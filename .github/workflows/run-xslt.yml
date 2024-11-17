@@ -29,13 +29,13 @@ jobs:
           docker run --rm -i -u $(id -u) --volume "${PWD}:/src" klakegg/saxon:he xslt \
             -s:$xml_file \
             -xsl:.github/workflows/dataset-to-html.xslt \
-            -o:pages/$base_name.html
+            -o:docs/$base_name.html
         done
 
     - name: Generate Directory Listings
       uses: jayanta525/github-pages-directory-listing@v4.0.0
       with:
-        FOLDER: pages
+        FOLDER: docs
 
     - name: Deploy to GitHub Pages
       run: |
@@ -43,26 +43,15 @@ jobs:
         sudo apt-get install -y python3-pip
         pip3 install ghp-import
 
-        cd pages
-        ls -al
-
         # Initialize the git repository and configure Git
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
 
-        # Create gh-pages branch (if it doesn't exist)
-        git checkout --orphan gh-pages
-
         # Add the HTML files from pages/
-        git add *.html
+        git add docs/*.html
 
         # Commit the changes
-        git commit -m "Deploy HTML files to GitHub Pages"
+        git commit -m "Deploy HTML files"
 
         # Push the changes to the gh-pages branch
-        git push --force --set-upstream origin gh-pages
-
-    - name: Clean up
-      run: |
-        # Checkout back to the main branch to preserve state for future pushes
-        git checkout main
+        git push
