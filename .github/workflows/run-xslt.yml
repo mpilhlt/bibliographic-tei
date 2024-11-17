@@ -22,7 +22,6 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Transform XML files
-      working-directory: repo
       run: |
         echo 
         for xml_file in data/gold/*.xml; do
