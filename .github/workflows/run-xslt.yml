@@ -23,18 +23,19 @@ jobs:
 
     - name: Transform XML files
       run: |
+        mkdir pages
         for xml_file in data/gold/*.xml; do
           base_name=$(basename "$xml_file" .xml)
           docker run --rm -i -u $(id -u) --volume "${PWD}:/src" klakegg/saxon:he xslt \
             -s:$xml_file \
             -xsl:.github/workflows/dataset-to-html.xslt \
-            -o:$base_name.html
+            -o:pages/$base_name.html
         done
 
     - name: Generate Directory Listings
       uses: jayanta525/github-pages-directory-listing@v4.0.0
       with:
-        FOLDER: .
+        FOLDER: pages
 
     - name: Deploy to GitHub Pages
       run: |
@@ -52,8 +53,8 @@ jobs:
         # Remove all files from the index (so we only commit the docs folder)
         git rm -rf .
 
-        # Add the HTML files from docs/
-        git add ./*.html
+        # Add the HTML files from pages/
+        git add pages/* -C .
 
         # Commit the changes
         git commit -m "Deploy HTML files to GitHub Pages"
