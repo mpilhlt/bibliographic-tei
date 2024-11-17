@@ -17,4 +17,4 @@ jobs:
 
     - name: Transform XML
       run: |
-        docker run --volume "${PWD}:/src" klakegg/saxon:he -s:/src/path/to/input.xml -xsl:/src/path/to/transform.xsl -o:/src/docs/output.xml
+        # docker run --volume "${PWD}:/src" klakegg/saxon:he -s:/src/path/to/input.xml -xsl:/src/path/to/transform.xsl -o:/src/docs/output.xml

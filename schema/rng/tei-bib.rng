@@ -1,0 +1,4288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:tei="http://www.tei-c.org/ns/1.0"
+         xmlns:teix="http://www.tei-c.org/ns/Examples"
+         xmlns="http://relaxng.org/ns/structure/1.0"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+         ns="http://www.tei-c.org/ns/1.0"><!--
+Schema generated from ODD source 2024-11-13T10:58:37Z. . 
+Schema generated from ODD source 2024-11-13T17:35:16Z. . 
+TEI Edition: P5 Version 4.8.1. Last updated on 1st November 2024, revision 0a2bff95a 
+TEI Edition Location: https://www.tei-c.org/Vault/P5/4.8.1/ 
+  
+--><!--TEI material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is generally appropriate for usages which treat TEI content as data or documentation. The BSD-2 licence is generally appropriate for usage of TEI content in a software environment. For further information or clarification, please contact the TEI Consortium (info@tei-c.org).-->
+   <define name="tbibmacro.abContent">
+      <zeroOrMore>
+         <choice>
+            <text/>
+            <ref name="tbibmodel.paraPart"/>
+            <ref name="tbibab"/>
+         </choice>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmacro.paraContent">
+      <zeroOrMore>
+         <choice>
+            <text/>
+            <ref name="tbibmodel.paraPart"/>
+         </choice>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmacro.phraseSeq">
+      <zeroOrMore>
+         <choice>
+            <text/>
+            <ref name="tbibmodel.gLike"/>
+            <ref name="tbibmodel.attributable"/>
+            <ref name="tbibmodel.phrase"/>
+            <ref name="tbibmodel.global"/>
+         </choice>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmacro.phraseSeq.limited">
+      <zeroOrMore>
+         <choice>
+            <text/>
+            <ref name="tbibmodel.limitedPhrase"/>
+            <ref name="tbibmodel.global"/>
+         </choice>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmacro.specialPara">
+      <zeroOrMore>
+         <choice>
+            <text/>
+            <ref name="tbibmodel.gLike"/>
+            <ref name="tbibmodel.phrase"/>
+            <ref name="tbibmodel.inter"/>
+            <ref name="tbibmodel.divPart"/>
+            <ref name="tbibmodel.global"/>
+         </choice>
+      </zeroOrMore>
+   </define>
+   <define name="tbibatt.anchoring.attributes">
+      <ref name="tbibatt.anchoring.attribute.anchored"/>
+      <ref name="tbibatt.anchoring.attribute.targetEnd"/>
+   </define>
+   <define name="tbibatt.anchoring.attribute.anchored">
+      <optional>
+         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                    name="anchored"
+                    a:defaultValue="true">
+            <a:documentation>(anchored) indicates whether the copy text shows the exact place of reference for the note.</a:documentation>
+            <data type="boolean"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.anchoring.attribute.targetEnd">
+      <optional>
+         <attribute name="targetEnd">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(target end) points to the end of the span to which the note is attached, if the note is not embedded in the text at that point.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.ascribed.attributes">
+      <ref name="tbibatt.ascribed.attribute.who"/>
+   </define>
+   <define name="tbibatt.ascribed.attribute.who">
+      <optional>
+         <attribute name="who">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the person, or group of people, to whom the element content is ascribed.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.ascribed.directed.attributes">
+      <ref name="tbibatt.ascribed.attributes"/>
+      <ref name="tbibatt.ascribed.directed.attribute.toWhom"/>
+   </define>
+   <define name="tbibatt.ascribed.directed.attribute.toWhom">
+      <optional>
+         <attribute name="toWhom">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the person, or group of people, to whom a speech act or action is directed.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.canonical.attributes">
+      <ref name="tbibatt.canonical.attribute.key"/>
+      <ref name="tbibatt.canonical.attribute.ref"/>
+   </define>
+   <define name="tbibatt.canonical.attribute.key">
+      <optional>
+         <attribute name="key">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides an externally-defined means of identifying the entity (or entities) being named, using a coded value of some kind.</a:documentation>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.canonical.attribute.ref">
+      <optional>
+         <attribute name="ref">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) provides an explicit means of locating a full definition or identity for the entity being named by means of one or more URIs.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.ranging.attributes">
+      <ref name="tbibatt.ranging.attribute.atLeast"/>
+      <ref name="tbibatt.ranging.attribute.atMost"/>
+      <ref name="tbibatt.ranging.attribute.min"/>
+      <ref name="tbibatt.ranging.attribute.max"/>
+      <ref name="tbibatt.ranging.attribute.confidence"/>
+   </define>
+   <define name="tbibatt.ranging.attribute.atLeast">
+      <optional>
+         <attribute name="atLeast">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives a minimum estimated value for the approximate measurement.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.ranging.attribute.atMost">
+      <optional>
+         <attribute name="atMost">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives a maximum estimated value for the approximate measurement.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.ranging.attribute.min">
+      <optional>
+         <attribute name="min">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">where the measurement summarizes more than one observation or a range, supplies the minimum value observed.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.ranging.attribute.max">
+      <optional>
+         <attribute name="max">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">where the measurement summarizes more than one observation or a range, supplies the maximum value observed.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.ranging.attribute.confidence">
+      <optional>
+         <attribute name="confidence">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the degree of statistical confidence (between zero and one) that a value falls within the range specified by <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@min</code> and <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@max</code>, or the proportion of observed values that fall within that range.</a:documentation>
+            <data type="double">
+               <param name="minInclusive">0</param> 
+               <param name="maxInclusive">1</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.dimensions.attributes">
+      <ref name="tbibatt.ranging.attributes"/>
+      <ref name="tbibatt.dimensions.attribute.unit"/>
+      <ref name="tbibatt.dimensions.attribute.quantity"/>
+      <ref name="tbibatt.dimensions.attribute.extent"/>
+      <ref name="tbibatt.dimensions.attribute.precision"/>
+      <ref name="tbibatt.dimensions.attribute.scope"/>
+   </define>
+   <define name="tbibatt.dimensions.attribute.unit">
+      <optional>
+         <attribute name="unit">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">names the unit used for the measurement
+Suggested values include: 1] cm (centimetres); 2] mm (millimetres); 3] in (inches); 4] line; 5] char (characters)</a:documentation>
+            <choice>
+               <value>cm</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(centimetres) </a:documentation>
+               <value>mm</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(millimetres) </a:documentation>
+               <value>in</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(inches) </a:documentation>
+               <value>line</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">lines of text</a:documentation>
+               <value>char</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(characters) characters of text</a:documentation>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.dimensions.attribute.quantity">
+      <optional>
+         <attribute name="quantity">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the length in the units specified</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.dimensions.attribute.extent">
+      <optional>
+         <attribute name="extent">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the size of the object concerned using a project-specific vocabulary combining quantity and units in a single string of words.</a:documentation>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.dimensions.attribute.precision">
+      <optional>
+         <attribute name="precision">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the precision of the values specified by the other attributes.</a:documentation>
+            <choice>
+               <value>high</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>medium</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>low</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>unknown</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.dimensions.attribute.scope">
+      <optional>
+         <attribute name="scope">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">where the measurement summarizes more than one observation, specifies the applicability of this measurement.
+Sample values include: 1] all; 2] most; 3] range</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.written.attributes">
+      <ref name="tbibatt.written.attribute.hand"/>
+   </define>
+   <define name="tbibatt.written.attribute.hand">
+      <optional>
+         <attribute name="hand">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to a <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;handNote&gt;</code> element describing the hand considered responsible for the content of the element concerned.</a:documentation>
+            <data type="anyURI">
+               <param name="pattern">\S+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.breaking.attributes">
+      <ref name="tbibatt.breaking.attribute.break"/>
+   </define>
+   <define name="tbibatt.breaking.attribute.break">
+      <optional>
+         <attribute name="break">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates whether or not the element bearing this attribute should be considered to mark the end of an orthographic token in the same way as whitespace.</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.cmc.attributes">
+      <ref name="tbibatt.cmc.attribute.generatedBy"/>
+   </define>
+   <define name="tbibatt.cmc.attribute.generatedBy">
+      <optional>
+         <attribute name="generatedBy">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(generated by) categorizes how the content of an element was generated in a CMC environment.
+Suggested values include: 1] human; 2] template; 3] system; 4] bot; 5] unspecified</a:documentation>
+            <choice>
+               <value>human</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the content was naturally typed or spoken by a human user</a:documentation>
+               <value>template</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the content was generated after a human user activated a template for its insertion</a:documentation>
+               <value>system</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the content was generated by the system, i.e. the CMC environment</a:documentation>
+               <value>bot</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the content was generated by a bot, i.e. a non-human agent, typically one that is not part of the CMC environment itself</a:documentation>
+               <value>unspecified</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the content was generated by an unknown or unspecified process</a:documentation>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="tei-bib-att.cmc-generatedBy-CMC_generatedBy_within_post-constraint-rule-1">
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                context="tei:*[@generatedBy]">
+            <sch:assert test="ancestor-or-self::tei:post">The @generatedBy attribute is for use within a &lt;post&gt; element.</sch:assert>
+          </sch:rule>
+   </pattern>
+   <define name="tbibatt.cReferencing.attributes">
+      <ref name="tbibatt.cReferencing.attribute.cRef"/>
+   </define>
+   <define name="tbibatt.cReferencing.attribute.cRef">
+      <optional>
+         <attribute name="cRef">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(canonical reference) specifies the destination of the pointer by supplying a canonical reference expressed using the scheme defined in a <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;refsDecl&gt;</code> element in the TEI header</a:documentation>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.datable.w3c.attributes">
+      <ref name="tbibatt.datable.w3c.attribute.when"/>
+      <ref name="tbibatt.datable.w3c.attribute.notBefore"/>
+      <ref name="tbibatt.datable.w3c.attribute.notAfter"/>
+      <ref name="tbibatt.datable.w3c.attribute.from"/>
+      <ref name="tbibatt.datable.w3c.attribute.to"/>
+   </define>
+   <define name="tbibatt.datable.w3c.attribute.when">
+      <optional>
+         <attribute name="when">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the value of the date or time in a standard form, e.g. yyyy-mm-dd.</a:documentation>
+            <choice>
+               <data type="date"/>
+               <data type="gYear"/>
+               <data type="gMonth"/>
+               <data type="gDay"/>
+               <data type="gYearMonth"/>
+               <data type="gMonthDay"/>
+               <data type="time"/>
+               <data type="dateTime"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.datable.w3c.attribute.notBefore">
+      <optional>
+         <attribute name="notBefore">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the earliest possible date for the event in standard form, e.g. yyyy-mm-dd.</a:documentation>
+            <choice>
+               <data type="date"/>
+               <data type="gYear"/>
+               <data type="gMonth"/>
+               <data type="gDay"/>
+               <data type="gYearMonth"/>
+               <data type="gMonthDay"/>
+               <data type="time"/>
+               <data type="dateTime"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.datable.w3c.attribute.notAfter">
+      <optional>
+         <attribute name="notAfter">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the latest possible date for the event in standard form, e.g. yyyy-mm-dd.</a:documentation>
+            <choice>
+               <data type="date"/>
+               <data type="gYear"/>
+               <data type="gMonth"/>
+               <data type="gDay"/>
+               <data type="gYearMonth"/>
+               <data type="gMonthDay"/>
+               <data type="time"/>
+               <data type="dateTime"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.datable.w3c.attribute.from">
+      <optional>
+         <attribute name="from">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the starting point of the period in standard form, e.g. yyyy-mm-dd.</a:documentation>
+            <choice>
+               <data type="date"/>
+               <data type="gYear"/>
+               <data type="gMonth"/>
+               <data type="gDay"/>
+               <data type="gYearMonth"/>
+               <data type="gMonthDay"/>
+               <data type="time"/>
+               <data type="dateTime"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.datable.w3c.attribute.to">
+      <optional>
+         <attribute name="to">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the ending point of the period in standard form, e.g. yyyy-mm-dd.</a:documentation>
+            <choice>
+               <data type="date"/>
+               <data type="gYear"/>
+               <data type="gMonth"/>
+               <data type="gDay"/>
+               <data type="gYearMonth"/>
+               <data type="gMonthDay"/>
+               <data type="time"/>
+               <data type="dateTime"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="tei-bib-att.datable.w3c-att-datable-w3c-when-constraint-rule-2">
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                context="tei:*[@when]">
+        <sch:report role="nonfatal" test="@notBefore|@notAfter|@from|@to">The @when attribute cannot be used with any other att.datable.w3c attributes.</sch:report>
+      </sch:rule>
+   </pattern>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="tei-bib-att.datable.w3c-att-datable-w3c-from-constraint-rule-3">
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                context="tei:*[@from]">
+        <sch:report role="nonfatal" test="@notBefore">The @from and @notBefore attributes cannot be used together.</sch:report>
+      </sch:rule>
+   </pattern>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="tei-bib-att.datable.w3c-att-datable-w3c-to-constraint-rule-4">
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                context="tei:*[@to]">
+        <sch:report role="nonfatal" test="@notAfter">The @to and @notAfter attributes cannot be used together.</sch:report>
+      </sch:rule>
+   </pattern>
+   <define name="tbibatt.datable.attributes">
+      <ref name="tbibatt.datable.w3c.attributes"/>
+      <ref name="tbibatt.datable.iso.attributes"/>
+      <ref name="tbibatt.datable.custom.attributes"/>
+      <ref name="tbibatt.datable.attribute.period"/>
+   </define>
+   <define name="tbibatt.datable.attribute.period">
+      <optional>
+         <attribute name="period">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies pointers to one or more definitions of named periods of time (typically <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;category&gt;</code>s, <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;date&gt;</code>s or <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;event&gt;</code>s) within which the datable item is understood to have occurred.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.datcat.attributes">
+      <ref name="tbibatt.datcat.attribute.datcat"/>
+      <ref name="tbibatt.datcat.attribute.valueDatcat"/>
+      <ref name="tbibatt.datcat.attribute.targetDatcat"/>
+   </define>
+   <define name="tbibatt.datcat.attribute.datcat">
+      <optional>
+         <attribute name="datcat">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides a pointer to a definition of, and/or general information about, (a) an information container (element or attribute) or (b) a value of an information container (element content or attribute value), by referencing an external taxonomy or ontology. If <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@valueDatcat</code> is present in the immediate context, this attribute takes on role (a), while <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@valueDatcat</code> performs role (b).</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.datcat.attribute.valueDatcat">
+      <optional>
+         <attribute name="valueDatcat">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides a definition of, and/or general information about a value of an information container (element content or attribute value), by reference to an external taxonomy or ontology. Used especially where a contrast with <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@datcat</code> is needed.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.datcat.attribute.targetDatcat">
+      <optional>
+         <attribute name="targetDatcat">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides a definition of, and/or general information about, information structure of an object referenced or modeled by the containing element, by reference to an external taxonomy or ontology. This attribute has the characteristics of the <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@datcat</code> attribute, except that it addresses not its containing element, but an object that is being referenced or modeled by its containing element.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.declarable.attributes">
+      <ref name="tbibatt.declarable.attribute.default"/>
+   </define>
+   <define name="tbibatt.declarable.attribute.default">
+      <optional>
+         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                    name="default"
+                    a:defaultValue="false">
+            <a:documentation>indicates whether or not this element is selected by default when its parent is selected.</a:documentation>
+            <choice>
+               <value>true</value>
+               <a:documentation>This element is selected if its parent is selected</a:documentation>
+               <value>false</value>
+               <a:documentation>This element can only be selected explicitly, unless it is the only one of its kind, in which case it is selected if its parent is selected.</a:documentation>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.declaring.attributes">
+      <ref name="tbibatt.declaring.attribute.decls"/>
+   </define>
+   <define name="tbibatt.declaring.attribute.decls">
+      <optional>
+         <attribute name="decls">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(declarations) identifies one or more declarable elements within the header, which are understood to apply to the element bearing this attribute and its content.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.fragmentable.attributes">
+      <ref name="tbibatt.fragmentable.attribute.part"/>
+   </define>
+   <define name="tbibatt.fragmentable.attribute.part">
+      <optional>
+         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                    name="part"
+                    a:defaultValue="N">
+            <a:documentation>specifies whether or not its parent element is fragmented in some way, typically by some other overlapping structure: for example a speech which is divided between two or more verse stanzas, a paragraph which is split across a page division, a verse line which is divided between two speakers.</a:documentation>
+            <choice>
+               <value>Y</value>
+               <a:documentation>(yes) the element is fragmented in some (unspecified) respect</a:documentation>
+               <value>N</value>
+               <a:documentation>(no) the element is not fragmented, or no claim is made as to its completeness</a:documentation>
+               <value>I</value>
+               <a:documentation>(initial) this is the initial part of a fragmented element</a:documentation>
+               <value>M</value>
+               <a:documentation>(medial) this is a medial part of a fragmented element</a:documentation>
+               <value>F</value>
+               <a:documentation>(final) this is the final part of a fragmented element</a:documentation>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.docStatus.attributes">
+      <ref name="tbibatt.docStatus.attribute.status"/>
+   </define>
+   <define name="tbibatt.docStatus.attribute.status">
+      <optional>
+         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                    name="status"
+                    a:defaultValue="draft">
+            <a:documentation>describes the status of a document either currently or, when associated with a dated element, at the time indicated.
+Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] draft; 6] embargoed; 7] expired; 8] frozen; 9] galley; 10] proposed; 11] published; 12] recommendation; 13] submitted; 14] unfinished; 15] withdrawn</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.global.responsibility.attributes">
+      <ref name="tbibatt.global.responsibility.attribute.cert"/>
+      <ref name="tbibatt.global.responsibility.attribute.resp"/>
+   </define>
+   <define name="tbibatt.global.responsibility.attribute.cert">
+      <optional>
+         <attribute name="cert">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(certainty) signifies the degree of certainty associated with the intervention or interpretation.</a:documentation>
+            <choice>
+               <data type="double">
+                  <param name="minInclusive">0</param> 
+                  <param name="maxInclusive">1</param>
+               </data>
+               <choice>
+                  <value>high</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>medium</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>low</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>unknown</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.global.responsibility.attribute.resp">
+      <optional>
+         <attribute name="resp">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsible party) indicates the agency responsible for the intervention or interpretation, for example an editor or transcriber.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.editLike.attributes">
+      <ref name="tbibatt.editLike.attribute.evidence"/>
+      <ref name="tbibatt.editLike.attribute.instant"/>
+   </define>
+   <define name="tbibatt.editLike.attribute.evidence">
+      <optional>
+         <attribute name="evidence">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the nature of the evidence supporting the reliability or accuracy of the intervention or interpretation.
+Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentation>
+            <list>
+               <oneOrMore>
+                  <choice>
+                     <value>internal</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">there is internal evidence to support the intervention.</a:documentation>
+                     <value>external</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">there is external evidence to support the intervention.</a:documentation>
+                     <value>conjecture</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the intervention or interpretation has been made by the editor, cataloguer, or scholar on the basis of their expertise.</a:documentation>
+                     <data type="token">
+                        <param name="pattern">[^\p{C}\p{Z}]+</param>
+                     </data>
+                  </choice>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.editLike.attribute.instant">
+      <optional>
+         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                    name="instant"
+                    a:defaultValue="false">
+            <a:documentation>indicates whether this is an instant revision or not.</a:documentation>
+            <choice>
+               <data type="boolean"/>
+               <choice>
+                  <value>unknown</value>
+                  <a:documentation/>
+                  <value>inapplicable</value>
+                  <a:documentation/>
+               </choice>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.global.rendition.attributes">
+      <ref name="tbibatt.global.rendition.attribute.rend"/>
+      <ref name="tbibatt.global.rendition.attribute.style"/>
+      <ref name="tbibatt.global.rendition.attribute.rendition"/>
+   </define>
+   <define name="tbibatt.global.rendition.attribute.rend">
+      <optional>
+         <attribute name="rend">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rendition) indicates how the element in question was rendered or presented in the source text.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="token">
+                     <param name="pattern">[^\p{C}\p{Z}]+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.global.rendition.attribute.style">
+      <optional>
+         <attribute name="style">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains an expression in some formal style definition language which defines the rendering or presentation used for this element in the source text</a:documentation>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.global.rendition.attribute.rendition">
+      <optional>
+         <attribute name="rendition">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to a description of the rendering or presentation used for this element in the source text.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.global.source.attributes">
+      <ref name="tbibatt.global.source.attribute.source"/>
+   </define>
+   <define name="tbibatt.global.source.attribute.source">
+      <optional>
+         <attribute name="source">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the source from which some aspect of this element is drawn.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="tei-bib-att.global.source-source-only_1_ODD_source-constraint-rule-5">
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                context="tei:*[@source]">
+            <sch:let name="srcs" value="tokenize( normalize-space(@source),' ')"/>
+            <sch:report test="( self::tei:classRef               | self::tei:dataRef               | self::tei:elementRef               | self::tei:macroRef               | self::tei:moduleRef               | self::tei:schemaSpec )               and               $srcs[2]">
+              When used on a schema description element (like
+              <sch:value-of select="name(.)"/>), the @source attribute
+              should have only 1 value. (This one has <sch:value-of select="count($srcs)"/>.)
+            </sch:report>
+          </sch:rule>
+   </pattern>
+   <define name="tbibatt.global.attributes">
+      <ref name="tbibatt.global.rendition.attributes"/>
+      <ref name="tbibatt.global.linking.attributes"/>
+      <ref name="tbibatt.global.responsibility.attributes"/>
+      <ref name="tbibatt.global.source.attributes"/>
+      <ref name="tbibatt.global.attribute.xmlid"/>
+      <ref name="tbibatt.global.attribute.n"/>
+      <ref name="tbibatt.global.attribute.xmllang"/>
+      <ref name="tbibatt.global.attribute.xmlbase"/>
+      <ref name="tbibatt.global.attribute.xmlspace"/>
+   </define>
+   <define name="tbibatt.global.attribute.xmlid">
+      <optional>
+         <attribute name="xml:id">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) provides a unique identifier for the element bearing the attribute.</a:documentation>
+            <data type="ID"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.global.attribute.n">
+      <optional>
+         <attribute name="n">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(number) gives a number (or other label) for an element, which is not necessarily unique within the document.</a:documentation>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.global.attribute.xmllang">
+      <optional>
+         <attribute name="xml:lang">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to <a xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>.</a:documentation>
+            <choice>
+               <data type="language"/>
+               <choice>
+                  <value/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.global.attribute.xmlbase">
+      <optional>
+         <attribute name="xml:base">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides a base URI reference with which applications can resolve relative URI references into absolute URI references.</a:documentation>
+            <data type="anyURI">
+               <param name="pattern">\S+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.global.attribute.xmlspace">
+      <optional>
+         <attribute name="xml:space">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">signals an intention about how white space should be managed by applications.</a:documentation>
+            <choice>
+               <value>default</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">signals that the application's default white-space processing modes are acceptable</a:documentation>
+               <value>preserve</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the intent that applications preserve all white space</a:documentation>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.internetMedia.attributes">
+      <ref name="tbibatt.internetMedia.attribute.mimeType"/>
+   </define>
+   <define name="tbibatt.internetMedia.attribute.mimeType">
+      <optional>
+         <attribute name="mimeType">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(MIME media type) specifies the applicable multimedia internet mail extension (MIME) media type</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="token">
+                     <param name="pattern">[^\p{C}\p{Z}]+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.naming.attributes">
+      <ref name="tbibatt.canonical.attributes"/>
+      <ref name="tbibatt.naming.attribute.role"/>
+      <ref name="tbibatt.naming.attribute.nymRef"/>
+   </define>
+   <define name="tbibatt.naming.attribute.role">
+      <optional>
+         <attribute name="role">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">may be used to specify further information about the entity referenced by this name in the form of a set of whitespace-separated values, for example the occupation of a person, or the status of a place.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="token">
+                     <param name="pattern">[^\p{C}\p{Z}]+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.naming.attribute.nymRef">
+      <optional>
+         <attribute name="nymRef">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference to the canonical name) provides a means of locating the canonical form (nym) of the names associated with the object named by the element bearing it.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.notated.attributes">
+      <ref name="tbibatt.notated.attribute.notation"/>
+   </define>
+   <define name="tbibatt.notated.attribute.notation">
+      <optional>
+         <attribute name="notation">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">names the notation used for the content of the element.</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.placement.attributes">
+      <ref name="tbibatt.placement.attribute.place"/>
+   </define>
+   <define name="tbibatt.placement.attribute.place">
+      <optional>
+         <attribute name="place">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies where this item is placed.
+Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf; 6] above; 7] right; 8] below; 9] left; 10] end; 11] inline; 12] inspace</a:documentation>
+            <list>
+               <oneOrMore>
+                  <choice>
+                     <value>top</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">at the top of the page</a:documentation>
+                     <value>bottom</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">at the foot of the page</a:documentation>
+                     <value>margin</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">in the margin (left, right, or both)</a:documentation>
+                     <value>opposite</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">on the opposite, i.e. facing, page</a:documentation>
+                     <value>overleaf</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">on the other side of the leaf</a:documentation>
+                     <value>above</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">above the line</a:documentation>
+                     <value>right</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to the right, e.g. to the right of a vertical line of text, or to the right of a figure</a:documentation>
+                     <value>below</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">below the line</a:documentation>
+                     <value>left</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to the left, e.g. to the left of a vertical line of text, or to the left of a figure</a:documentation>
+                     <value>end</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">at the end of e.g. chapter or volume.</a:documentation>
+                     <value>inline</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">within the body of the text.</a:documentation>
+                     <value>inspace</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">in a predefined space, for example left by an earlier scribe.</a:documentation>
+                     <data type="token">
+                        <param name="pattern">[^\p{C}\p{Z}]+</param>
+                     </data>
+                  </choice>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.typed.attributes">
+      <ref name="tbibatt.typed.attribute.type"/>
+      <ref name="tbibatt.typed.attribute.subtype"/>
+   </define>
+   <define name="tbibatt.typed.attribute.type">
+      <optional>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.typed.attribute.subtype">
+      <optional>
+         <attribute name="subtype">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(subtype) provides a sub-categorization of the element, if needed</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="tei-bib-att.typed-subtypeTyped-constraint-rule-6">
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                context="tei:*[@subtype]">
+        <sch:assert test="@type">The <sch:name/> element should not be categorized in detail with @subtype unless also categorized in general with @type</sch:assert>
+      </sch:rule>
+   </pattern>
+   <define name="tbibatt.pointing.attributes">
+      <ref name="tbibatt.pointing.attribute.targetLang"/>
+      <ref name="tbibatt.pointing.attribute.target"/>
+      <ref name="tbibatt.pointing.attribute.evaluate"/>
+   </define>
+   <define name="tbibatt.pointing.attribute.targetLang">
+      <optional>
+         <attribute name="targetLang">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the language of the content to be found at the destination referenced by <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@target</code>, using a language tag generated according to <a xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>.</a:documentation>
+            <choice>
+               <data type="language"/>
+               <choice>
+                  <value/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="tei-bib-att.pointing-targetLang-targetLang-constraint-rule-7">
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                context="tei:*[not(self::tei:schemaSpec)][@targetLang]">
+            <sch:assert test="@target">@targetLang should only be used on <sch:name/> if @target is specified.</sch:assert>
+          </sch:rule>
+   </pattern>
+   <define name="tbibatt.pointing.attribute.target">
+      <optional>
+         <attribute name="target">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the destination of the reference by supplying one or more URI References</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.pointing.attribute.evaluate">
+      <optional>
+         <attribute name="evaluate">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(evaluate) specifies the intended meaning when the target of a pointer is itself a pointer.</a:documentation>
+            <choice>
+               <value>all</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">if the element pointed to is itself a pointer, then the target of that pointer will be taken, and so on, until an element is found which is not a pointer.</a:documentation>
+               <value>one</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">if the element pointed to is itself a pointer, then its target (whether a pointer or not) is taken as the target of this pointer.</a:documentation>
+               <value>none</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">no further evaluation of targets is carried out beyond that needed to find the element specified in the pointer's target.</a:documentation>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.pointing.group.attributes">
+      <ref name="tbibatt.pointing.attributes"/>
+      <ref name="tbibatt.typed.attributes"/>
+      <ref name="tbibatt.pointing.group.attribute.domains"/>
+      <ref name="tbibatt.pointing.group.attribute.targFunc"/>
+   </define>
+   <define name="tbibatt.pointing.group.attribute.domains">
+      <optional>
+         <attribute name="domains">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">optionally specifies the identifiers of the elements within which all elements indicated by the contents of this element lie.</a:documentation>
+            <list>
+               <data type="anyURI">
+                  <param name="pattern">\S+</param>
+               </data>
+               <data type="anyURI">
+                  <param name="pattern">\S+</param>
+               </data>
+               <zeroOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </zeroOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.pointing.group.attribute.targFunc">
+      <optional>
+         <attribute name="targFunc">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(target function) describes the function of each of the values of the <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@target</code> attribute of the enclosed <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;link&gt;</code>, <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;join&gt;</code>, or <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;alt&gt;</code> tags.</a:documentation>
+            <list>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+               <zeroOrMore>
+                  <data type="token">
+                     <param name="pattern">[^\p{C}\p{Z}]+</param>
+                  </data>
+               </zeroOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.segLike.attributes">
+      <ref name="tbibatt.datcat.attributes"/>
+      <ref name="tbibatt.fragmentable.attributes"/>
+      <ref name="tbibatt.segLike.attribute.function"/>
+   </define>
+   <define name="tbibatt.segLike.attribute.function">
+      <optional>
+         <attribute name="function">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(function) characterizes the function of the segment.</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.sortable.attributes">
+      <ref name="tbibatt.sortable.attribute.sortKey"/>
+   </define>
+   <define name="tbibatt.sortable.attribute.sortKey">
+      <optional>
+         <attribute name="sortKey">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the sort key for this element in an index, list or group which contains it.</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.edition.attributes">
+      <ref name="tbibatt.edition.attribute.ed"/>
+      <ref name="tbibatt.edition.attribute.edRef"/>
+   </define>
+   <define name="tbibatt.edition.attribute.ed">
+      <optional>
+         <attribute name="ed">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(edition) supplies a sigil or other arbitrary identifier for the source edition in which the associated feature (for example, a page, column, or line break) occurs at this point in the text.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="token">
+                     <param name="pattern">[^\p{C}\p{Z}]+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.edition.attribute.edRef">
+      <optional>
+         <attribute name="edRef">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(edition reference) provides a pointer to the source edition in which the associated feature (for example, a page, column, or line break) occurs at this point in the text.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.spanning.attributes">
+      <ref name="tbibatt.spanning.attribute.spanTo"/>
+   </define>
+   <define name="tbibatt.spanning.attribute.spanTo">
+      <optional>
+         <attribute name="spanTo">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the end of a span initiated by the element bearing this attribute.</a:documentation>
+            <data type="anyURI">
+               <param name="pattern">\S+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="tei-bib-att.spanning-spanTo-spanTo-points-to-following-constraint-rule-8">
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                context="tei:*[@spanTo]">
+            <sch:assert test="id(substring(@spanTo,2)) and following::*[@xml:id=substring(current()/@spanTo,2)]">
+The element indicated by @spanTo (<sch:value-of select="@spanTo"/>) must follow the current element <sch:name/>
+            </sch:assert>
+          </sch:rule>
+   </pattern>
+   <define name="tbibatt.transcriptional.attributes">
+      <ref name="tbibatt.editLike.attributes"/>
+      <ref name="tbibatt.written.attributes"/>
+      <ref name="tbibatt.transcriptional.attribute.status"/>
+      <ref name="tbibatt.transcriptional.attribute.cause"/>
+      <ref name="tbibatt.transcriptional.attribute.seq"/>
+   </define>
+   <define name="tbibatt.transcriptional.attribute.status">
+      <optional>
+         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                    name="status"
+                    a:defaultValue="unremarkable">
+            <a:documentation>indicates the effect of the intervention, for example in the case of a deletion, strikeouts which include too much or too little text, or in the case of an addition, an insertion which duplicates some of the text already present.
+Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] excessEnd; 5] shortStart; 6] shortEnd; 7] partial; 8] unremarkable</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.transcriptional.attribute.cause">
+      <optional>
+         <attribute name="cause">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documents the presumed cause for the intervention.</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.transcriptional.attribute.seq">
+      <optional>
+         <attribute name="seq">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(sequence) assigns a sequence number related to the order in which the encoded features carrying this attribute are believed to have occurred.</a:documentation>
+            <data type="nonNegativeInteger"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.citing.attributes">
+      <ref name="tbibatt.citing.attribute.unit"/>
+      <ref name="tbibatt.citing.attribute.from"/>
+      <ref name="tbibatt.citing.attribute.to"/>
+   </define>
+   <define name="tbibatt.citing.attribute.unit">
+      <optional>
+         <attribute name="unit">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies the unit of information conveyed by the element, e.g. columns, pages, volume, entry.
+Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line; 5] chapter (chapter); 6] part; 7] column; 8] entry</a:documentation>
+            <choice>
+               <value>volume</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(volume) the element contains a volume number.</a:documentation>
+               <value>issue</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the element contains an issue number, or volume and issue numbers.</a:documentation>
+               <value>page</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(page) the element contains a page number or page range.</a:documentation>
+               <value>line</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the element contains a line number or line range.</a:documentation>
+               <value>chapter</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(chapter) the element contains a chapter indication (number and/or title)</a:documentation>
+               <value>part</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the element identifies a part of a book or collection.</a:documentation>
+               <value>column</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the element identifies a column.</a:documentation>
+               <value>entry</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the element identifies an entry number or label in a list of entries.</a:documentation>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.citing.attribute.from">
+      <optional>
+         <attribute name="from">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the starting point of the range of units indicated by the <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@unit</code> attribute.</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.citing.attribute.to">
+      <optional>
+         <attribute name="to">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the end-point of the range of units indicated by the <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@unit</code> attribute.</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibmodel.nameLike.agent">
+      <choice>
+         <ref name="tbibname"/>
+         <ref name="tbiborgName"/>
+         <ref name="tbibpersName"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.nameLike.agent_alternation">
+      <choice>
+         <ref name="tbibname"/>
+         <ref name="tbiborgName"/>
+         <ref name="tbibpersName"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.nameLike.agent_sequence">
+      <ref name="tbibname"/>
+      <ref name="tbiborgName"/>
+      <ref name="tbibpersName"/>
+   </define>
+   <define name="tbibmodel.nameLike.agent_sequenceOptional">
+      <optional>
+         <ref name="tbibname"/>
+      </optional>
+      <optional>
+         <ref name="tbiborgName"/>
+      </optional>
+      <optional>
+         <ref name="tbibpersName"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.nameLike.agent_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibname"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbiborgName"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibpersName"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.nameLike.agent_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibname"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbiborgName"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibpersName"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.segLike">
+      <choice>
+         <ref name="tbibseg"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.segLike_alternation">
+      <choice>
+         <ref name="tbibseg"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.segLike_sequence">
+      <ref name="tbibseg"/>
+   </define>
+   <define name="tbibmodel.segLike_sequenceOptional">
+      <optional>
+         <ref name="tbibseg"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.segLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibseg"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.segLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibseg"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.hiLike">
+      <choice>
+         <ref name="tbibq"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.hiLike_alternation">
+      <choice>
+         <ref name="tbibq"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.hiLike_sequence">
+      <ref name="tbibq"/>
+   </define>
+   <define name="tbibmodel.hiLike_sequenceOptional">
+      <optional>
+         <ref name="tbibq"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.hiLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibq"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.hiLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibq"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.emphLike">
+      <choice>
+         <ref name="tbibtitle"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.emphLike_alternation">
+      <choice>
+         <ref name="tbibtitle"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.emphLike_sequence">
+      <ref name="tbibtitle"/>
+   </define>
+   <define name="tbibmodel.emphLike_sequenceOptional">
+      <optional>
+         <ref name="tbibtitle"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.emphLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibtitle"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.emphLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibtitle"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.highlighted">
+      <choice>
+         <ref name="tbibmodel.hiLike"/>
+         <ref name="tbibmodel.emphLike"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.highlighted_alternation">
+      <choice>
+         <ref name="tbibmodel.hiLike_alternation"/>
+         <ref name="tbibmodel.emphLike_alternation"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.highlighted_sequence">
+      <ref name="tbibmodel.hiLike_sequence"/>
+      <ref name="tbibmodel.emphLike_sequence"/>
+   </define>
+   <define name="tbibmodel.highlighted_sequenceOptional">
+      <optional>
+         <ref name="tbibmodel.hiLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="tbibmodel.emphLike_sequenceOptional"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.highlighted_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibmodel.hiLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibmodel.emphLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.highlighted_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibmodel.hiLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibmodel.emphLike_sequenceRepeatable"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.dateLike">
+      <choice>
+         <ref name="tbibdate"/>
+         <ref name="tbibtime"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.dateLike_alternation">
+      <choice>
+         <ref name="tbibdate"/>
+         <ref name="tbibtime"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.dateLike_sequence">
+      <ref name="tbibdate"/>
+      <ref name="tbibtime"/>
+   </define>
+   <define name="tbibmodel.dateLike_sequenceOptional">
+      <optional>
+         <ref name="tbibdate"/>
+      </optional>
+      <optional>
+         <ref name="tbibtime"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.dateLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibdate"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibtime"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.dateLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibdate"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibtime"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.measureLike">
+      <choice>
+         <ref name="tbibnum"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.measureLike_alternation">
+      <choice>
+         <ref name="tbibnum"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.measureLike_sequence">
+      <ref name="tbibnum"/>
+   </define>
+   <define name="tbibmodel.measureLike_sequenceOptional">
+      <optional>
+         <ref name="tbibnum"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.measureLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibnum"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.measureLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibnum"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.egLike">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.egLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.egLike_sequence">
+      <empty/>
+   </define>
+   <define name="tbibmodel.egLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="tbibmodel.egLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="tbibmodel.egLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.graphicLike">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.graphicLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.graphicLike_sequence">
+      <empty/>
+   </define>
+   <define name="tbibmodel.graphicLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="tbibmodel.graphicLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="tbibmodel.graphicLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.offsetLike">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.offsetLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.offsetLike_sequence">
+      <empty/>
+   </define>
+   <define name="tbibmodel.offsetLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="tbibmodel.offsetLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="tbibmodel.offsetLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.pPart.msdesc">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.pPart.msdesc_alternation">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.pPart.msdesc_sequence">
+      <empty/>
+   </define>
+   <define name="tbibmodel.pPart.msdesc_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="tbibmodel.pPart.msdesc_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="tbibmodel.pPart.msdesc_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.pPart.editorial">
+      <choice>
+         <ref name="tbibabbr"/>
+         <ref name="tbibexpan"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.pPart.editorial_alternation">
+      <choice>
+         <ref name="tbibabbr"/>
+         <ref name="tbibexpan"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.pPart.editorial_sequence">
+      <ref name="tbibabbr"/>
+      <ref name="tbibexpan"/>
+   </define>
+   <define name="tbibmodel.pPart.editorial_sequenceOptional">
+      <optional>
+         <ref name="tbibabbr"/>
+      </optional>
+      <optional>
+         <ref name="tbibexpan"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.pPart.editorial_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibabbr"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibexpan"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.pPart.editorial_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibabbr"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibexpan"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.pPart.transcriptional">
+      <choice>
+         <ref name="tbibadd"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.pPart.transcriptional_alternation">
+      <choice>
+         <ref name="tbibadd"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.pPart.transcriptional_sequence">
+      <ref name="tbibadd"/>
+   </define>
+   <define name="tbibmodel.pPart.transcriptional_sequenceOptional">
+      <optional>
+         <ref name="tbibadd"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.pPart.transcriptional_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibadd"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.pPart.transcriptional_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibadd"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.pPart.edit">
+      <choice>
+         <ref name="tbibmodel.pPart.editorial"/>
+         <ref name="tbibmodel.pPart.transcriptional"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.pPart.edit_alternation">
+      <choice>
+         <ref name="tbibmodel.pPart.editorial_alternation"/>
+         <ref name="tbibmodel.pPart.transcriptional_alternation"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.pPart.edit_sequence">
+      <ref name="tbibmodel.pPart.editorial_sequence"/>
+      <ref name="tbibmodel.pPart.transcriptional_sequence"/>
+   </define>
+   <define name="tbibmodel.pPart.edit_sequenceOptional">
+      <optional>
+         <ref name="tbibmodel.pPart.editorial_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="tbibmodel.pPart.transcriptional_sequenceOptional"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.pPart.edit_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibmodel.pPart.editorial_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibmodel.pPart.transcriptional_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.pPart.edit_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibmodel.pPart.editorial_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibmodel.pPart.transcriptional_sequenceRepeatable"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.ptrLike">
+      <choice>
+         <ref name="tbibptr"/>
+         <ref name="tbibref"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.ptrLike_alternation">
+      <choice>
+         <ref name="tbibptr"/>
+         <ref name="tbibref"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.ptrLike_sequence">
+      <ref name="tbibptr"/>
+      <ref name="tbibref"/>
+   </define>
+   <define name="tbibmodel.ptrLike_sequenceOptional">
+      <optional>
+         <ref name="tbibptr"/>
+      </optional>
+      <optional>
+         <ref name="tbibref"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.ptrLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibptr"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibref"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.ptrLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibptr"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibref"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.lPart">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.lPart_alternation">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.lPart_sequence">
+      <empty/>
+   </define>
+   <define name="tbibmodel.lPart_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="tbibmodel.lPart_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="tbibmodel.lPart_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.global.meta">
+      <choice>
+         <ref name="tbiblink"/>
+         <ref name="tbiblinkGrp"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.global.meta_alternation">
+      <choice>
+         <ref name="tbiblink"/>
+         <ref name="tbiblinkGrp"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.global.meta_sequence">
+      <ref name="tbiblink"/>
+      <ref name="tbiblinkGrp"/>
+   </define>
+   <define name="tbibmodel.global.meta_sequenceOptional">
+      <optional>
+         <ref name="tbiblink"/>
+      </optional>
+      <optional>
+         <ref name="tbiblinkGrp"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.global.meta_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbiblink"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbiblinkGrp"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.global.meta_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbiblink"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbiblinkGrp"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.milestoneLike">
+      <choice>
+         <ref name="tbibpb"/>
+         <ref name="tbibcb"/>
+         <ref name="tbibanchor"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.milestoneLike_alternation">
+      <choice>
+         <ref name="tbibpb"/>
+         <ref name="tbibcb"/>
+         <ref name="tbibanchor"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.milestoneLike_sequence">
+      <ref name="tbibpb"/>
+      <ref name="tbibcb"/>
+      <ref name="tbibanchor"/>
+   </define>
+   <define name="tbibmodel.milestoneLike_sequenceOptional">
+      <optional>
+         <ref name="tbibpb"/>
+      </optional>
+      <optional>
+         <ref name="tbibcb"/>
+      </optional>
+      <optional>
+         <ref name="tbibanchor"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.milestoneLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibpb"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibcb"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibanchor"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.milestoneLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibpb"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibcb"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibanchor"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.gLike">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.oddDecl">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.oddDecl_alternation">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.oddDecl_sequence">
+      <empty/>
+   </define>
+   <define name="tbibmodel.oddDecl_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="tbibmodel.oddDecl_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="tbibmodel.oddDecl_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.phrase.xml">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.phrase.xml_alternation">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.phrase.xml_sequence">
+      <empty/>
+   </define>
+   <define name="tbibmodel.phrase.xml_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="tbibmodel.phrase.xml_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="tbibmodel.phrase.xml_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.specDescLike">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.specDescLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.specDescLike_sequence">
+      <empty/>
+   </define>
+   <define name="tbibmodel.specDescLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="tbibmodel.specDescLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="tbibmodel.specDescLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.biblLike">
+      <choice>
+         <ref name="tbibbibl"/>
+         <ref name="tbibbiblStruct"/>
+         <ref name="tbiblistBibl"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.biblLike_alternation">
+      <choice>
+         <ref name="tbibbibl"/>
+         <ref name="tbibbiblStruct"/>
+         <ref name="tbiblistBibl"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.biblLike_sequence">
+      <ref name="tbibbibl"/>
+      <ref name="tbibbiblStruct"/>
+      <ref name="tbiblistBibl"/>
+   </define>
+   <define name="tbibmodel.biblLike_sequenceOptional">
+      <optional>
+         <ref name="tbibbibl"/>
+      </optional>
+      <optional>
+         <ref name="tbibbiblStruct"/>
+      </optional>
+      <optional>
+         <ref name="tbiblistBibl"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.biblLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibbibl"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibbiblStruct"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbiblistBibl"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.biblLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibbibl"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibbiblStruct"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbiblistBibl"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.headLike">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.labelLike">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.labelLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.labelLike_sequence">
+      <empty/>
+   </define>
+   <define name="tbibmodel.labelLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="tbibmodel.labelLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="tbibmodel.labelLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.listLike">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.listLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.listLike_sequence">
+      <empty/>
+   </define>
+   <define name="tbibmodel.listLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="tbibmodel.listLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="tbibmodel.listLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.noteLike">
+      <choice>
+         <ref name="tbibnote"/>
+         <ref name="tbibnoteGrp"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.noteLike_alternation">
+      <choice>
+         <ref name="tbibnote"/>
+         <ref name="tbibnoteGrp"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.noteLike_sequence">
+      <ref name="tbibnote"/>
+      <ref name="tbibnoteGrp"/>
+   </define>
+   <define name="tbibmodel.noteLike_sequenceOptional">
+      <optional>
+         <ref name="tbibnote"/>
+      </optional>
+      <optional>
+         <ref name="tbibnoteGrp"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.noteLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibnote"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibnoteGrp"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.noteLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibnote"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibnoteGrp"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.lLike">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.pLike">
+      <choice>
+         <ref name="tbibp"/>
+         <ref name="tbibab"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.stageLike">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.stageLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.stageLike_sequence">
+      <empty/>
+   </define>
+   <define name="tbibmodel.stageLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="tbibmodel.stageLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="tbibmodel.stageLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.global.edit">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.global.edit_alternation">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.global.edit_sequence">
+      <empty/>
+   </define>
+   <define name="tbibmodel.global.edit_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="tbibmodel.global.edit_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="tbibmodel.global.edit_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.divPart">
+      <choice>
+         <ref name="tbibmodel.lLike"/>
+         <ref name="tbibmodel.pLike"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.placeNamePart">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.placeNamePart_alternation">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.placeNamePart_sequence">
+      <empty/>
+   </define>
+   <define name="tbibmodel.placeNamePart_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="tbibmodel.placeNamePart_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="tbibmodel.placeNamePart_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.placeStateLike">
+      <choice>
+         <ref name="tbibmodel.placeNamePart"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.placeStateLike_alternation">
+      <choice>
+         <ref name="tbibmodel.placeNamePart_alternation"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.placeStateLike_sequence">
+      <ref name="tbibmodel.placeNamePart_sequence"/>
+   </define>
+   <define name="tbibmodel.placeStateLike_sequenceOptional">
+      <optional>
+         <ref name="tbibmodel.placeNamePart_sequenceOptional"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.placeStateLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibmodel.placeNamePart_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.placeStateLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibmodel.placeNamePart_sequenceRepeatable"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.descLike">
+      <notAllowed/>
+   </define>
+   <define name="tbibmodel.quoteLike">
+      <choice>
+         <ref name="tbibquote"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.quoteLike_alternation">
+      <choice>
+         <ref name="tbibquote"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.quoteLike_sequence">
+      <ref name="tbibquote"/>
+   </define>
+   <define name="tbibmodel.quoteLike_sequenceOptional">
+      <optional>
+         <ref name="tbibquote"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.quoteLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibquote"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.quoteLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibquote"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.attributable">
+      <choice>
+         <ref name="tbibmodel.quoteLike"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.attributable_alternation">
+      <choice>
+         <ref name="tbibmodel.quoteLike_alternation"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.attributable_sequence">
+      <ref name="tbibmodel.quoteLike_sequence"/>
+   </define>
+   <define name="tbibmodel.attributable_sequenceOptional">
+      <optional>
+         <ref name="tbibmodel.quoteLike_sequenceOptional"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.attributable_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibmodel.quoteLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.attributable_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibmodel.quoteLike_sequenceRepeatable"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.respLike">
+      <choice>
+         <ref name="tbibauthor"/>
+         <ref name="tbibeditor"/>
+         <ref name="tbibrespStmt"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.imprintPart">
+      <choice>
+         <ref name="tbibpublisher"/>
+         <ref name="tbibbiblScope"/>
+         <ref name="tbibpubPlace"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.addressLike">
+      <choice>
+         <ref name="tbibemail"/>
+         <ref name="tbibaddress"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.addressLike_alternation">
+      <choice>
+         <ref name="tbibemail"/>
+         <ref name="tbibaddress"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.addressLike_sequence">
+      <ref name="tbibemail"/>
+      <ref name="tbibaddress"/>
+   </define>
+   <define name="tbibmodel.addressLike_sequenceOptional">
+      <optional>
+         <ref name="tbibemail"/>
+      </optional>
+      <optional>
+         <ref name="tbibaddress"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.addressLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibemail"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibaddress"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.addressLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibemail"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibaddress"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.nameLike">
+      <choice>
+         <ref name="tbibmodel.nameLike.agent"/>
+         <ref name="tbibmodel.offsetLike"/>
+         <ref name="tbibmodel.placeStateLike"/>
+         <ref name="tbibrs"/>
+         <ref name="tbibmodel.persNamePart"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.nameLike_alternation">
+      <choice>
+         <ref name="tbibmodel.nameLike.agent_alternation"/>
+         <ref name="tbibmodel.offsetLike_alternation"/>
+         <ref name="tbibmodel.placeStateLike_alternation"/>
+         <ref name="tbibrs"/>
+         <ref name="tbibmodel.persNamePart_alternation"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.nameLike_sequence">
+      <ref name="tbibmodel.nameLike.agent_sequence"/>
+      <ref name="tbibmodel.offsetLike_sequence"/>
+      <ref name="tbibmodel.placeStateLike_sequence"/>
+      <ref name="tbibrs"/>
+      <ref name="tbibmodel.persNamePart_sequence"/>
+   </define>
+   <define name="tbibmodel.nameLike_sequenceOptional">
+      <optional>
+         <ref name="tbibmodel.nameLike.agent_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="tbibmodel.offsetLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="tbibmodel.placeStateLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="tbibrs"/>
+      </optional>
+      <optional>
+         <ref name="tbibmodel.persNamePart_sequenceOptional"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.nameLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibmodel.nameLike.agent_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibmodel.offsetLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibmodel.placeStateLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibrs"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibmodel.persNamePart_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.nameLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibmodel.nameLike.agent_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibmodel.offsetLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibmodel.placeStateLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibrs"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibmodel.persNamePart_sequenceRepeatable"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.global">
+      <choice>
+         <ref name="tbibmodel.global.meta"/>
+         <ref name="tbibmodel.milestoneLike"/>
+         <ref name="tbibmodel.noteLike"/>
+         <ref name="tbibmodel.global.edit"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.biblPart">
+      <choice>
+         <ref name="tbibmodel.respLike"/>
+         <ref name="tbibmodel.imprintPart"/>
+         <ref name="tbibquote"/>
+         <ref name="tbibseries"/>
+         <ref name="tbibcitedRange"/>
+         <ref name="tbibbibl"/>
+         <ref name="tbibrelatedItem"/>
+         <ref name="tbibtextLang"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.addrPart">
+      <choice>
+         <ref name="tbibmodel.nameLike"/>
+         <ref name="tbibaddrLine"/>
+         <ref name="tbibstreet"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.pPart.data">
+      <choice>
+         <ref name="tbibmodel.dateLike"/>
+         <ref name="tbibmodel.measureLike"/>
+         <ref name="tbibmodel.addressLike"/>
+         <ref name="tbibmodel.nameLike"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.pPart.data_alternation">
+      <choice>
+         <ref name="tbibmodel.dateLike_alternation"/>
+         <ref name="tbibmodel.measureLike_alternation"/>
+         <ref name="tbibmodel.addressLike_alternation"/>
+         <ref name="tbibmodel.nameLike_alternation"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.pPart.data_sequence">
+      <ref name="tbibmodel.dateLike_sequence"/>
+      <ref name="tbibmodel.measureLike_sequence"/>
+      <ref name="tbibmodel.addressLike_sequence"/>
+      <ref name="tbibmodel.nameLike_sequence"/>
+   </define>
+   <define name="tbibmodel.pPart.data_sequenceOptional">
+      <optional>
+         <ref name="tbibmodel.dateLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="tbibmodel.measureLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="tbibmodel.addressLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="tbibmodel.nameLike_sequenceOptional"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.pPart.data_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibmodel.dateLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibmodel.measureLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibmodel.addressLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibmodel.nameLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.pPart.data_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibmodel.dateLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibmodel.measureLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibmodel.addressLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibmodel.nameLike_sequenceRepeatable"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibmodel.inter">
+      <choice>
+         <ref name="tbibmodel.egLike"/>
+         <ref name="tbibmodel.oddDecl"/>
+         <ref name="tbibmodel.biblLike"/>
+         <ref name="tbibmodel.labelLike"/>
+         <ref name="tbibmodel.listLike"/>
+         <ref name="tbibmodel.stageLike"/>
+         <ref name="tbibmodel.attributable"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.phrase">
+      <choice>
+         <ref name="tbibmodel.segLike"/>
+         <ref name="tbibmodel.highlighted"/>
+         <ref name="tbibmodel.graphicLike"/>
+         <ref name="tbibmodel.pPart.msdesc"/>
+         <ref name="tbibmodel.pPart.edit"/>
+         <ref name="tbibmodel.ptrLike"/>
+         <ref name="tbibmodel.lPart"/>
+         <ref name="tbibmodel.phrase.xml"/>
+         <ref name="tbibmodel.specDescLike"/>
+         <ref name="tbibmodel.pPart.data"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.paraPart">
+      <choice>
+         <ref name="tbibmodel.gLike"/>
+         <ref name="tbibmodel.lLike"/>
+         <ref name="tbibmodel.global"/>
+         <ref name="tbibmodel.inter"/>
+         <ref name="tbibmodel.phrase"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.limitedPhrase">
+      <choice>
+         <ref name="tbibmodel.hiLike"/>
+         <ref name="tbibmodel.emphLike"/>
+         <ref name="tbibmodel.pPart.msdesc"/>
+         <ref name="tbibmodel.pPart.editorial"/>
+         <ref name="tbibmodel.ptrLike"/>
+         <ref name="tbibmodel.phrase.xml"/>
+         <ref name="tbibmodel.pPart.data"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.annotationLike">
+      <choice>
+         <ref name="tbibnote"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.standOffPart">
+      <choice>
+         <ref name="tbibmodel.global.meta"/>
+         <ref name="tbibmodel.biblLike"/>
+         <ref name="tbibmodel.listLike"/>
+         <ref name="tbibmodel.annotationLike"/>
+         <ref name="tbibseg"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.resource">
+      <choice>
+         <ref name="tbibstandOff"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.describedResource">
+      <choice>
+         <ref name="tbibteiCorpus"/>
+         <ref name="tbibTEI"/>
+      </choice>
+   </define>
+   <define name="tbibatt.personal.attributes">
+      <ref name="tbibatt.naming.attributes"/>
+      <ref name="tbibatt.personal.attribute.full"/>
+      <ref name="tbibatt.personal.attribute.sort"/>
+   </define>
+   <define name="tbibatt.personal.attribute.full">
+      <optional>
+         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                    name="full"
+                    a:defaultValue="yes">
+            <a:documentation>indicates whether the name component is given in full, as an abbreviation or simply as an initial.</a:documentation>
+            <choice>
+               <value>yes</value>
+               <a:documentation>(yes) the name component is spelled out in full.</a:documentation>
+               <value>abb</value>
+               <a:documentation>(abbreviated) the name component is given in an abbreviated form.</a:documentation>
+               <value>init</value>
+               <a:documentation>(initial letter) the name component is indicated only by one initial.</a:documentation>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.personal.attribute.sort">
+      <optional>
+         <attribute name="sort">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(sort) specifies the sort order of the name component in relation to others within the name.</a:documentation>
+            <data type="nonNegativeInteger"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.calendarSystem.attributes">
+      <ref name="tbibatt.calendarSystem.attribute.calendar"/>
+   </define>
+   <define name="tbibatt.calendarSystem.attribute.calendar">
+      <optional>
+         <attribute name="calendar">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="tei-bib-att.calendarSystem-calendar-calendar_attr_on_empty_element-constraint-rule-9">
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                context="tei:*[@calendar]">
+            <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
+              systems or calendars to which the date represented by the content of this element belongs,
+              but this <sch:name/> element has no textual content.</sch:assert>
+          </sch:rule>
+   </pattern>
+   <define name="tbibp">
+      <element name="p">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(paragraph) marks paragraphs in prose. [3.1. Paragraphs 7.2.5. Speech Contents]</a:documentation>
+         <ref name="tbibmacro.paraContent"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="tei-bib-p-abstractModel-structure-p-in-ab-or-p-constraint-rule-10">
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      context="tei:p">
+               <sch:report test="(ancestor::tei:ab or ancestor::tei:p) and                        not( ancestor::tei:floatingText                           | parent::tei:exemplum                           | parent::tei:item                           | parent::tei:note                           | parent::tei:q                           | parent::tei:quote                           | parent::tei:remarks                           | parent::tei:said                           | parent::tei:sp                           | parent::tei:stage                           | parent::tei:cell                           | parent::tei:figure )">
+          Abstract model violation: Paragraphs may not occur inside other paragraphs or ab elements.
+        </sch:report>
+            </sch:rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="tei-bib-p-abstractModel-structure-p-in-l-or-lg-constraint-rule-11">
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      context="tei:p">
+               <sch:report test="( ancestor::tei:l  or  ancestor::tei:lg ) and                        not( ancestor::tei:floatingText                           | parent::tei:figure                           | parent::tei:note )">
+          Abstract model violation: Lines may not contain higher-level structural elements such as div, p, or ab, unless p is a child of figure or note, or is a descendant of floatingText.
+        </sch:report>
+            </sch:rule>
+         </pattern>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.declaring.attributes"/>
+         <ref name="tbibatt.fragmentable.attributes"/>
+         <ref name="tbibatt.written.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibquote">
+      <element name="quote">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(quotation) contains a phrase or passage attributed by the narrator or author to some agency external to the text. [3.3.3. Quotation 4.3.1. Grouped Texts]</a:documentation>
+         <ref name="tbibmacro.specialPara"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.notated.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibq">
+      <element name="q">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(quoted) contains material which is distinguished from the surrounding text using quotation marks or a similar method, for any one of a variety of reasons including, but not limited to: direct speech or thought, technical terms or jargon, authorial distance, quotations from elsewhere, and passages that are mentioned but not used. [3.3.3. Quotation]</a:documentation>
+         <ref name="tbibmacro.specialPara"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.ascribed.directed.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(type) may be used to indicate whether the offset passage is spoken or thought, or to characterize it more finely.
+Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (written); 4] soCalled (so called); 5] foreign (foreign); 6] distinct (distinct); 7] term; 8] emph (emph); 9] mentioned (mentioned)</a:documentation>
+               <choice>
+                  <value>spoken</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(spoken) representation of speech</a:documentation>
+                  <value>thought</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(thought) representation of thought, e.g. internal monologue</a:documentation>
+                  <value>written</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(written) quotation from a written source</a:documentation>
+                  <value>soCalled</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(so called) authorial distance</a:documentation>
+                  <value>foreign</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(foreign) foreign words</a:documentation>
+                  <value>distinct</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(distinct) linguistically distinct</a:documentation>
+                  <value>term</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">technical term</a:documentation>
+                  <value>emph</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(emph) rhetorically emphasized</a:documentation>
+                  <value>mentioned</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(mentioned) refering to itself, not its normal referent</a:documentation>
+                  <data type="token">
+                     <param name="pattern">[^\p{C}\p{Z}]+</param>
+                  </data>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibadd">
+      <element name="add">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(addition) contains letters, words, or phrases inserted in the source text by an author, scribe, or a previous annotator or corrector. [3.5.3. Additions, Deletions, and Omissions]</a:documentation>
+         <ref name="tbibmacro.paraContent"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.transcriptional.attributes"/>
+         <ref name="tbibatt.placement.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.dimensions.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibname">
+      <element name="name">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(name, proper noun) contains a proper noun or noun phrase. [3.6.1. Referring Strings]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.personal.attributes"/>
+         <ref name="tbibatt.datable.attributes"/>
+         <ref name="tbibatt.editLike.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <optional>
+            <attribute name="calendar">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI">
+                        <param name="pattern">\S+</param>
+                     </data>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="tei-bib-name-calendar-calendar-check-name-constraint-rule-12">
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      context="tei:*[@calendar]">
+                    <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
+                        systems or calendars to which the date represented by the content of this element belongs,
+                        but this <sch:name/> element has no textual content.</sch:assert>
+                </sch:rule>
+         </pattern>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibrs">
+      <element name="rs">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(referencing string) contains a general purpose name or referring string. [14.2.1. Personal Names 3.6.1. Referring Strings]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.naming.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibemail">
+      <element name="email">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(electronic mail address) contains an email address identifying a location to which email messages can be delivered. [3.6.2. Addresses]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibaddress">
+      <element name="address">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(address) contains a postal address, for example of a publisher, an organization, or an individual. [3.6.2. Addresses 2.2.4. Publication, Distribution, Licensing, etc. 3.12.2.4. Imprint, Size of a Document, and Reprint Information]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="tbibmodel.global"/>
+            </zeroOrMore>
+            <oneOrMore>
+               <ref name="tbibmodel.addrPart"/>
+               <zeroOrMore>
+                  <ref name="tbibmodel.global"/>
+               </zeroOrMore>
+            </oneOrMore>
+         </group>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibaddrLine">
+      <element name="addrLine">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(address line) contains one line of a postal address. [3.6.2. Addresses 2.2.4. Publication, Distribution, Licensing, etc. 3.12.2.4. Imprint, Size of a Document, and Reprint Information]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibstreet">
+      <element name="street">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a full street address including any name or number identifying a building as well as the name of the street or route on which it is located. [3.6.2. Addresses]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibnum">
+      <element name="num">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(number) contains a number, written in any form. [3.6.3. Numbers and
+Measures]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.typed.attribute.subtype"/>
+         <ref name="tbibatt.ranging.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the type of numeric value.
+Suggested values include: 1] cardinal; 2] ordinal; 3] fraction; 4] percentage</a:documentation>
+               <choice>
+                  <value>cardinal</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">absolute number, e.g. 21, 21.5</a:documentation>
+                  <value>ordinal</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ordinal number, e.g. 21st</a:documentation>
+                  <value>fraction</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">fraction, e.g. one half or three-quarters</a:documentation>
+                  <value>percentage</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a percentage</a:documentation>
+                  <data type="token">
+                     <param name="pattern">[^\p{C}\p{Z}]+</param>
+                  </data>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="value">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the value of the number in standard form.</a:documentation>
+               <choice>
+                  <data type="double"/>
+                  <data type="token">
+                     <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+                  </data>
+                  <data type="decimal"/>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibdate">
+      <element name="date">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(date) contains a date in any format. [3.6.4. Dates and Times 2.2.4. Publication, Distribution, Licensing, etc. 2.6. The Revision Description 3.12.2.4. Imprint, Size of a Document, and Reprint Information 16.2.3. The Setting Description 14.4. Dates]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tbibmodel.gLike"/>
+               <ref name="tbibmodel.phrase"/>
+               <ref name="tbibmodel.global"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.canonical.attributes"/>
+         <ref name="tbibatt.datable.attributes"/>
+         <ref name="tbibatt.calendarSystem.attributes"/>
+         <ref name="tbibatt.editLike.attributes"/>
+         <ref name="tbibatt.dimensions.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibtime">
+      <element name="time">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(time) contains a phrase defining a time of day in any format. [3.6.4. Dates and Times]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tbibmodel.gLike"/>
+               <ref name="tbibmodel.phrase"/>
+               <ref name="tbibmodel.global"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.datable.attributes"/>
+         <ref name="tbibatt.calendarSystem.attributes"/>
+         <ref name="tbibatt.canonical.attributes"/>
+         <ref name="tbibatt.editLike.attributes"/>
+         <ref name="tbibatt.dimensions.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibabbr">
+      <element name="abbr">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(abbreviation) contains an abbreviation of any sort. [3.6.5. Abbreviations and Their Expansions]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.typed.attribute.subtype"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(type) allows the encoder to classify the abbreviation according to some convenient typology.
+Sample values include: 1] suspension (suspension); 2] contraction (contraction); 3] brevigraph; 4] superscription (superscription); 5] acronym (acronym); 6] title (title); 7] organization (organization); 8] geographic (geographic)</a:documentation>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibexpan">
+      <element name="expan">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(expansion) contains the expansion of an abbreviation. [3.6.5. Abbreviations and Their Expansions]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.editLike.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibptr">
+      <element name="ptr">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(pointer) defines a pointer to another location. [3.7. Simple Links and Cross-References 17.1. Links]</a:documentation>
+         <empty/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="tei-bib-ptr-ptrAtts-constraint-rule-13">
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      context="tei:ptr">
+               <sch:report test="@target and @cRef">Only one of the attributes @target and @cRef may be supplied on <sch:name/>.</sch:report>
+            </sch:rule>
+         </pattern>
+         <ref name="tbibatt.cReferencing.attributes"/>
+         <ref name="tbibatt.declaring.attributes"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.internetMedia.attributes"/>
+         <ref name="tbibatt.pointing.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibref">
+      <element name="ref">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) defines a reference to another location, possibly modified by additional text or comment. [3.7. Simple Links and Cross-References 17.1. Links]</a:documentation>
+         <ref name="tbibmacro.paraContent"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="tei-bib-ref-refAtts-constraint-rule-14">
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      context="tei:ref">
+               <sch:report test="@target and @cRef">Only one of the attributes @target' and @cRef' may be supplied on <sch:name/>
+               </sch:report>
+            </sch:rule>
+         </pattern>
+         <ref name="tbibatt.cReferencing.attributes"/>
+         <ref name="tbibatt.declaring.attributes"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.internetMedia.attributes"/>
+         <ref name="tbibatt.pointing.attributes"/>
+         <ref name="tbibatt.typed.attribute.subtype"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>footnote</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The reference is to a previous or following footnote or endnote, usually explicitly stated, if so, the footnote or endnote number is given in the @n attribute </a:documentation>
+                  <value/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>name</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A reference to a previously stated name of an author or editor, replaced by abbreviations such as "id.", "eadem" in English or "ders.", "dies." in German</a:documentation>
+                  <value>work</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A reference to a previously referenced work, usually indicated by abbreviations such as "op. cit.", "ibid." in English or "ebd.", "a.a.O." in German.</a:documentation>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibnote">
+      <element name="note">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(note) contains a note or annotation. [3.9.1. Notes and Simple Annotation 2.2.6. The Notes Statement 3.12.2.8. Notes and Statement of Language 10.3.5.4. Notes within Entries]</a:documentation>
+         <ref name="tbibmacro.specialPara"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.placement.attributes"/>
+         <ref name="tbibatt.pointing.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.written.attributes"/>
+         <ref name="tbibatt.anchoring.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibnoteGrp">
+      <element name="noteGrp">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(note group) contains a group of notes [3.9.1.1. Encoding Grouped Notes]</a:documentation>
+         <group>
+            <oneOrMore>
+               <choice>
+                  <ref name="tbibnote"/>
+                  <ref name="tbibnoteGrp"/>
+               </choice>
+            </oneOrMore>
+         </group>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.placement.attributes"/>
+         <ref name="tbibatt.pointing.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.written.attributes"/>
+         <ref name="tbibatt.anchoring.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibpb">
+      <element name="pb">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(page beginning) marks the beginning of a new page in a paginated document. [3.11.3. Milestone
+Elements]</a:documentation>
+         <empty/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.edition.attributes"/>
+         <ref name="tbibatt.spanning.attributes"/>
+         <ref name="tbibatt.breaking.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibcb">
+      <element name="cb">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(column beginning) marks the beginning of a new column of a text on a multi-column page. [3.11.3. Milestone
+Elements]</a:documentation>
+         <empty/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.edition.attributes"/>
+         <ref name="tbibatt.spanning.attributes"/>
+         <ref name="tbibatt.breaking.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibanalytic">
+      <element name="analytic">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(analytic level) contains bibliographic elements describing an item (e.g. an article or poem) published within a monograph or journal and not as an independent publication. [3.12.2.1. Analytic, Monographic, and Series Levels]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <ref name="tbibauthor"/>
+               <ref name="tbibeditor"/>
+               <ref name="tbibrespStmt"/>
+               <ref name="tbibtitle"/>
+               <ref name="tbibmodel.ptrLike"/>
+               <ref name="tbibdate"/>
+               <ref name="tbibtextLang"/>
+        
+        
+            </choice>
+         </zeroOrMore>
+         <ref name="tbibatt.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibmonogr">
+      <element name="monogr">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(monographic level) contains bibliographic elements describing an item (e.g. a book or journal) published as an independent item (i.e. as a separate physical object). [3.12.2.1. Analytic, Monographic, and Series Levels]</a:documentation>
+         <group>
+            <optional>
+               <choice>
+                  <group>
+                     <choice>
+                        <ref name="tbibauthor"/>
+                        <ref name="tbibeditor"/>
+              
+                        <ref name="tbibrespStmt"/>
+                     </choice>
+                     <zeroOrMore>
+                        <choice>
+                           <ref name="tbibauthor"/>
+                           <ref name="tbibeditor"/>
+                
+                           <ref name="tbibrespStmt"/>
+                        </choice>
+                     </zeroOrMore>
+                     <oneOrMore>
+                        <ref name="tbibtitle"/>
+                     </oneOrMore>
+                     <zeroOrMore>
+                        <choice>
+                           <ref name="tbibmodel.ptrLike"/>
+                
+                           <ref name="tbibtextLang"/>
+                           <ref name="tbibeditor"/>
+                           <ref name="tbibrespStmt"/>
+                        </choice>
+                     </zeroOrMore>
+                  </group>
+                  <group>
+                     <oneOrMore>
+                        <choice>
+                           <ref name="tbibtitle"/>
+                           <ref name="tbibmodel.ptrLike"/>
+                
+                        </choice>
+                     </oneOrMore>
+                     <zeroOrMore>
+                        <choice>
+                           <ref name="tbibtextLang"/>
+                           <ref name="tbibauthor"/>
+                           <ref name="tbibeditor"/>
+                
+                           <ref name="tbibrespStmt"/>
+                        </choice>
+                     </zeroOrMore>
+                  </group>
+                  <empty/>
+               </choice>
+            </optional>
+            <zeroOrMore>
+               <ref name="tbibmodel.noteLike"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <choice>
+            
+                  <ref name="tbibmodel.ptrLike"/>
+                  <ref name="tbibeditor"/>
+            
+            
+                  <ref name="tbibrespStmt"/>
+               </choice>
+            </zeroOrMore>
+            <ref name="tbibimprint"/>
+            <zeroOrMore>
+               <choice>
+                  <ref name="tbibimprint"/>
+          
+                  <ref name="tbibbiblScope"/>
+               </choice>
+            </zeroOrMore>
+         </group>
+         <ref name="tbibatt.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibseries">
+      <element name="series">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(series information) contains information about the series in which a book or other bibliographic item has appeared. [3.12.2.1. Analytic, Monographic, and Series Levels]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tbibmodel.gLike"/>
+               <ref name="tbibtitle"/>
+               <ref name="tbibmodel.ptrLike"/>
+               <ref name="tbibeditor"/>
+               <ref name="tbibrespStmt"/>
+               <ref name="tbibbiblScope"/>
+        
+               <ref name="tbibtextLang"/>
+               <ref name="tbibmodel.global"/>
+        
+            </choice>
+         </zeroOrMore>
+         <ref name="tbibatt.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibauthor">
+      <element name="author">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(author) in a bibliographic reference, contains the name(s) of an author, personal or corporate, of a work; for example in the same form as that provided by a recognized bibliographic name authority. [3.12.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.naming.attributes"/>
+         <ref name="tbibatt.datable.attributes"/>
+         <optional>
+            <attribute name="calendar">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI">
+                        <param name="pattern">\S+</param>
+                     </data>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="tei-bib-author-calendar-calendar-check-author-constraint-rule-15">
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      context="tei:*[@calendar]">
+                    <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
+                        systems or calendars to which the date represented by the content of this element belongs,
+                        but this <sch:name/> element has no textual content.</sch:assert>
+                </sch:rule>
+         </pattern>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibeditor">
+      <element name="editor">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a secondary statement of responsibility for a bibliographic item, for example the name of an individual, institution or organization, (or of several such) acting as editor, compiler, translator, etc. [3.12.2.2. Titles, Authors, and Editors]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.naming.attributes"/>
+         <ref name="tbibatt.datable.attributes"/>
+         <optional>
+            <attribute name="calendar">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI">
+                        <param name="pattern">\S+</param>
+                     </data>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="tei-bib-editor-calendar-calendar-check-editor-constraint-rule-16">
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      context="tei:*[@calendar]">
+                    <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
+                        systems or calendars to which the date represented by the content of this element belongs,
+                        but this <sch:name/> element has no textual content.</sch:assert>
+                </sch:rule>
+         </pattern>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibrespStmt">
+      <element name="respStmt">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(statement of responsibility) supplies a statement of responsibility for the intellectual content of a text, edition, recording, or series, where the specialized elements for authors, editors, etc. do not suffice or do not apply. May also be used to encode information about individuals or organizations which have played a role in the production or distribution of a bibliographic work. [3.12.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.2. The Edition Statement 2.2.5. The Series Statement]</a:documentation>
+         <group>
+            <choice>
+               <group>
+                  <oneOrMore>
+                     <ref name="tbibresp"/>
+                  </oneOrMore>
+                  <oneOrMore>
+                     <ref name="tbibmodel.nameLike.agent"/>
+                  </oneOrMore>
+               </group>
+               <group>
+                  <oneOrMore>
+                     <ref name="tbibmodel.nameLike.agent"/>
+                  </oneOrMore>
+                  <oneOrMore>
+                     <ref name="tbibresp"/>
+                  </oneOrMore>
+               </group>
+            </choice>
+            <zeroOrMore>
+               <ref name="tbibnote"/>
+            </zeroOrMore>
+         </group>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.canonical.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibresp">
+      <element name="resp">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsibility) contains a phrase describing the nature of a person's intellectual responsibility, or an organization's role in the production or distribution of a work. [3.12.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.2. The Edition Statement 2.2.5. The Series Statement]</a:documentation>
+         <ref name="tbibmacro.phraseSeq.limited"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.canonical.attributes"/>
+         <ref name="tbibatt.datable.attributes"/>
+         <optional>
+            <attribute name="calendar">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI">
+                        <param name="pattern">\S+</param>
+                     </data>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="tei-bib-resp-calendar-calendar-check-resp-constraint-rule-17">
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      context="tei:*[@calendar]">
+                    <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
+                        systems or calendars to which the date represented by the content of this element belongs,
+                        but this <sch:name/> element has no textual content.</sch:assert>
+                </sch:rule>
+         </pattern>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibtitle">
+      <element name="title">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(title) contains a title for any kind of work. [3.12.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.5. The Series Statement]</a:documentation>
+         <ref name="tbibmacro.paraContent"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.typed.attribute.subtype"/>
+         <ref name="tbibatt.canonical.attributes"/>
+         <ref name="tbibatt.datable.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">classifies the title according to some convenient typology.
+Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] short; 5] desc (descriptive)</a:documentation>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="calendar">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI">
+                        <param name="pattern">\S+</param>
+                     </data>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="tei-bib-title-calendar-calendar-check-title-constraint-rule-18">
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      context="tei:*[@calendar]">
+                    <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
+                        systems or calendars to which the date represented by the content of this element belongs,
+                        but this <sch:name/> element has no textual content.</sch:assert>
+                </sch:rule>
+         </pattern>
+         <optional>
+            <attribute name="level">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the bibliographic level for a title, that is, whether it identifies an article, book, journal, series, or unpublished material.</a:documentation>
+               <choice>
+                  <value>a</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(analytic) the title applies to an analytic item, such as an article, poem, or other work published as part of a larger item.</a:documentation>
+                  <value>m</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(monographic) the title applies to a monograph such as a book or other item considered to be a distinct publication, including single volumes of multi-volume works</a:documentation>
+                  <value>j</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(journal) the title applies to any serial or periodical publication such as a journal, magazine, or newspaper</a:documentation>
+                  <value>s</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(series) the title applies to a series of otherwise distinct publications such as a collection</a:documentation>
+                  <value>u</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(unpublished) the title applies to any unpublished material (including theses and dissertations unless published by a commercial press)</a:documentation>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibimprint">
+      <element name="imprint">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">groups information relating to the publication or distribution of a bibliographic item. [3.12.2.4. Imprint, Size of a Document, and Reprint Information]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <empty/>
+            </zeroOrMore>
+            <oneOrMore>
+               <choice>
+          
+            
+                  <ref name="tbibmodel.imprintPart"/>
+          
+          
+            
+                  <ref name="tbibmodel.dateLike"/>
+          
+               </choice>
+               <zeroOrMore>
+                  <ref name="tbibrespStmt"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="tbibmodel.global"/>
+               </zeroOrMore>
+            </oneOrMore>
+         </group>
+         <ref name="tbibatt.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibpublisher">
+      <element name="publisher">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(publisher) provides the name of the organization responsible for the publication or distribution of a bibliographic item. [3.12.2.4. Imprint, Size of a Document, and Reprint Information 2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.canonical.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibbiblScope">
+      <element name="biblScope">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(scope of bibliographic reference) defines the scope of a bibliographic reference, for example as a list of page numbers, or a named subdivision of a larger work. [3.12.2.5. Scopes and Ranges in Bibliographic Citations]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.citing.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibcitedRange">
+      <element name="citedRange">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(cited range) defines the range of cited content, often represented by pages or other units [3.12.2.5. Scopes and Ranges in Bibliographic Citations]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.pointing.attributes"/>
+         <ref name="tbibatt.citing.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibpubPlace">
+      <element name="pubPlace">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(publication place) contains the name of the place where a bibliographic item was published. [3.12.2.4. Imprint, Size of a Document, and Reprint Information]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.naming.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibbibl">
+      <element name="bibl">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(bibliographic citation) contains a loosely-structured bibliographic citation of which the sub-components may or may not be explicitly tagged. [3.12.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7. The Source Description 16.3.2. Declarable Elements]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tbibmodel.gLike"/>
+               <ref name="tbibmodel.highlighted"/>
+               <ref name="tbibmodel.pPart.data"/>
+               <ref name="tbibmodel.pPart.edit"/>
+               <ref name="tbibmodel.segLike"/>
+               <ref name="tbibmodel.ptrLike"/>
+               <ref name="tbibmodel.biblPart"/>
+               <ref name="tbibmodel.global"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.declarable.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.sortable.attributes"/>
+         <ref name="tbibatt.docStatus.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibbiblStruct">
+      <element name="biblStruct">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(structured bibliographic citation) contains a structured bibliographic citation, in which only bibliographic sub-elements appear and in a specified order. [3.12.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7. The Source Description 16.3.2. Declarable Elements]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="tbibanalytic"/>
+            </zeroOrMore>
+            <oneOrMore>
+               <ref name="tbibmonogr"/>
+               <zeroOrMore>
+                  <ref name="tbibseries"/>
+               </zeroOrMore>
+            </oneOrMore>
+            <zeroOrMore>
+               <choice>
+                  <ref name="tbibmodel.noteLike"/>
+                  <ref name="tbibmodel.ptrLike"/>
+                  <ref name="tbibrelatedItem"/>
+                  <ref name="tbibcitedRange"/>
+               </choice>
+            </zeroOrMore>
+         </group>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.declarable.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.sortable.attributes"/>
+         <ref name="tbibatt.docStatus.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbiblistBibl">
+      <element name="listBibl">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(citation list) contains a list of bibliographic citations of any kind. [3.12.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7. The Source Description 16.3.2. Declarable Elements]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="tbibmodel.headLike"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <choice>
+                  <ref name="tbibmodel.milestoneLike"/>
+        
+        
+               </choice>
+            </zeroOrMore>
+            <oneOrMore>
+               <oneOrMore>
+                  <ref name="tbibmodel.biblLike"/>
+               </oneOrMore>
+               <zeroOrMore>
+                  <choice>
+                     <ref name="tbibmodel.milestoneLike"/>
+          
+          
+                  </choice>
+               </zeroOrMore>
+            </oneOrMore>
+         </group>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.sortable.attributes"/>
+         <ref name="tbibatt.declarable.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibrelatedItem">
+      <element name="relatedItem">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains or references some other bibliographic item which is related to the present one in some specified manner, for example as a constituent or alternative version of it. [3.12.2.7. Related Items]</a:documentation>
+         <optional>
+            <choice>
+               <ref name="tbibmodel.biblLike"/>
+               <ref name="tbibmodel.ptrLike"/>
+            </choice>
+         </optional>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="tei-bib-relatedItem-targetorcontent1-constraint-rule-19">
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      context="tei:relatedItem">
+               <sch:report test="@target and count( child::* ) &gt; 0">If the @target attribute on <sch:name/> is used, the relatedItem element must be empty</sch:report>
+               <sch:assert test="@target or child::*">A relatedItem element should have either a @target attribute or a child element to indicate the related bibliographic item</sch:assert>
+            </sch:rule>
+         </pattern>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <optional>
+            <attribute name="target">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to the related bibliographic element by means of an absolute or relative URI reference</a:documentation>
+               <data type="anyURI">
+                  <param name="pattern">\S+</param>
+               </data>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibteiCorpus">
+      <element name="teiCorpus">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(TEI corpus) contains the whole of a TEI encoded corpus, comprising a single corpus header and one or more <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;TEI&gt;</code> elements, each containing a single text header and a text. [4. Default Text Structure 16.1. Varieties of Composite Text]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="tbibmodel.resource"/>
+            </zeroOrMore>
+            <oneOrMore>
+               <ref name="tbibmodel.describedResource"/>
+            </oneOrMore>
+         </group>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <optional>
+            <attribute name="version">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(version) specifies the version number of the TEI Guidelines against which this document is valid.</a:documentation>
+               <data type="token">
+                  <param name="pattern">[\d]+(\.[\d]+){0,2}</param>
+               </data>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibtextLang">
+      <element name="textLang">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(text language) describes the languages and writing systems identified within the bibliographic work being described, rather than its description. [3.12.2.4. Imprint, Size of a Document, and Reprint Information 11.6.6. Languages and Writing Systems]</a:documentation>
+         <ref name="tbibmacro.specialPara"/>
+         <ref name="tbibatt.global.attributes"/>
+         <optional>
+            <attribute name="mainLang">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(main language) supplies a code which identifies the chief language used in the bibliographic work.</a:documentation>
+               <choice>
+                  <data type="language"/>
+                  <choice>
+                     <value/>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  </choice>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="otherLangs">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(other languages) one or more codes identifying any other languages used in the bibliographic work.</a:documentation>
+               <list>
+                  <zeroOrMore>
+                     <choice>
+                        <data type="language"/>
+                        <choice>
+                           <value/>
+                           <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        </choice>
+                     </choice>
+                  </zeroOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibTEI">
+      <element name="TEI">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(TEI document) contains a single TEI-conformant document, combining a single TEI header with one or more members of the model.resource class. Multiple <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;TEI&gt;</code> elements may be combined within a <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;TEI&gt;</code> (or <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;teiCorpus&gt;</code>) element. [4. Default Text Structure 16.1. Varieties of Composite Text]</a:documentation>
+         <choice>
+            <group>
+               <oneOrMore>
+                  <ref name="tbibmodel.resource"/>
+               </oneOrMore>
+               <zeroOrMore>
+                  <ref name="tbibTEI"/>
+               </zeroOrMore>
+            </group>
+            <oneOrMore>
+               <ref name="tbibTEI"/>
+            </oneOrMore>
+         </choice>
+         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 prefix="tei"
+                 uri="http://www.tei-c.org/ns/1.0"/>
+         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 prefix="xs"
+                 uri="http://www.w3.org/2001/XMLSchema"/>
+         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 prefix="rng"
+                 uri="http://relaxng.org/ns/structure/1.0"/>
+         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 prefix="rna"
+                 uri="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 prefix="sch"
+                 uri="http://purl.oclc.org/dsdl/schematron"/>
+         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 prefix="sch1x"
+                 uri="http://www.ascc.net/xml/schematron"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <optional>
+            <attribute name="version">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the version number of the TEI Guidelines against which this document is valid.</a:documentation>
+               <data type="token">
+                  <param name="pattern">[\d]+(\.[\d]+){0,2}</param>
+               </data>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibatt.datable.custom.attributes">
+      <ref name="tbibatt.datable.custom.attribute.when-custom"/>
+      <ref name="tbibatt.datable.custom.attribute.notBefore-custom"/>
+      <ref name="tbibatt.datable.custom.attribute.notAfter-custom"/>
+      <ref name="tbibatt.datable.custom.attribute.from-custom"/>
+      <ref name="tbibatt.datable.custom.attribute.to-custom"/>
+      <ref name="tbibatt.datable.custom.attribute.datingPoint"/>
+      <ref name="tbibatt.datable.custom.attribute.datingMethod"/>
+   </define>
+   <define name="tbibatt.datable.custom.attribute.when-custom">
+      <optional>
+         <attribute name="when-custom">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the value of a date or time in some custom standard form.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="token">
+                     <param name="pattern">[^\p{C}\p{Z}]+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.datable.custom.attribute.notBefore-custom">
+      <optional>
+         <attribute name="notBefore-custom">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the earliest possible date for the event in some custom standard form.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="token">
+                     <param name="pattern">[^\p{C}\p{Z}]+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.datable.custom.attribute.notAfter-custom">
+      <optional>
+         <attribute name="notAfter-custom">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the latest possible date for the event in some custom standard form.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="token">
+                     <param name="pattern">[^\p{C}\p{Z}]+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.datable.custom.attribute.from-custom">
+      <optional>
+         <attribute name="from-custom">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the starting point of the period in some custom standard form.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="token">
+                     <param name="pattern">[^\p{C}\p{Z}]+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.datable.custom.attribute.to-custom">
+      <optional>
+         <attribute name="to-custom">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the ending point of the period in some custom standard form.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="token">
+                     <param name="pattern">[^\p{C}\p{Z}]+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.datable.custom.attribute.datingPoint">
+      <optional>
+         <attribute name="datingPoint">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a pointer to some location defining a named point in time with reference to which the datable item is understood to have occurred</a:documentation>
+            <data type="anyURI">
+               <param name="pattern">\S+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.datable.custom.attribute.datingMethod">
+      <optional>
+         <attribute name="datingMethod">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a pointer to a <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;calendar&gt;</code> element or other means of interpreting the values of the custom dating attributes.</a:documentation>
+            <data type="anyURI">
+               <param name="pattern">\S+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibmodel.persNamePart">
+      <choice>
+         <ref name="tbibsurname"/>
+         <ref name="tbibforename"/>
+         <ref name="tbibnameLink"/>
+         <ref name="tbibaddName"/>
+         <ref name="tbibroleName"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.persNamePart_alternation">
+      <choice>
+         <ref name="tbibsurname"/>
+         <ref name="tbibforename"/>
+         <ref name="tbibnameLink"/>
+         <ref name="tbibaddName"/>
+         <ref name="tbibroleName"/>
+      </choice>
+   </define>
+   <define name="tbibmodel.persNamePart_sequence">
+      <ref name="tbibsurname"/>
+      <ref name="tbibforename"/>
+      <ref name="tbibnameLink"/>
+      <ref name="tbibaddName"/>
+      <ref name="tbibroleName"/>
+   </define>
+   <define name="tbibmodel.persNamePart_sequenceOptional">
+      <optional>
+         <ref name="tbibsurname"/>
+      </optional>
+      <optional>
+         <ref name="tbibforename"/>
+      </optional>
+      <optional>
+         <ref name="tbibnameLink"/>
+      </optional>
+      <optional>
+         <ref name="tbibaddName"/>
+      </optional>
+      <optional>
+         <ref name="tbibroleName"/>
+      </optional>
+   </define>
+   <define name="tbibmodel.persNamePart_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="tbibsurname"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibforename"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibnameLink"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibaddName"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tbibroleName"/>
+      </zeroOrMore>
+   </define>
+   <define name="tbibmodel.persNamePart_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="tbibsurname"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibforename"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibnameLink"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibaddName"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tbibroleName"/>
+      </oneOrMore>
+   </define>
+   <define name="tbibatt.datable.iso.attributes">
+      <ref name="tbibatt.datable.iso.attribute.when-iso"/>
+      <ref name="tbibatt.datable.iso.attribute.notBefore-iso"/>
+      <ref name="tbibatt.datable.iso.attribute.notAfter-iso"/>
+      <ref name="tbibatt.datable.iso.attribute.from-iso"/>
+      <ref name="tbibatt.datable.iso.attribute.to-iso"/>
+   </define>
+   <define name="tbibatt.datable.iso.attribute.when-iso">
+      <optional>
+         <attribute name="when-iso">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the value of a date or time in a standard form.</a:documentation>
+            <choice>
+               <data type="date"/>
+               <data type="gYear"/>
+               <data type="gMonth"/>
+               <data type="gDay"/>
+               <data type="gYearMonth"/>
+               <data type="gMonthDay"/>
+               <data type="time"/>
+               <data type="dateTime"/>
+               <data type="token">
+                  <param name="pattern">[0-9.,DHMPRSTWYZ/:+\-]+</param>
+               </data>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.datable.iso.attribute.notBefore-iso">
+      <optional>
+         <attribute name="notBefore-iso">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the earliest possible date for the event in standard form, e.g. yyyy-mm-dd.</a:documentation>
+            <choice>
+               <data type="date"/>
+               <data type="gYear"/>
+               <data type="gMonth"/>
+               <data type="gDay"/>
+               <data type="gYearMonth"/>
+               <data type="gMonthDay"/>
+               <data type="time"/>
+               <data type="dateTime"/>
+               <data type="token">
+                  <param name="pattern">[0-9.,DHMPRSTWYZ/:+\-]+</param>
+               </data>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.datable.iso.attribute.notAfter-iso">
+      <optional>
+         <attribute name="notAfter-iso">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the latest possible date for the event in standard form, e.g. yyyy-mm-dd.</a:documentation>
+            <choice>
+               <data type="date"/>
+               <data type="gYear"/>
+               <data type="gMonth"/>
+               <data type="gDay"/>
+               <data type="gYearMonth"/>
+               <data type="gMonthDay"/>
+               <data type="time"/>
+               <data type="dateTime"/>
+               <data type="token">
+                  <param name="pattern">[0-9.,DHMPRSTWYZ/:+\-]+</param>
+               </data>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.datable.iso.attribute.from-iso">
+      <optional>
+         <attribute name="from-iso">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the starting point of the period in standard form.</a:documentation>
+            <choice>
+               <data type="date"/>
+               <data type="gYear"/>
+               <data type="gMonth"/>
+               <data type="gDay"/>
+               <data type="gYearMonth"/>
+               <data type="gMonthDay"/>
+               <data type="time"/>
+               <data type="dateTime"/>
+               <data type="token">
+                  <param name="pattern">[0-9.,DHMPRSTWYZ/:+\-]+</param>
+               </data>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.datable.iso.attribute.to-iso">
+      <optional>
+         <attribute name="to-iso">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the ending point of the period in standard form.</a:documentation>
+            <choice>
+               <data type="date"/>
+               <data type="gYear"/>
+               <data type="gMonth"/>
+               <data type="gDay"/>
+               <data type="gYearMonth"/>
+               <data type="gMonthDay"/>
+               <data type="time"/>
+               <data type="dateTime"/>
+               <data type="token">
+                  <param name="pattern">[0-9.,DHMPRSTWYZ/:+\-]+</param>
+               </data>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbiborgName">
+      <element name="orgName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(organization name) contains an organizational name. [14.2.2. Organizational Names]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.datable.attributes"/>
+         <ref name="tbibatt.editLike.attributes"/>
+         <ref name="tbibatt.personal.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <optional>
+            <attribute name="calendar">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI">
+                        <param name="pattern">\S+</param>
+                     </data>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="tei-bib-orgName-calendar-calendar-check-orgName-constraint-rule-20">
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      context="tei:*[@calendar]">
+                    <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
+                        systems or calendars to which the date represented by the content of this element belongs,
+                        but this <sch:name/> element has no textual content.</sch:assert>
+                </sch:rule>
+         </pattern>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibpersName">
+      <element name="persName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(personal name) contains a proper noun or proper-noun phrase referring to a person, possibly including one or more of the person's forenames, surnames, honorifics, added names, etc. [14.2.1. Personal Names]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.datable.attributes"/>
+         <ref name="tbibatt.editLike.attributes"/>
+         <ref name="tbibatt.personal.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <optional>
+            <attribute name="calendar">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI">
+                        <param name="pattern">\S+</param>
+                     </data>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="tei-bib-persName-calendar-calendar-check-persName-constraint-rule-21">
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      context="tei:*[@calendar]">
+                    <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
+                        systems or calendars to which the date represented by the content of this element belongs,
+                        but this <sch:name/> element has no textual content.</sch:assert>
+                </sch:rule>
+         </pattern>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibsurname">
+      <element name="surname">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(surname) contains a family (inherited) name, as opposed to a given, baptismal, or nick name. [14.2.1. Personal Names]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.personal.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibforename">
+      <element name="forename">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(forename) contains a forename, given or baptismal name. [14.2.1. Personal Names]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.personal.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibnameLink">
+      <element name="nameLink">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(name link) contains a connecting phrase or link used within a name but not regarded as part of it, such as van der or of. [14.2.1. Personal Names]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibaddName">
+      <element name="addName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(additional name) contains an additional name component, such as a nickname, epithet, or alias, or any other descriptive phrase used within a personal name. [14.2.1. Personal Names]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.personal.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibroleName">
+      <element name="roleName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(role name) contains a name component which indicates that the referent has a particular role or position in society, such as an official title or rank. [14.2.1. Personal Names]</a:documentation>
+         <ref name="tbibmacro.phraseSeq"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.personal.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibatt.global.linking.attributes">
+      <ref name="tbibatt.global.linking.attribute.corresp"/>
+      <ref name="tbibatt.global.linking.attribute.synch"/>
+      <ref name="tbibatt.global.linking.attribute.sameAs"/>
+      <ref name="tbibatt.global.linking.attribute.copyOf"/>
+      <ref name="tbibatt.global.linking.attribute.next"/>
+      <ref name="tbibatt.global.linking.attribute.prev"/>
+      <ref name="tbibatt.global.linking.attribute.exclude"/>
+      <ref name="tbibatt.global.linking.attribute.select"/>
+   </define>
+   <define name="tbibatt.global.linking.attribute.corresp">
+      <optional>
+         <attribute name="corresp">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(corresponds) points to elements that correspond to the current element in some way.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.global.linking.attribute.synch">
+      <optional>
+         <attribute name="synch">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(synchronous) points to elements that are synchronous with the current element.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.global.linking.attribute.sameAs">
+      <optional>
+         <attribute name="sameAs">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to an element that is the same as the current element.</a:documentation>
+            <data type="anyURI">
+               <param name="pattern">\S+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.global.linking.attribute.copyOf">
+      <optional>
+         <attribute name="copyOf">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to an element of which the current element is a copy.</a:documentation>
+            <data type="anyURI">
+               <param name="pattern">\S+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.global.linking.attribute.next">
+      <optional>
+         <attribute name="next">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to the next element of a virtual aggregate of which the current element is part.</a:documentation>
+            <data type="anyURI">
+               <param name="pattern">\S+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.global.linking.attribute.prev">
+      <optional>
+         <attribute name="prev">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(previous) points to the previous element of a virtual aggregate of which the current element is part.</a:documentation>
+            <data type="anyURI">
+               <param name="pattern">\S+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.global.linking.attribute.exclude">
+      <optional>
+         <attribute name="exclude">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to elements that are in exclusive alternation with the current element.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbibatt.global.linking.attribute.select">
+      <optional>
+         <attribute name="select">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">selects one or more alternants; if one alternant is selected, the ambiguity or uncertainty is marked as resolved. If more than one alternant is selected, the degree of ambiguity or uncertainty is marked as reduced by the number of alternants not selected.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tbiblink">
+      <element name="link">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(link) defines an association or hypertextual link among elements or passages, of some type not more precisely specifiable by other elements. [17.1. Links]</a:documentation>
+         <empty/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="tei-bib-link-linkTargets3-constraint-rule-22">
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      context="tei:link">
+               <sch:assert test="contains(normalize-space(@target),' ')">You must supply at least two values for @target or  on <sch:name/>
+               </sch:assert>
+            </sch:rule>
+         </pattern>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.pointing.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbiblinkGrp">
+      <element name="linkGrp">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(link group) defines a collection of associations or hypertextual links. [17.1. Links]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="tbibmodel.descLike"/>
+            </zeroOrMore>
+            <oneOrMore>
+               <choice>
+                  <ref name="tbiblink"/>
+                  <ref name="tbibptr"/>
+               </choice>
+            </oneOrMore>
+         </group>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.pointing.group.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibab">
+      <element name="ab">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(anonymous block) contains any component-level unit of text, acting as a container for phrase or inter level elements analogous to, but without the same constraints as, a paragraph. [17.3. Blocks, Segments, and Anchors]</a:documentation>
+         <ref name="tbibmacro.abContent"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="tei-bib-ab-abstractModel-structure-ab-in-l-or-lg-constraint-rule-23">
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      context="tei:ab">
+               <sch:report test="(ancestor::tei:l or ancestor::tei:lg) and not( ancestor::tei:floatingText |parent::tei:figure |parent::tei:note )">
+          Abstract model violation: Lines may not contain higher-level divisions such as p or ab, unless ab is a child of figure or note, or is a descendant of floatingText.
+        </sch:report>
+            </sch:rule>
+         </pattern>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.declaring.attributes"/>
+         <ref name="tbibatt.fragmentable.attributes"/>
+         <ref name="tbibatt.written.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibanchor">
+      <element name="anchor">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(anchor point) attaches an identifier to a point within a text, whether or not it corresponds with a textual element. [8.4.2. Synchronization and Overlap 17.5. Correspondence and Alignment]</a:documentation>
+         <empty/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibseg">
+      <element name="seg">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(arbitrary segment) represents any segmentation of text below the chunk level. [17.3. Blocks, Segments, and Anchors 6.2. Components of the Verse Line 7.2.5. Speech Contents]</a:documentation>
+         <ref name="tbibmacro.paraContent"/>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.segLike.attributes"/>
+         <ref name="tbibatt.typed.attribute.subtype"/>
+         <ref name="tbibatt.written.attributes"/>
+         <ref name="tbibatt.notated.attributes"/>
+         <ref name="tbibatt.cmc.attributes"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>signal</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An introductory word or phrase signalling a following reference. Signal expressions can express agreement ("See" "Cf.") or disagreement ("contra", "but see", "anders...") or can contain a value judgement ("Abwegig hier")</a:documentation>
+                  <value>comment</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A segment that does not contain bibliographic information but gives additional information or commentary on the work being referenced.</a:documentation>
+                  <value>documentType</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Information on the type of document which is not necessarily part of the bibliographic data, such as "report", "Ph.D. dissertation", "Master's thesis"</a:documentation>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbibstandOff">
+      <element name="standOff">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Functions as a container element for linked data, contextual information, and stand-off annotations embedded in a TEI document. [17.10. The standOff Container]</a:documentation>
+         <oneOrMore>
+            <ref name="tbibmodel.standOffPart"/>
+         </oneOrMore>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="tei-bib-standOff-nested_standOff_should_be_typed-constraint-rule-24">
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      context="tei:standOff">
+               <sch:assert test="@type or not(ancestor::tei:standOff)">This
+        <sch:name/> element must have a @type attribute, since it is
+        nested inside a <sch:name/>
+               </sch:assert>
+            </sch:rule>
+         </pattern>
+         <ref name="tbibatt.global.attributes"/>
+         <ref name="tbibatt.typed.attributes"/>
+         <ref name="tbibatt.declaring.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <start>
+      <choice>
+         <ref name="tbibTEI"/>
+         <ref name="tbibteiCorpus"/>
+      </choice>
+   </start>
+</grammar>

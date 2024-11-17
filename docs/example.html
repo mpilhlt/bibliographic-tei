@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Tabbed Page</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/languages/xml.min.js" integrity="sha512-dG+W2e5Wf51XUF9HqsX31z5+nTTuxe8wpOEC3/1gCJImJusP1FZS1PHxiH3NjBUQJ6oDpVRKKXH7+aCVd+wkDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        body {
+            font-family:Arial, Helvetica, sans-serif
+        }
+        .raw-text { 
+            padding: 10px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="description-dataset">
+            Dataset-level description
+        </div>
+
+        <!-- instances -->
+        <div>
+
+            <div class="description-instance">
+                Description instance 1
+            </div>
+
+            <ul data-tabs>
+                <li><a data-tabby-default href="#input-1">Input</a></li>
+                <li><a href="#block-1">Block</a></li>
+                <li><a href="#bibl-1">bibl</a></li>
+                <li><a href="#biblStruct-1">biblStruct</a></li>
+            </ul>
+            
+            <div id="input-1">
+                <div class="raw-text">
+                    <!-- <input type="raw" here,  html-entities escaped  -->
+                </div>
+            </div>
+            <div id="block-1">
+                <pre><code>
+<!-- <output type="block" here, html-entities escaped and stripped of indent  -->
+                </code></pre>
+            </div>            
+            
+            <div id="bibl-1">
+                <pre><code>
+<!-- <output type="bibl" here, html-entities escaped and stripped of indent  -->
+                </code></pre>
+            </div>
+
+            
+            <div id="biblStruct-1">
+                <pre><code>
+<!-- <output type="biblStruct" here, html-entities escaped and stripped of indent  -->
+                </code></pre>
+            </div>
+    </div>
+    <script>
+        new Tabby('[data-tabs]');
+        hljs.highlightAll();
+    </script>
+</body>
+</html>

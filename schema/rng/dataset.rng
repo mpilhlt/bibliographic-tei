@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    ns="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore">
+
+  <include href="./tei-bib.rng"/>
+
+  <start combine="choice">
+    <element name="dataset">
+      <zeroOrMore>
+        <element name="instance">
+          <attribute name="xml:id"/>
+          <zeroOrMore>
+            <element name="input">
+              <attribute name="type">
+                <data type="string"/>
+              </attribute>
+              <text/>
+            </element>
+            <element name="output">
+              <attribute name="type">
+                <data type="string"/>
+              </attribute>
+              <optional>
+                <element xmlns="http://www.tei-c.org/ns/1.0" name="note"/> 
+                <element xmlns="http://www.tei-c.org/ns/1.0" name="p"/> 
+                <element xmlns="http://www.tei-c.org/ns/1.0" name="listBibl"/> 
+              </optional>
+            </element>
+          </zeroOrMore>
+        </element>
+      </zeroOrMore>
+    </element>
+  </start>
+</grammar>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>TEI for bibliographic reference annotation</title>
+        <author>Christian Boulanger, Andreas Wagner</author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>TEI Consortium</publisher>
+        <availability status="free">
+          <p>TEI material can be licensed differently depending on the
+            use you intend to make of it. Hence it is made available
+            under both the CC+BY and BSD-2 licences. The CC+BY licence
+            is generally appropriate for usages which treat TEI content
+            as data or documentation. The BSD-2 licence is generally
+            appropriate for usage of TEI content in a software
+            environment. For further information or clarification,
+            please contact the TEI Consortium (info@tei-c.org).</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Written from scratch.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <appInfo>
+        <application ident="RomaJS" version="1.1.2" when="2024-11-13T18:53:24.753Z">
+          <desc>File edited with <ref target="https://github.com/TEIC/romajs">RomaJS</ref>
+          </desc>
+        </application>
+      </appInfo>
+    <appInfo><application ident="RomaJS" version="1.1.2" when="2024-11-15T06:17:19.646Z"><desc>File edited with <ref target="https://github.com/TEIC/romajs">RomaJS</ref></desc></application></appInfo></encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <head>TEI ODD for annotating bibliographic information</head>
+      <p>
+        This ODD aims to provide a subset of TEI elemnts as minimal as possible for annotating bibliographic 
+        information in scholarly article, with a few restrictions and extensions deemed necessary to annotate 
+        data required for bibliographic data extraction.
+      </p>
+      <schemaSpec ident="tei-bib" start="TEI teiCorpus" prefix="tbib" targetLang="en" docLang="en">
+        <moduleRef n="01" key="tei"/>
+        <moduleRef n="02" key="header"/>
+        <moduleRef n="03" key="core" />
+        <moduleRef n="04" key="textstructure" />
+        <moduleRef n="14" key="namesdates" except="affiliation age birth bloc climate country death district education event eventName faith floruit genName gender geo geogFeat geogName langKnowledge langKnown listEvent listNym listObject listOrg listPerson listPlace listRelation location nationality nym object objectIdentifier objectName occupation offset org persPronouns person personGrp persona place placeName population region relation residence settlement sex socecStatus state terrain trait"/>
+        <moduleRef n="17" key="linking" except="alt altGrp annotation join joinGrp listAnnotation timeline when"/>
+        <!-- restrictions of @type of <ref> -->
+        <elementSpec ident="ref" mode="change">
+          <attList>
+            <attDef ident="type" mode="change">
+              <desc versionDate="2024-11-13" xml:lang="en"/>
+              <valList type="closed" mode="change">
+                <valItem mode="add" ident="footnote">
+                  <desc versionDate="2024-11-13" xml:lang="en">A footnote or endnote</desc>
+                </valItem>
+                <valItem mode="add" ident=""/>
+                <valItem mode="add" ident="previous-author">
+                  <desc versionDate="2024-11-13" xml:lang="en">A reference to a previously stated
+                    name of an author, replaced by abbreviations such as "id.", "eadem" in
+                    English or "ders.", "dies." in German</desc>
+                </valItem>
+                <valItem mode="add" ident="previous-work">
+                  <desc versionDate="2024-11-13" xml:lang="en">A reference to a previously
+                    referenced work, usually indicated by abbreviations such as "op. cit.", "ibid."
+                    in English or "ebd.", "a.a.O." in German.</desc>
+                </valItem>
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <!-- restrictions of @type of <note> -->
+        <elementSpec ident="note" mode="change">
+          <attList>
+            <attDef ident="type" mode="change">
+              <desc versionDate="2024-11-13" xml:lang="en"/>
+              <valList type="closed" mode="change">
+                <valItem mode="add" ident="footnote">
+                  <desc versionDate="2024-11-13" xml:lang="en">A footnote </desc>
+                </valItem>
+                <valItem mode="add" ident="signal">
+                  <desc versionDate="2024-11-13" xml:lang="en">An introductory word or phrase
+                    signalling a following reference. Signal expressions can express agreement
+                    ("See" "Cf.") or disagreement ("contra", "but see", "anders...") or can contain
+                    a value judgement ("Abwegig hier")</desc>
+                </valItem>
+                <valItem mode="add" ident="comment">
+                  <desc versionDate="2024-11-13" xml:lang="en">A segment that does not contain
+                    bibliographic information but gives additional information or commentary on the
+                    work being referenced.</desc>
+                </valItem>
+                <valItem mode="add" ident="document-type">
+                  <desc versionDate="2024-11-13" xml:lang="en">Information on the type of document
+                    which is not necessarily part of the bibliographic data, such as "report",
+                    "Ph.D. dissertation", "Master's thesis"</desc>
+                </valItem>
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
+      </schemaSpec>
+    </body>
+  </text>
+</TEI>
