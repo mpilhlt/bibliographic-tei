@@ -23,11 +23,10 @@ jobs:
 
     - name: Transform XML files
       run: |
-        echo 
         for xml_file in data/gold/*.xml; do
           base_name=$(basename "$xml_file" .xml)
           docker run --volume "${PWD}:/src" klakegg/saxon:he \
-            -s:.src/$xml_file \
+            -s:src/$xml_file \
             -xsl:src/.github/workflows/dataset-to-html.xslt \
             -o:src/$base_name.html
         done
