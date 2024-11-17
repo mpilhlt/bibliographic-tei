@@ -21,19 +21,15 @@ jobs:
     - name: Check out source code
       uses: actions/checkout@v2
 
-    - name: Install required dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y findutils
-
     - name: Transform XML files
       run: |
-        for xml_file in $(find data -type f -name "*.xml"); do
+        for xml_file in ../../data/gold; do
           base_name=$(basename "$xml_file" .xml)
+          cp $xml_file ./$base_name.xml
           docker run --volume "${PWD}:/src" klakegg/saxon:he \
-            -s:../../data/gold/$xml_file \
-            -xsl:./dataset-to-html.xslt \
-            -o:../../docs/$base_name.html
+            -s:.src/$xml_file \
+            -xsl:src/dataset-to-html.xslt \
+            -o:src/$base_name.html
         done
 
     - name: Deploy to GitHub Pages
@@ -53,7 +49,7 @@ jobs:
         git rm -rf .
 
         # Add the HTML files from docs/
-        git add docs/*.html
+        git add ./*.html
 
         # Commit the changes
         git commit -m "Deploy HTML files to GitHub Pages"
