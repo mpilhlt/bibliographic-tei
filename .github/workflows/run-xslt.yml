@@ -44,6 +44,7 @@ jobs:
         pip3 install ghp-import
 
         cd pages
+        ls -al
 
         # Initialize the git repository and configure Git
         git config --global user.name "GitHub Actions"
@@ -51,6 +52,8 @@ jobs:
 
         # Create gh-pages branch (if it doesn't exist)
         git checkout --orphan gh-pages
+
+        ls -al
 
         # Remove all files from the index (so we only commit the docs folder)
         git rm -rf .
