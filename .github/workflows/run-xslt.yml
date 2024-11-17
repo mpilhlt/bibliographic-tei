@@ -31,6 +31,11 @@ jobs:
             -o:$base_name.html
         done
 
+    - name: Generate Directory Listings
+      uses: jayanta525/github-pages-directory-listing@v4.0.0
+      with:
+        FOLDER: .
+
     - name: Deploy to GitHub Pages
       run: |
         # Install gh-pages deployment tool
