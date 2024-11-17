@@ -53,9 +53,6 @@ jobs:
         # Create gh-pages branch (if it doesn't exist)
         git checkout --orphan gh-pages
 
-        # Remove all files from the index (so we only commit the docs folder)
-        git rm -rf *
-
         # Add the HTML files from pages/
         git add *.html
 
