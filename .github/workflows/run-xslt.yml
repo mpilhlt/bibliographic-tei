@@ -24,12 +24,11 @@ jobs:
     - name: Transform XML files
       run: |
         for xml_file in data/gold/*.xml; do
-        echo "$xml_file"
           base_name=$(basename "$xml_file" .xml)
           docker run --rm -i -u $(id -u) --volume "${PWD}:/src" klakegg/saxon:he xslt \
-            -s:src/$xml_file \
-            -xsl:src/.github/workflows/dataset-to-html.xslt \
-            -o:src/$base_name.html
+            -s:$xml_file \
+            -xsl:.github/workflows/dataset-to-html.xslt \
+            -o:$base_name.html
         done
 
     - name: Deploy to GitHub Pages
