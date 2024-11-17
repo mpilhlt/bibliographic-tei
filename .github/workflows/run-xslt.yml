@@ -31,9 +31,9 @@ jobs:
         for xml_file in $(find data -type f -name "*.xml"); do
           base_name=$(basename "$xml_file" .xml)
           docker run --volume "${PWD}:/src" klakegg/saxon:he \
-            -s:/src/$xml_file \
-            -xsl:/src/dataset-to-html.xslt \
-            -o:/src/docs/$base_name.html
+            -s:../../data/gold/$xml_file \
+            -xsl:./dataset-to-html.xslt \
+            -o:../../docs/$base_name.html
         done
 
     - name: Deploy to GitHub Pages
