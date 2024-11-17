@@ -1,6 +1,12 @@
 name: XSLT Transformation
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
@@ -15,6 +21,47 @@ jobs:
     - name: Check out source code
       uses: actions/checkout@v2
 
-    - name: Transform XML
+    - name: Install required dependencies
       run: |
-        # docker run --volume "${PWD}:/src" klakegg/saxon:he -s:/src/path/to/input.xml -xsl:/src/path/to/transform.xsl -o:/src/docs/output.xml
+        sudo apt-get update
+        sudo apt-get install -y findutils
+
+    - name: Transform XML files
+      run: |
+        for xml_file in $(find data -type f -name "*.xml"); do
+          base_name=$(basename "$xml_file" .xml)
+          docker run --volume "${PWD}:/src" klakegg/saxon:he \
+            -s:/src/$xml_file \
+            -xsl:/src/dataset-to-html.xslt \
+            -o:/src/docs/$base_name.html
+        done
+
+    - name: Deploy to GitHub Pages
+      run: |
+        # Install gh-pages deployment tool
+        sudo apt-get install -y python3-pip
+        pip3 install ghp-import
+
+        # Initialize the git repository and configure Git
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+
+        # Create gh-pages branch (if it doesn't exist)
+        git checkout --orphan gh-pages
+
+        # Remove all files from the index (so we only commit the docs folder)
+        git rm -rf .
+
+        # Add the HTML files from docs/
+        git add docs/*.html
+
+        # Commit the changes
+        git commit -m "Deploy HTML files to GitHub Pages"
+
+        # Push the changes to the gh-pages branch
+        git push --force --set-upstream origin gh-pages
+
+    - name: Clean up
+      run: |
+        # Checkout back to the main branch to preserve state for future pushes
+        git checkout main
