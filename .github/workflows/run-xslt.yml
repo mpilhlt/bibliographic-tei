@@ -23,7 +23,9 @@ jobs:
 
     - name: Transform XML files
       run: |
+        echo "${PWD}"
         for xml_file in data/gold/*.xml; do
+        echo "$xml_file"
           base_name=$(basename "$xml_file" .xml)
           docker run --volume "${PWD}:/src" klakegg/saxon:he \
             -s:src/$xml_file \
