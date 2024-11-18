@@ -96,7 +96,7 @@
     <div id="block-{@xml:id}">
       <pre><code>
         <xsl:call-template name="serialize-stripped">
-          <xsl:with-param name="node" select="llm:output[@type='block']"/>
+          <xsl:with-param name="node" select="llm:output[@type='block']/*[1]"/>
         </xsl:call-template>
       </code></pre>
     </div>
@@ -105,7 +105,7 @@
     <div id="bibl-{@xml:id}">
       <pre><code>
         <xsl:call-template name="serialize-stripped">
-          <xsl:with-param name="node" select="llm:output[@type='bibl']"/>
+          <xsl:with-param name="node" select="llm:output[@type='bibl']/*[1]"/>
         </xsl:call-template>
       </code></pre>
     </div>
@@ -114,7 +114,7 @@
     <div id="biblStruct-{@xml:id}">
       <pre><code>
         <xsl:call-template name="serialize-stripped">
-          <xsl:with-param name="node" select="llm:output[@type='block']"/>
+          <xsl:with-param name="node" select="llm:output[@type='biblStruct']/*[1]"/>
         </xsl:call-template>
       </code></pre>
     </div>
