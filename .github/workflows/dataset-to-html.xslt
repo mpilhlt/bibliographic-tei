@@ -60,8 +60,14 @@
   <xsl:template name="serialize-stripped">
     <xsl:param name="node"/>
     <xsl:variable name="serialized-node" select="serialize($node, map {'method': 'xml'})"/>
-    <xsl:variable name="stripped-node" select="replace($serialized-node, '\n\s{8}', '&#10;')"/>
-    <xsl:value-of select="$stripped-node"/>
+    <!-- Calculate number of white spaces before the first tag -->
+    <xsl:variable name="leading-space-count" select="string-length(substring-before($serialized-node, '&lt;'))"/>
+    <!-- Replace the variable number of leading spaces with newlines -->
+    <xsl:variable name="stripped-node" select="replace($serialized-node, concat('\n\s{', $leading-space-count, '}'), '&#10;')"/>
+    <!-- Remove namespace expressions -->
+    <xsl:value-of select="replace($stripped-node, 'xmlns(:\w+)?=&quot;([^&quot;]*)&quot;', '')"/>
+    <!-- output -->
+    <xsl:value-of select="$clean-stripped-node"/>
   </xsl:template>
 
   <!-- Template for <llm:instance> with a <description> child -->
