@@ -65,7 +65,7 @@
     <!-- Replace the variable number of leading spaces with newlines -->
     <xsl:variable name="stripped-node" select="replace($serialized-node, concat('\n\s{', $leading-space-count, '}'), '&#10;')"/>
     <!-- Remove namespace expressions -->
-    <xsl:value-of select="replace($stripped-node, 'xmlns(:\w+)?=&quot;([^&quot;]*)&quot;', '')"/>
+    <xsl:variable name="clean-stripped-node"  select="replace($stripped-node, 'xmlns(:\w+)?=&quot;([^&quot;]*)&quot;', '')"/>
     <!-- output -->
     <xsl:value-of select="$clean-stripped-node"/>
   </xsl:template>
