@@ -1,6 +1,7 @@
 <xsl:stylesheet version="2.0"
   xmlns:llm="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:tei="http://www.tei-c.org/ns/1.0">
 
   <xsl:output method="html" indent="yes" encoding="UTF-8" />
@@ -56,19 +57,37 @@
     </div>
   </xsl:template>
 
-  <!-- template to escape xml data and remove indentation -->
+  <!-- template to escape xml data and remove indentation and namespaces -->
   <xsl:template name="serialize-stripped">
-    <xsl:param name="node"/>
-    <xsl:variable name="serialized-node" select="serialize($node, map {'method': 'xml'})"/>
-    <!-- Calculate number of white spaces before the first tag -->
-    <xsl:variable name="leading-space-count" select="string-length(substring-before($serialized-node, '&lt;'))"/>
-    <!-- Replace the variable number of leading spaces with newlines -->
-    <xsl:variable name="stripped-node" select="replace($serialized-node, concat('\n\s{', $leading-space-count, '}'), '&#10;')"/>
-    <!-- Remove namespace expressions -->
-    <xsl:variable name="clean-stripped-node"  select="replace($stripped-node, 'xmlns(:\w+)?=&quot;([^&quot;]*)&quot;', '')"/>
-    <!-- output -->
-    <xsl:value-of select="$clean-stripped-node"/>
+      <xsl:param name="node"/>
+      <xsl:variable name="serialized-node" select="serialize($node, map {'method': 'xml'})"/>
+      <!-- get tag of the first child -->
+      <xsl:variable name="child-tag" select="name($node/*[position() = last()])"/>
+      <!-- Remove namespace expressions -->
+      <xsl:variable name="namespace-stripped-node" select="replace($serialized-node, ' xmlns(:\w+)?=&quot;[^&quot;]*&quot;', '')"/>
+      <!-- De-indent -->
+      <xsl:variable name="stripped-node" select="llm:replace_while_match($namespace-stripped-node, concat('\n\s+&lt;/', $child-tag, '&gt;'), '\n\s', '&#10;')"/>
+      <!-- output -->
+      <xsl:value-of select="$stripped-node"/>
   </xsl:template>
+
+  <!-- search/replace while a string matches -->
+  <xsl:function name="llm:replace_while_match" as="xs:string">
+      <xsl:param name="input" as="xs:string"/>
+      <xsl:param name="match" as="xs:string"/>
+      <xsl:param name="search" as="xs:string"/>
+      <xsl:param name="replace" as="xs:string"/>
+      <!-- if the $match can be found, replace $search with $replace and recurse -->
+      <xsl:choose>
+          <xsl:when test="matches($input, $match)">
+              <xsl:sequence select="llm:replace_while_match(replace($input, $search, $replace), $match, $search, $replace)"/>
+          </xsl:when>
+          <xsl:otherwise>
+              <xsl:sequence select="$input"/>
+          </xsl:otherwise>
+      </xsl:choose>
+  </xsl:function>
+
 
   <!-- Template for <llm:instance> with a <description> child -->
   <xsl:template match="llm:instance[llm:description]">

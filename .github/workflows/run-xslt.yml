@@ -23,7 +23,7 @@ jobs:
 
     - name: Transform XML files
       run: |
-        mkdir pages
+        mkdir -p docs
         for xml_file in data/gold/*.xml; do
           base_name=$(basename "$xml_file" .xml)
           docker run --rm -i -u $(id -u) --volume "${PWD}:/src" klakegg/saxon:he xslt \
