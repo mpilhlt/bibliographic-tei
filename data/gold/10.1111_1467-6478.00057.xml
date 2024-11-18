@@ -5,73 +5,77 @@
 
   <description content-type="text/html"><![CDATA[ 
     <h1>English-language socio-legal article with endnotes</h1>
+    <p>Examples taken from Thornton, M. (1997) ‘The Judicial Gendering of Citizenship: A Look at Property Interests During Marriage’, Journal of Law and Society, 24(4), pp. 486–503,
+     DOI <a href="https://doi.org/10.1111/1467-6478.00057">10.1111/1467-6478.00057</a></p>
   ]]></description>
 
   <instance xml:id="instance-1">
-        <description content-type="text/html"><![CDATA[ 
-          <h2>Chapter in edited volume</h2>
-          <p>This is a test for the instance-level description</p>
-        ]]></description>
-        <input type="raw"><![CDATA[1 A. Phillips, ‘Citizenship and Feminist Politics’ in Citizenship, ed. G. Andrews (1991) 77.]]></input>
-        <output type="block">
-          <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="1" place="bottom">
+    <description content-type="text/html"><![CDATA[ 
+      <h2>Chapter in edited volume</h2>
+    ]]></description>
+      <input type="raw"><![CDATA[1 A. Phillips, ‘Citizenship and Feminist Politics’ in Citizenship, ed. G. Andrews (1991) 77.]]></input>
+      <output type="block">
+        <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="1" place="bottom">
+          <label>1</label>
+          <bibl>A. Phillips, ‘Citizenship and Feminist Politics’ in Citizenship, ed. G. Andrews (1991) 77.</bibl>
+        </note>
+      </output>
+      <output type="bibl">
+        <note xmlns="http://www.tei-c.org/ns/1.0" n="1" type="footnote" place="bottom">
             <label>1</label>
-            <bibl>A. Phillips, ‘Citizenship and Feminist Politics’ in Citizenship, ed. G. Andrews (1991) 77.</bibl>
-          </note>
-        </output>
-        <output type="bibl">
-          <note xmlns="http://www.tei-c.org/ns/1.0" n="1" type="footnote" place="bottom">
-              <label>1</label>
-            <bibl xml:id="bibl-1">
-                  <author>
-                      <persName>
-                          <forename>A.</forename>
-                            <surname>Phillips</surname>
-                        </persName>
-                    </author>,
-                    ‘<title level="a">Citizenship and Feminist Politics</title>’ in
-                    <title level="m">Citizenship</title>, ed.
-                    <editor>
-                      <persName>
-                          <forename>G.</forename>
-                            <surname>Andrews</surname>
-                        </persName>
-                    </editor>
-                    (<date when="1991">1991</date>)
-                    <citedRange unit="page" from="77" to="77">77</citedRange>.
-                </bibl>
-          </note>
-        </output>
-        <output type="biblStruct">
-          <listBibl xmlns="http://www.tei-c.org/ns/1.0">
-              <biblStruct>
-                  <analytic>
-                      <title level="a">Citizenship and Feminist Politics</title>
-                        <author>
-                          <persName>
-                              <forename>A.</forename>
-                                <surname>Phillips</surname>
-                            </persName>
-                        </author>
-                    </analytic>
-                    <monogr>
-                      <title level="m">Citizenship</title>
-                        <editor>
-                          <persName>
-                              <forename>G.</forename>
-                                <surname>Andrews</surname>
-                            </persName>
-                        </editor>
-                        <imprint>
-                          <date when="1991">1991</date>
-                        </imprint>
-                    </monogr>
-                <citedRange unit="page" from="77" to="77">77</citedRange>
-            </biblStruct>
-          </listBibl>
-        </output>
+          <bibl xml:id="bibl-1">
+                <author>
+                    <persName>
+                        <forename>A.</forename>
+                          <surname>Phillips</surname>
+                      </persName>
+                  </author>,
+                  ‘<title level="a">Citizenship and Feminist Politics</title>’ in
+                  <title level="m">Citizenship</title>, ed.
+                  <editor>
+                    <persName>
+                        <forename>G.</forename>
+                          <surname>Andrews</surname>
+                      </persName>
+                  </editor>
+                  (<date when="1991">1991</date>)
+                  <citedRange unit="page" from="77" to="77">77</citedRange>.
+              </bibl>
+        </note>
+      </output>
+      <output type="biblStruct">
+        <listBibl xmlns="http://www.tei-c.org/ns/1.0">
+            <biblStruct>
+                <analytic>
+                    <title level="a">Citizenship and Feminist Politics</title>
+                      <author>
+                        <persName>
+                            <forename>A.</forename>
+                              <surname>Phillips</surname>
+                          </persName>
+                      </author>
+                  </analytic>
+                  <monogr>
+                    <title level="m">Citizenship</title>
+                      <editor>
+                        <persName>
+                            <forename>G.</forename>
+                              <surname>Andrews</surname>
+                          </persName>
+                      </editor>
+                      <imprint>
+                        <date when="1991">1991</date>
+                      </imprint>
+                  </monogr>
+              <citedRange unit="page" from="77" to="77">77</citedRange>
+          </biblStruct>
+        </listBibl>
+      </output>
     </instance>
     <instance xml:id="instance-2">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Journal Article</h2>
+      ]]></description>      
       <input type="raw"><![CDATA[2 T. Brennan and C. Pateman, ‘“Mere Auxiliaries to the Commonwealth”: Women and the Origins of Liberalism’ (1979) 27 Political Studies 183.]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="2" place="bottom">
@@ -135,6 +139,9 @@
         </output>
     </instance>
     <instance xml:id="instance-3">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Book</h2>
+      ]]></description> 
       <input type="raw"><![CDATA[3 M. Sawer and M. Simms, A Woman’s Place: Women and Politics in Australia (2nd ed., 1993).]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="3" place="bottom">
@@ -191,6 +198,9 @@
         </output>
     </instance>
     <instance xml:id="instance-4">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Bibliographic information embedded in commentary</h2>
+      ]]></description> 
       <input type="raw"><![CDATA[4 I have explored the gendered nature of citizenship at greater length in two complementary papers: ‘Embodying the Citizen’ in Public and Private: Feminist Legal Debates, ed. M. Thornton (1995) and ‘Historicising Citizenship: Remembering Broken Promises’ (1996) 20 Melbourne University Law Rev. 1072.]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="4" place="bottom">
@@ -313,6 +323,9 @@
         </output>
     </instance>
     <instance xml:id="instance-6">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Translation of historical text</h2>
+      ]]></description> 
       <input type="raw"><![CDATA[6 I. Kant, ‘Metaphysical First Principles of the Doctrine of Right [1785]’ in The Metaphysics of Morals (trans. M. Gregor, 1991) 125–6 s. 146.]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="6" place="bottom">
@@ -378,25 +391,25 @@
         </output>
         <output type="bibl">
           <note xmlns="http://www.tei-c.org/ns/1.0" n="7" type="footnote" place="bottom">
-              <label>7</label>
+            <label>7</label>
             <bibl xml:id="bibl-8">
-                  <author>
-                      <persName>
-                          <forename>U.</forename>
-                            <surname>Vogel</surname>
-                        </persName>
-                    </author>,
-                    ‘<title level="a">Marriage and the Boundaries of Citizenship</title>’ in
-                    <title level="m">The Condition of Citizenship</title>, ed.
-                    <editor>
-                      <persName>
-                          <forename>B.</forename>
-                            <surname>van Steenbergen</surname>
-                        </persName>
-                    </editor>
-                    (<date when="1994">1994</date>)
-                    <biblScope unit="page" from="75">75</biblScope>.
-                </bibl>
+                <author>
+                    <persName>
+                        <forename>U.</forename>
+                          <surname>Vogel</surname>
+                      </persName>
+                  </author>,
+                  ‘<title level="a">Marriage and the Boundaries of Citizenship</title>’ in
+                  <title level="m">The Condition of Citizenship</title>, ed.
+                  <editor>
+                    <persName>
+                        <forename>B.</forename>
+                          <surname>van Steenbergen</surname>
+                      </persName>
+                  </editor>
+                  (<date when="1994">1994</date>)
+                  <biblScope unit="page" from="75">75</biblScope>.
+              </bibl>
           </note>
         </output>
         <output type="biblStruct">
@@ -429,6 +442,9 @@
         </output>
     </instance>
     <instance xml:id="instance-8">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Back-reference to collected volume</h2>
+      ]]></description> 
       <input type="raw"><![CDATA[8 N. Fraser and L. Gordon, ‘Civil Citizenship against Social Citizenship?’ in id., p. 97.]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="8" place="bottom">
@@ -486,6 +502,9 @@
         </output>
     </instance>
     <instance xml:id="instance-9">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Additional commmentary on work</h2>
+      ]]></description> 
       <input type="raw"><![CDATA[9 Vogel, id., p. 79. W. Blackstone, Commentaries (Facsimile of 1st. ed. of 1765–69, 1979) 442.]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="9" place="bottom">
@@ -553,6 +572,9 @@
         </output>
     </instance>
     <instance xml:id="instance-10">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Op.cit. with reference to footnote</h2>
+      ]]></description> 
       <input type="raw"><![CDATA[11 Vogel, op. cit., n. 7, pp. 80–1.]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="11" place="bottom">
@@ -593,6 +615,9 @@
         </output>
     </instance>
     <instance xml:id="instance-11">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Collected volume</h2>
+      ]]></description> 
       <input type="raw"><![CDATA[12 F. Haug (ed.), Female Sexualization: A Collective Work of Memory (1987) 196.]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="12" place="bottom">
@@ -690,6 +715,9 @@
         </output>
     </instance>
     <instance xml:id="instance-13">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Mixed reference types</h2>
+      ]]></description> 
       <input type="raw"><![CDATA[14 D. West, ‘Power and Formation: New Foundations for a Radical Concept of Power’ (1987) 30 Inquiry 137, 145. Compare M. Foucault, Power/Knowledge: Selected Interviews and Other Writings 1972–1977, ed. C. Gordon (1980) 98.]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="14" place="bottom">
@@ -781,6 +809,9 @@
         </output>
     </instance>
     <instance xml:id="instance-14">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Qualified signal</h2>
+      ]]></description> 
       <input type="raw"><![CDATA[15 For a detailed analysis of legal method and the political role it plays, see M.J. Mossman, ‘Feminism, and Legal Method: The Difference it Makes’ (1986) 3 Aust. J. of Law and Society 30.]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="15" place="bottom">
@@ -834,6 +865,9 @@
         </output>
     </instance>
     <instance xml:id="instance-15">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Edition of a work</h2>
+      ]]></description> 
       <input type="raw"><![CDATA[16 H.S. Maine, Ancient Law: Its Connection with the Early History of Society and its Relation to Modern Ideas (10th ed., 1912) 174.]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="16" place="bottom">
@@ -883,6 +917,9 @@
         </output>
     </instance>
     <instance xml:id="instance-16">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Preceeding comment</h2>
+      ]]></description> 
       <input type="raw"><![CDATA[17 This was particularly the case in the United States of America. See M.J. Horwitz, The Transformation of American Law, 1780–1860 (1977) 160.]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="17" place="bottom">
@@ -974,6 +1011,9 @@
         </output>
     </instance>
     <instance xml:id="instance-18">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Long preceeding comment</h2>
+      ]]></description> 
       <input type="raw"><![CDATA[19 Staves postulates that the position was somewhat more complicated in that marriage, as a status, crumbled in response to contract ideology in the seventeenth century but, by the end of the eighteenth century, deeper patriarchal structures were re-imposed. See S. Staves, Married Women’s Separate Property in England, 1660–1833 (1990) 4, 220.]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="19" place="bottom">
@@ -1083,6 +1123,9 @@
         </output>
     </instance>
     <instance xml:id="instance-20">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Sandwiched comment</h2>
+      ]]></description> 
       <input type="raw"><![CDATA[21 C. Pateman, The Sexual Contract (1988). For further analysis of the marriage contract, see K. O’Donovan, Family Matters (1993), especially 43–59.]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="21" place="bottom">
@@ -1152,6 +1195,9 @@
         </output>
     </instance>
     <instance xml:id="instance-21">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>List of statutes</h2>
+      ]]></description> 
       <input type="raw"><![CDATA[23 Crimes (Sexual Assault) Amendment Act 1981 (N.S.W.); Criminal Law Consolidation Act Amendment Act 1976 (S.A.); Criminal Code (Sexual Offences) Act 1987 (Tas.); Crimes (Sexual Offences) 1991 (Vic.); Acts Amendment (Sexual Assault) Act 1985 (W.A.). The High Court upheld the validity of the South Australian law in 1991 (see R. v. L. (1991) 103 A.L.R. 577), the same year that the House of Lords abolished the immunity (see R. v. R. [1991] 2 All E.R. 257).]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="23" place="bottom">
@@ -1280,6 +1326,9 @@
         </output>
     </instance>
     <instance xml:id="instance-22">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Trailing comment, use of non-standard locator</h2>
+      ]]></description> 
       <input type="raw"><![CDATA[24 M. Freeman, ‘Contracting in the Haven: Balfour v. Balfour Revisited’ in Exploring the Boundaries of Contract, ed. R. Halson (1996) 74 R. Collier, Masculinity, Law and the Family (1995) 127 and throughout. See Collier further for a comprehensive study of sexuality in marriage.]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="24" place="bottom">
@@ -1433,6 +1482,9 @@
         </output>
     </instance>
     <instance xml:id="instance-24">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Reports</h2>
+      ]]></description> 
       <input type="raw"><![CDATA[26 The Australian Law Reform Commission has addressed the issue and recommended recognition of prenuptial agreements. See A.L.R.C., Matrimonial Property, report no. 37 (1987); A.L.R.C. ., Report of the Joint Select Committee on Certain Aspects of the Operation and Interpretation of the Family Law Act (1992). For critique, see M. Neave, ‘Private Ordering in Family Law – Will Women Benefit?’ in Thornton, op. cit., n. 4. For a feminist critique of contract in the American context, see C. Dalton, ‘An Essay in the Deconstruction of Contract Doctrine’ (1985) 94 Yale Law J. 997.]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="26" place="bottom">
@@ -1654,52 +1706,48 @@
         </output>
     </instance>
     <instance xml:id="instance-27">
-      <input type="raw"><![CDATA[29 V. Balfour [1919] 2 K.B. 571.]]></input>
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Legal decision</h2>
+      ]]></description>       
+      <input type="raw"><![CDATA[29 Balfour v. Balfour [1919] 2 K.B. 571.]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="29" place="bottom">
             <label>29</label>
-            <bibl>V. Balfour [1919] 2 K.B. 571.</bibl>
+            <bibl>Balfour v. Balfour [1919] 2 K.B. 571.</bibl>
           </note>
         </output>
         <output type="bibl">
           <note xmlns="http://www.tei-c.org/ns/1.0" n="29" type="footnote" place="bottom">
-              <label>29</label>
+            <label>29</label>
             <bibl xml:id="bibl-46">
-                  <author>
-                      <persName>
-                          <forename>V.</forename>
-                            <surname>Balfour</surname>
-                        </persName>
-                    </author>
-                    [<date when="1919">1919</date>]
-                    <biblScope unit="volume" from="2" to="2">2</biblScope>
-                    <title level="j">K.B.</title>
-                    <biblScope unit="page" from="571">571</biblScope>.
-                </bibl>
+              <title>Balfour v. Balfour</title>
+              [<date when="1919">1919</date>]
+              <biblScope unit="volume" from="2" to="2">2</biblScope>
+              <title level="j">K.B.</title>
+              <biblScope unit="page" from="571">571</biblScope>.
+            </bibl>
           </note>
         </output>
         <output type="biblStruct">
           <listBibl xmlns="http://www.tei-c.org/ns/1.0">
-              <biblStruct>
-                  <monogr>
-                      <title level="j">K.B.</title>
-                        <author>
-                          <persName>
-                              <forename>V.</forename>
-                                <surname>Balfour</surname>
-                            </persName>
-                        </author>
-                        <imprint>
-                          <date when="1919">1919</date>
-                        </imprint>
-                        <biblScope unit="volume" from="2" to="2">2</biblScope>
-                        <biblScope unit="page" from="571">571</biblScope>
-                    </monogr>
-                </biblStruct>
-            </listBibl>
+            <biblStruct>
+                <monogr>
+                  <title level="j">K.B.</title>
+                  <title>Balfour v. Balfour</title>
+                    <imprint>
+                      <date when="1919">1919</date>
+                    </imprint>
+                    <biblScope unit="volume" from="2" to="2">2</biblScope>
+                    <biblScope unit="page" from="571">571</biblScope>
+                </monogr>
+            </biblStruct>
+          </listBibl>
         </output>
     </instance>
     <instance xml:id="instance-28">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Op. cit. with comment and reference</h2>
+      ]]></description>   
       <input type="raw"><![CDATA[30 Freeman, op. cit., n. 24. While acknowledging the trends towards contractualism and private ordering, Regan cautions against it, noting that greater freedom to contract invites greater scrutiny by the courts. More significantly, however, he would rather reclaim the idea of status by injecting it with new notions of responsibility andrelationality, as well as divesting it of its sexist assumptions. See M.C. Regan ., Family Law and the Pursuit of Intimacy (1993).]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="30" place="bottom">
@@ -1709,34 +1757,34 @@
         </output>
         <output type="bibl">
           <note xmlns="http://www.tei-c.org/ns/1.0" n="30" type="footnote" place="bottom">
-              <label>30</label>
+            <label>30</label>
             <bibl xml:id="bibl-47">
-                  <author>
-                      <persName>
-                          <surname>Freeman</surname>
-                        </persName>
-                    </author>,
-                    <ref type="previous-work">op. cit.</ref>,
-                    <ref type="footnote" n="24">n. 24</ref>.
-                </bibl>
-                <note type="comment">
-                    While acknowledging the trends towards contractualism and private ordering,
-                    Regan cautions against it, noting that greater freedom to contract invites greater scrutiny by
-                    the courts. More significantly, however, he would rather reclaim the idea of status by injecting
-                    it with new notions of responsibility andrelationality, as well as divesting it of its sexist
-                    assumptions.
-              </note>
-                <note type="signal">See</note>
-                <bibl xml:id="bibl-49">
-                  <author>
-                      <persName>
-                          <forename>M.C.</forename>
-                            <surname>Regan</surname>
-                        </persName>
-                    </author>.,
-                    <title level="m">Family Law and the Pursuit of Intimacy</title>
-                    (<date when="1993">1993</date>).
-                </bibl>
+              <author>
+                <persName>
+                  <surname>Freeman</surname>
+                </persName>
+              </author>,
+              <ref type="previous-work">op. cit.</ref>,
+              <ref type="footnote" n="24">n. 24</ref>.
+            </bibl>
+            <note type="comment">
+              While acknowledging the trends towards contractualism and private ordering,
+              Regan cautions against it, noting that greater freedom to contract invites greater scrutiny by
+              the courts. More significantly, however, he would rather reclaim the idea of status by injecting
+              it with new notions of responsibility andrelationality, as well as divesting it of its sexist
+              assumptions.
+            </note>
+            <note type="signal">See</note>
+            <bibl xml:id="bibl-49">
+              <author>
+                <persName>
+                  <forename>M.C.</forename>
+                    <surname>Regan</surname>
+                </persName>
+              </author>.,
+              <title level="m">Family Law and the Pursuit of Intimacy</title>
+              (<date when="1993">1993</date>).
+            </bibl>
           </note>
         </output>
         <output type="biblStruct">
@@ -1770,6 +1818,9 @@
         </output>
     </instance>
     <instance xml:id="instance-29">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Legislation</h2>
+      ]]></description>   
       <input type="raw"><![CDATA[31 For example, Law Reform (Miscellaneous Provisions) Act 1970 (U.K.); Domestic Relations Act 1975 (N.Z.); Marriage Act Amendment Act 1976 (Cwth.).]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="31" place="bottom">
