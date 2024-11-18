@@ -1,3 +1,5 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML5//EN" "http://www.w3.org/TR/html5/html.html">
 <html xmlns:llm="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -1023,7 +1025,7 @@
 &lt;/listBibl&gt;</code></pre>
          </div>
          <div class="description-instance"> 
-        <h2>List of statutes</h2>
+        <h2>List of statutes and judicial decisions</h2>
       </div>
          <ul data-tabs="">
             <li><a data-tabby-default="" href="#input-instance-21">Input</a></li>
@@ -1626,7 +1628,11 @@
 &lt;/listBibl&gt;</code></pre>
          </div>
       </div><script>
-          new Tabby('[data-tabs]');
+          const tabSelectors = document.querySelectorAll('[data-tabs]');
+          for (const [i, tabs] of [...tabSelectors].entries()) {
+              tabs.setAttribute(`data-tabs-${i}`, '');
+              new Tabby(`[data-tabs-${i}]`);
+          }
           hljs.highlightAll();
         </script></body>
 </html>
