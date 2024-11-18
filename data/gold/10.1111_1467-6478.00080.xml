@@ -5,6 +5,7 @@ xsi:schemaLocation="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore ../../schema/x
 
   <description content-type="text/html"><![CDATA[ 
     <h1>English-language socio-legal article with footnotes</h1>
+    <p>Examples taken from Bradney, A. (1998) ‘Law as a Parasitic Discipline’, Journal of Law and Society, 25(1), pp. 71–84, DOI <a href="https://doi.org/10.1111/1467-6478.00080">10.1111/1467-6478.00080</a></p>
   ]]></description>
 
   <instance xml:id="instance-1">

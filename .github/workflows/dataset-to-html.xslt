@@ -4,7 +4,8 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:tei="http://www.tei-c.org/ns/1.0">
 
-  <xsl:output method="html" indent="yes" encoding="UTF-8" />
+  <xsl:output method="html" indent="yes" encoding="UTF-8" 
+    doctype-public="-//W3C//DTD HTML5//EN" doctype-system="http://www.w3.org/TR/html5/html.html"/>
 
   <!-- prevent pass-through of text nodes -->
   <xsl:template match="text()"></xsl:template>
@@ -43,7 +44,11 @@
           <xsl:apply-templates select="llm:instance[llm:description]" />
         </div>
         <script>
-          new Tabby('[data-tabs]');
+          const tabSelectors = document.querySelectorAll('[data-tabs]');
+          for (const [i, tabs] of [...tabSelectors].entries()) {
+              tabs.setAttribute(`data-tabs-${i}`, '');
+              new Tabby(`[data-tabs-${i}]`);
+          }
           hljs.highlightAll();
         </script>
       </body>

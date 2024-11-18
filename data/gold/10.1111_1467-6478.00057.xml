@@ -1196,7 +1196,7 @@
     </instance>
     <instance xml:id="instance-21">
       <description content-type="text/html"><![CDATA[ 
-        <h2>List of statutes</h2>
+        <h2>List of statutes and judicial decisions</h2>
       ]]></description> 
       <input type="raw"><![CDATA[23 Crimes (Sexual Assault) Amendment Act 1981 (N.S.W.); Criminal Law Consolidation Act Amendment Act 1976 (S.A.); Criminal Code (Sexual Offences) Act 1987 (Tas.); Crimes (Sexual Offences) 1991 (Vic.); Acts Amendment (Sexual Assault) Act 1985 (W.A.). The High Court upheld the validity of the South Australian law in 1991 (see R. v. L. (1991) 103 A.L.R. 577), the same year that the House of Lords abolished the immunity (see R. v. R. [1991] 2 All E.R. 257).]]></input>
         <output type="block">
