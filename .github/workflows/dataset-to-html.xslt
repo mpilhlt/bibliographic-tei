@@ -45,7 +45,7 @@
             <xsl:apply-templates select="llm:instance[llm:description]" />
             
             <!-- Then apply templates to all llm:instance elements without a description -->
-            <h2>Other</h2>
+            <hr />
             <xsl:apply-templates select="llm:instance[not(llm:description)]" />
         </div>
         <script>
@@ -104,9 +104,6 @@
     
     <ul data-tabs="">
       <li>
-        <a data-tabby-default="" href="#input-{$node/@xml:id}">Input</a>
-      </li>
-      <li>
         <a href="#block-{$node/@xml:id}">Block</a>
       </li>
       <li>
@@ -115,13 +112,7 @@
       <li>
         <a href="#biblStruct-{$node/@xml:id}">biblStruct</a>
       </li>
-    </ul>
-
-
-    <!-- Process <llm:input[@type='raw']> -->
-    <div id="input-{$node/@xml:id}" class="raw-text">
-        <xsl:value-of select="$node/llm:input[@type='raw']"/>
-    </div>    
+    </ul> 
 
     <!-- Process <llm:output[@type='block']> -->
     <div id="block-{$node/@xml:id}">
@@ -157,6 +148,11 @@
     <div class="description-instance">
         <xsl:value-of select="llm:description" disable-output-escaping="yes" />
     </div>
+    <!-- Process <llm:input[@type='raw']> -->
+    <div id="input-{@xml:id}" class="raw-text">
+      <xsl:value-of select="llm:input[@type='raw']"/>
+    </div>
+    <!-- Process <llm:output> nodes -->
     <xsl:call-template name="tabbed-codeblocks">
         <xsl:with-param name="node" select="."/>
     </xsl:call-template>
@@ -164,6 +160,11 @@
   
   <!-- Template to process <llm:instance> without a <description> child -->
   <xsl:template match="llm:instance[not(llm:description)]">
+    <!-- Process <llm:input[@type='raw']> -->
+    <div id="input-{@xml:id}" class="raw-text">
+      <xsl:value-of select="llm:input[@type='raw']"/>
+    </div>
+    <!-- Process <llm:output> nodes -->    
     <xsl:call-template name="tabbed-codeblocks">
         <xsl:with-param name="node" select="."/>
     </xsl:call-template>
