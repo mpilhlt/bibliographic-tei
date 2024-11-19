@@ -41,7 +41,12 @@
           <div class="description">
             <xsl:value-of select="llm:description" disable-output-escaping="yes" />
           </div>
-          <xsl:apply-templates select="llm:instance[llm:description]" />
+            <!-- Apply templates to all llm:instance elements with a description -->
+            <xsl:apply-templates select="llm:instance[llm:description]" />
+            
+            <!-- Then apply templates to all llm:instance elements without a description -->
+            <h2>Other</h2>
+            <xsl:apply-templates select="llm:instance[not(llm:description)]" />
         </div>
         <script>
           const tabSelectors = document.querySelectorAll('[data-tabs]');
@@ -93,62 +98,75 @@
       </xsl:choose>
   </xsl:function>
 
-
-  <!-- Template for <llm:instance> with a <description> child -->
-  <xsl:template match="llm:instance[llm:description]">
-
-    <div class="description-instance">
-        <xsl:value-of select="llm:description" disable-output-escaping="yes" />
-    </div>
-
+  <!-- Template for the tabbed code blocks -->
+  <xsl:template name="tabbed-codeblocks">
+    <xsl:param name="node" />
+    
     <ul data-tabs="">
       <li>
-        <a data-tabby-default="" href="#input-{@xml:id}">Input</a>
+        <a data-tabby-default="" href="#input-{$node/@xml:id}">Input</a>
       </li>
       <li>
-        <a href="#block-{@xml:id}">Block</a>
+        <a href="#block-{$node/@xml:id}">Block</a>
       </li>
       <li>
-        <a href="#bibl-{@xml:id}">bibl</a>
+        <a href="#bibl-{$node/@xml:id}">bibl</a>
       </li>
       <li>
-        <a href="#biblStruct-{@xml:id}">biblStruct</a>
+        <a href="#biblStruct-{$node/@xml:id}">biblStruct</a>
       </li>
     </ul>
 
 
     <!-- Process <llm:input[@type='raw']> -->
-      <div id="input-{@xml:id}" class="raw-text">
-        <xsl:value-of select="llm:input[@type='raw']"/>
-      </div>    
+    <div id="input-{$node/@xml:id}" class="raw-text">
+        <xsl:value-of select="$node/llm:input[@type='raw']"/>
+    </div>    
 
     <!-- Process <llm:output[@type='block']> -->
-    <div id="block-{@xml:id}">
-      <pre><code>
-        <xsl:call-template name="serialize-stripped">
-          <xsl:with-param name="node" select="llm:output[@type='block']/*[1]"/>
-        </xsl:call-template>
-      </code></pre>
+    <div id="block-{$node/@xml:id}">
+        <pre><code>
+            <xsl:call-template name="serialize-stripped">
+                <xsl:with-param name="node" select="$node/llm:output[@type='block']/*[1]"/>
+            </xsl:call-template>
+        </code></pre>
     </div>
 
     <!-- Process <llm:output[@type='bibl']> -->
-    <div id="bibl-{@xml:id}">
-      <pre><code>
-        <xsl:call-template name="serialize-stripped">
-          <xsl:with-param name="node" select="llm:output[@type='bibl']/*[1]"/>
-        </xsl:call-template>
-      </code></pre>
+    <div id="bibl-{$node/@xml:id}">
+        <pre><code>
+            <xsl:call-template name="serialize-stripped">
+                <xsl:with-param name="node" select="$node/llm:output[@type='bibl']/*[1]"/>
+            </xsl:call-template>
+        </code></pre>
     </div>
 
     <!-- Process <llm:output[@type='biblStruct']> -->
-    <div id="biblStruct-{@xml:id}">
-      <pre><code>
-        <xsl:call-template name="serialize-stripped">
-          <xsl:with-param name="node" select="llm:output[@type='biblStruct']/*[1]"/>
-        </xsl:call-template>
-      </code></pre>
+    <div id="biblStruct-{$node/@xml:id}">
+        <pre><code>
+            <xsl:call-template name="serialize-stripped">
+                <xsl:with-param name="node" select="$node/llm:output[@type='biblStruct']/*[1]"/>
+            </xsl:call-template>
+        </code></pre>
     </div>
 
   </xsl:template>
-
+  
+  <!-- Template to process <llm:instance> with a <description> child -->
+  <xsl:template match="llm:instance[llm:description]">
+    <div class="description-instance">
+        <xsl:value-of select="llm:description" disable-output-escaping="yes" />
+    </div>
+    <xsl:call-template name="tabbed-codeblocks">
+        <xsl:with-param name="node" select="."/>
+    </xsl:call-template>
+  </xsl:template>
+  
+  <!-- Template to process <llm:instance> without a <description> child -->
+  <xsl:template match="llm:instance[not(llm:description)]">
+    <xsl:call-template name="tabbed-codeblocks">
+        <xsl:with-param name="node" select="."/>
+    </xsl:call-template>
+  </xsl:template>
+  
 </xsl:stylesheet>
