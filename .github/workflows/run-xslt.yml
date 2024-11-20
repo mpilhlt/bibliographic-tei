@@ -28,7 +28,7 @@ jobs:
           base_name=$(basename "$xml_file" .xml)
           docker run --rm -i -u $(id -u) --volume "${PWD}:/src" klakegg/saxon:he xslt \
             -s:$xml_file \
-            -xsl:.github/workflows/dataset-to-html.xslt \
+            -xsl:xslt/dataset-to-html.xslt \
             -o:docs/$base_name.html
         done
 
