@@ -4,6 +4,10 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:tei="http://www.tei-c.org/ns/1.0">
 
+  <!-- this stylesheet generates a TEI/XML bibliography from all <bibl> elements found in the text of a TEI/XML document -->
+  <!-- taken from https://github.com/OpenArabicPE/convert_tei-to-bibliographic-data -->
+  <xsl:import href="convert_tei-to-biblstruct_functions.xsl"/>
+
   <xsl:output method="html" indent="yes" encoding="UTF-8" 
     doctype-public="-//W3C//DTD HTML5//EN" doctype-system="http://www.w3.org/TR/html5/html.html"/>
 
@@ -67,36 +71,58 @@
     </div>
   </xsl:template>
 
-  <!-- template to escape xml data and remove indentation and namespaces -->
-  <xsl:template name="serialize-stripped">
-      <xsl:param name="node"/>
-      <xsl:variable name="serialized-node" select="serialize($node, map {'method': 'xml'})"/>
-      <!-- get tag of the first child -->
-      <xsl:variable name="child-tag" select="name($node/*[position() = last()])"/>
-      <!-- Remove namespace expressions -->
-      <xsl:variable name="namespace-stripped-node" select="replace($serialized-node, ' xmlns(:\w+)?=&quot;[^&quot;]*&quot;', '')"/>
-      <!-- De-indent -->
-      <xsl:variable name="stripped-node" select="llm:replace_while_match($namespace-stripped-node, concat('\n\s+&lt;/', $child-tag, '&gt;'), '\n\s', '&#10;')"/>
-      <!-- output -->
-      <xsl:value-of select="$stripped-node"/>
+<!-- Template to escape XML data and remove indentation and namespaces, then pretty-print -->
+<xsl:template name="serialize-stripped">
+    <xsl:param name="node"/>
+    
+    <!-- Serialize the node with pretty-printing enabled -->
+    <xsl:variable name="serialized" select="serialize($node, map {'method': 'xml', 'indent': true()})"/>
+    
+    <!-- Post-process to remove line breaks between attributes (and maintain attributes on the same line) -->
+    <!-- select="replace($serialized, '([\n\r]+)\s*([^&lt;][^=]*=[^&lt;]+)', ' $1')" -->
+    <xsl:variable name="fixed-attributes" select="$serialized"/>
+
+    <!-- Remove namespace expressions -->
+    <xsl:variable name="namespace-stripped" select="replace($fixed-attributes, ' xmlns(:\w+)?=&quot;[^&quot;]*&quot;', '')"/>
+    
+    <!-- De-indent, replace '\n ' with '\n', and format the output -->
+    <xsl:variable name="de-intented" select="llm:replace_while_match($namespace-stripped, '', '[\n\r]&lt;', '([\n\r]+)\s', '$1')"/>
+    
+    <!-- Output the final formatted and pretty-printed XML -->
+    <xsl:value-of select="$de-intented"/>
   </xsl:template>
 
-  <!-- search/replace while a string matches -->
+
   <xsl:function name="llm:replace_while_match" as="xs:string">
-      <xsl:param name="input" as="xs:string"/>
-      <xsl:param name="match" as="xs:string"/>
-      <xsl:param name="search" as="xs:string"/>
-      <xsl:param name="replace" as="xs:string"/>
-      <!-- if the $match can be found, replace $search with $replace and recurse -->
-      <xsl:choose>
-          <xsl:when test="matches($input, $match)">
-              <xsl:sequence select="llm:replace_while_match(replace($input, $search, $replace), $match, $search, $replace)"/>
-          </xsl:when>
-          <xsl:otherwise>
-              <xsl:sequence select="$input"/>
-          </xsl:otherwise>
-      </xsl:choose>
+    <xsl:param name="input" as="xs:string"/>
+    <xsl:param name="match" as="xs:string"/>
+    <xsl:param name="not-match" as="xs:string"/>
+    <xsl:param name="search" as="xs:string"/>
+    <xsl:param name="replace" as="xs:string"/>
+
+    <!-- Replace while matching the pattern and ensuring we don't recurse indefinitely -->
+    <xsl:variable name="replaced" select="replace($input, $search, $replace)"/>
+
+    <!-- Check if a replacement happened, and if so, recurse, otherwise return the input -->
+    <xsl:choose>
+        <!-- Continue replacing if there's a match and the input changed -->
+        <xsl:when test="($match != '' and matches($input, $match)) and ($replaced != $input)">
+            <xsl:sequence select="llm:replace_while_match($replaced, $match, $not-match, $search, $replace)"/>
+        </xsl:when>
+
+        <!-- Check if the input does not match the 'not-match' pattern and continue -->
+        <xsl:when test="($not-match != '' and not(matches($input, $not-match))) and ($replaced != $input)">
+            <xsl:sequence select="llm:replace_while_match($replaced, $match, $not-match, $search, $replace)"/>
+        </xsl:when>
+
+        <!-- If no match occurs or the string didn't change, return the input -->
+        <xsl:otherwise>
+            <xsl:sequence select="$input"/>
+        </xsl:otherwise>
+    </xsl:choose>
   </xsl:function>
+
+
 
   <!-- Template for the tabbed code blocks -->
   <xsl:template name="tabbed-codeblocks">
@@ -107,10 +133,13 @@
         <a href="#block-{$node/@xml:id}">Block</a>
       </li>
       <li>
-        <a href="#bibl-{$node/@xml:id}">bibl</a>
+        <a href="#bibl-{$node/@xml:id}">&lt;bibl&gt;</a>
       </li>
       <li>
-        <a href="#biblStruct-{$node/@xml:id}">biblStruct</a>
+        <a href="#biblStruct-{$node/@xml:id}">&lt;biblStruct&gt; (from source)</a>
+      </li>
+      <li>
+        <a href="#biblStruct-generated-{$node/@xml:id}">&lt;biblStruct&gt; (auto-generated)</a>
       </li>
     </ul> 
 
@@ -138,6 +167,18 @@
             <xsl:call-template name="serialize-stripped">
                 <xsl:with-param name="node" select="$node/llm:output[@type='biblStruct']/*[1]"/>
             </xsl:call-template>
+        </code></pre>
+    </div>
+
+    <!-- Translate bibl to biblStruct with XSLT -->
+      <div id="biblStruct-generated-{$node/@xml:id}">
+        <pre><code>
+          <xsl:variable name="biblStructResult">
+            <xsl:apply-templates select="$node//tei:bibl" mode="m_bibl-to-biblStruct"/>
+          </xsl:variable>
+          <xsl:call-template name="serialize-stripped">
+              <xsl:with-param name="node" select="$biblStructResult"/>
+          </xsl:call-template>
         </code></pre>
     </div>
 
