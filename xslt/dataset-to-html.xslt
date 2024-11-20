@@ -37,11 +37,13 @@
           padding: 10px;
           font-family: 'Courier New', Courier, monospace;
           }
+          .block-with-description, .block-no-description {
+          }
         </style>
       </head>
       <body>
-        <div class="container">
-          <div class="description">
+        <div class="document-container">
+          <div class="document-description">
             <xsl:value-of select="llm:description" disable-output-escaping="yes" />
           </div>
           <!-- Apply templates to all llm:instance elements with a description -->
@@ -63,11 +65,46 @@
     </html>
   </xsl:template>
 
-  <!-- Template for <llm:description> -->
+  <!-- Template for top-level <llm:description> -->
   <xsl:template match="llm:description">
     <div class="description-dataset">
       <xsl:copy-of select="." />
     </div>
+  </xsl:template>
+
+  <!-- Template to process <llm:instance> with a <description> child -->
+  <xsl:template match="llm:instance[llm:description]">
+    <fieldset class="block-with-description">
+      <legend><a name="{@xml:id}" href="#{@xml:id}"><xsl:value-of select="@xml:id"/></a></legend>
+      <div class="description-instance">
+        <xsl:value-of select="llm:description" disable-output-escaping="yes" />
+      </div>
+      <!-- Process <llm:input[@type='raw']> -->
+        <div
+        id="input-{@xml:id}" class="raw-text">
+        <xsl:value-of select="llm:input[@type='raw']" />
+      </div>
+      <!-- Process <llm:output> nodes -->
+      <xsl:call-template name="tabbed-codeblocks">
+        <xsl:with-param name="node" select="." />
+      </xsl:call-template>
+    </fieldset>
+  </xsl:template>
+
+  <!-- Template to process <llm:instance> without a <description> child -->
+  <xsl:template match="llm:instance[not(llm:description)]">
+    <fieldset class="block-no-description">
+      <legend><a name="{@xml:id}" href="#{@xml:id}"><xsl:value-of select="@xml:id"/></a></legend>
+      <!-- Process <llm:input[@type='raw']> -->
+      <div id="input-{@xml:id}"
+      class="raw-text">
+      <xsl:value-of select="llm:input[@type='raw']" />
+    </div>
+    <!-- Process <llm:output> nodes -->    
+    <xsl:call-template name="tabbed-codeblocks">
+      <xsl:with-param name="node" select="." />
+    </xsl:call-template>
+    </fieldset>
   </xsl:template>
 
   <!-- Template for the tabbed code blocks -->
@@ -85,7 +122,10 @@
         <a href="#biblStruct-{$node/@xml:id}">&lt;biblStruct&gt; (from source)</a>
       </li>
       <li>
-        <a href="#biblStruct-generated-{$node/@xml:id}">&lt;biblStruct&gt; (auto-generated)</a>
+        <a href="#biblStruct-unresolved-{$node/@xml:id}">&lt;biblStruct&gt; (unresolved)</a>
+      </li>
+      <li>
+        <a href="#biblStruct-resolved-{$node/@xml:id}">&lt;biblStruct&gt; (resolved)</a>
       </li>
     </ul>
 
@@ -113,102 +153,40 @@
     <div
       id="biblStruct-{$node/@xml:id}">
       <pre><code>
-            <xsl:call-template name="serialize-stripped">
-                <xsl:with-param name="node" select="$node/llm:output[@type='biblStruct']/*[1]"/>
-            </xsl:call-template>
+        <xsl:call-template name="serialize-stripped">
+            <xsl:with-param name="node" select="$node/llm:output[@type='biblStruct']/*[1]"/>
+        </xsl:call-template>
         </code></pre>
     </div>
 
-    <!-- Translate bibl to biblStruct with XSLT -->
-      <div
-      id="biblStruct-generated-{$node/@xml:id}">
+    <!-- Unresolved biblStruct -->
+    <div id="biblStruct-unresolved-{$node/@xml:id}">
       <pre><code>
           <xsl:variable name="biblStructResult">
             <listBibl>
-              <xsl:apply-templates select="$node//tei:bibl" />
+              <xsl:apply-templates select="$node/llm:output[@type='bibl']//tei:bibl" mode="unresolved" />
             </listBibl>
           </xsl:variable>
           <xsl:call-template name="serialize-stripped">
-              <xsl:with-param name="node" select="$biblStructResult"/>
+            <xsl:with-param name="node" select="$biblStructResult"/>
           </xsl:call-template>
         </code></pre>
     </div>
 
-  </xsl:template>
-
-  <!-- Template to process <llm:instance> with a <description> child -->
-  <xsl:template match="llm:instance[llm:description]">
-    <div class="description-instance">
-      <xsl:value-of select="llm:description" disable-output-escaping="yes" />
+    <!-- Resolved biblStruct -->
+    <div id="biblStruct-resolved-{$node/@xml:id}">
+      <pre><code>
+          <xsl:variable name="biblStructResult">
+            <listBibl>
+              <xsl:apply-templates select="$node/llm:output[@type='bibl']//tei:bibl" mode="resolved"/>
+            </listBibl>
+          </xsl:variable>
+          <xsl:call-template name="serialize-stripped">
+            <xsl:with-param name="node" select="$biblStructResult"/>
+          </xsl:call-template>
+        </code></pre>
     </div>
-    <!-- Process <llm:input[@type='raw']> -->
-    <div
-      id="input-{@xml:id}" class="raw-text">
-      <xsl:value-of select="llm:input[@type='raw']" />
-    </div>
-    <!-- Process <llm:output> nodes -->
-    <xsl:call-template
-      name="tabbed-codeblocks">
-      <xsl:with-param name="node" select="." />
-    </xsl:call-template>
-  </xsl:template>
 
-  <!-- Template to process <llm:instance> without a <description> child -->
-  <xsl:template match="llm:instance[not(llm:description)]">
-    <!-- Process <llm:input[@type='raw']> -->
-    <div id="input-{@xml:id}"
-      class="raw-text">
-      <xsl:value-of select="llm:input[@type='raw']" />
-    </div>
-    <!-- Process <llm:output> nodes -->    
-    <xsl:call-template
-      name="tabbed-codeblocks">
-      <xsl:with-param name="node" select="." />
-    </xsl:call-template>
-  </xsl:template>
-
-  <!-- 
-    convert a bibl to a biblStruct
-    code originally adapted from
-  https://github.com/OpenArabicPE/convert_tei-to-bibliographic-data/blob/master/xslt/convert_tei-to-zotero-rdf_functions.xsl
-    Author: Till Grallert
-
-    there's a bug producing an empty <biblStruct/>
-  -->
-  <xsl:template match="tei:bibl">
-      <biblStruct>
-        <xsl:copy-of select="@*" />
-        <xsl:if test="tei:title[@level = 'a']">
-          <analytic>
-            <xsl:copy-of select="tei:title[@level = 'a']" />
-            <xsl:copy-of select="tei:author" />
-          </analytic>
-        </xsl:if>
-        <xsl:if test="tei:title[@level != 'a']" >
-          <monogr>
-            <xsl:copy-of select="tei:title[@level != 'a']" />
-            <xsl:copy-of select="tei:idno" />
-            <!-- author: depending on which level we are on -->
-            <xsl:choose>
-              <!-- if this is for a book section, article etc., the author has been part of <analytic> -->
-              <xsl:when test="tei:title[@level = 'a']" />
-              <xsl:otherwise>
-                <xsl:copy-of select="tei:author" />
-              </xsl:otherwise>
-            </xsl:choose>
-            <xsl:copy-of select="tei:editor" />
-            <imprint>
-              <xsl:copy-of select="descendant::tei:date" />
-              <xsl:copy-of select="tei:pubPlace" />
-              <xsl:copy-of select="tei:publisher" />
-            </imprint>
-            <xsl:copy-of select="tei:biblScope" />
-            <xsl:copy-of select="tei:citedRange" />
-          </monogr>
-        </xsl:if>
-        <!-- retain all potential notes  -->
-        <xsl:copy-of select="tei:note" />
-      </biblStruct>
   </xsl:template>
 
   <!-- Template to escape XML data and remove indentation and namespaces, then pretty-print -->
