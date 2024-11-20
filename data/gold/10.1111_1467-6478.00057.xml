@@ -5,7 +5,7 @@
 
   <description content-type="text/html"><![CDATA[ 
     <h1>English-language socio-legal article with endnotes</h1>
-    <p>Examples taken from Thornton, M. (1997) ‘The Judicial Gendering of Citizenship: A Look at Property Interests During Marriage’, Journal of Law and Society, 24(4), pp. 486–503,
+    <p>Source: Thornton, M. (1997) ‘The Judicial Gendering of Citizenship: A Look at Property Interests During Marriage’, Journal of Law and Society, 24(4), pp. 486–503,
      DOI <a href="https://doi.org/10.1111/1467-6478.00057">10.1111/1467-6478.00057</a></p>
   ]]></description>
 
@@ -167,7 +167,7 @@
                         </persName>
                     </author>,
                     <title level="m">A Woman’s Place: Women and Politics in Australia</title>
-                    (<edition>2nd ed.</edition>,
+                    (<edition n="2">2nd ed.</edition>,
                     <date when="1993">1993</date>).
                 </bibl>
           </note>
@@ -888,7 +888,7 @@
                     <title level="m">Ancient Law: Its Connection with the Early History of Society and its Relation to
                         Modern Ideas
                     </title>
-                    (<edition>10th ed.</edition>,
+                    (<edition n="10">10th ed.</edition>,
                     <date when="1912">1912</date>)
                     <citedRange unit="page" from="174" to="174">174</citedRange>.
                 </bibl>
@@ -1446,19 +1446,19 @@
         </output>
         <output type="bibl">
           <note xmlns="http://www.tei-c.org/ns/1.0" n="25" type="footnote" place="bottom">
-              <label>25</label>
+            <label>25</label>
             <bibl xml:id="bibl-38">
-                  <author>
-                      <persName>
-                          <forename>P.S.</forename>
-                            <surname>Atiyah</surname>
-                        </persName>
-                    </author>,
-                    <title level="m">An Introduction to the Law of Contract</title>
-                    (<edition>5th ed.</edition>,
-                    <date when="1995">1995</date>)
-                    <citedRange unit="page" from="3" to="3">3</citedRange>.
-                </bibl>
+              <author>
+                <persName>
+                  <forename>P.S.</forename>
+                  <surname>Atiyah</surname>
+                </persName>
+              </author>,
+              <title level="m">An Introduction to the Law of Contract</title>
+              (<edition n="5">5th ed.</edition>,
+              <date when="1995">1995</date>)
+              <citedRange unit="page" from="3" to="3">3</citedRange>.
+            </bibl>
           </note>
         </output>
         <output type="biblStruct">
@@ -1673,19 +1673,19 @@
             <bibl>Grossberg, op. cit., n. 18, p. 52.</bibl>
           </note>
         </output>
-        <output type="bibl">
+          <output type="bibl">
           <note xmlns="http://www.tei-c.org/ns/1.0" n="28" type="footnote" place="bottom">
-              <label>28</label>
+          <label>28</label>
             <bibl xml:id="bibl-45">
-                  <author>
-                      <persName>
-                          <surname>Grossberg</surname>
-                        </persName>
-                    </author>,
-                    <ref type="previous-work">op. cit.</ref>,
-                    <ref type="footnote" n="18">n. 18</ref>,
-                    <citedRange unit="page" from="52" to="52">p. 52</citedRange>.
-                </bibl>
+              <author>
+                <persName>
+                  <surname>Grossberg</surname>
+                </persName>
+              </author>,
+              <ref type="previous-work" target="#bibl-21">op. cit.</ref>,
+              <ref type="footnote" n="18">n. 18</ref>,
+              <citedRange unit="page" from="52" to="52">p. 52</citedRange>.
+            </bibl>
           </note>
         </output>
         <output type="biblStruct">
@@ -2155,19 +2155,12 @@
         <output type="bibl">
           <note xmlns="http://www.tei-c.org/ns/1.0" n="37" type="footnote" place="bottom">
               <label>37</label>
-            <bibl xml:id="bibl-59">
-                  <author>
-                      <persName>
-                          <surname>Although</surname>
-                        </persName>
-                    </author>
-                </bibl>
-                <note type="comment">
-                    Australia, like the United Kingdom, has a separate property regime, the courts
-                    are endowed with broad powers under the Family Law Act 1975 (Cwth.) to distribute property equitably.
+              <note type="comment">
+                Although Australia, like the United Kingdom, has a separate property regime, the courts
+                are endowed with broad powers under the Family Law Act 1975 (Cwth.) to distribute property equitably.
               </note>
-                <note type="signal">For detailed treatment, see</note>
-                <bibl xml:id="bibl-61">
+              <note type="signal">For detailed treatment, see</note>
+              <bibl xml:id="bibl-61">
                   <author>
                       <persName>
                           <forename>P.</forename>
@@ -2230,82 +2223,71 @@
         <output type="biblStruct">
           <listBibl xmlns="http://www.tei-c.org/ns/1.0">
               <biblStruct>
-                  <monogr>
-                    <title/>
+                <monogr>
+                    <title level="m">Australian Family Law in Context: Commentary and Materials</title>
                       <author>
-                          <persName>
-                              <surname>Although</surname>
-                            </persName>
-                        </author>
-                        <imprint><date/></imprint>
-                    </monogr>
-                </biblStruct>
-                <biblStruct>
+                        <persName>
+                            <forename>P.</forename>
+                              <forename>Parkinson</forename>
+                          </persName>
+                      </author>
+                      <author>
+                        <persName>
+                            <forename>S.</forename>
+                              <surname>Parker</surname>
+                          </persName>
+                      </author>
+                      <author>
+                        <persName>
+                            <forename>J.</forename>
+                              <surname>Behrens</surname>
+                          </persName>
+                      </author>
+                      <imprint>
+                        <date when="1994">1994</date>
+                      </imprint>
+                  </monogr>
+              </biblStruct>
+              <biblStruct>
+                <analytic>
+                    <title level="a">Management of the Community Estate during an Intact Marriage</title>
+                      <author>
+                        <persName>
+                            <forename>J.T.</forename>
+                              <surname>Oldham</surname>
+                          </persName>
+                      </author>
+                  </analytic>
                   <monogr>
-                      <title level="m">Australian Family Law in Context: Commentary and Materials</title>
-                        <author>
-                          <persName>
-                              <forename>P.</forename>
-                                <forename>Parkinson</forename>
-                            </persName>
-                        </author>
-                        <author>
-                          <persName>
-                              <forename>S.</forename>
-                                <surname>Parker</surname>
-                            </persName>
-                        </author>
-                        <author>
-                          <persName>
-                              <forename>J.</forename>
-                                <surname>Behrens</surname>
-                            </persName>
-                        </author>
-                        <imprint>
-                          <date when="1994">1994</date>
-                        </imprint>
-                    </monogr>
-                </biblStruct>
-                <biblStruct>
-                  <analytic>
-                      <title level="a">Management of the Community Estate during an Intact Marriage</title>
-                        <author>
-                          <persName>
-                              <forename>J.T.</forename>
-                                <surname>Oldham</surname>
-                            </persName>
-                        </author>
-                    </analytic>
-                    <monogr>
-                      <title level="j">Law and Contemporary Problems</title>
-                        <imprint>
-                          <date when="1993">1993</date>
-                        </imprint>
-                        <biblScope unit="volume" from="56" to="56">56</biblScope>
-                        <biblScope unit="page" from="99">99</biblScope>
-                    </monogr>
-                </biblStruct>
-                <biblStruct>
-                  <analytic>
-                      <title level="a">What Causes Fundamental Legal Ideas? Marital Property in England and France in the
-                        Thirteenth Century’
-                    </title>
-                        <author>
-                          <persName>
-                              <forename>C.</forename>
-                                <surname>Donahue</surname>
-                            </persName>
-                        </author>
-                    </analytic>
-                    <monogr>
-                      <title level="j">Michigan Law Rev.</title>
-                        <imprint>
-                          <date when="1979">1979</date>
-                        </imprint>
-                        <biblScope unit="volume" from="78" to="78">78</biblScope>
-                        <biblScope unit="page" from="59">59</biblScope>
-                    </monogr>
-                </biblStruct>
+                    <title level="j">Law and Contemporary Problems</title>
+                      <imprint>
+                        <date when="1993">1993</date>
+                      </imprint>
+                      <biblScope unit="volume" from="56" to="56">56</biblScope>
+                      <biblScope unit="page" from="99">99</biblScope>
+                  </monogr>
+              </biblStruct>
+              <biblStruct>
+                <analytic>
+                    <title level="a">What Causes Fundamental Legal Ideas? Marital Property in England and France in the
+                      Thirteenth Century’
+                  </title>
+                      <author>
+                        <persName>
+                            <forename>C.</forename>
+                              <surname>Donahue</surname>
+                          </persName>
+                      </author>
+                  </analytic>
+                  <monogr>
+                    <title level="j">Michigan Law Rev.</title>
+                      <imprint>
+                        <date when="1979">1979</date>
+                      </imprint>
+                      <biblScope unit="volume" from="78" to="78">78</biblScope>
+                      <biblScope unit="page" from="59">59</biblScope>
+                  </monogr>
+              </biblStruct>
             </listBibl>
         </output>
     </instance>

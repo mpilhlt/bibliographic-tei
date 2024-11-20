@@ -5,7 +5,7 @@ xsi:schemaLocation="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore ../../schema/x
 
   <description content-type="text/html"><![CDATA[ 
     <h1>English-language socio-legal article with footnotes</h1>
-    <p>Examples taken from Bradney, A. (1998) ‘Law as a Parasitic Discipline’, Journal of Law and Society, 25(1), pp. 71–84, DOI <a href="https://doi.org/10.1111/1467-6478.00080">10.1111/1467-6478.00080</a></p>
+    <p>Source: Bradney, A. (1998) ‘Law as a Parasitic Discipline’, Journal of Law and Society, 25(1), pp. 71–84, DOI <a href="https://doi.org/10.1111/1467-6478.00080">10.1111/1467-6478.00080</a></p>
   ]]></description>
 
   <instance xml:id="instance-1">
@@ -1400,7 +1400,7 @@ xsi:schemaLocation="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore ../../schema/x
                             <surname>Willliams</surname>
                         </persName>
                     </editor>
-                    (<edition>10th ed.</edition>,
+                    (<edition n="10">10th ed.</edition>,
                     <date when="1947">1947</date>)
                     <citedRange unit="page" from="256" to="257">at 256 and 257</citedRange>.
                 </bibl>

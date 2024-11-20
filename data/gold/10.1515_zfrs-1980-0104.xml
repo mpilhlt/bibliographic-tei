@@ -1037,7 +1037,7 @@
                     <title level="m">Handbuch der Psychologie</title>,
                     <biblScope unit="volume" from="VII" to="VII">Bd. VII</biblScope>
                     <biblScope unit="issue" from="1" to="1">1</biblScope>
-                    (<edition>2. Aufl.</edition>,
+                    (<edition n="2">2. Aufl.</edition>,
                     <date when="1969">1969</date>)
                     <biblScope unit="page" from="514">514</biblScope>
                     (<citedRange unit="page" from="520">520 ff.</citedRange>)
@@ -2884,7 +2884,7 @@
                     <note type="comment">der sie am Beispiel der Religion näher erläutert hat</note>
                     (<title level="m">Social Theory and Social Structure</title>,
                     <pubPlace>New York, London</pubPlace>,
-                    <edition>erweiterte Aufl.</edition>
+                    <edition n="2">erweiterte Aufl.</edition>
                     <date when="1968">1968</date>,
                     <citedRange unit="page" from="82">S. 82 ff.</citedRange>):
                 </bibl>
@@ -4690,7 +4690,7 @@
                     (Hrsg.),
                     <title level="m">Handbuch der empirischen Sozialforschung</title>,
                     <biblScope unit="volume" from="4" to="4">Bd. 4</biblScope>
-                    (<edition>3. Aufl.</edition>
+                    (<edition n="3">3. Aufl.</edition>
                     <date when="1974">1974</date>)
                     <biblScope unit="page" from="405">405</biblScope>
                     (<citedRange unit="page" from="414">414 f.</citedRange>)
