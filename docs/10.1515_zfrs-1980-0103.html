@@ -13,31 +13,36 @@
           padding: 10px;
           font-family: 'Courier New', Courier, monospace;
           }
+          .block-with-description, .block-no-description {
+          }
         </style>
    </head>
    <body>
-      <div class="container">
-         <div class="description"> 
+      <div class="document-container">
+         <div class="document-description"> 
     <h1>German-language socio-legal article with footnotes and bibliography</h1>
   </div>
          <hr>
-         <div id="input-instance-1" class="raw-text">1 Geiger 1964, insbesondere S. 65—83.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-1">Block</a></li>
-            <li><a href="#bibl-instance-1">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-1">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-1">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-1">
-            <pre><code>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-1" href="#instance-1">instance-1</a></legend>
+            <div id="input-instance-1" class="raw-text">1 Geiger 1964, insbesondere S. 65—83.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-1">Block</a></li>
+               <li><a href="#bibl-instance-1">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-1">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-1">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-1">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-1">
+               <pre><code>
 &lt;note type="footnote" n="1" place="bottom"&gt;
    &lt;label&gt;1&lt;/label&gt;
    &lt;bibl&gt;Geiger 1964, insbesondere S. 65—83.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-1">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-1">
+               <pre><code>
 &lt;note n="1" type="footnote" place="bottom"&gt;
    &lt;label&gt;1&lt;/label&gt;
    &lt;bibl xml:id="bibl-1"&gt;
@@ -51,9 +56,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-1">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-1">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -71,35 +76,59 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-1">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-1">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-1"/&gt;
+   &lt;biblStruct source="#bibl-1"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Geiger&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="65" to="83"&gt;insbesondere S. 65—83&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-2" class="raw-text">2 Vgl. Feest/Blankenburg, 1972. Die Konsequenz einer größeren Dunkelziffer bei den
-            von der Polizei selbst entdeckten Straftaten entwickle ich ausführlicher in meinem
-            Beitrag über ‘Nichtkriminalisierung als Struktur und Routine’, 1976.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-2">Block</a></li>
-            <li><a href="#bibl-instance-2">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-2">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-2">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-2">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-1">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-1"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Geiger&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="65" to="83"&gt;insbesondere S. 65—83&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-2" href="#instance-2">instance-2</a></legend>
+            <div id="input-instance-2" class="raw-text">2 Vgl. Feest/Blankenburg, 1972. Die Konsequenz einer größeren Dunkelziffer bei den
+               von der Polizei selbst entdeckten Straftaten entwickle ich ausführlicher in meinem
+               Beitrag über ‘Nichtkriminalisierung als Struktur und Routine’, 1976.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-2">Block</a></li>
+               <li><a href="#bibl-instance-2">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-2">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-2">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-2">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-2">
+               <pre><code>
 &lt;note type="footnote" n="2" place="bottom"&gt;
    &lt;label&gt;2&lt;/label&gt;
    &lt;seg&gt;Vgl.&lt;/seg&gt;
    &lt;bibl&gt;Feest/Blankenburg, 1972.&lt;/bibl&gt; Die Konsequenz einer größeren Dunkelziffer bei den von der Polizei selbst entdeckten Straftaten entwickle ich ausführlicher in meinem Beitrag über &lt;bibl&gt;‘Nichtkriminalisierung als Struktur und Routine’, 1976.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-2">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-2">
+               <pre><code>
 &lt;note n="2" type="footnote" place="bottom"&gt;
    &lt;label&gt;2&lt;/label&gt;
    &lt;note type="signal"&gt;Vgl.&lt;/note&gt;
@@ -126,9 +155,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-2">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-2">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -158,14 +187,23 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-2">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-2">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-2"/&gt;
-   &lt;biblStruct xml:id="bibl-3"&gt;
+   &lt;biblStruct source="#bibl-2"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Feest&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-3"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Nichtkriminalisierung als Struktur und Routine&lt;/title&gt;
          &lt;imprint&gt;
@@ -175,29 +213,59 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-3" class="raw-text">3 Angaben aus einer Befragung von Peter MacNaughton-Smith und Richard Rosellen zur
-            ‘Bereitschaft zur Anzeigeerstattung’ Max-Planck-Institut für Strafrecht, Freiburg
-            1978. Manuskript Der ausführliche Forschungsbericht von Richard Rosellen erscheint
-            in Kürze unter dem Titel ‘Private Verbrechenskontrolle — eine empirische Untersuchung
-            zur Anzeigeerstattung’, Berlin, voraussichtlich 1980.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-3">Block</a></li>
-            <li><a href="#bibl-instance-3">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-3">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-3">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-3">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-2">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-2"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Feest&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-3"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Nichtkriminalisierung als Struktur und Routine&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1976"&gt;1976&lt;/date&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-3" href="#instance-3">instance-3</a></legend>
+            <div id="input-instance-3" class="raw-text">3 Angaben aus einer Befragung von Peter MacNaughton-Smith und Richard Rosellen zur
+               ‘Bereitschaft zur Anzeigeerstattung’ Max-Planck-Institut für Strafrecht, Freiburg
+               1978. Manuskript Der ausführliche Forschungsbericht von Richard Rosellen erscheint
+               in Kürze unter dem Titel ‘Private Verbrechenskontrolle — eine empirische Untersuchung
+               zur Anzeigeerstattung’, Berlin, voraussichtlich 1980.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-3">Block</a></li>
+               <li><a href="#bibl-instance-3">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-3">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-3">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-3">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-3">
+               <pre><code>
 &lt;note type="footnote" n="3" place="bottom"&gt;
    &lt;label&gt;3&lt;/label&gt;
    &lt;seg&gt;Angaben aus einer Befragung von&lt;/seg&gt;
    &lt;bibl&gt;Peter MacNaughton-Smith und Richard Rosellen zur ‘Bereitschaft zur Anzeigeerstattung’ Max-Planck-Institut für Strafrecht, Freiburg 1978.&lt;/bibl&gt; Manuskript Der ausführliche Forschungsbericht von &lt;bibl&gt;Richard Rosellen erscheint in Kürze unter dem Titel ‘Private Verbrechenskontrolle — eine empirische Untersuchung zur Anzeigeerstattung’, Berlin, voraussichtlich 1980.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-3">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-3">
+               <pre><code>
 &lt;note n="3" type="footnote" place="bottom"&gt;
    &lt;label&gt;3&lt;/label&gt;
    &lt;note type="signal"&gt;Angaben aus einer Befragung von&lt;/note&gt;
@@ -235,9 +303,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-3">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-3">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -278,13 +346,11 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-3">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-3">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-4"&gt;
+   &lt;biblStruct source="#bibl-4"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Bereitschaft zur Anzeigeerstattung&lt;/title&gt;
          &lt;author&gt;
@@ -306,7 +372,7 @@
          &lt;/imprint&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-5"&gt;
+   &lt;biblStruct source="#bibl-5"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Private Verbrechenskontrolle — eine empirische Untersuchung zur Anzeigeerstattung&lt;/title&gt;
          &lt;author&gt;
@@ -324,25 +390,73 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-4" class="raw-text">4 Vgl. Blankenburg/Sessar/Steffen, 1978, S. 66-85.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-4">Block</a></li>
-            <li><a href="#bibl-instance-4">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-4">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-4">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-4">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-3">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-4"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Bereitschaft zur Anzeigeerstattung&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;Peter&lt;/forename&gt;
+               &lt;surname&gt;MacNaughton-Smith&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;Richard&lt;/forename&gt;
+               &lt;surname&gt;Rosellen&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1978"&gt;1978&lt;/date&gt;
+            &lt;pubPlace&gt;Freiburg&lt;/pubPlace&gt;
+            &lt;publisher&gt;Max-Planck-Institut für Strafrecht&lt;/publisher&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-5"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Private Verbrechenskontrolle — eine empirische Untersuchung zur Anzeigeerstattung&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;Richard&lt;/forename&gt;
+               &lt;surname&gt;Rosellen&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1980"&gt;voraussichtlich 1980&lt;/date&gt;
+            &lt;pubPlace&gt;Berlin&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+      &lt;note type="comment"&gt;erscheint in Kürze unter dem Titel&lt;/note&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-4" href="#instance-4">instance-4</a></legend>
+            <div id="input-instance-4" class="raw-text">4 Vgl. Blankenburg/Sessar/Steffen, 1978, S. 66-85.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-4">Block</a></li>
+               <li><a href="#bibl-instance-4">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-4">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-4">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-4">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-4">
+               <pre><code>
 &lt;note type="footnote" n="4" place="bottom"&gt;
    &lt;label&gt;4&lt;/label&gt;
    &lt;seg&gt;Vgl.&lt;/seg&gt;
    &lt;bibl&gt;Blankenburg/Sessar/Steffen, 1978, S. 66-85.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-4">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-4">
+               <pre><code>
 &lt;note n="4" type="footnote" place="bottom"&gt;
    &lt;label&gt;4&lt;/label&gt;
    &lt;note type="signal"&gt;Vgl.&lt;/note&gt;
@@ -367,9 +481,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-4">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-4">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -397,32 +511,76 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-4">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-4">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-6"/&gt;
+   &lt;biblStruct source="#bibl-6"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Sessar&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Steffen&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="66" to="85"&gt;S. 66-85&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-5" class="raw-text">5 Black, 1973 S. 125 ff.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-5">Block</a></li>
-            <li><a href="#bibl-instance-5">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-5">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-5">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-5">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-4">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-6"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Sessar&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Steffen&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="66" to="85"&gt;S. 66-85&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-5" href="#instance-5">instance-5</a></legend>
+            <div id="input-instance-5" class="raw-text">5 Black, 1973 S. 125 ff.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-5">Block</a></li>
+               <li><a href="#bibl-instance-5">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-5">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-5">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-5">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-5">
+               <pre><code>
 &lt;note type="footnote" n="5" place="bottom"&gt;
    &lt;label&gt;5&lt;/label&gt;
    &lt;bibl&gt;Black, 1973 S. 125 ff.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-5">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-5">
+               <pre><code>
 &lt;note n="5" type="footnote" place="bottom"&gt;
    &lt;label&gt;5&lt;/label&gt;
    &lt;bibl xml:id="bibl-7"&gt;
@@ -436,9 +594,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-5">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-5">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -456,34 +614,58 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-5">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-5">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-7"/&gt;
+   &lt;biblStruct source="#bibl-7"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Black&lt;/surname&gt;
+         &lt;/persName&gt;,
+                  &lt;/author&gt;
+      &lt;citedRange unit="page" from="125"&gt;S. 125 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-6" class="raw-text">6 Zur höheren Wahrscheinlichkeit der Normierung von Verhalten in weniger komplexen
-            Beziehungen vgl. die Konflikttheorie von Gessner 1976, insbesondere S. 170—183.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-6">Block</a></li>
-            <li><a href="#bibl-instance-6">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-6">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-6">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-6">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-5">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-7"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Black&lt;/surname&gt;
+         &lt;/persName&gt;,
+                  &lt;/author&gt;
+      &lt;citedRange unit="page" from="125"&gt;S. 125 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-6" href="#instance-6">instance-6</a></legend>
+            <div id="input-instance-6" class="raw-text">6 Zur höheren Wahrscheinlichkeit der Normierung von Verhalten in weniger komplexen
+               Beziehungen vgl. die Konflikttheorie von Gessner 1976, insbesondere S. 170—183.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-6">Block</a></li>
+               <li><a href="#bibl-instance-6">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-6">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-6">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-6">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-6">
+               <pre><code>
 &lt;note type="footnote" n="6" place="bottom"&gt;
    &lt;label&gt;6&lt;/label&gt;
    &lt;seg&gt;Zur höheren Wahrscheinlichkeit der Normierung von Verhalten in weniger komplexen Beziehungen vgl. die Konflikttheorie von&lt;/seg&gt;
    &lt;bibl&gt;Gessner 1976, insbesondere S. 170—183.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-6">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-6">
+               <pre><code>
 &lt;note n="6" type="footnote" place="bottom"&gt;
    &lt;label&gt;6&lt;/label&gt;
    &lt;note type="signal"&gt;
@@ -501,9 +683,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-6">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-6">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -521,33 +703,57 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-6">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-6">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-8"/&gt;
+   &lt;biblStruct source="#bibl-8"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Gessner&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="170" to="183"&gt;insbesondere S. 170—183&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-7" class="raw-text">7 Zum Konzept der 'Thematisierung von Recht' vgl. Luhmann 1980, S. 99—112.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-7">Block</a></li>
-            <li><a href="#bibl-instance-7">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-7">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-7">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-7">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-6">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-8"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Gessner&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="170" to="183"&gt;insbesondere S. 170—183&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-7" href="#instance-7">instance-7</a></legend>
+            <div id="input-instance-7" class="raw-text">7 Zum Konzept der 'Thematisierung von Recht' vgl. Luhmann 1980, S. 99—112.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-7">Block</a></li>
+               <li><a href="#bibl-instance-7">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-7">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-7">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-7">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-7">
+               <pre><code>
 &lt;note type="footnote" n="7" place="bottom"&gt;
    &lt;label&gt;7&lt;/label&gt;
    &lt;seg&gt;Zum Konzept der 'Thematisierung von Recht' vgl.&lt;/seg&gt;
    &lt;bibl&gt;Luhmann 1980, S. 99—112.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-7">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-7">
+               <pre><code>
 &lt;note n="7" type="footnote" place="bottom"&gt;
    &lt;label&gt;7&lt;/label&gt;
    &lt;note type="signal"&gt;Zum Konzept der 'Thematisierung von Recht' vgl.&lt;/note&gt;
@@ -562,9 +768,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-7">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-7">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -582,32 +788,56 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-7">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-7">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-9"/&gt;
+   &lt;biblStruct source="#bibl-9"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Luhmann&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="99" to="112"&gt;S. 99—112&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-8" class="raw-text">8 Ausführlicher bei Gessner 1976</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-8">Block</a></li>
-            <li><a href="#bibl-instance-8">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-8">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-8">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-8">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-7">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-9"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Luhmann&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="99" to="112"&gt;S. 99—112&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-8" href="#instance-8">instance-8</a></legend>
+            <div id="input-instance-8" class="raw-text">8 Ausführlicher bei Gessner 1976</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-8">Block</a></li>
+               <li><a href="#bibl-instance-8">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-8">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-8">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-8">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-8">
+               <pre><code>
 &lt;note type="footnote" n="8" place="bottom"&gt;
    &lt;label&gt;8&lt;/label&gt;
    &lt;seg&gt;Ausführlicher bei Gessner 1976&lt;/seg&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-8">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-8">
+               <pre><code>
 &lt;note n="8" type="footnote" place="bottom"&gt;
    &lt;label&gt;8&lt;/label&gt;
    &lt;note type="signal"&gt;Ausführlicher bei&lt;/note&gt;
@@ -621,9 +851,9 @@
    &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-8">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-8">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -640,31 +870,54 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-8">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-8">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct xml:id="bibl-10"/&gt;
+   &lt;biblStruct source="#bibl-10"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Gessner&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-9" class="raw-text">9 Vgl. Schönholz 1980.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-9">Block</a></li>
-            <li><a href="#bibl-instance-9">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-9">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-9">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-9">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-8">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-10"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Gessner&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-9" href="#instance-9">instance-9</a></legend>
+            <div id="input-instance-9" class="raw-text">9 Vgl. Schönholz 1980.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-9">Block</a></li>
+               <li><a href="#bibl-instance-9">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-9">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-9">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-9">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-9">
+               <pre><code>
 &lt;note type="footnote" n="9" place="bottom"&gt;
    &lt;label&gt;9&lt;/label&gt;
    &lt;seg&gt;Vgl. Schönholz 1980.&lt;/seg&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-9">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-9">
+               <pre><code>
 &lt;note n="9" type="footnote" place="bottom"&gt;
    &lt;label&gt;9&lt;/label&gt;
    &lt;note type="signal"&gt;Vgl.&lt;/note&gt;
@@ -678,9 +931,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-9">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-9">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -697,31 +950,54 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-9">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-9">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct xml:id="bibl-11"/&gt;
+   &lt;biblStruct source="#bibl-11"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Schönholz&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-10" class="raw-text">10 Blankenburg/Schönholz/Rogowski 1979, S. 64 ff.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-10">Block</a></li>
-            <li><a href="#bibl-instance-10">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-10">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-10">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-10">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-9">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-11"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Schönholz&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-10" href="#instance-10">instance-10</a></legend>
+            <div id="input-instance-10" class="raw-text">10 Blankenburg/Schönholz/Rogowski 1979, S. 64 ff.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-10">Block</a></li>
+               <li><a href="#bibl-instance-10">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-10">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-10">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-10">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-10">
+               <pre><code>
 &lt;note type="footnote" n="10" place="bottom"&gt;
    &lt;label&gt;10&lt;/label&gt;
    &lt;bibl&gt;Blankenburg/Schönholz/Rogowski 1979, S. 64 ff.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-10">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-10">
+               <pre><code>
 &lt;note n="10" type="footnote" place="bottom"&gt;
    &lt;label&gt;10&lt;/label&gt;
    &lt;bibl xml:id="bibl-12"&gt;
@@ -745,9 +1021,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-10">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-10">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -775,32 +1051,76 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-10">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-10">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-12"/&gt;
+   &lt;biblStruct source="#bibl-12"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Schönholz&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Rogowski&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="64"&gt;S. 64 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-11" class="raw-text">11 Hilden 1976, S. 64 ff.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-11">Block</a></li>
-            <li><a href="#bibl-instance-11">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-11">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-11">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-11">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-10">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-12"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Schönholz&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Rogowski&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="64"&gt;S. 64 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-11" href="#instance-11">instance-11</a></legend>
+            <div id="input-instance-11" class="raw-text">11 Hilden 1976, S. 64 ff.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-11">Block</a></li>
+               <li><a href="#bibl-instance-11">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-11">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-11">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-11">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-11">
+               <pre><code>
 &lt;note type="footnote" n="11" place="bottom"&gt;
    &lt;label&gt;11&lt;/label&gt;
    &lt;bibl&gt;Hilden 1976, S. 64 ff.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-11">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-11">
+               <pre><code>
 &lt;note n="11" type="footnote" place="bottom"&gt;
    &lt;label&gt;11&lt;/label&gt;
    &lt;bibl xml:id="bibl-13"&gt;
@@ -814,9 +1134,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-11">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-11">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -834,33 +1154,57 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-11">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-11">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-13"/&gt;
+   &lt;biblStruct source="#bibl-13"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Hilden&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="64"&gt;S. 64 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-12" class="raw-text">12 Koch 1975, S. 75 der allerdings nur streitige Urteile und Vergleiche untersucht
-            hat.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-12">Block</a></li>
-            <li><a href="#bibl-instance-12">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-12">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-12">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-12">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-11">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-13"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Hilden&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="64"&gt;S. 64 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-12" href="#instance-12">instance-12</a></legend>
+            <div id="input-instance-12" class="raw-text">12 Koch 1975, S. 75 der allerdings nur streitige Urteile und Vergleiche untersucht
+               hat.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-12">Block</a></li>
+               <li><a href="#bibl-instance-12">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-12">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-12">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-12">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-12">
+               <pre><code>
 &lt;note type="footnote" n="12" place="bottom"&gt;
    &lt;label&gt;12&lt;/label&gt;
    &lt;seg&gt;Koch 1975, S. 75 der allerdings nur streitige Urteile und Vergleiche untersucht hat.&lt;/seg&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-12">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-12">
+               <pre><code>
 &lt;note n="12" type="footnote" place="bottom"&gt;
    &lt;label&gt;12&lt;/label&gt;
    &lt;bibl xml:id="bibl-14"&gt;
@@ -875,9 +1219,9 @@
    &lt;note type="comment"&gt;der allerdings nur streitige Urteile und Vergleiche untersucht hat.&lt;/note&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-12">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-12">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -895,34 +1239,59 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-12">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-12">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct xml:id="bibl-14"/&gt;
+   &lt;biblStruct source="#bibl-14"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Koch&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="75" to="75"&gt;S. 75&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-13" class="raw-text">13 Für Angaben der Zählkartenstatistik für die Familiengerichte siehe: Statistisches
-            Bundesamt Wiesbaden, Fachserie 10 (Rechtspflege) Reihe 2.1, Tabelle 10, Wiesbaden
-            1978.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-13">Block</a></li>
-            <li><a href="#bibl-instance-13">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-13">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-13">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-13">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-12">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-14"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Koch&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="75" to="75"&gt;S. 75&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-13" href="#instance-13">instance-13</a></legend>
+            <div id="input-instance-13" class="raw-text">13 Für Angaben der Zählkartenstatistik für die Familiengerichte siehe: Statistisches
+               Bundesamt Wiesbaden, Fachserie 10 (Rechtspflege) Reihe 2.1, Tabelle 10, Wiesbaden
+               1978.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-13">Block</a></li>
+               <li><a href="#bibl-instance-13">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-13">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-13">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-13">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-13">
+               <pre><code>
 &lt;note type="footnote" n="13" place="bottom"&gt;
    &lt;label&gt;13&lt;/label&gt;
    &lt;seg&gt;Für Angaben der Zählkartenstatistik für die Familiengerichte siehe:&lt;/seg&gt;
    &lt;bibl&gt;Statistisches Bundesamt Wiesbaden, Fachserie 10 (Rechtspflege) Reihe 2.1, Tabelle 10, Wiesbaden 1978.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-13">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-13">
+               <pre><code>
 &lt;note n="13" type="footnote" place="bottom"&gt;
    &lt;label&gt;13&lt;/label&gt;
    &lt;note type="signal"&gt;Für Angaben der Zählkartenstatistik für die Familiengerichte siehe:&lt;/note&gt;
@@ -937,9 +1306,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-13">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-13">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -956,12 +1325,11 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-13">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-13">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-15"&gt;
+   &lt;biblStruct source="#bibl-15"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Fachserie 10 (Rechtspflege) Reihe 2.1&lt;/title&gt;
          &lt;author&gt;
@@ -971,29 +1339,52 @@
             &lt;date when="1978"&gt;1978&lt;/date&gt;
             &lt;pubPlace&gt;Wiesbaden&lt;/pubPlace&gt;
          &lt;/imprint&gt;
-         &lt;citedRange unit="part"&gt;Tabelle 10&lt;/citedRange&gt;
       &lt;/monogr&gt;
+      &lt;citedRange unit="part"&gt;Tabelle 10&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-14" class="raw-text">14 Blankenburg/Schönholz/Rogowski 1979, S. 78 ff.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-14">Block</a></li>
-            <li><a href="#bibl-instance-14">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-14">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-14">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-14">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-13">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-15"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Fachserie 10 (Rechtspflege) Reihe 2.1&lt;/title&gt;
+         &lt;author&gt;
+            &lt;orgName&gt;Statistisches Bundesamt Wiesbaden&lt;/orgName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1978"&gt;1978&lt;/date&gt;
+            &lt;pubPlace&gt;Wiesbaden&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+      &lt;citedRange unit="part"&gt;Tabelle 10&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-14" href="#instance-14">instance-14</a></legend>
+            <div id="input-instance-14" class="raw-text">14 Blankenburg/Schönholz/Rogowski 1979, S. 78 ff.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-14">Block</a></li>
+               <li><a href="#bibl-instance-14">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-14">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-14">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-14">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-14">
+               <pre><code>
 &lt;note type="footnote" n="14" place="bottom"&gt;
    &lt;label&gt;14&lt;/label&gt;
    &lt;bibl&gt;Blankenburg/Schönholz/Rogowski 1979, S. 78 ff.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-14">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-14">
+               <pre><code>
 &lt;note n="14" type="footnote" place="bottom"&gt;
    &lt;label&gt;14&lt;/label&gt;
    &lt;bibl xml:id="bibl-16"&gt;
@@ -1017,9 +1408,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-14">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-14">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -1047,35 +1438,79 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-14">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-14">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-16"/&gt;
+   &lt;biblStruct source="#bibl-16"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Schönholz&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Rogowski&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="78"&gt;S. 78 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-15" class="raw-text">15 Steinbach 1979 hat in einer Erhebung von 1144 Amtsgerichtsprozessen in der Bundesrepublik
-            ohne Berlin in den Jahren 1974—1976 ein Verhältnis von 1 Räumungsklage je 1,2 Forderungsklagen,
-            in Berlin allerdings von 1 Räumungsklage je 0,12 Forderungsklagen ermittelt. Im folgenden
-            auch als GMD-Erhebung zitiert.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-15">Block</a></li>
-            <li><a href="#bibl-instance-15">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-15">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-15">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-15">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-14">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-16"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Schönholz&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Rogowski&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="78"&gt;S. 78 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-15" href="#instance-15">instance-15</a></legend>
+            <div id="input-instance-15" class="raw-text">15 Steinbach 1979 hat in einer Erhebung von 1144 Amtsgerichtsprozessen in der Bundesrepublik
+               ohne Berlin in den Jahren 1974—1976 ein Verhältnis von 1 Räumungsklage je 1,2 Forderungsklagen,
+               in Berlin allerdings von 1 Räumungsklage je 0,12 Forderungsklagen ermittelt. Im folgenden
+               auch als GMD-Erhebung zitiert.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-15">Block</a></li>
+               <li><a href="#bibl-instance-15">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-15">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-15">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-15">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-15">
+               <pre><code>
 &lt;note type="footnote" n="15" place="bottom"&gt;
    &lt;label&gt;15&lt;/label&gt;
    &lt;seg&gt;Steinbach 1979 hat in einer Erhebung von 1144 Amtsgerichtsprozessen in der Bundesrepublik ohne Berlin in den Jahren 1974—1976 ein Verhältnis von 1 Räumungsklage je 1,2 Forderungsklagen, in Berlin allerdings von 1 Räumungsklage je 0,12 Forderungsklagen ermittelt. Im folgenden auch als GMD-Erhebung zitiert.&lt;/seg&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-15">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-15">
+               <pre><code>
 &lt;note n="15" type="footnote" place="bottom"&gt;
    &lt;label&gt;15&lt;/label&gt;
    &lt;bibl xml:id="bibl-16a"&gt;
@@ -1093,9 +1528,9 @@
             &lt;/note&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-15">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-15">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -1112,31 +1547,54 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-15">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-15">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct xml:id="bibl-16a"/&gt;
+   &lt;biblStruct source="#bibl-16a"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Steinbach&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-16" class="raw-text">16 Johnson 1979 S. 90 ff. berichtet von dem erfolgreichen Versuch einer Unfall-Schadensregulierung
-            ohne Berücksichtigung einer Schuldzuschreibung in Neuseeland (no fault accident compensation),</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-16">Block</a></li>
-            <li><a href="#bibl-instance-16">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-16">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-16">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-16">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-15">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-16a"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Steinbach&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-16" href="#instance-16">instance-16</a></legend>
+            <div id="input-instance-16" class="raw-text">16 Johnson 1979 S. 90 ff. berichtet von dem erfolgreichen Versuch einer Unfall-Schadensregulierung
+               ohne Berücksichtigung einer Schuldzuschreibung in Neuseeland (no fault accident compensation),</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-16">Block</a></li>
+               <li><a href="#bibl-instance-16">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-16">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-16">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-16">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-16">
+               <pre><code>
 &lt;note type="footnote" n="16" place="bottom"&gt;
    &lt;label&gt;16&lt;/label&gt;
    &lt;bibl&gt;Johnson 1979 S. 90 ff.&lt;/bibl&gt; berichtet von dem erfolgreichen Versuch einer Unfall-Schadensregulierung ohne Berücksichtigung einer Schuldzuschreibung in Neuseeland (no fault accident compensation),&lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-16">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-16">
+               <pre><code>
 &lt;note n="16" type="footnote" place="bottom"&gt;
    &lt;label&gt;16&lt;/label&gt;
    &lt;bibl xml:id="bibl-18"&gt;
@@ -1154,9 +1612,9 @@
           &lt;/note&gt;,
           &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-16">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-16">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -1174,33 +1632,57 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-16">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-16">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-18"/&gt;
+   &lt;biblStruct source="#bibl-18"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Johnson&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="90"&gt;S. 90 ff.&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-17" class="raw-text">17 Steinbach 1979, S. 66 ff. Blankenburg/Blankenburg/Morasch 1972, S.82 ff.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-17">Block</a></li>
-            <li><a href="#bibl-instance-17">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-17">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-17">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-17">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-16">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-18"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Johnson&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="90"&gt;S. 90 ff.&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-17" href="#instance-17">instance-17</a></legend>
+            <div id="input-instance-17" class="raw-text">17 Steinbach 1979, S. 66 ff. Blankenburg/Blankenburg/Morasch 1972, S.82 ff.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-17">Block</a></li>
+               <li><a href="#bibl-instance-17">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-17">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-17">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-17">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-17">
+               <pre><code>
 &lt;note type="footnote" n="17" place="bottom"&gt;
    &lt;label&gt;17&lt;/label&gt;
    &lt;bibl&gt;Steinbach 1979, S. 66 ff.&lt;/bibl&gt;
    &lt;bibl&gt;Blankenburg/Blankenburg/Morasch 1972, S.82 ff.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-17">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-17">
+               <pre><code>
 &lt;note n="17" type="footnote" place="bottom"&gt;
    &lt;label&gt;17&lt;/label&gt;
    &lt;bibl xml:id="bibl-19"&gt;
@@ -1233,9 +1715,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-17">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-17">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -1277,36 +1759,94 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-17">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-17">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-19"/&gt;
-   &lt;biblStruct xml:id="bibl-20"/&gt;
+   &lt;biblStruct source="#bibl-19"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Steinbach&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="66"&gt;S. 66 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-20"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Morasch&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="82"&gt;S.82 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-18" class="raw-text">18 Projektbericht ‚Rechtshilfebedürfnisse sozial Schwacher‘, (Blankenburg/Gorges/Reifner
-            Tiemann). Befragt wurden im Januar bis März 1979 je eine Person in 835 Haushalten
-            Westberlins. Veröffentlichung ist vorgesehen für Ende 1980.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-18">Block</a></li>
-            <li><a href="#bibl-instance-18">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-18">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-18">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-18">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-17">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-19"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Steinbach&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="66"&gt;S. 66 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-20"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Morasch&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="82"&gt;S.82 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-18" href="#instance-18">instance-18</a></legend>
+            <div id="input-instance-18" class="raw-text">18 Projektbericht ‚Rechtshilfebedürfnisse sozial Schwacher‘, (Blankenburg/Gorges/Reifner
+               Tiemann). Befragt wurden im Januar bis März 1979 je eine Person in 835 Haushalten
+               Westberlins. Veröffentlichung ist vorgesehen für Ende 1980.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-18">Block</a></li>
+               <li><a href="#bibl-instance-18">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-18">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-18">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-18">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-18">
+               <pre><code>
 &lt;note type="footnote" n="18" place="bottom"&gt;
    &lt;label&gt;18&lt;/label&gt;
    &lt;bibl&gt;Projektbericht ‚Rechtshilfebedürfnisse sozial Schwacher‘, (Blankenburg/Gorges/Reifner Tiemann). Befragt wurden im Januar bis März 1979 je eine Person in 835 Haushalten Westberlins. Veröffentlichung ist vorgesehen für Ende 1980.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-18">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-18">
+               <pre><code>
 &lt;note n="18" type="footnote" place="bottom"&gt;
    &lt;label&gt;18&lt;/label&gt;
    &lt;bibl xml:id="bibl-21"&gt;
@@ -1338,9 +1878,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-18">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-18">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
@@ -1374,12 +1914,11 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-18">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-18">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-21"&gt;
+   &lt;biblStruct source="#bibl-21"&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Projektbericht ‚Rechtshilfebedürfnisse sozial Schwacher‘&lt;/title&gt;
          &lt;author&gt;
@@ -1409,25 +1948,63 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-19" class="raw-text">19 Explizit bei Baumgärtel 1976, S. 113-128.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-19">Block</a></li>
-            <li><a href="#bibl-instance-19">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-19">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-19">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-19">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-18">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-21"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Projektbericht ‚Rechtshilfebedürfnisse sozial Schwacher‘&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Blankenburg&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Gorges&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Reifner&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Tiemann&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;note type="comment"&gt;Befragt wurden im Januar bis März 1979 je eine Person in 835 Haushalten
+                        Westberlins. Veröffentlichung ist vorgesehen für
+                  &lt;/note&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-19" href="#instance-19">instance-19</a></legend>
+            <div id="input-instance-19" class="raw-text">19 Explizit bei Baumgärtel 1976, S. 113-128.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-19">Block</a></li>
+               <li><a href="#bibl-instance-19">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-19">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-19">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-19">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-19">
+               <pre><code>
 &lt;note type="footnote" n="19" place="bottom"&gt;
    &lt;label&gt;19&lt;/label&gt;
    &lt;seg&gt;Explizit bei&lt;/seg&gt;
    &lt;bibl&gt;Baumgärtel 1976, S. 113-128.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-19">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-19">
+               <pre><code>
 &lt;note n="19" type="footnote" place="bottom"&gt;
    &lt;label&gt;19&lt;/label&gt;
    &lt;note type="signal"&gt;Explizit bei&lt;/note&gt;
@@ -1442,9 +2019,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-19">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-19">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -1462,38 +2039,62 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-19">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-19">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-22"/&gt;
+   &lt;biblStruct source="#bibl-22"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Baumgärtel&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="113" to="128"&gt;S. 113-128&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-20" class="raw-text">20 Laut einer GMD-Erhebung aus der Zählkartenstatistik wurde in Baden-Württemberg
-            1978 in 25,6% aller Scheidungssachen vor dem Familiengericht Armenrecht beantragt,
-            35,6% bei Unterhaltsklagen. 1976 (nach alten Familien recht) sind die Anteile 14,2%
-            bei den Scheidungsprozessen und 42,79% bei den Unterhaltsklagen. Zum Vergleich: Bei
-            Mietsachen wird in etwa 2% das Armenrecht beantragt (GMD-Erhebung), bei Zivilprozessen
-            vor dem Amtsgericht insgesamt (laut Zählkartenstatistik) 0,4% (mündliche Mitteilung
-            von Jörg Dotterweich).</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-20">Block</a></li>
-            <li><a href="#bibl-instance-20">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-20">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-20">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-20">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-19">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-22"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Baumgärtel&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="113" to="128"&gt;S. 113-128&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-20" href="#instance-20">instance-20</a></legend>
+            <div id="input-instance-20" class="raw-text">20 Laut einer GMD-Erhebung aus der Zählkartenstatistik wurde in Baden-Württemberg
+               1978 in 25,6% aller Scheidungssachen vor dem Familiengericht Armenrecht beantragt,
+               35,6% bei Unterhaltsklagen. 1976 (nach alten Familien recht) sind die Anteile 14,2%
+               bei den Scheidungsprozessen und 42,79% bei den Unterhaltsklagen. Zum Vergleich: Bei
+               Mietsachen wird in etwa 2% das Armenrecht beantragt (GMD-Erhebung), bei Zivilprozessen
+               vor dem Amtsgericht insgesamt (laut Zählkartenstatistik) 0,4% (mündliche Mitteilung
+               von Jörg Dotterweich).</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-20">Block</a></li>
+               <li><a href="#bibl-instance-20">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-20">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-20">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-20">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-20">
+               <pre><code>
 &lt;note type="footnote" n="20" place="bottom"&gt;
    &lt;label&gt;20&lt;/label&gt;
    &lt;seg&gt;Laut einer GMD-Erhebung aus der Zählkartenstatistik wurde in Baden-Württemberg 1978 in 25,6% aller Scheidungssachen vor dem Familiengericht Armenrecht beantragt, 35,6% bei Unterhaltsklagen. 1976 (nach alten Familien recht) sind die Anteile 14,2% bei den Scheidungsprozessen und 42,79% bei den Unterhaltsklagen. Zum Vergleich: Bei Mietsachen wird in etwa 2% das Armenrecht beantragt (GMD-Erhebung), bei Zivilprozessen vor dem Amtsgericht insgesamt (laut Zählkartenstatistik) 0,4% (mündliche Mitteilung von Jörg Dotterweich).&lt;/seg&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-20">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-20">
+               <pre><code>
 &lt;note n="20" type="footnote" place="bottom"&gt;
    &lt;label&gt;20&lt;/label&gt;
    &lt;note type="comment"&gt;Laut einer GMD-Erhebung aus der Zählkartenstatistik wurde in Baden-Württemberg 1978
@@ -1505,34 +2106,43 @@
               &lt;/note&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-20">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-20">
+               <pre><code>
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-20">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-20">
+               <pre><code>
 &lt;listBibl/&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-21" class="raw-text">21 Projektbericht ‚Rechtsschutzversicherung‘. (Blankenburg/Fiedler), Veröffentlichung
-            voraussichtlich Mitte 1980.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-21">Block</a></li>
-            <li><a href="#bibl-instance-21">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-21">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-21">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-21">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-20">
+               <pre><code>
+&lt;listBibl/&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-21" href="#instance-21">instance-21</a></legend>
+            <div id="input-instance-21" class="raw-text">21 Projektbericht ‚Rechtsschutzversicherung‘. (Blankenburg/Fiedler), Veröffentlichung
+               voraussichtlich Mitte 1980.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-21">Block</a></li>
+               <li><a href="#bibl-instance-21">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-21">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-21">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-21">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-21">
+               <pre><code>
 &lt;note type="footnote" n="21" place="bottom"&gt;
    &lt;label&gt;21&lt;/label&gt;
    &lt;bibl&gt;Projektbericht ‚Rechtsschutzversicherung‘. (Blankenburg/Fiedler), Veröffentlichung voraussichtlich Mitte 1980.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-21">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-21">
+               <pre><code>
 &lt;note n="21" type="footnote" place="bottom"&gt;
    &lt;label&gt;21&lt;/label&gt;
    &lt;bibl xml:id="bibl-23"&gt;
@@ -1552,9 +2162,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-21">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-21">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
@@ -1578,12 +2188,11 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-21">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-21">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-23"&gt;
+   &lt;biblStruct source="#bibl-23"&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Projektbericht ‚Rechtsschutzversicherung‘.&lt;/title&gt;
          &lt;author&gt;
@@ -1601,24 +2210,50 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-22" class="raw-text">22 Vgl. auch Reifner/Gorges 1980.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-22">Block</a></li>
-            <li><a href="#bibl-instance-22">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-22">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-22">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-22">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-21">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-23"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Projektbericht ‚Rechtsschutzversicherung‘.&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Blankenburg&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Fiedler&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;note type="comment"&gt;Veröffentlichung voraussichtlich Mitte&lt;/note&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-22" href="#instance-22">instance-22</a></legend>
+            <div id="input-instance-22" class="raw-text">22 Vgl. auch Reifner/Gorges 1980.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-22">Block</a></li>
+               <li><a href="#bibl-instance-22">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-22">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-22">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-22">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-22">
+               <pre><code>
 &lt;note type="footnote" n="22" place="bottom"&gt;
    &lt;label&gt;22&lt;/label&gt;
    &lt;seg&gt;Vgl. auch Reifner/Gorges 1980.&lt;/seg&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-22">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-22">
+               <pre><code>
 &lt;note n="22" type="footnote" place="bottom"&gt;
    &lt;label&gt;22&lt;/label&gt;
    &lt;note type="signal"&gt;Vgl. auch&lt;/note&gt;
@@ -1637,9 +2272,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-22">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-22">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -1661,31 +2296,64 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-22">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-22">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct xml:id="bibl-24"/&gt;
+   &lt;biblStruct source="#bibl-24"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Reifner&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Gorges&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-23" class="raw-text">23 Reifner 1979.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-23">Block</a></li>
-            <li><a href="#bibl-instance-23">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-23">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-23">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-23">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-22">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-24"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Reifner&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Gorges&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-23" href="#instance-23">instance-23</a></legend>
+            <div id="input-instance-23" class="raw-text">23 Reifner 1979.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-23">Block</a></li>
+               <li><a href="#bibl-instance-23">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-23">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-23">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-23">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-23">
+               <pre><code>
 &lt;note type="footnote" n="23" place="bottom"&gt;
    &lt;label&gt;23&lt;/label&gt;
    &lt;seg&gt;Reifner 1979.&lt;/seg&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-23">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-23">
+               <pre><code>
 &lt;note n="23" type="footnote" place="bottom"&gt;
    &lt;label&gt;23&lt;/label&gt;
    &lt;bibl xml:id="bibl-25"&gt;
@@ -1698,9 +2366,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-23">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-23">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -1717,32 +2385,55 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-23">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-23">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct xml:id="bibl-25"/&gt;
+   &lt;biblStruct source="#bibl-25"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Reifner&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-24" class="raw-text">24 Klassisch bei Carlin/Howard/Messinger 1967.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-24">Block</a></li>
-            <li><a href="#bibl-instance-24">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-24">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-24">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-24">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-23">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-25"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Reifner&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-24" href="#instance-24">instance-24</a></legend>
+            <div id="input-instance-24" class="raw-text">24 Klassisch bei Carlin/Howard/Messinger 1967.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-24">Block</a></li>
+               <li><a href="#bibl-instance-24">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-24">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-24">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-24">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-24">
+               <pre><code>
 &lt;note type="footnote" n="24" place="bottom"&gt;
    &lt;label&gt;24&lt;/label&gt;
    &lt;seg&gt;Klassisch bei&lt;/seg&gt;
    &lt;bibl&gt;Carlin/Howard/Messinger 1967.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-24">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-24">
+               <pre><code>
 &lt;note n="24" type="footnote" place="bottom"&gt;
    &lt;label&gt;24&lt;/label&gt;
    &lt;note type="signal"&gt;Klassisch bei&lt;/note&gt;
@@ -1766,9 +2457,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-24">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-24">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -1795,35 +2486,77 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-24">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-24">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-26"/&gt;
+   &lt;biblStruct source="#bibl-26"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Carlin&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Howard&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Messinger&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-25" class="raw-text">25 Grundsätzlich vgl. hierzu den klassischen Beitrag von Galanter 1974, S. 95—160.
-            Die grösseren Chancen von Firmen, insbesondere bei der großen Zahl von vorstreitigen
-            Erledigungen zeigt Sarat 1976, S. 339-375.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-25">Block</a></li>
-            <li><a href="#bibl-instance-25">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-25">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-25">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-25">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-24">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-26"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Carlin&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Howard&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Messinger&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-25" href="#instance-25">instance-25</a></legend>
+            <div id="input-instance-25" class="raw-text">25 Grundsätzlich vgl. hierzu den klassischen Beitrag von Galanter 1974, S. 95—160.
+               Die grösseren Chancen von Firmen, insbesondere bei der großen Zahl von vorstreitigen
+               Erledigungen zeigt Sarat 1976, S. 339-375.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-25">Block</a></li>
+               <li><a href="#bibl-instance-25">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-25">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-25">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-25">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-25">
+               <pre><code>
 &lt;note type="footnote" n="25" place="bottom"&gt;
    &lt;label&gt;25&lt;/label&gt;
    &lt;seg&gt;Grundsätzlich vgl. hierzu den klassischen Beitrag von&lt;/seg&gt;
    &lt;bibl&gt;Galanter 1974, S. 95—160.&lt;/bibl&gt; Die grösseren Chancen von Firmen, insbesondere bei der großen Zahl von vorstreitigen Erledigungen zeigt &lt;bibl&gt;Sarat 1976, S. 339-375.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-25">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-25">
+               <pre><code>
 &lt;note n="25" type="footnote" place="bottom"&gt;
    &lt;label&gt;25&lt;/label&gt;
    &lt;note type="signal"&gt;Grundsätzlich vgl. hierzu den klassischen Beitrag von&lt;/note&gt;
@@ -1851,9 +2584,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-25">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-25">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -1885,34 +2618,72 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-25">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-25">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-27"/&gt;
-   &lt;biblStruct xml:id="bibl-28"/&gt;
+   &lt;biblStruct source="#bibl-27"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Galanter&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="95" to="160"&gt;S. 95—160&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-28"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Sarat&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="339" to="375"&gt;S. 339-375&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-26" class="raw-text">26 Bender/Schumacher 1980, S. 138.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-26">Block</a></li>
-            <li><a href="#bibl-instance-26">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-26">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-26">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-26">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-25">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-27"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Galanter&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="95" to="160"&gt;S. 95—160&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-28"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Sarat&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="339" to="375"&gt;S. 339-375&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-26" href="#instance-26">instance-26</a></legend>
+            <div id="input-instance-26" class="raw-text">26 Bender/Schumacher 1980, S. 138.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-26">Block</a></li>
+               <li><a href="#bibl-instance-26">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-26">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-26">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-26">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-26">
+               <pre><code>
 &lt;note type="footnote" n="26" place="bottom"&gt;
    &lt;label&gt;26&lt;/label&gt;
    &lt;bibl&gt;Bender/Schumacher 1980, S. 138.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-26">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-26">
+               <pre><code>
 &lt;note n="26" type="footnote" place="bottom"&gt;
    &lt;label&gt;26&lt;/label&gt;
    &lt;bibl xml:id="bibl-29"&gt;
@@ -1931,9 +2702,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-26">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-26">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -1956,33 +2727,67 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-26">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-26">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-29"/&gt;
+   &lt;biblStruct source="#bibl-29"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Bender&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Schumacher&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="138" to="138"&gt;S. 138&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-27" class="raw-text">27 Steinbach 1979, S. 96 ff, vgl. auch Blankenburg/Blankenburg/Morasch 1972, S. 89
-            Fn. 17</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-27">Block</a></li>
-            <li><a href="#bibl-instance-27">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-27">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-27">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-27">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-26">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-29"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Bender&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Schumacher&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="138" to="138"&gt;S. 138&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-27" href="#instance-27">instance-27</a></legend>
+            <div id="input-instance-27" class="raw-text">27 Steinbach 1979, S. 96 ff, vgl. auch Blankenburg/Blankenburg/Morasch 1972, S. 89
+               Fn. 17</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-27">Block</a></li>
+               <li><a href="#bibl-instance-27">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-27">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-27">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-27">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-27">
+               <pre><code>
 &lt;note type="footnote" n="27" place="bottom"&gt;
    &lt;label&gt;27&lt;/label&gt;
    &lt;bibl&gt;Steinbach 1979, S. 96 ff,&lt;/bibl&gt; vgl. auch &lt;bibl&gt;Blankenburg/Blankenburg/Morasch 1972, S. 89 Fn. 17&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-27">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-27">
+               <pre><code>
 &lt;note n="27" type="footnote" place="bottom"&gt;
    &lt;label&gt;27&lt;/label&gt;
    &lt;bibl xml:id="bibl-30"&gt;
@@ -2017,9 +2822,9 @@
    &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-27">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-27">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -2062,34 +2867,94 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-27">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-27">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-30"/&gt;
-   &lt;biblStruct xml:id="bibl-31"/&gt;
+   &lt;biblStruct source="#bibl-30"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Steinbach&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="96"&gt;S. 96 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-31"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Morasch&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="89" to="89"&gt;S. 89&lt;/citedRange&gt;
+      &lt;citedRange unit="footnote" from="17"&gt;Fn. 17&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-28" class="raw-text">28 Reifner 1978.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-28">Block</a></li>
-            <li><a href="#bibl-instance-28">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-28">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-28">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-28">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-27">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-30"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Steinbach&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="96"&gt;S. 96 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-31"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Morasch&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="89" to="89"&gt;S. 89&lt;/citedRange&gt;
+      &lt;citedRange unit="footnote" from="17"&gt;Fn. 17&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-28" href="#instance-28">instance-28</a></legend>
+            <div id="input-instance-28" class="raw-text">28 Reifner 1978.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-28">Block</a></li>
+               <li><a href="#bibl-instance-28">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-28">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-28">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-28">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-28">
+               <pre><code>
 &lt;note type="footnote" n="28" place="bottom"&gt;
    &lt;label&gt;28&lt;/label&gt;
    &lt;seg&gt;Reifner 1978.&lt;/seg&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-28">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-28">
+               <pre><code>
 &lt;note n="28" type="footnote" place="bottom"&gt;
    &lt;label&gt;28&lt;/label&gt;
    &lt;bibl xml:id="bibl-32"&gt;
@@ -2102,9 +2967,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-28">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-28">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -2121,31 +2986,54 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-28">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-28">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct xml:id="bibl-32"/&gt;
+   &lt;biblStruct source="#bibl-32"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Reifner&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-29" class="raw-text">29 Blankenburg/Schönholz/Rogowski 1979, S. 102 ff.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-29">Block</a></li>
-            <li><a href="#bibl-instance-29">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-29">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-29">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-29">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-28">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-32"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Reifner&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-29" href="#instance-29">instance-29</a></legend>
+            <div id="input-instance-29" class="raw-text">29 Blankenburg/Schönholz/Rogowski 1979, S. 102 ff.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-29">Block</a></li>
+               <li><a href="#bibl-instance-29">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-29">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-29">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-29">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-29">
+               <pre><code>
 &lt;note type="footnote" n="29" place="bottom"&gt;
    &lt;label&gt;29&lt;/label&gt;
    &lt;bibl&gt;Blankenburg/Schönholz/Rogowski 1979, S. 102 ff.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-29">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-29">
+               <pre><code>
 &lt;note n="29" type="footnote" place="bottom"&gt;
    &lt;label&gt;29&lt;/label&gt;
    &lt;bibl xml:id="bibl-33"&gt;
@@ -2169,9 +3057,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-29">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-29">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -2199,34 +3087,78 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-29">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-29">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-33"/&gt;
+   &lt;biblStruct source="#bibl-33"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Schönholz&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Rogowski&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="102"&gt;S. 102 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-30" class="raw-text">30 Vgl. zum Verrechtlichungsbegriff meinen Beitrag über: Recht als gradualisiertes
-            Konzept 1980, S. 83—98.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-30">Block</a></li>
-            <li><a href="#bibl-instance-30">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-30">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-30">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-30">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-29">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-33"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Schönholz&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Rogowski&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="102"&gt;S. 102 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-30" href="#instance-30">instance-30</a></legend>
+            <div id="input-instance-30" class="raw-text">30 Vgl. zum Verrechtlichungsbegriff meinen Beitrag über: Recht als gradualisiertes
+               Konzept 1980, S. 83—98.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-30">Block</a></li>
+               <li><a href="#bibl-instance-30">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-30">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-30">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-30">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-30">
+               <pre><code>
 &lt;note type="footnote" n="30" place="bottom"&gt;
    &lt;label&gt;30&lt;/label&gt;
    &lt;seg&gt;Vgl. zum Verrechtlichungsbegriff meinen Beitrag über:&lt;/seg&gt;
    &lt;bibl&gt;Recht als gradualisiertes Konzept 1980, S. 83—98.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-30">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-30">
+               <pre><code>
 &lt;note n="30" type="footnote" place="bottom"&gt;
    &lt;label&gt;30&lt;/label&gt;
    &lt;note type="signal"&gt;Vgl. zum Verrechtlichungsbegriff meinen Beitrag über:&lt;/note&gt;
@@ -2237,9 +3169,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-30">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-30">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
@@ -2254,37 +3186,53 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-30">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-30">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-34"&gt;
+   &lt;biblStruct source="#bibl-34"&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Recht als gradualisiertes Konzept&lt;/title&gt;
       &lt;/analytic&gt;
+      &lt;citedRange unit="page" from="83" to="98"&gt;S. 83—98&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-31" class="raw-text">31 Steinbach 1979, S. 35 Bender Schumacher 1980, S. 24 und S. 49.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-31">Block</a></li>
-            <li><a href="#bibl-instance-31">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-31">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-31">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-31">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-30">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-34"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Recht als gradualisiertes Konzept&lt;/title&gt;
+      &lt;/analytic&gt;
+      &lt;citedRange unit="page" from="83" to="98"&gt;S. 83—98&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-31" href="#instance-31">instance-31</a></legend>
+            <div id="input-instance-31" class="raw-text">31 Steinbach 1979, S. 35 Bender Schumacher 1980, S. 24 und S. 49.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-31">Block</a></li>
+               <li><a href="#bibl-instance-31">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-31">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-31">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-31">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-31">
+               <pre><code>
 &lt;note type="footnote" n="31" place="bottom"&gt;
    &lt;label&gt;31&lt;/label&gt;
    &lt;bibl&gt;Steinbach 1979, S. 35&lt;/bibl&gt;
    &lt;bibl&gt;Bender Schumacher 1980, S. 24 und S. 49.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-31">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-31">
+               <pre><code>
 &lt;note n="31" type="footnote" place="bottom"&gt;
    &lt;label&gt;31&lt;/label&gt;
    &lt;bibl xml:id="bibl-35"&gt;
@@ -2314,9 +3262,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-31">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-31">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -2354,34 +3302,84 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-31">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-31">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-35"/&gt;
-   &lt;biblStruct xml:id="bibl-36"/&gt;
+   &lt;biblStruct source="#bibl-35"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Steinbach&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="35" to="35"&gt;S. 35&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-36"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Bender&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Schumacher&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="24" to="24"&gt;S. 24&lt;/citedRange&gt;
+      &lt;citedRange unit="page" from="49" to="49"&gt;S. 49&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-32" class="raw-text">32 Wanner 1975, S. 293—306 hebt dies deutlich hervor, ebenso Bender/Schumacher 1980,
-            S. 72 ff. sowie Galanter 1974; Sarat 1976.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-32">Block</a></li>
-            <li><a href="#bibl-instance-32">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-32">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-32">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-32">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-31">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-35"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Steinbach&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="35" to="35"&gt;S. 35&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-36"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Bender&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Schumacher&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="24" to="24"&gt;S. 24&lt;/citedRange&gt;
+      &lt;citedRange unit="page" from="49" to="49"&gt;S. 49&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-32" href="#instance-32">instance-32</a></legend>
+            <div id="input-instance-32" class="raw-text">32 Wanner 1975, S. 293—306 hebt dies deutlich hervor, ebenso Bender/Schumacher 1980,
+               S. 72 ff. sowie Galanter 1974; Sarat 1976.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-32">Block</a></li>
+               <li><a href="#bibl-instance-32">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-32">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-32">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-32">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-32">
+               <pre><code>
 &lt;note type="footnote" n="32" place="bottom"&gt;
    &lt;label&gt;32&lt;/label&gt;
    &lt;bibl&gt;Wanner 1975, S. 293—306&lt;/bibl&gt; hebt dies deutlich hervor, ebenso &lt;bibl&gt;Bender/Schumacher 1980, S. 72 ff.&lt;/bibl&gt; sowie Galanter 1974; Sarat 1976.&lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-32">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-32">
+               <pre><code>
 &lt;note n="32" type="footnote" place="bottom"&gt;
    &lt;label&gt;32&lt;/label&gt;
    &lt;bibl xml:id="bibl-37"&gt;
@@ -2428,9 +3426,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-32">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-32">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -2493,36 +3491,110 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-32">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-32">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-37"/&gt;
-   &lt;biblStruct xml:id="bibl-38"/&gt;
-   &lt;biblStruct xml:id="bibl-39"/&gt;
-   &lt;biblStruct xml:id="bibl-40"/&gt;
+   &lt;biblStruct source="#bibl-37"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Wanner&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="293" to="306"&gt;S. 293—306&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-38"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Bender&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Schumacher&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="72"&gt;S. 72 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-39"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Galanter&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-40"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Sarat&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-33" class="raw-text">33 Blankenburg/Schönholz/Rogowski 1979, S. 78 ff.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-33">Block</a></li>
-            <li><a href="#bibl-instance-33">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-33">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-33">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-33">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-32">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-37"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Wanner&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="293" to="306"&gt;S. 293—306&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-38"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Bender&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Schumacher&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="72"&gt;S. 72 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-39"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Galanter&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-40"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Sarat&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-33" href="#instance-33">instance-33</a></legend>
+            <div id="input-instance-33" class="raw-text">33 Blankenburg/Schönholz/Rogowski 1979, S. 78 ff.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-33">Block</a></li>
+               <li><a href="#bibl-instance-33">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-33">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-33">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-33">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-33">
+               <pre><code>
 &lt;note type="footnote" n="33" place="bottom"&gt;
    &lt;label&gt;33&lt;/label&gt;
    &lt;bibl&gt;Blankenburg/Schönholz/Rogowski 1979, S. 78 ff.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-33">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-33">
+               <pre><code>
 &lt;note n="33" type="footnote" place="bottom"&gt;
    &lt;label&gt;33&lt;/label&gt;
    &lt;bibl xml:id="bibl-41"&gt;
@@ -2546,9 +3618,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-33">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-33">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -2576,32 +3648,76 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-33">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-33">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-41"/&gt;
+   &lt;biblStruct source="#bibl-41"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Schönholz&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Rogowski&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="78"&gt;S. 78 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-34" class="raw-text">34 Ebenda, S. 138-186.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-34">Block</a></li>
-            <li><a href="#bibl-instance-34">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-34">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-34">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-34">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-33">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-41"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Blankenburg&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Schönholz&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Rogowski&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+      &lt;citedRange unit="page" from="78"&gt;S. 78 ff&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-34" href="#instance-34">instance-34</a></legend>
+            <div id="input-instance-34" class="raw-text">34 Ebenda, S. 138-186.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-34">Block</a></li>
+               <li><a href="#bibl-instance-34">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-34">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-34">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-34">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-34">
+               <pre><code>
 &lt;note type="footnote" n="34" place="bottom"&gt;
    &lt;label&gt;34&lt;/label&gt;
    &lt;seg&gt;Ebenda, S. 138-186.&lt;/seg&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-34">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-34">
+               <pre><code>
 &lt;note n="34" type="footnote" place="bottom"&gt;
    &lt;label&gt;34&lt;/label&gt;
    &lt;bibl xml:id="bibl-42"&gt;
@@ -2610,9 +3726,9 @@
           &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-34">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-34">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -2624,31 +3740,48 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-34">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-34">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct xml:id="bibl-42"/&gt;
+   &lt;biblStruct source="#bibl-42"&gt;
+      &lt;ref type="previous-work"&gt;Ebenda&lt;/ref&gt;
+      &lt;citedRange unit="page" from="138" to="186"&gt;S. 138-186&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-35" class="raw-text">35 Luhmann 1969.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-35">Block</a></li>
-            <li><a href="#bibl-instance-35">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-35">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-35">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-35">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-34">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-42"&gt;
+      &lt;ref type="previous-work"&gt;Ebenda&lt;/ref&gt;
+      &lt;citedRange unit="page" from="138" to="186"&gt;S. 138-186&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-35" href="#instance-35">instance-35</a></legend>
+            <div id="input-instance-35" class="raw-text">35 Luhmann 1969.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-35">Block</a></li>
+               <li><a href="#bibl-instance-35">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-35">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-35">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-35">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-35">
+               <pre><code>
 &lt;note type="footnote" n="35" place="bottom"&gt;
    &lt;label&gt;35&lt;/label&gt;
    &lt;seg&gt;Luhmann 1969.&lt;/seg&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-35">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-35">
+               <pre><code>
 &lt;note n="35" type="footnote" place="bottom"&gt;
    &lt;label&gt;35&lt;/label&gt;
    &lt;bibl xml:id="bibl-43"&gt;
@@ -2661,9 +3794,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-35">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-35">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -2680,33 +3813,56 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-35">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-35">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct xml:id="bibl-43"/&gt;
+   &lt;biblStruct source="#bibl-43"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Luhmann&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-36" class="raw-text">36 Für eine überaus positive Bewertung des ‚Vermeidens‘vgl. Felstiner und Danzig/Lowy
-            in Law and Society Review, vol. 9, 1974/75.</div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-36">Block</a></li>
-            <li><a href="#bibl-instance-36">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-36">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-36">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-36">
-            <pre><code>
+            </div>
+            <div id="biblStruct-resolved-instance-35">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-43"&gt;
+      &lt;author&gt;
+         &lt;persName&gt;
+            &lt;surname&gt;Luhmann&lt;/surname&gt;
+         &lt;/persName&gt;
+      &lt;/author&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-36" href="#instance-36">instance-36</a></legend>
+            <div id="input-instance-36" class="raw-text">36 Für eine überaus positive Bewertung des ‚Vermeidens‘vgl. Felstiner und Danzig/Lowy
+               in Law and Society Review, vol. 9, 1974/75.</div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-36">Block</a></li>
+               <li><a href="#bibl-instance-36">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-36">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-36">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-36">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-36">
+               <pre><code>
 &lt;note type="footnote" n="36" place="bottom"&gt;
    &lt;label&gt;36&lt;/label&gt;
    &lt;seg&gt;Für eine überaus positive Bewertung des ‚Vermeidens‘vgl.&lt;/seg&gt;
    &lt;bibl&gt;Felstiner und Danzig/Lowy in Law and Society Review, vol. 9, 1974/75.&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-36">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-36">
+               <pre><code>
 &lt;note n="36" type="footnote" place="bottom"&gt;
    &lt;label&gt;36&lt;/label&gt;
    &lt;note type="signal"&gt;Für eine überaus positive Bewertung des ‚Vermeidens‘ vgl.&lt;/note&gt;
@@ -2734,9 +3890,9 @@
             &lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-36">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-36">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
@@ -2765,12 +3921,11 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-36">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-36">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-44"&gt;
+   &lt;biblStruct source="#bibl-44"&gt;
       &lt;monogr&gt;
          &lt;title level="j"&gt;Law and Society Review&lt;/title&gt;
          &lt;author&gt;
@@ -2796,72 +3951,106 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="input-instance-37" class="raw-text">Baumgärtei, Gottfried, 1976: Gleicher Zugang zum Recht für alle. Köln.
-            Bender, Rolf und Rolf Schumacher, 1980: Erfolgsbarrieren vor Gericht. Tübingen. 
-            Black, Donald, 1973: The Mobilization of Law, in: Journal of Legal Studies 2.
-            Blankenburg, Erhard/Blankenburg, Viola/Morasch, Helmut, 1972: Der lange Weg in die
-            Berufung, in: Bender, Rolf (Hrsg.): Tatsachenforschung in der Justiz. Tübingen.
-            Blankenburg, Erhard, 1976: Nichtkriminalisierung als Struktur und Routine, in: Göppinger,
-            Hans und Günter Kaiser: Kriminologie und Strafverfahren. Stuttgart.
-            Blankenburg, Erhard/Sessar, Klaus/Steffen, Wiebke, 1978: Die Staatsanwaltschaft im
-            Prozeß strafrechtlicher Sozialkontrolle. Berlin.
-            Blankenburg, Erhard; Schönholz, Siegfried, unter Mitarbeit von Ralf Rogowski, 1979:
-            Zur Soziologie des Arbeitsgerichtsverfahrens. Neuwied und Darmstadt.
-            Blankenburg, Erhard, 1980: Recht als gradualisiertes Konzept, in: Blankenburg, Erhard;
-            Klausa, Ekkehard und Hubert Rottleuthner (Hrsg.): Alternative Rechtsformen und Alternativen
-            zum Recht, Jahrbuch für Rechtssoziologie und Rechtstheorie Bd. 6. Opladen.
-            Carlin, Jerome, Jan Howard und Sheldon Messinger, 1967: Civil Justice and the Poor.
-            New York. 
-            Danzig, Richard /Lowy, Michael, 1974/75; Everday Disputes and Mediation in the United
-            States: A Reply to Professor Felstiner, Law and Society Review, vol. 9, pp. 675—694.
-            Feest, Johannes/Blankenburg, Erhard, 1972: Die Definitionsmacht der Polizei. Düsseldorf.
-            Felstiner, William L. F., 1974/75: Influences of Social Organization on Dispute processing,
-            in: Law and Society Review, vol. 9, pp. 63—94.
-            Felstiner, William L. F., 1974/75: Avoidance as Dispute Processing: An Elaboration,
-            in: Law and Society Review, vol. 9, pp. 695-706.
-            Galanter, Marc, 1974: Why the ,Haves* Come out Ahead: Speculations on the Limits of
-            Legal Change, in: Law and Society Review, vol. 9, pp. 95—160.
-            Geiger, Theodor, 1964: Vorstudien zu einer Soziologie des Rechts. Neuwied. Gessner,
-            Volkmar, 1976: Recht und Konflikt. Tübingen.
-            Hilden, Hartmut, 1976: Rechtstatsachen im Räumungsstreit. Frankfurt/Main.
-            Johnson, Earl, 1979; Thinking about Access: A Preliminary Typology of Possible Strategies.
-            In: Cappelletti, Mauro und Bryant Garth (Hrsg.): Access to Justice, Bd. III. Milan
-            und Alphen/ Rijn.
-            Koch, Hartmut, 1975: Das Gerichtsverfahren als Konfliktlösungsprozeß — Einstellung
-            von Klägern und Beklagten zu Mietprozessen. Diss. Hamburg.
-            Luhmann, Niklas, 1969: Legitimation durch Verfahren. Neuwied und Darmstadt.
-            Luhmann, Niklas, 1980: Kommunikation über Recht in Interaktionssystemen, in: Blankenburg,
-            Erhard; Klausa, Ekkehard und Hubert Rottleuthner (Hrsg.): Alternative Rechtsformen
-            und Alternativen zum Recht, Jahrbuch für Rechtssoziologie und Rechtstheorie Bd. 6.
-            Opladen.
-            Reifner, Udo, 1978: Rechtshilfebedürfnis und Verrechtlichung am Beispiel einer Berliner
-            Mieterinitiative, Wissenschaftszentrum Berlin, IIM-dp/78—70.
-            Reifner, Udo, 1979: Gewerkschaftlicher Rechtsschutz — Geschichte des freigewerkschaftlichen
-            Rechtsschutzes und der Rechtsberatung der Deutschen Arbeitsfront von 1894—1945. Wissenschaftszentrum
-            Berlin IIM-dp/79—104.
-            Reifner, Udo und Irmela Gorges, 1980: Alternativen der Rechtsberatung: Dienstleistung,
-            Fürsorge und kollektive Selbsthilfe, in: Blankenburg, Erhard; Klausa, Ekkehard und
-            Hubert Rottleuthner (Hrsg.): Alternative Rechtsformen und Alternativen zum Recht,
-            Jahrbuch für Rechtssoziologie und Rechtstheorie Bd. 6. Opladen.
-            Sarat, Austin, 1976: Alternatives in Dispute Processing in a Small Claim Court, in:
-            Law and Society Review, vol. 10, pp. 339—375.
-            Schönholz, Siegfried, 1980: Arbeitsplatzsicherung oder Kompensation - Rechtliche Formen
-            des Bestandsschutzes im Vergleich in: Vereinigung für Rechtssoziologie (Hrsg.): Arbeitslosigkeit
-            und Recht. Baden-Baden.
-            Steinbach, E., 1979: GMD-Bericht, Manuskript. Gesellschaft für Mathematik und Datenverarbeitung.
-            Birlinghoven bei Bonn.
-            Wanner, Craig, 1975: The Public Ordering of Private Cases; Winning Civil Court Cases,
-            in: Law and Society Review, vol. 9, pp. 293-306.
             </div>
-         <ul data-tabs="">
-            <li><a href="#block-instance-37">Block</a></li>
-            <li><a href="#bibl-instance-37">&lt;bibl&gt;</a></li>
-            <li><a href="#biblStruct-instance-37">&lt;biblStruct&gt; (from source)</a></li>
-            <li><a href="#biblStruct-generated-instance-37">&lt;biblStruct&gt; (auto-generated)</a></li>
-         </ul>
-         <div id="block-instance-37">
-            <pre><code>
+            <div id="biblStruct-resolved-instance-36">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-44"&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;Law and Society Review&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Felstiner&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Danzig&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Lowy&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1974"&gt;1974/75&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="9" to="9"&gt;vol. 9&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
+         <fieldset class="block-no-description">
+            <legend><a name="instance-37" href="#instance-37">instance-37</a></legend>
+            <div id="input-instance-37" class="raw-text">Baumgärtei, Gottfried, 1976: Gleicher Zugang zum Recht für alle. Köln.
+               Bender, Rolf und Rolf Schumacher, 1980: Erfolgsbarrieren vor Gericht. Tübingen. 
+               Black, Donald, 1973: The Mobilization of Law, in: Journal of Legal Studies 2.
+               Blankenburg, Erhard/Blankenburg, Viola/Morasch, Helmut, 1972: Der lange Weg in die
+               Berufung, in: Bender, Rolf (Hrsg.): Tatsachenforschung in der Justiz. Tübingen.
+               Blankenburg, Erhard, 1976: Nichtkriminalisierung als Struktur und Routine, in: Göppinger,
+               Hans und Günter Kaiser: Kriminologie und Strafverfahren. Stuttgart.
+               Blankenburg, Erhard/Sessar, Klaus/Steffen, Wiebke, 1978: Die Staatsanwaltschaft im
+               Prozeß strafrechtlicher Sozialkontrolle. Berlin.
+               Blankenburg, Erhard; Schönholz, Siegfried, unter Mitarbeit von Ralf Rogowski, 1979:
+               Zur Soziologie des Arbeitsgerichtsverfahrens. Neuwied und Darmstadt.
+               Blankenburg, Erhard, 1980: Recht als gradualisiertes Konzept, in: Blankenburg, Erhard;
+               Klausa, Ekkehard und Hubert Rottleuthner (Hrsg.): Alternative Rechtsformen und Alternativen
+               zum Recht, Jahrbuch für Rechtssoziologie und Rechtstheorie Bd. 6. Opladen.
+               Carlin, Jerome, Jan Howard und Sheldon Messinger, 1967: Civil Justice and the Poor.
+               New York. 
+               Danzig, Richard /Lowy, Michael, 1974/75; Everday Disputes and Mediation in the United
+               States: A Reply to Professor Felstiner, Law and Society Review, vol. 9, pp. 675—694.
+               Feest, Johannes/Blankenburg, Erhard, 1972: Die Definitionsmacht der Polizei. Düsseldorf.
+               Felstiner, William L. F., 1974/75: Influences of Social Organization on Dispute processing,
+               in: Law and Society Review, vol. 9, pp. 63—94.
+               Felstiner, William L. F., 1974/75: Avoidance as Dispute Processing: An Elaboration,
+               in: Law and Society Review, vol. 9, pp. 695-706.
+               Galanter, Marc, 1974: Why the ,Haves* Come out Ahead: Speculations on the Limits of
+               Legal Change, in: Law and Society Review, vol. 9, pp. 95—160.
+               Geiger, Theodor, 1964: Vorstudien zu einer Soziologie des Rechts. Neuwied. Gessner,
+               Volkmar, 1976: Recht und Konflikt. Tübingen.
+               Hilden, Hartmut, 1976: Rechtstatsachen im Räumungsstreit. Frankfurt/Main.
+               Johnson, Earl, 1979; Thinking about Access: A Preliminary Typology of Possible Strategies.
+               In: Cappelletti, Mauro und Bryant Garth (Hrsg.): Access to Justice, Bd. III. Milan
+               und Alphen/ Rijn.
+               Koch, Hartmut, 1975: Das Gerichtsverfahren als Konfliktlösungsprozeß — Einstellung
+               von Klägern und Beklagten zu Mietprozessen. Diss. Hamburg.
+               Luhmann, Niklas, 1969: Legitimation durch Verfahren. Neuwied und Darmstadt.
+               Luhmann, Niklas, 1980: Kommunikation über Recht in Interaktionssystemen, in: Blankenburg,
+               Erhard; Klausa, Ekkehard und Hubert Rottleuthner (Hrsg.): Alternative Rechtsformen
+               und Alternativen zum Recht, Jahrbuch für Rechtssoziologie und Rechtstheorie Bd. 6.
+               Opladen.
+               Reifner, Udo, 1978: Rechtshilfebedürfnis und Verrechtlichung am Beispiel einer Berliner
+               Mieterinitiative, Wissenschaftszentrum Berlin, IIM-dp/78—70.
+               Reifner, Udo, 1979: Gewerkschaftlicher Rechtsschutz — Geschichte des freigewerkschaftlichen
+               Rechtsschutzes und der Rechtsberatung der Deutschen Arbeitsfront von 1894—1945. Wissenschaftszentrum
+               Berlin IIM-dp/79—104.
+               Reifner, Udo und Irmela Gorges, 1980: Alternativen der Rechtsberatung: Dienstleistung,
+               Fürsorge und kollektive Selbsthilfe, in: Blankenburg, Erhard; Klausa, Ekkehard und
+               Hubert Rottleuthner (Hrsg.): Alternative Rechtsformen und Alternativen zum Recht,
+               Jahrbuch für Rechtssoziologie und Rechtstheorie Bd. 6. Opladen.
+               Sarat, Austin, 1976: Alternatives in Dispute Processing in a Small Claim Court, in:
+               Law and Society Review, vol. 10, pp. 339—375.
+               Schönholz, Siegfried, 1980: Arbeitsplatzsicherung oder Kompensation - Rechtliche Formen
+               des Bestandsschutzes im Vergleich in: Vereinigung für Rechtssoziologie (Hrsg.): Arbeitslosigkeit
+               und Recht. Baden-Baden.
+               Steinbach, E., 1979: GMD-Bericht, Manuskript. Gesellschaft für Mathematik und Datenverarbeitung.
+               Birlinghoven bei Bonn.
+               Wanner, Craig, 1975: The Public Ordering of Private Cases; Winning Civil Court Cases,
+               in: Law and Society Review, vol. 9, pp. 293-306.
+               </div>
+            <ul data-tabs="">
+               <li><a href="#block-instance-37">Block</a></li>
+               <li><a href="#bibl-instance-37">&lt;bibl&gt;</a></li>
+               <li><a href="#biblStruct-instance-37">&lt;biblStruct&gt; (from source)</a></li>
+               <li><a href="#biblStruct-unresolved-instance-37">&lt;biblStruct&gt; (unresolved)</a></li>
+               <li><a href="#biblStruct-resolved-instance-37">&lt;biblStruct&gt; (resolved)</a></li>
+            </ul>
+            <div id="block-instance-37">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;bibl&gt;Baumgärtel, Gottfried, 1976: Gleicher Zugang zum Recht für alle. Köln.&lt;/bibl&gt;
    &lt;bibl&gt;Bender, Rolf und Rolf Schumacher, 1980: Erfolgsbarrieren vor Gericht. Tübingen. Black, Donald, 1973: The Mobilization of Law, in: Journal of Legal Studies 2.&lt;/bibl&gt;
@@ -2892,9 +4081,9 @@
    &lt;bibl&gt;Wanner, Craig, 1975: The Public Ordering of Private Cases; Winning Civil Court Cases, in: Law and Society Review, vol. 9, pp. 293-306.&lt;/bibl&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="bibl-instance-37">
-            <pre><code>
+            </div>
+            <div id="bibl-instance-37">
+               <pre><code>
 &lt;listBibl&gt;
    &lt;bibl xml:id="bibl-45"&gt;
       &lt;author&gt;
@@ -3386,42 +4575,15 @@
           &lt;/bibl&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
-         <div id="biblStruct-instance-37">
-            <pre><code>
+            </div>
+            <div id="biblStruct-instance-37">
+               <pre><code>
 </code></pre>
-         </div>
-         <div id="biblStruct-generated-instance-37">
-            <pre><code>
+            </div>
+            <div id="biblStruct-unresolved-instance-37">
+               <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct/&gt;
-   &lt;biblStruct xml:id="bibl-45"&gt;
+   &lt;biblStruct source="#bibl-45"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Gleicher Zugang zum Recht für alle&lt;/title&gt;
          &lt;author&gt;
@@ -3436,7 +4598,7 @@
          &lt;/imprint&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-46"&gt;
+   &lt;biblStruct source="#bibl-46"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Erfolgsbarrieren vor Gericht&lt;/title&gt;
          &lt;author&gt;
@@ -3457,7 +4619,7 @@
          &lt;/imprint&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-47"&gt;
+   &lt;biblStruct source="#bibl-47"&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;The Mobilization of Law&lt;/title&gt;
          &lt;author&gt;
@@ -3475,7 +4637,7 @@
          &lt;biblScope unit="volume" from="2" to="2"&gt;2&lt;/biblScope&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-48"&gt;
+   &lt;biblStruct source="#bibl-48"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Der lange Weg in die Berufung&lt;/title&gt;
          &lt;title level="m"&gt;Tatsachenforschung in der Justiz&lt;/title&gt;
@@ -3509,7 +4671,7 @@
          &lt;/imprint&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-49"&gt;
+   &lt;biblStruct source="#bibl-49"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Nichtkriminalisierung als Struktur und Routine&lt;/title&gt;
          &lt;title level="m"&gt;Kriminologie und Strafverfahren&lt;/title&gt;
@@ -3537,7 +4699,7 @@
          &lt;/imprint&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-50"&gt;
+   &lt;biblStruct source="#bibl-50"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Die Staatsanwaltschaft im Prozeß strafrechtlicher Sozialkontrolle&lt;/title&gt;
          &lt;author&gt;
@@ -3564,7 +4726,7 @@
          &lt;/imprint&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-51"&gt;
+   &lt;biblStruct source="#bibl-51"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Zur Soziologie des Arbeitsgerichtsverfahrens&lt;/title&gt;
          &lt;author&gt;
@@ -3585,7 +4747,7 @@
          &lt;/imprint&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-52"&gt;
+   &lt;biblStruct source="#bibl-52"&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Alternative Rechtsformen und Alternativen zum Recht&lt;/title&gt;
          &lt;author&gt;
@@ -3623,7 +4785,7 @@
          &lt;biblScope unit="volume" from="6" to="6"&gt;Bd. 6&lt;/biblScope&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-53"&gt;
+   &lt;biblStruct source="#bibl-53"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Civil Justice and the Poor&lt;/title&gt;
          &lt;author&gt;
@@ -3644,7 +4806,7 @@
          &lt;/imprint&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-54"&gt;
+   &lt;biblStruct source="#bibl-54"&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Everday Disputes and Mediation in the United States: A Reply to Professor Felstiner&lt;/title&gt;
          &lt;author&gt;
@@ -3669,7 +4831,7 @@
          &lt;biblScope unit="page" from="675" to="694"&gt;pp. 675—694&lt;/biblScope&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-55"&gt;
+   &lt;biblStruct source="#bibl-55"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Die Definitionsmacht der Polizei&lt;/title&gt;
          &lt;author&gt;
@@ -3690,7 +4852,7 @@
          &lt;/imprint&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-56"&gt;
+   &lt;biblStruct source="#bibl-56"&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Influences of Social Organization on Dispute processing&lt;/title&gt;
          &lt;author&gt;
@@ -3710,7 +4872,7 @@
          &lt;biblScope unit="page" from="63" to="94"&gt;pp. 63—94&lt;/biblScope&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-57"&gt;
+   &lt;biblStruct source="#bibl-57"&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Avoidance as Dispute Processing: An Elaboration&lt;/title&gt;
          &lt;author&gt;
@@ -3730,7 +4892,7 @@
          &lt;biblScope unit="page" from="695" to="706"&gt;pp. 695-706&lt;/biblScope&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-58"&gt;
+   &lt;biblStruct source="#bibl-58"&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Why the ‚Haves‘ Come out Ahead: Speculations on the Limits of Legal Change&lt;/title&gt;
          &lt;author&gt;
@@ -3749,7 +4911,7 @@
          &lt;biblScope unit="page" from="95" to="160"&gt;pp. 95—160&lt;/biblScope&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-59"&gt;
+   &lt;biblStruct source="#bibl-59"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Vorstudien zu einer Soziologie des Rechts&lt;/title&gt;
          &lt;author&gt;
@@ -3764,7 +4926,7 @@
          &lt;/imprint&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-60"&gt;
+   &lt;biblStruct source="#bibl-60"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Recht und Konflikt&lt;/title&gt;
          &lt;author&gt;
@@ -3779,7 +4941,7 @@
          &lt;/imprint&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-61"&gt;
+   &lt;biblStruct source="#bibl-61"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Rechtstatsachen im Räumungsstreit&lt;/title&gt;
          &lt;author&gt;
@@ -3794,7 +4956,7 @@
          &lt;/imprint&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-62"&gt;
+   &lt;biblStruct source="#bibl-62"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Thinking about Access: A Preliminary Typology of Possible Strategies&lt;/title&gt;
          &lt;title level="m"&gt;Access to Justice&lt;/title&gt;
@@ -3823,7 +4985,7 @@
          &lt;biblScope unit="volume" from="III" to="III"&gt;Bd. III&lt;/biblScope&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-63"&gt;
+   &lt;biblStruct source="#bibl-63"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Das Gerichtsverfahren als Konfliktlösungsprozeß — Einstellung von Klägern und Beklagten zu Mietprozessen&lt;/title&gt;
          &lt;author&gt;
@@ -3839,7 +5001,7 @@
       &lt;/monogr&gt;
       &lt;note type="document-type"&gt;Diss&lt;/note&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-64"&gt;
+   &lt;biblStruct source="#bibl-64"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Legitimation durch Verfahren&lt;/title&gt;
          &lt;author&gt;
@@ -3854,7 +5016,7 @@
          &lt;/imprint&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-65"&gt;
+   &lt;biblStruct source="#bibl-65"&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Kommunikation über Recht in Interaktionssystemen&lt;/title&gt;
          &lt;author&gt;
@@ -3892,7 +5054,7 @@
          &lt;biblScope unit="volume" from="6" to="6"&gt;Bd. 6&lt;/biblScope&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-66"&gt;
+   &lt;biblStruct source="#bibl-66"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Rechtshilfebedürfnis und Verrechtlichung am Beispiel einer Berliner Mieterinitiative&lt;/title&gt;
          &lt;idno&gt;IIM-dp/78—70&lt;/idno&gt;
@@ -3908,7 +5070,7 @@
          &lt;/imprint&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-67"&gt;
+   &lt;biblStruct source="#bibl-67"&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Gewerkschaftlicher Rechtsschutz — Geschichte des freigewerkschaftlichen Rechtsschutzes und der Rechtsberatung der Deutschen Arbeitsfront von 1894—1945&lt;/title&gt;
          &lt;author&gt;
@@ -3919,7 +5081,7 @@
          &lt;/author&gt;
       &lt;/analytic&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-68"&gt;
+   &lt;biblStruct source="#bibl-68"&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Alternativen der Rechtsberatung: Dienstleistung, Fürsorge und kollektive Selbsthilfe&lt;/title&gt;
          &lt;author&gt;
@@ -3963,7 +5125,7 @@
          &lt;biblScope unit="volume" from="6" to="6"&gt;Bd. 6&lt;/biblScope&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-69"&gt;
+   &lt;biblStruct source="#bibl-69"&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Alternatives in Dispute Processing in a Small Claim Court&lt;/title&gt;
          &lt;author&gt;
@@ -3982,7 +5144,7 @@
          &lt;biblScope unit="page" from="339" to="375"&gt;pp. 339—375.&lt;/biblScope&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-70"&gt;
+   &lt;biblStruct source="#bibl-70"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Arbeitsplatzsicherung oder Kompensation - Rechtliche Formen des Bestandsschutzes im Vergleich&lt;/title&gt;
          &lt;title level="m"&gt;Arbeitslosigkeit und Recht&lt;/title&gt;
@@ -4001,7 +5163,7 @@
          &lt;/imprint&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-71"&gt;
+   &lt;biblStruct source="#bibl-71"&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;GMD-Bericht, Manuskript. Gesellschaft für Mathematik und Datenverarbeitung&lt;/title&gt;
          &lt;author&gt;
@@ -4016,7 +5178,7 @@
          &lt;/imprint&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
-   &lt;biblStruct xml:id="bibl-72"&gt;
+   &lt;biblStruct source="#bibl-72"&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;The Public Ordering of Private Cases; Winning Civil Court Cases&lt;/title&gt;
          &lt;author&gt;
@@ -4037,7 +5199,628 @@
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
-         </div>
+            </div>
+            <div id="biblStruct-resolved-instance-37">
+               <pre><code>
+&lt;listBibl&gt;
+   &lt;biblStruct source="#bibl-45"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Gleicher Zugang zum Recht für alle&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Baumgärtel&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Gottfried&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1976&lt;/date&gt;
+            &lt;pubPlace&gt;Köln&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-46"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Erfolgsbarrieren vor Gericht&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Bender&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Rolf&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename type="first"&gt;Rolf&lt;/forename&gt;
+               &lt;surname&gt;Schumacher&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1980&lt;/date&gt;
+            &lt;pubPlace&gt;Tübingen&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-47"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;The Mobilization of Law&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Black&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Donald&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;Journal of Legal Studies&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1973&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="2" to="2"&gt;2&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-48"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Der lange Weg in die Berufung&lt;/title&gt;
+         &lt;title level="m"&gt;Tatsachenforschung in der Justiz&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Blankenburg&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Erhard&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Blankenburg&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Viola&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Morasch&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Helmut&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Bender&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Rolf&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1972&lt;/date&gt;
+            &lt;pubPlace&gt;Tübingen&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-49"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Nichtkriminalisierung als Struktur und Routine&lt;/title&gt;
+         &lt;title level="m"&gt;Kriminologie und Strafverfahren&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Blankenburg&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Erhard&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Göppinger&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Hans&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;forename type="first"&gt;Günter&lt;/forename&gt;
+               &lt;surname&gt;Kaiser&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1976&lt;/date&gt;
+            &lt;pubPlace&gt;Stuttgart&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-50"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Die Staatsanwaltschaft im Prozeß strafrechtlicher Sozialkontrolle&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Blankenburg&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Erhard&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Sessar&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Klaus&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Steffen&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Wiebke&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1978&lt;/date&gt;
+            &lt;pubPlace&gt;Berlin&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-51"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Zur Soziologie des Arbeitsgerichtsverfahrens&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Blankenburg&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Erhard&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Schönholz&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Siegfried&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1979&lt;/date&gt;
+            &lt;pubPlace&gt;Neuwied und Darmstadt&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-52"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Alternative Rechtsformen und Alternativen zum Recht&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Blankenburg&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Erhard&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Recht als gradualisiertes Konzept&lt;/title&gt;
+         &lt;title level="s"&gt;Jahrbuch für Rechtssoziologie und Rechtstheorie&lt;/title&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Blankenburg&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Erhard&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Klausa&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Ekkehard&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;forename type="first"&gt;Hubert&lt;/forename&gt;
+               &lt;surname&gt;Rottleuthner&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1980&lt;/date&gt;
+            &lt;pubPlace&gt;Opladen&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="6" to="6"&gt;Bd. 6&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-53"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Civil Justice and the Poor&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Carlin&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Jerome&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename type="first"&gt;Sheldon&lt;/forename&gt;
+               &lt;surname&gt;Messinger&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1967&lt;/date&gt;
+            &lt;pubPlace&gt;New York&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-54"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Everday Disputes and Mediation in the United States: A Reply to Professor Felstiner&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Danzig&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Richard&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Lowy&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Michael&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;Law and Society Review&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1975"&gt;1974/75&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="9" to="9"&gt;vol. 9&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="675" to="694"&gt;pp. 675—694&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-55"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Die Definitionsmacht der Polizei&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Feest&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Johannes&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Blankenburg&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Erhard&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1972&lt;/date&gt;
+            &lt;pubPlace&gt;Düsseldorf&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-56"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Influences of Social Organization on Dispute processing&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Felstiner&lt;/surname&gt;,
+                &lt;forename type="first"&gt;William&lt;/forename&gt;
+               &lt;forename type="middle"&gt;L. F.&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;Law and Society Review&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1974"&gt;1974/75&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="9" to="9"&gt;vol. 9&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="63" to="94"&gt;pp. 63—94&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-57"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Avoidance as Dispute Processing: An Elaboration&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Felstiner&lt;/surname&gt;,
+                &lt;forename type="first"&gt;William&lt;/forename&gt;
+               &lt;forename type="middle"&gt;L. F.&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;Law and Society Review&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1974"&gt;1974/75&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="9" to="9"&gt;vol. 9&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="695" to="706"&gt;pp. 695-706&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-58"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Why the ‚Haves‘ Come out Ahead: Speculations on the Limits of Legal Change&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Galanter&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Marc&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;Law and Society Review&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1974&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="9" to="9"&gt;vol. 9&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="95" to="160"&gt;pp. 95—160&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-59"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Vorstudien zu einer Soziologie des Rechts&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Geiger&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Theodor&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1964&lt;/date&gt;
+            &lt;pubPlace&gt;Neuwied&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-60"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Recht und Konflikt&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Gessner&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Volkmar&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1976&lt;/date&gt;
+            &lt;pubPlace&gt;Tübingen&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-61"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Rechtstatsachen im Räumungsstreit&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Hilden&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Hartmut&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1976&lt;/date&gt;
+            &lt;pubPlace&gt;Frankfurt/Main&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-62"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Thinking about Access: A Preliminary Typology of Possible Strategies&lt;/title&gt;
+         &lt;title level="m"&gt;Access to Justice&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Johnson&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Earl&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Cappelletti&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Mauro&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;forename type="first"&gt;Bryant&lt;/forename&gt;
+               &lt;surname&gt;Garth&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1979&lt;/date&gt;
+            &lt;pubPlace&gt;Milan und Alphen/ Rijn&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="III" to="III"&gt;Bd. III&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-63"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Das Gerichtsverfahren als Konfliktlösungsprozeß — Einstellung von Klägern und Beklagten zu Mietprozessen&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Koch&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Hartmut&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1975&lt;/date&gt;
+            &lt;pubPlace&gt;Hamburg&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+      &lt;note type="document-type"&gt;Diss&lt;/note&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-64"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Legitimation durch Verfahren&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Luhmann&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Niklas&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1969&lt;/date&gt;
+            &lt;pubPlace&gt;Neuwied und Darmstadt&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-65"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Kommunikation über Recht in Interaktionssystemen&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Luhmann&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Niklas&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Alternative Rechtsformen und Alternativen zum Recht&lt;/title&gt;
+         &lt;title level="s"&gt;Jahrbuch für Rechtssoziologie und Rechtstheorie&lt;/title&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Blankenburg&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Erhard&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Klausa&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Ekkehard&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;forename type="first"&gt;Hubert&lt;/forename&gt;
+               &lt;surname&gt;Rottleuthner&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1980&lt;/date&gt;
+            &lt;pubPlace&gt;Opladen&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="6" to="6"&gt;Bd. 6&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-66"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Rechtshilfebedürfnis und Verrechtlichung am Beispiel einer Berliner Mieterinitiative&lt;/title&gt;
+         &lt;idno&gt;IIM-dp/78—70&lt;/idno&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Reifner&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Udo&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1978&lt;/date&gt;
+            &lt;publisher&gt;Wissenschaftszentrum Berlin&lt;/publisher&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-67"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Gewerkschaftlicher Rechtsschutz — Geschichte des freigewerkschaftlichen Rechtsschutzes und der Rechtsberatung der Deutschen Arbeitsfront von 1894—1945&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Reifner&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Udo&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-68"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Alternativen der Rechtsberatung: Dienstleistung, Fürsorge und kollektive Selbsthilfe&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Reifner&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Udo&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename type="first"&gt;Irmela&lt;/forename&gt;
+               &lt;surname&gt;Gorges&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Klausa&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Ekkehard&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename type="first"&gt;Hubert&lt;/forename&gt;
+               &lt;surname&gt;Rottleuthner&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Alternative Rechtsformen und Alternativen zum Recht&lt;/title&gt;
+         &lt;title level="s"&gt;Jahrbuch für Rechtssoziologie und Rechtstheorie&lt;/title&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Blankenburg&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Erhard&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1980&lt;/date&gt;
+            &lt;pubPlace&gt;Opladen&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="6" to="6"&gt;Bd. 6&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-69"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Alternatives in Dispute Processing in a Small Claim Court&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Sarat&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Austin&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;Law and Society Review&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1976&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="10" to="10"&gt;vol. 10&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="339" to="375"&gt;pp. 339—375.&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-70"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Arbeitsplatzsicherung oder Kompensation - Rechtliche Formen des Bestandsschutzes im Vergleich&lt;/title&gt;
+         &lt;title level="m"&gt;Arbeitslosigkeit und Recht&lt;/title&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Schönholz&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Siegfried&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;editor&gt;
+            &lt;orgName&gt;Vereinigung für Rechtssoziologie&lt;/orgName&gt;
+         &lt;/editor&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1980&lt;/date&gt;
+            &lt;pubPlace&gt;Baden-Baden&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-71"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;GMD-Bericht, Manuskript. Gesellschaft für Mathematik und Datenverarbeitung&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Steinbach&lt;/surname&gt;,
+                &lt;forename type="first"&gt;E.&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1979&lt;/date&gt;
+            &lt;pubPlace&gt;Birlinghoven bei Bonn&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct source="#bibl-72"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;The Public Ordering of Private Cases; Winning Civil Court Cases&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Wanner&lt;/surname&gt;,
+                &lt;forename type="first"&gt;Craig&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;Law and Society Review&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;1975&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="9" to="9"&gt;vol. 9&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="293" to="306"&gt;pp. 293-306.&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
+</code></pre>
+            </div>
+         </fieldset>
       </div><script>
           const tabSelectors = document.querySelectorAll('[data-tabs]');
           for (const [i, tabs] of [...tabSelectors].entries()) {
