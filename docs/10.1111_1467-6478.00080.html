@@ -5,7 +5,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Dataset</title>
       <meta charset="UTF-8">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css"><script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/languages/xml.min.js" integrity="sha512-dG+W2e5Wf51XUF9HqsX31z5+nTTuxe8wpOEC3/1gCJImJusP1FZS1PHxiH3NjBUQJ6oDpVRKKXH7+aCVd+wkDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><style>
+      <link rel="stylesheet" href="resources/tabby/dist/css/tabby-ui.min.css"><script src="resources/tabby/dist/js/tabby.polyfills.min.js"></script><link rel="stylesheet" href="resources/highlight.js/11.9.0/styles/default.min.css"><script src="resources/highlight.js/11.9.0/highlight.min.js"></script><script src="resources/highlight.js/11.9.0/languages/xml.min.js"></script><style>
           body {
           font-family: Arial, Helvetica, sans-serif;
           }
@@ -32,11 +32,7 @@
          </ul>
          <div id="block-instance-1">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="1"
-      place="bottom"&gt;
+&lt;note type="footnote" n="1" place="bottom"&gt;
    &lt;label&gt;1&lt;/label&gt;
    &lt;seg&gt;For a contrary view, see&lt;/seg&gt;
    &lt;bibl&gt;G. Jones, ‘“Traditional” Legal Scholarship: a Personal View’ in What Are Law Schools For?, ed. P. Birks (1996) 14.&lt;/bibl&gt;
@@ -45,11 +41,7 @@
          </div>
          <div id="bibl-instance-1">
             <pre><code>
-&lt;note
-     
-      n="1"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="1" type="footnote" place="bottom"&gt;
    &lt;label&gt;1&lt;/label&gt;
    &lt;note type="signal"&gt;For a contrary view, see&lt;/note&gt;
    &lt;bibl xml:id="bibl-1"&gt;
@@ -75,8 +67,7 @@
          </div>
          <div id="biblStruct-instance-1">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;“Traditional” Legal Scholarship: a Personal View&lt;/title&gt;
@@ -106,39 +97,33 @@
          </div>
          <div id="biblStruct-generated-instance-1">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-1"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;“Traditional” Legal Scholarship: a Personal View&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;G.&lt;/forename&gt;
-            &lt;surname&gt;Jones&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;What Are Law Schools For?&lt;/title&gt;
-      &lt;editor&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;P.&lt;/forename&gt;
-            &lt;surname&gt;Birks&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/editor&gt;
-      &lt;imprint&gt;
-         &lt;date when="1996"&gt;1996&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="14"&gt;14&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-1"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;“Traditional” Legal Scholarship: a Personal View&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;G.&lt;/forename&gt;
+               &lt;surname&gt;Jones&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;What Are Law Schools For?&lt;/title&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;P.&lt;/forename&gt;
+               &lt;surname&gt;Birks&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;imprint&gt;
+            &lt;date when="1996"&gt;1996&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="page" from="14"&gt;14&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-2" class="raw-text">3 R. Goff, ‘The Search for Principle’ (1983) Proceeedings of the British Academy 169,
@@ -154,11 +139,7 @@
          </ul>
          <div id="block-instance-2">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="3"
-      place="bottom"&gt;
+&lt;note type="footnote" n="3" place="bottom"&gt;
    &lt;label&gt;3&lt;/label&gt;
    &lt;bibl&gt;R. Goff, ‘The Search for Principle’ (1983) Proceeedings of the British Academy 169, at 171.&lt;/bibl&gt; This is an amplification of Dicey’s remark that ‘[b]y adequate study and careful thought whole departments of law can . . . be reduced to order and exhibited under the form of a few principles which sum up the effect of a hundred cases . . .’. &lt;bibl&gt;A. Dicey, Can English Law be taught at the Universities? (1883) 20.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -166,11 +147,7 @@
          </div>
          <div id="bibl-instance-2">
             <pre><code>
-&lt;note
-     
-      n="3"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="3" type="footnote" place="bottom"&gt;
    &lt;label&gt;3&lt;/label&gt;
    &lt;bibl xml:id="bibl-2"&gt;
       &lt;author&gt;
@@ -205,8 +182,7 @@
          </div>
          <div id="biblStruct-instance-2">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;The Search for Principle&lt;/title&gt;
@@ -246,55 +222,44 @@
          </div>
          <div id="biblStruct-generated-instance-2">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-2"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;The Search for Principle&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;R.&lt;/forename&gt;
-            &lt;surname&gt;Goff&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="j"&gt;Proceeedings of the British Academy&lt;/title&gt;
-      &lt;imprint&gt;
-         &lt;date when="1983"&gt;1983&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="volume"
-                 from="169"
-                 to="169"&gt;169&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-3"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;Can English Law be taught at the Universities?&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;A.&lt;/forename&gt;
-            &lt;surname&gt;Dicey&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint&gt;
-         &lt;date when="1883"&gt;1883&lt;/date&gt;
-      &lt;/imprint&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-2"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;The Search for Principle&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;R.&lt;/forename&gt;
+               &lt;surname&gt;Goff&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;Proceeedings of the British Academy&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1983"&gt;1983&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="169" to="169"&gt;169&lt;/biblScope&gt;
+         &lt;citedRange unit="page" from="171" to="171"&gt;at 171&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct xml:id="bibl-3"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Can English Law be taught at the Universities?&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;A.&lt;/forename&gt;
+               &lt;surname&gt;Dicey&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1883"&gt;1883&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;citedRange unit="page" from="20" to="20"&gt;20&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-3" class="raw-text">4 J. Smith, The Law of Contract (1989)</div>
@@ -306,11 +271,7 @@
          </ul>
          <div id="block-instance-3">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="4"
-      place="bottom"&gt;
+&lt;note type="footnote" n="4" place="bottom"&gt;
    &lt;label&gt;4&lt;/label&gt;
    &lt;bibl&gt;J. Smith, The Law of Contract (1989)&lt;/bibl&gt;
 &lt;/note&gt;
@@ -318,11 +279,7 @@
          </div>
          <div id="bibl-instance-3">
             <pre><code>
-&lt;note
-     
-      n="4"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="4" type="footnote" place="bottom"&gt;
    &lt;label&gt;4&lt;/label&gt;
    &lt;bibl xml:id="bibl-4"&gt;
       &lt;author&gt;
@@ -339,8 +296,7 @@
          </div>
          <div id="biblStruct-instance-3">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;The Law of Contract&lt;/title&gt;
@@ -360,27 +316,23 @@
          </div>
          <div id="biblStruct-generated-instance-3">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-4"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;The Law of Contract&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;J.&lt;/forename&gt;
-            &lt;surname&gt;Smith&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint&gt;
-         &lt;date when="1989"&gt;1989&lt;/date&gt;
-      &lt;/imprint&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-4"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;The Law of Contract&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;J.&lt;/forename&gt;
+               &lt;surname&gt;Smith&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1989"&gt;1989&lt;/date&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-4" class="raw-text">6 See, for example, D. Kennedy, ‘Form and substance in Private Law Ajudication’ (1976)
@@ -393,11 +345,7 @@
          </ul>
          <div id="block-instance-4">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="6"
-      place="bottom"&gt;
+&lt;note type="footnote" n="6" place="bottom"&gt;
    &lt;label&gt;6&lt;/label&gt;
    &lt;seg&gt;See, for example,&lt;/seg&gt;
    &lt;bibl&gt;D. Kennedy, ‘Form and substance in Private Law Ajudication’ (1976) 89 Harvard Law Rev. 1685.&lt;/bibl&gt;
@@ -406,11 +354,7 @@
          </div>
          <div id="bibl-instance-4">
             <pre><code>
-&lt;note
-     
-      n="6"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="6" type="footnote" place="bottom"&gt;
    &lt;label&gt;6&lt;/label&gt;
    &lt;note type="signal"&gt;See, for example,&lt;/note&gt;
    &lt;bibl xml:id="bibl-5"&gt;
@@ -431,8 +375,7 @@
          </div>
          <div id="biblStruct-instance-4">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Form and substance in Private Law Ajudication&lt;/title&gt;
@@ -457,37 +400,28 @@
          </div>
          <div id="biblStruct-generated-instance-4">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-5"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;Form and substance in Private Law Ajudication&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;D.&lt;/forename&gt;
-            &lt;surname&gt;Kennedy&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="j"&gt;Harvard Law Rev.&lt;/title&gt;
-      &lt;imprint&gt;
-         &lt;date when="1976"&gt;1976&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="volume"
-                 from="89"
-                 to="89"&gt;89&lt;/biblScope&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="1685"&gt;1685&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-5"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Form and substance in Private Law Ajudication&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;D.&lt;/forename&gt;
+               &lt;surname&gt;Kennedy&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;Harvard Law Rev.&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1976"&gt;1976&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="89" to="89"&gt;89&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="1685"&gt;1685&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-5" class="raw-text">7 B. Hepple, ‘The Renewal of the Liberal Law Degree’ (1996) Cambridge Law J. 470 at
@@ -500,11 +434,7 @@
          </ul>
          <div id="block-instance-5">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="7"
-      place="bottom"&gt;
+&lt;note type="footnote" n="7" place="bottom"&gt;
    &lt;label&gt;7&lt;/label&gt;
    &lt;bibl&gt;B. Hepple, ‘The Renewal of the Liberal Law Degree’ (1996) Cambridge Law J. 470 at 485 and 481.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -512,11 +442,7 @@
          </div>
          <div id="bibl-instance-5">
             <pre><code>
-&lt;note
-     
-      n="7"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="7" type="footnote" place="bottom"&gt;
    &lt;label&gt;7&lt;/label&gt;
    &lt;bibl xml:id="bibl-6"&gt;
       &lt;author&gt;
@@ -536,8 +462,7 @@
          </div>
          <div id="biblStruct-instance-5">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;The Renewal of the Liberal Law Degree&lt;/title&gt;
@@ -562,33 +487,28 @@
          </div>
          <div id="biblStruct-generated-instance-5">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-6"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;The Renewal of the Liberal Law Degree&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;B.&lt;/forename&gt;
-            &lt;surname&gt;Hepple&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="j"&gt;Cambridge Law J&lt;/title&gt;
-      &lt;imprint&gt;
-         &lt;date when="1996"&gt;1996&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="470"&gt;470&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-6"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;The Renewal of the Liberal Law Degree&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;B.&lt;/forename&gt;
+               &lt;surname&gt;Hepple&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;Cambridge Law J&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1996"&gt;1996&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="page" from="470"&gt;470&lt;/biblScope&gt;
+         &lt;citedRange unit="page" from="at"&gt;at 485 and 481&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-6" class="raw-text">8 P.A. Thomas, ‘Introduction’ in Socio-Legal Studies, ed. P.A. Thomas (1997) 19.</div>
@@ -600,11 +520,7 @@
          </ul>
          <div id="block-instance-6">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="8"
-      place="bottom"&gt;
+&lt;note type="footnote" n="8" place="bottom"&gt;
    &lt;label&gt;8&lt;/label&gt;
    &lt;bibl&gt;P.A. Thomas, ‘Introduction’ in Socio-Legal Studies, ed. P.A. Thomas (1997) 19.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -612,11 +528,7 @@
          </div>
          <div id="bibl-instance-6">
             <pre><code>
-&lt;note
-     
-      n="8"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="8" type="footnote" place="bottom"&gt;
    &lt;label&gt;8&lt;/label&gt;
    &lt;bibl xml:id="bibl-7"&gt;
       &lt;author&gt;
@@ -641,8 +553,7 @@
          </div>
          <div id="biblStruct-instance-6">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Introduction&lt;/title&gt;
@@ -672,39 +583,33 @@
          </div>
          <div id="biblStruct-generated-instance-6">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-7"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;Introduction&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;P.A.&lt;/forename&gt;
-            &lt;surname&gt;Thomas&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;Socio-Legal Studies&lt;/title&gt;
-      &lt;editor&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;P.A.&lt;/forename&gt;
-            &lt;surname&gt;Thomas&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/editor&gt;
-      &lt;imprint&gt;
-         &lt;date when="1997"&gt;1997&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="19"&gt;19&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-7"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Introduction&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;P.A.&lt;/forename&gt;
+               &lt;surname&gt;Thomas&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Socio-Legal Studies&lt;/title&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;P.A.&lt;/forename&gt;
+               &lt;surname&gt;Thomas&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;imprint&gt;
+            &lt;date when="1997"&gt;1997&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="page" from="19"&gt;19&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-7" class="raw-text">9 R. Cotterrell, Law’s Community (1995) 296.</div>
@@ -716,11 +621,7 @@
          </ul>
          <div id="block-instance-7">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="9"
-      place="bottom"&gt;
+&lt;note type="footnote" n="9" place="bottom"&gt;
    &lt;label&gt;9&lt;/label&gt;
    &lt;bibl&gt;R. Cotterrell, Law’s Community (1995) 296.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -728,11 +629,7 @@
          </div>
          <div id="bibl-instance-7">
             <pre><code>
-&lt;note
-     
-      n="9"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="9" type="footnote" place="bottom"&gt;
    &lt;label&gt;9&lt;/label&gt;
    &lt;bibl xml:id="bibl-8"&gt;
       &lt;author&gt;
@@ -750,8 +647,7 @@
          </div>
          <div id="biblStruct-instance-7">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Law’s Community&lt;/title&gt;
@@ -772,30 +668,24 @@
          </div>
          <div id="biblStruct-generated-instance-7">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-8"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;Law’s Community&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;R.&lt;/forename&gt;
-            &lt;surname&gt;Cotterrell&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint&gt;
-         &lt;date when="1995"&gt;1995&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="296"&gt;296&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-8"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Law’s Community&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;R.&lt;/forename&gt;
+               &lt;surname&gt;Cotterrell&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1995"&gt;1995&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="page" from="296"&gt;296&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-8" class="raw-text">10 Socio-legal studies has been defined in many different ways. In this essay the
@@ -810,11 +700,7 @@
          </ul>
          <div id="block-instance-8">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="10"
-      place="bottom"&gt;
+&lt;note type="footnote" n="10" place="bottom"&gt;
    &lt;label&gt;10&lt;/label&gt;
    &lt;seg&gt;Socio-legal studies has been defined in many different ways. In this essay the term is taken to indicate the use of ideas ‘from other disciplines primarily but not exclusively from within the social science and humanities fields’.&lt;/seg&gt;
    &lt;bibl&gt;S. Wheeler, ‘Company Law’ in Thomas, op. cit., n. 8, at p. 285.&lt;/bibl&gt;
@@ -823,11 +709,7 @@
          </div>
          <div id="bibl-instance-8">
             <pre><code>
-&lt;note
-     
-      n="10"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="10" type="footnote" place="bottom"&gt;
    &lt;label&gt;10&lt;/label&gt;
    &lt;note type="comment"&gt;Socio-legal studies has been defined in many different ways. In this essay the
                         term is taken to indicate the use of ideas ‘from other disciplines primarily but not exclusively
@@ -855,8 +737,7 @@
          </div>
          <div id="biblStruct-instance-8">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Company Law&lt;/title&gt;
@@ -885,32 +766,20 @@
          </div>
          <div id="biblStruct-generated-instance-8">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-9"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;Company Law&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;S.&lt;/forename&gt;
-            &lt;surname&gt;Wheeler&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;editor&gt;
-         &lt;persName&gt;
-            &lt;surname&gt;Thomas&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/editor&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-9"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Company Law&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;S.&lt;/forename&gt;
+               &lt;surname&gt;Wheeler&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-9" class="raw-text">11 Some fail wholly. It is difficult to see any effect on academic legal education
@@ -934,11 +803,7 @@
          </ul>
          <div id="block-instance-9">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="11"
-      place="bottom"&gt;
+&lt;note type="footnote" n="11" place="bottom"&gt;
    &lt;label&gt;11&lt;/label&gt;
    &lt;seg&gt;Some fail wholly. It is difficult to see any effect on academic legal education that resulted from&lt;/seg&gt;
    &lt;bibl&gt;Lady Marre’s report A Time for Change (1988).&lt;/bibl&gt; The Jarratt report on universities produced for the Committee of Vice-Chancellors and Principals (CVCP), &lt;bibl&gt;Report of the Steering Committee for Efficiency studies in Universities (1988),&lt;/bibl&gt; produced much comment but little action. Even those that are thought of as being a success are not wholly implemented. Despite Ormrod’s recommendations no Institute of Profesional Legal Studies was set up and the universities and colleges of higher education did not take sole responsibility for vocational legal training (&lt;bibl&gt;Report of the Committee on Legal Education (1971; Cmnd 4595) ch. 9 recs. 40 and 23).&lt;/bibl&gt; There were also other recommendations that were not implemented. &lt;bibl&gt;The Robbins report on higher education, Higher Education (1963; Cmnd 2154) took it is axiomatic that ‘courses of higher education should be available for all those who are qualified by ability and attainment to pursue them and wish to do so. (para. 31).&lt;/bibl&gt; This has yet to happen.&lt;/note&gt;
@@ -946,11 +811,7 @@
          </div>
          <div id="bibl-instance-9">
             <pre><code>
-&lt;note
-     
-      n="11"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="11" type="footnote" place="bottom"&gt;
    &lt;label&gt;11&lt;/label&gt;
    &lt;note type="comment"&gt;
                     Some fail wholly. It is difficult to see any effect on academic legal education that resulted from
@@ -1006,8 +867,7 @@
          </div>
          <div id="biblStruct-instance-9">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;A Time for Change&lt;/title&gt;
@@ -1059,81 +919,63 @@
          </div>
          <div id="biblStruct-generated-instance-9">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-10"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;A Time for Change&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;roleName type="honorific"&gt;Lady&lt;/roleName&gt;
-            &lt;surname&gt;Marre&lt;/surname&gt;’s
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-10"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;A Time for Change&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;roleName type="honorific"&gt;Lady&lt;/roleName&gt;
+               &lt;surname&gt;Marre&lt;/surname&gt;’s
                         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint&gt;
-         &lt;date when="1988"&gt;1988&lt;/date&gt;
-      &lt;/imprint&gt;
-   &lt;/monogr&gt;
-   &lt;note type="document-type"&gt;report&lt;/note&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-11"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;Report of the Steering Committee for Efficiency studies in Universities&lt;/title&gt;
-      &lt;imprint&gt;
-         &lt;date when="1988"&gt;1988&lt;/date&gt;
-      &lt;/imprint&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-12"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;Report of the Committee on Legal Education&lt;/title&gt;
-      &lt;title level="s"&gt;Cmnd&lt;/title&gt;
-      &lt;imprint&gt;
-         &lt;date when="1971"&gt;1971&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope unit="volume" from="4595" to="4595"&gt;4595&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-13"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;The Robbins report on higher education, Higher Education&lt;/title&gt;
-      &lt;title level="s"&gt;Cmnd&lt;/title&gt;
-      &lt;imprint&gt;
-         &lt;date when="1963"&gt;1963&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope unit="volume" from="2154" to="2154"&gt;2154&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-   &lt;note type="comment"&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1988"&gt;1988&lt;/date&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+      &lt;note type="document-type"&gt;report&lt;/note&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct xml:id="bibl-11"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Report of the Steering Committee for Efficiency studies in Universities&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1988"&gt;1988&lt;/date&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct xml:id="bibl-12"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Report of the Committee on Legal Education&lt;/title&gt;
+         &lt;title level="s"&gt;Cmnd&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1971"&gt;1971&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="4595" to="4595"&gt;4595&lt;/biblScope&gt;
+         &lt;citedRange unit="chapter" from="9" to="9"&gt;ch. 9&lt;/citedRange&gt;
+         &lt;citedRange unit="entry" from="40" to="40"&gt;recs. 40&lt;/citedRange&gt;
+         &lt;citedRange unit="entry" from="23" to="23"&gt;23&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct xml:id="bibl-13"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;The Robbins report on higher education, Higher Education&lt;/title&gt;
+         &lt;title level="s"&gt;Cmnd&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1963"&gt;1963&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="2154" to="2154"&gt;2154&lt;/biblScope&gt;
+         &lt;citedRange unit="para" from="31"&gt;para. 31&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+      &lt;note type="comment"&gt;
                         took it is axiomatic that ‘courses of higher education should be available for
                         all those who are qualified by ability and attainment to pursue them and wish to do so.
                   &lt;/note&gt;
-&lt;/biblStruct&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-10" class="raw-text">12 Committee of Inquiry into Higher Education, Higher Education in the learning society
@@ -1148,22 +990,14 @@
          </ul>
          <div id="block-instance-10">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="12"
-      place="bottom"&gt;
+&lt;note type="footnote" n="12" place="bottom"&gt;
    &lt;label&gt;12&lt;/label&gt;
    &lt;bibl&gt;Committee of Inquiry into Higher Education, Higher Education in the learning society (1997) (&lt;/bibl&gt;the Dearing report); &lt;bibl&gt;ACLEC, First Report on Legal Education and Training (1996).&lt;/bibl&gt; The Government’s White Paper on further and higher education had not been published at the time of writing this essay.&lt;/note&gt;
 </code></pre>
          </div>
          <div id="bibl-instance-10">
             <pre><code>
-&lt;note
-     
-      n="12"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="12" type="footnote" place="bottom"&gt;
    &lt;label&gt;12&lt;/label&gt;
    &lt;bibl xml:id="bibl-14"&gt;
       &lt;author&gt;
@@ -1188,8 +1022,7 @@
          </div>
          <div id="biblStruct-instance-10">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Higher Education in the learning society&lt;/title&gt;
@@ -1217,42 +1050,32 @@
          </div>
          <div id="biblStruct-generated-instance-10">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-14"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;Higher Education in the learning society&lt;/title&gt;
-      &lt;author&gt;
-         &lt;orgName&gt;Committee of Inquiry into Higher Education&lt;/orgName&gt;
-      &lt;/author&gt;
-      &lt;imprint&gt;
-         &lt;date when="1997"&gt;1997&lt;/date&gt;
-      &lt;/imprint&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-15"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;First Report on Legal Education and Training&lt;/title&gt;
-      &lt;author&gt;
-         &lt;orgName&gt;ACLEC&lt;/orgName&gt;
-      &lt;/author&gt;
-      &lt;imprint&gt;
-         &lt;date when="1996"&gt;1996&lt;/date&gt;
-      &lt;/imprint&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-14"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Higher Education in the learning society&lt;/title&gt;
+         &lt;author&gt;
+            &lt;orgName&gt;Committee of Inquiry into Higher Education&lt;/orgName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1997"&gt;1997&lt;/date&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct xml:id="bibl-15"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;First Report on Legal Education and Training&lt;/title&gt;
+         &lt;author&gt;
+            &lt;orgName&gt;ACLEC&lt;/orgName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1996"&gt;1996&lt;/date&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-11" class="raw-text">12 ACLEC, id., para 4.6.</div>
@@ -1264,11 +1087,7 @@
          </ul>
          <div id="block-instance-11">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="12"
-      place="bottom"&gt;
+&lt;note type="footnote" n="12" place="bottom"&gt;
    &lt;label&gt;12&lt;/label&gt;
    &lt;bibl&gt;ACLEC, id., para 4.6.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -1276,11 +1095,7 @@
          </div>
          <div id="bibl-instance-11">
             <pre><code>
-&lt;note
-     
-      n="12"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="12" type="footnote" place="bottom"&gt;
    &lt;label&gt;12&lt;/label&gt;
    &lt;bibl xml:id="bibl-16"&gt;
       &lt;author&gt;
@@ -1294,8 +1109,7 @@
          </div>
          <div id="biblStruct-instance-11">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title/&gt;
@@ -1313,21 +1127,10 @@
          </div>
          <div id="biblStruct-generated-instance-11">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-16"&gt;
-   &lt;monogr&gt;
-      &lt;author&gt;
-         &lt;orgName&gt;ACLEC&lt;/orgName&gt;
-      &lt;/author&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-16"/&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-12" class="raw-text">14 ACLEC’s proposal is part of an historical process which has gradually seen English
@@ -1343,11 +1146,7 @@
          </ul>
          <div id="block-instance-12">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="14"
-      place="bottom"&gt;
+&lt;note type="footnote" n="14" place="bottom"&gt;
    &lt;label&gt;14&lt;/label&gt;
    &lt;seg&gt;ACLEC’s proposal is part of an historical process which has gradually seen English university law schools distance themselves from the legal professions and the legal professions propose decreasing degrees of control over the content of law degrees. (See&lt;/seg&gt;
    &lt;bibl&gt;A. Bradney and F. Cownie, ‘Working on the Chain Gang?’ (1996) 2 Contemporary Issues in Law 15 at 24–6).&lt;/bibl&gt;
@@ -1356,11 +1155,7 @@
          </div>
          <div id="bibl-instance-12">
             <pre><code>
-&lt;note
-     
-      n="14"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="14" type="footnote" place="bottom"&gt;
    &lt;label&gt;14&lt;/label&gt;
    &lt;note type="comment"&gt;ACLEC’s proposal is part of an historical process which has gradually seen
                         English university law schools distance themselves from the legal professions and the legal
@@ -1393,8 +1188,7 @@
          </div>
          <div id="biblStruct-instance-12">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Working on the Chain Gang?&lt;/title&gt;
@@ -1426,43 +1220,35 @@
          </div>
          <div id="biblStruct-generated-instance-12">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-18"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;Working on the Chain Gang?&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;A.&lt;/forename&gt;
-            &lt;surname&gt;Bradney&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;F.&lt;/forename&gt;
-            &lt;surname&gt;Cownie&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="j"&gt;Contemporary Issues in Law&lt;/title&gt;
-      &lt;imprint&gt;
-         &lt;date when="1996"&gt;1996&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="volume"
-                 from="2"
-                 to="2"&gt;2&lt;/biblScope&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="15"&gt;15&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-18"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Working on the Chain Gang?&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;A.&lt;/forename&gt;
+               &lt;surname&gt;Bradney&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;F.&lt;/forename&gt;
+               &lt;surname&gt;Cownie&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;Contemporary Issues in Law&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1996"&gt;1996&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="2" to="2"&gt;2&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="15"&gt;15&lt;/biblScope&gt;
+         &lt;citedRange unit="page" from="24" to="26"&gt;at 24–6&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-13" class="raw-text">15 M. Jeeves, J. MacFarlane and A. Boon, ‘Education for Life or for Work?’ (1987)
@@ -1475,11 +1261,7 @@
          </ul>
          <div id="block-instance-13">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="15"
-      place="bottom"&gt;
+&lt;note type="footnote" n="15" place="bottom"&gt;
    &lt;label&gt;15&lt;/label&gt;
    &lt;bibl&gt;M. Jeeves, J. MacFarlane and A. Boon, ‘Education for Life or for Work?’ (1987) 137 New Law J. 835 at 836.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -1487,11 +1269,7 @@
          </div>
          <div id="bibl-instance-13">
             <pre><code>
-&lt;note
-     
-      n="15"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="15" type="footnote" place="bottom"&gt;
    &lt;label&gt;15&lt;/label&gt;
    &lt;bibl xml:id="bibl-19"&gt;
       &lt;author&gt;
@@ -1525,8 +1303,7 @@
          </div>
          <div id="biblStruct-instance-13">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Education for Life or for Work?&lt;/title&gt;
@@ -1564,49 +1341,41 @@
          </div>
          <div id="biblStruct-generated-instance-13">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-19"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;Education for Life or for Work?&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;M.&lt;/forename&gt;
-            &lt;forename&gt;Jeeves&lt;/forename&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;J.&lt;/forename&gt;
-            &lt;surname&gt;MacFarlane&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;A.&lt;/forename&gt;
-            &lt;surname&gt;Boon&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="j"&gt;New Law J.&lt;/title&gt;
-      &lt;imprint&gt;
-         &lt;date when="1987"&gt;1987&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="volume"
-                 from="137"
-                 to="137"&gt;137&lt;/biblScope&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="835"&gt;835&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-19"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Education for Life or for Work?&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;M.&lt;/forename&gt;
+               &lt;forename&gt;Jeeves&lt;/forename&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;J.&lt;/forename&gt;
+               &lt;surname&gt;MacFarlane&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;A.&lt;/forename&gt;
+               &lt;surname&gt;Boon&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;New Law J.&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1987"&gt;1987&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="137" to="137"&gt;137&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="835"&gt;835&lt;/biblScope&gt;
+         &lt;citedRange unit="page" from="836" to="836"&gt;at 836&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-14" class="raw-text">16 T.H. Huxley, ‘Universities: Actual and Ideal’ in T.H. Huxley, Collected Essays:
@@ -1619,11 +1388,7 @@
          </ul>
          <div id="block-instance-14">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="16"
-      place="bottom"&gt;
+&lt;note type="footnote" n="16" place="bottom"&gt;
    &lt;label&gt;16&lt;/label&gt;
    &lt;bibl&gt;T.H. Huxley, ‘Universities: Actual and Ideal’ in T.H. Huxley, Collected Essays: Volume III (1905) 215.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -1631,11 +1396,7 @@
          </div>
          <div id="bibl-instance-14">
             <pre><code>
-&lt;note
-     
-      n="16"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="16" type="footnote" place="bottom"&gt;
    &lt;label&gt;16&lt;/label&gt;
    &lt;bibl xml:id="bibl-20"&gt;
       &lt;author&gt;
@@ -1655,8 +1416,7 @@
          </div>
          <div id="biblStruct-instance-14">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Universities: Actual and Ideal&lt;/title&gt;
@@ -1681,37 +1441,28 @@
          </div>
          <div id="biblStruct-generated-instance-14">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-20"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;Universities: Actual and Ideal&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;T.H.&lt;/forename&gt;
-            &lt;surname&gt;Huxley&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;T.H. Huxley, Collected Essays&lt;/title&gt;
-      &lt;imprint&gt;
-         &lt;date when="1905"&gt;1905&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="volume"
-                 from="III"
-                 to="III"&gt;Volume III&lt;/biblScope&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="215"&gt;215&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-20"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Universities: Actual and Ideal&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;T.H.&lt;/forename&gt;
+               &lt;surname&gt;Huxley&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;T.H. Huxley, Collected Essays&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1905"&gt;1905&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="III" to="III"&gt;Volume III&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="215"&gt;215&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-15" class="raw-text">17 J.S. Mill, ‘Inaugural address to the University of St Andrews’ in Collected Work
@@ -1724,11 +1475,7 @@
          </ul>
          <div id="block-instance-15">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="17"
-      place="bottom"&gt;
+&lt;note type="footnote" n="17" place="bottom"&gt;
    &lt;label&gt;17&lt;/label&gt;
    &lt;bibl&gt;J.S. Mill, ‘Inaugural address to the University of St Andrews’ in Collected Work of John Stuart Mill: Volume XXI, ed. J.M. Robson (1984) 218.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -1736,11 +1483,7 @@
          </div>
          <div id="bibl-instance-15">
             <pre><code>
-&lt;note
-     
-      n="17"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="17" type="footnote" place="bottom"&gt;
    &lt;label&gt;17&lt;/label&gt;
    &lt;bibl xml:id="bibl-21"&gt;
       &lt;author&gt;
@@ -1766,8 +1509,7 @@
          </div>
          <div id="biblStruct-instance-15">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Inaugural address to the University of St Andrews&lt;/title&gt;
@@ -1798,40 +1540,34 @@
          </div>
          <div id="biblStruct-generated-instance-15">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-21"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;Inaugural address to the University of St Andrews&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;J.S.&lt;/forename&gt;
-            &lt;surname&gt;Mill&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;Collected Work of John Stuart Mill: Volume&lt;/title&gt;
-      &lt;editor&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;J.M.&lt;/forename&gt;
-            &lt;surname&gt;Robson&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/editor&gt;
-      &lt;imprint&gt;
-         &lt;date when="1984"&gt;1984&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="volume"
-                 from="XXI"
-                 to="XXI"&gt;XXI&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-21"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Inaugural address to the University of St Andrews&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;J.S.&lt;/forename&gt;
+               &lt;surname&gt;Mill&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Collected Work of John Stuart Mill: Volume&lt;/title&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;J.M.&lt;/forename&gt;
+               &lt;surname&gt;Robson&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;imprint&gt;
+            &lt;date when="1984"&gt;1984&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="XXI" to="XXI"&gt;XXI&lt;/biblScope&gt;
+         &lt;citedRange unit="page" from="218" to="218"&gt;218&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-16" class="raw-text">18 Dearing, op. cit., n. 12, para. 9.32.</div>
@@ -1843,11 +1579,7 @@
          </ul>
          <div id="block-instance-16">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="18"
-      place="bottom"&gt;
+&lt;note type="footnote" n="18" place="bottom"&gt;
    &lt;label&gt;18&lt;/label&gt;
    &lt;bibl&gt;Dearing, op. cit., n. 12, para. 9.32.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -1855,11 +1587,7 @@
          </div>
          <div id="bibl-instance-16">
             <pre><code>
-&lt;note
-     
-      n="18"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="18" type="footnote" place="bottom"&gt;
    &lt;label&gt;18&lt;/label&gt;
    &lt;bibl xml:id="bibl-22"&gt;
       &lt;author&gt;
@@ -1876,8 +1604,7 @@
          </div>
          <div id="biblStruct-instance-16">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title/&gt;
@@ -1897,23 +1624,10 @@
          </div>
          <div id="biblStruct-generated-instance-16">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-22"&gt;
-   &lt;monogr&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;surname&gt;Dearing&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-22"/&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-17" class="raw-text">19 id., para. 5.11.</div>
@@ -1925,11 +1639,7 @@
          </ul>
          <div id="block-instance-17">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="19"
-      place="bottom"&gt;
+&lt;note type="footnote" n="19" place="bottom"&gt;
    &lt;label&gt;19&lt;/label&gt;
    &lt;seg&gt;id., para. 5.11.&lt;/seg&gt;
 &lt;/note&gt;
@@ -1937,11 +1647,7 @@
          </div>
          <div id="bibl-instance-17">
             <pre><code>
-&lt;note
-     
-      n="19"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="19" type="footnote" place="bottom"&gt;
    &lt;label&gt;19&lt;/label&gt;
    &lt;bibl xml:id="bibl-23"&gt;
       &lt;ref type="previous-work"&gt;id.&lt;/ref&gt;,
@@ -1952,8 +1658,7 @@
          </div>
          <div id="biblStruct-instance-17">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;imprint&gt;
@@ -1967,12 +1672,9 @@
          </div>
          <div id="biblStruct-generated-instance-17">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-23"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct xml:id="bibl-23"/&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-18" class="raw-text">20 F.R. Leavis, Education and the University (1948) 28. Leavis’s view was narrowly
@@ -1985,22 +1687,14 @@
          </ul>
          <div id="block-instance-18">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="20"
-      place="bottom"&gt;
+&lt;note type="footnote" n="20" place="bottom"&gt;
    &lt;label&gt;20&lt;/label&gt;
    &lt;bibl&gt;F.R. Leavis, Education and the University (1948) 28.&lt;/bibl&gt; Leavis’s view was narrowly nationalistic. For ‘centre’ it would be better to substitute ‘centres’.&lt;/note&gt;
 </code></pre>
          </div>
          <div id="bibl-instance-18">
             <pre><code>
-&lt;note
-     
-      n="20"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="20" type="footnote" place="bottom"&gt;
    &lt;label&gt;20&lt;/label&gt;
    &lt;bibl xml:id="bibl-24"&gt;
       &lt;author&gt;
@@ -2021,8 +1715,7 @@
          </div>
          <div id="biblStruct-instance-18">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Education and the University&lt;/title&gt;
@@ -2043,27 +1736,24 @@
          </div>
          <div id="biblStruct-generated-instance-18">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-24"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;Education and the University&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;F.R.&lt;/forename&gt;
-            &lt;surname&gt;Leavis&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint&gt;
-         &lt;date when="1948"&gt;1948&lt;/date&gt;
-      &lt;/imprint&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-24"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Education and the University&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;F.R.&lt;/forename&gt;
+               &lt;surname&gt;Leavis&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1948"&gt;1948&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;citedRange unit="page" from="28" to="28"&gt;28&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-19" class="raw-text">21 See, further, A. Bradney, ‘Liberalising Legal Education’ in The Law School: Global
@@ -2076,11 +1766,7 @@
          </ul>
          <div id="block-instance-19">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="21"
-      place="bottom"&gt;
+&lt;note type="footnote" n="21" place="bottom"&gt;
    &lt;label&gt;21&lt;/label&gt;
    &lt;seg&gt;See, further,&lt;/seg&gt;
    &lt;bibl&gt;A. Bradney, ‘Liberalising Legal Education’ in The Law School: Global Issues, Local Questions, ed. F. Cownie (forthcoming).&lt;/bibl&gt;
@@ -2089,11 +1775,7 @@
          </div>
          <div id="bibl-instance-19">
             <pre><code>
-&lt;note
-     
-      n="21"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="21" type="footnote" place="bottom"&gt;
    &lt;label&gt;21&lt;/label&gt;
    &lt;note type="signal"&gt;See, further,&lt;/note&gt;
    &lt;bibl xml:id="bibl-25"&gt;
@@ -2116,8 +1798,7 @@
          </div>
          <div id="biblStruct-instance-19">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Liberalising Legal Education&lt;/title&gt;
@@ -2144,34 +1825,30 @@
          </div>
          <div id="biblStruct-generated-instance-19">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-25"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;Liberalising Legal Education&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;A.&lt;/forename&gt;
-            &lt;surname&gt;Bradney&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;The Law School: Global Issues, Local Questions&lt;/title&gt;
-      &lt;editor&gt;
-         &lt;forename type="first" full="init"&gt;F.&lt;/forename&gt;
-         &lt;surname&gt;Cownie&lt;/surname&gt;
-      &lt;/editor&gt;
-      &lt;imprint&gt;
-         &lt;date&gt;forthcoming&lt;/date&gt;
-      &lt;/imprint&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-25"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Liberalising Legal Education&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;A.&lt;/forename&gt;
+               &lt;surname&gt;Bradney&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;The Law School: Global Issues, Local Questions&lt;/title&gt;
+         &lt;editor&gt;
+            &lt;forename type="first" full="init"&gt;F.&lt;/forename&gt;
+            &lt;surname&gt;Cownie&lt;/surname&gt;
+         &lt;/editor&gt;
+         &lt;imprint&gt;
+            &lt;date&gt;forthcoming&lt;/date&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-20" class="raw-text">22 P. Goodrich ‘Of Blackstone’s Tower: Metephors of Distance and Histories of the
@@ -2184,11 +1861,7 @@
          </ul>
          <div id="block-instance-20">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="22"
-      place="bottom"&gt;
+&lt;note type="footnote" n="22" place="bottom"&gt;
    &lt;label&gt;22&lt;/label&gt;
    &lt;bibl&gt;P. Goodrich ‘Of Blackstone’s Tower: Metephors of Distance and Histories of the English Law School’ in Birks op. cit., n. 1, p. 59.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -2196,11 +1869,7 @@
          </div>
          <div id="bibl-instance-20">
             <pre><code>
-&lt;note
-     
-      n="22"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="22" type="footnote" place="bottom"&gt;
    &lt;label&gt;22&lt;/label&gt;
    &lt;bibl xml:id="bibl-26"&gt;
       &lt;author&gt;
@@ -2225,8 +1894,7 @@
          </div>
          <div id="biblStruct-instance-20">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Of Blackstone’s Tower: Metephors of Distance and Histories of the English Law School
@@ -2256,33 +1924,21 @@
          </div>
          <div id="biblStruct-generated-instance-20">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-26"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;Of Blackstone’s Tower: Metephors of Distance and Histories of the English Law School
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-26"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Of Blackstone’s Tower: Metephors of Distance and Histories of the English Law School
                     &lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;P.&lt;/forename&gt;
-            &lt;surname&gt;Goodrich&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;editor&gt;
-         &lt;persName&gt;
-            &lt;surname&gt;Birks&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/editor&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;P.&lt;/forename&gt;
+               &lt;surname&gt;Goodrich&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-21" class="raw-text">23 S. Turow, One L (1977) 106.</div>
@@ -2294,11 +1950,7 @@
          </ul>
          <div id="block-instance-21">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="23"
-      place="bottom"&gt;
+&lt;note type="footnote" n="23" place="bottom"&gt;
    &lt;label&gt;23&lt;/label&gt;
    &lt;bibl&gt;S. Turow, One L (1977) 106.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -2306,11 +1958,7 @@
          </div>
          <div id="bibl-instance-21">
             <pre><code>
-&lt;note
-     
-      n="23"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="23" type="footnote" place="bottom"&gt;
    &lt;label&gt;23&lt;/label&gt;
    &lt;bibl xml:id="bibl-27"&gt;
       &lt;author&gt;
@@ -2328,8 +1976,7 @@
          </div>
          <div id="biblStruct-instance-21">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;One L&lt;/title&gt;
@@ -2350,30 +1997,24 @@
          </div>
          <div id="biblStruct-generated-instance-21">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-27"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;One L&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;S.&lt;/forename&gt;
-            &lt;surname&gt;Turow&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint&gt;
-         &lt;date when="1977"&gt;1977&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="106"&gt;106&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-27"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;One L&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;S.&lt;/forename&gt;
+               &lt;surname&gt;Turow&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1977"&gt;1977&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="page" from="106"&gt;106&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-22" class="raw-text">24 O. Kahn-Freund, ‘Reflections on Legal Education’ (1966) 29 Modern Law Rev. 121
@@ -2386,11 +2027,7 @@
          </ul>
          <div id="block-instance-22">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="24"
-      place="bottom"&gt;
+&lt;note type="footnote" n="24" place="bottom"&gt;
    &lt;label&gt;24&lt;/label&gt;
    &lt;bibl&gt;O. Kahn-Freund, ‘Reflections on Legal Education’ (1966) 29 Modern Law Rev. 121 at 129.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -2398,11 +2035,7 @@
          </div>
          <div id="bibl-instance-22">
             <pre><code>
-&lt;note
-     
-      n="24"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="24" type="footnote" place="bottom"&gt;
    &lt;label&gt;24&lt;/label&gt;
    &lt;bibl xml:id="bibl-28"&gt;
       &lt;author&gt;
@@ -2423,8 +2056,7 @@
          </div>
          <div id="biblStruct-instance-22">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Reflections on Legal Education&lt;/title&gt;
@@ -2448,35 +2080,27 @@
          </div>
          <div id="biblStruct-generated-instance-22">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-28"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;Reflections on Legal Education&lt;/title&gt;
-      &lt;title level="j"&gt;Modern Law Rev.&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;O.&lt;/forename&gt;
-            &lt;surname&gt;Kahn-Freund&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint&gt;
-         &lt;date when="1966"&gt;1966&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="volume"
-                 from="29"
-                 to="29"&gt;29&lt;/biblScope&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="121"&gt;121&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-28"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Reflections on Legal Education&lt;/title&gt;
+         &lt;title level="j"&gt;Modern Law Rev.&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;O.&lt;/forename&gt;
+               &lt;surname&gt;Kahn-Freund&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1966"&gt;1966&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="29" to="29"&gt;29&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="121"&gt;121&lt;/biblScope&gt;
+         &lt;citedRange unit="page" from="129" to="129"&gt;at 129&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-23" class="raw-text">25 Kahn-Freund believed that both doctrinal and non-doctrinal learning were possible
@@ -2491,11 +2115,7 @@
          </ul>
          <div id="block-instance-23">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="25"
-      place="bottom"&gt;
+&lt;note type="footnote" n="25" place="bottom"&gt;
    &lt;label&gt;25&lt;/label&gt;
    &lt;seg&gt;Kahn-Freund believed that both doctrinal and non-doctrinal learning were possible together though he did concede that in the doctrinal method there was ‘the danger that the discussion gets stuck in the perhaps intellectually very fascinating game of legal argument . . .’ (Kahn-Freund, id.).&lt;/seg&gt;
 &lt;/note&gt;
@@ -2503,11 +2123,7 @@
          </div>
          <div id="bibl-instance-23">
             <pre><code>
-&lt;note
-     
-      n="25"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="25" type="footnote" place="bottom"&gt;
    &lt;label&gt;25&lt;/label&gt;
    &lt;note type="comment"&gt;Kahn-Freund believed that both doctrinal and non-doctrinal learning were
                         possible together though he did concede that in the doctrinal method there was ‘the danger that
@@ -2527,8 +2143,7 @@
          </div>
          <div id="biblStruct-instance-23">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title/&gt;
@@ -2547,17 +2162,9 @@
          </div>
          <div id="biblStruct-generated-instance-23">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-29"&gt;
-   &lt;monogr&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;surname&gt;Kahn-Freund&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct xml:id="bibl-29"/&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-24" class="raw-text">26 Leavis, op. cit., n. 20, p. 120.</div>
@@ -2569,11 +2176,7 @@
          </ul>
          <div id="block-instance-24">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="26"
-      place="bottom"&gt;
+&lt;note type="footnote" n="26" place="bottom"&gt;
    &lt;label&gt;26&lt;/label&gt;
    &lt;bibl&gt;Leavis, op. cit., n. 20, p. 120.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -2581,11 +2184,7 @@
          </div>
          <div id="bibl-instance-24">
             <pre><code>
-&lt;note
-     
-      n="26"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="26" type="footnote" place="bottom"&gt;
    &lt;label&gt;26&lt;/label&gt;
    &lt;bibl xml:id="bibl-30"&gt;
       &lt;author&gt;
@@ -2602,8 +2201,7 @@
          </div>
          <div id="biblStruct-instance-24">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title/&gt;
@@ -2623,23 +2221,10 @@
          </div>
          <div id="biblStruct-generated-instance-24">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-30"&gt;
-   &lt;monogr&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;surname&gt;Leavis&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-30"/&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-25" class="raw-text">29 Leavis has, of course, been widely criticized for the cultural and gender assumptions
@@ -2654,11 +2239,7 @@
          </ul>
          <div id="block-instance-25">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="29"
-      place="bottom"&gt;
+&lt;note type="footnote" n="29" place="bottom"&gt;
    &lt;label&gt;29&lt;/label&gt;
    &lt;seg&gt;Leavis has, of course, been widely criticized for the cultural and gender assumptions that lie behind his selection of material to be studied. (See, for example,&lt;/seg&gt;
    &lt;bibl&gt;M. King, The New English Literatures (1980) at 216–17.)&lt;/bibl&gt; Whatever the accuracy of these criticisms, they are criticisms of the application of the method rather than the method itself.&lt;/note&gt;
@@ -2666,11 +2247,7 @@
          </div>
          <div id="bibl-instance-25">
             <pre><code>
-&lt;note
-     
-      n="29"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="29" type="footnote" place="bottom"&gt;
    &lt;label&gt;29&lt;/label&gt;
    &lt;note type="comment"&gt;
                     Leavis has, of course, been widely criticized for the cultural and gender
@@ -2697,8 +2274,7 @@
          </div>
          <div id="biblStruct-instance-25">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;The New English Literatures&lt;/title&gt;
@@ -2719,27 +2295,24 @@
          </div>
          <div id="biblStruct-generated-instance-25">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-32"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;The New English Literatures&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;M.&lt;/forename&gt;
-            &lt;surname&gt;King&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint&gt;
-         &lt;date when="1980"&gt;1980&lt;/date&gt;
-      &lt;/imprint&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-32"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;The New English Literatures&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;M.&lt;/forename&gt;
+               &lt;surname&gt;King&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1980"&gt;1980&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;citedRange unit="page" from="216" to="217"&gt;at 216–17&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-26" class="raw-text">30 Jurisprudence by Sir John Salmond, ed. G. Willliams (10th ed., 1947) at 256 and
@@ -2752,11 +2325,7 @@
          </ul>
          <div id="block-instance-26">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="30"
-      place="bottom"&gt;
+&lt;note type="footnote" n="30" place="bottom"&gt;
    &lt;label&gt;30&lt;/label&gt;
    &lt;bibl&gt;Jurisprudence by Sir John Salmond, ed. G. Willliams (10th ed., 1947) at 256 and 257.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -2764,11 +2333,7 @@
          </div>
          <div id="bibl-instance-26">
             <pre><code>
-&lt;note
-     
-      n="30"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="30" type="footnote" place="bottom"&gt;
    &lt;label&gt;30&lt;/label&gt;
    &lt;bibl xml:id="bibl-33"&gt;
       &lt;title level="m"&gt;Jurisprudence by Sir John Salmond&lt;/title&gt;, ed.
@@ -2787,8 +2352,7 @@
          </div>
          <div id="biblStruct-instance-26">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Jurisprudence by Sir John Salmond&lt;/title&gt;
@@ -2809,27 +2373,24 @@
          </div>
          <div id="biblStruct-generated-instance-26">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-33"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;Jurisprudence by Sir John Salmond&lt;/title&gt;
-      &lt;editor&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;G.&lt;/forename&gt;
-            &lt;surname&gt;Willliams&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/editor&gt;
-      &lt;imprint&gt;
-         &lt;date when="1947"&gt;1947&lt;/date&gt;
-      &lt;/imprint&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-33"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Jurisprudence by Sir John Salmond&lt;/title&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;G.&lt;/forename&gt;
+               &lt;surname&gt;Willliams&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;imprint&gt;
+            &lt;date when="1947"&gt;1947&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;citedRange unit="page" from="256" to="257"&gt;at 256 and 257&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-27" class="raw-text">31 So much so that when other disciplines engage with law they must develop their
@@ -2843,11 +2404,7 @@
          </ul>
          <div id="block-instance-27">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="31"
-      place="bottom"&gt;
+&lt;note type="footnote" n="31" place="bottom"&gt;
    &lt;label&gt;31&lt;/label&gt;
    &lt;seg&gt;So much so that when other disciplines engage with law they must develop their own concepts to analyse law rather than rely on the concepts already developed in law. See, for example,&lt;/seg&gt;
    &lt;bibl&gt;E. Durkheim The Division of Labour in Society (1933) 68.&lt;/bibl&gt;
@@ -2856,11 +2413,7 @@
          </div>
          <div id="bibl-instance-27">
             <pre><code>
-&lt;note
-     
-      n="31"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="31" type="footnote" place="bottom"&gt;
    &lt;label&gt;31&lt;/label&gt;
    &lt;note type="comment"&gt;
                     So much so that when other disciplines engage with law they must develop their
@@ -2883,8 +2436,7 @@
          </div>
          <div id="biblStruct-instance-27">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;The Division of Labour in Society&lt;/title&gt;
@@ -2905,27 +2457,24 @@
          </div>
          <div id="biblStruct-generated-instance-27">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-35"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;The Division of Labour in Society&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;E.&lt;/forename&gt;
-            &lt;surname&gt;Durkheim&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint&gt;
-         &lt;date when="1933"&gt;1933&lt;/date&gt;
-      &lt;/imprint&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-35"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;The Division of Labour in Society&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;E.&lt;/forename&gt;
+               &lt;surname&gt;Durkheim&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1933"&gt;1933&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;citedRange unit="page" from="68" to="68"&gt;68&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-28" class="raw-text">32 M. Le Brun and R. Johnstone, The Quiet Revolution: Improving Student Learning in
@@ -2941,11 +2490,7 @@
          </ul>
          <div id="block-instance-28">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="32"
-      place="bottom"&gt;
+&lt;note type="footnote" n="32" place="bottom"&gt;
    &lt;label&gt;32&lt;/label&gt;
    &lt;bibl&gt;M. Le Brun and R. Johnstone, The Quiet Revolution: Improving Student Learning in Law (1994) 65.&lt;/bibl&gt; On the effect on women students, see &lt;bibl&gt;‘Define and Empower: Women Students Consider Feminist Learning’ (1990) I Law and Critique 47 at pp. 54–55.&lt;/bibl&gt; For a survey of CLS and feminist literature on this general point, see &lt;bibl&gt;W. Conklin, ‘The Invisible Author of Legal Authority’ (1996) VII Law and Critique 173 at pp. 173–6.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -2953,11 +2498,7 @@
          </div>
          <div id="bibl-instance-28">
             <pre><code>
-&lt;note
-     
-      n="32"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="32" type="footnote" place="bottom"&gt;
    &lt;label&gt;32&lt;/label&gt;
    &lt;bibl xml:id="bibl-36"&gt;
       &lt;author&gt;
@@ -3006,8 +2547,7 @@
          </div>
          <div id="biblStruct-instance-28">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;The Quiet Revolution: Improving Student Learning in Law&lt;/title&gt;
@@ -3068,89 +2608,66 @@
          </div>
          <div id="biblStruct-generated-instance-28">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-36"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;The Quiet Revolution: Improving Student Learning in Law&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;M.&lt;/forename&gt;
-            &lt;surname&gt;Le Brun&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;R.&lt;/forename&gt;
-            &lt;surname&gt;Johnstone&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint&gt;
-         &lt;date when="1994"&gt;1994&lt;/date&gt;
-      &lt;/imprint&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-37"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;Define and Empower: Women Students Consider Feminist Learning&lt;/title&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="j"&gt;Law and Critique&lt;/title&gt;
-      &lt;imprint&gt;
-         &lt;date when="1990"&gt;1990&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="volume"
-                 from="I"
-                 to="I"&gt;I&lt;/biblScope&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="47"&gt;47&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-38"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;The Invisible Author of Legal Authority&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;W.&lt;/forename&gt;
-            &lt;surname&gt;Conklin&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="j"&gt;Law and Critique&lt;/title&gt;
-      &lt;imprint&gt;
-         &lt;date when="1996"&gt;1996&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="volume"
-                 from="VII"
-                 to="VII"&gt;VII&lt;/biblScope&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="173"&gt;173&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-36"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;The Quiet Revolution: Improving Student Learning in Law&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;M.&lt;/forename&gt;
+               &lt;surname&gt;Le Brun&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;R.&lt;/forename&gt;
+               &lt;surname&gt;Johnstone&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1994"&gt;1994&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;citedRange unit="page" from="65" to="65"&gt;65&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct xml:id="bibl-37"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Define and Empower: Women Students Consider Feminist Learning&lt;/title&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;Law and Critique&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1990"&gt;1990&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="I" to="I"&gt;I&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="47"&gt;47&lt;/biblScope&gt;
+         &lt;citedRange unit="page" from="54" to="55"&gt;at pp. 54–55&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+   &lt;biblStruct xml:id="bibl-38"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;The Invisible Author of Legal Authority&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;W.&lt;/forename&gt;
+               &lt;surname&gt;Conklin&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;Law and Critique&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1996"&gt;1996&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="VII" to="VII"&gt;VII&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="173"&gt;173&lt;/biblScope&gt;
+         &lt;citedRange unit="page" from="173" to="176"&gt;at pp. 173–6&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-29" class="raw-text">33 R. Collier, ‘Masculinism, Law and Law Teaching’ (1991) 19 International J. of the
@@ -3163,11 +2680,7 @@
          </ul>
          <div id="block-instance-29">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="33"
-      place="bottom"&gt;
+&lt;note type="footnote" n="33" place="bottom"&gt;
    &lt;label&gt;33&lt;/label&gt;
    &lt;bibl&gt;R. Collier, ‘Masculinism, Law and Law Teaching’ (1991) 19 International J. of the Sociology of Law 427 at 429.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -3175,11 +2688,7 @@
          </div>
          <div id="bibl-instance-29">
             <pre><code>
-&lt;note
-     
-      n="33"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="33" type="footnote" place="bottom"&gt;
    &lt;label&gt;33&lt;/label&gt;
    &lt;bibl xml:id="bibl-39"&gt;
       &lt;author&gt;
@@ -3200,8 +2709,7 @@
          </div>
          <div id="biblStruct-instance-29">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Masculinism, Law and Law Teaching&lt;/title&gt;
@@ -3227,41 +2735,29 @@
          </div>
          <div id="biblStruct-generated-instance-29">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-39"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;Masculinism, Law and Law Teaching&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;R.&lt;/forename&gt;
-            &lt;surname&gt;Collier&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="j"&gt;International J. of the Sociology of Law&lt;/title&gt;
-      &lt;imprint&gt;
-         &lt;date when="1991"&gt;1991&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="volume"
-                 from="19"
-                 to="19"&gt;19&lt;/biblScope&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="427"&gt;427&lt;/biblScope&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="429"
-                 to="429"&gt;at 429&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-39"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Masculinism, Law and Law Teaching&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;R.&lt;/forename&gt;
+               &lt;surname&gt;Collier&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;International J. of the Sociology of Law&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1991"&gt;1991&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="19" to="19"&gt;19&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="427"&gt;427&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="429" to="429"&gt;at 429&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-30" class="raw-text">34 P. McAuslan, ‘Administrative Law, Collective Consumption and Judicial Policy’ (1983)
@@ -3274,11 +2770,7 @@
          </ul>
          <div id="block-instance-30">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="34"
-      place="bottom"&gt;
+&lt;note type="footnote" n="34" place="bottom"&gt;
    &lt;label&gt;34&lt;/label&gt;
    &lt;bibl&gt;P. McAuslan, ‘Administrative Law, Collective Consumption and Judicial Policy’ (1983) 46 Modern Law Rev. 1 at 8.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -3286,11 +2778,7 @@
          </div>
          <div id="bibl-instance-30">
             <pre><code>
-&lt;note
-     
-      n="34"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="34" type="footnote" place="bottom"&gt;
    &lt;label&gt;34&lt;/label&gt;
    &lt;bibl xml:id="bibl-40"&gt;
       &lt;author&gt;
@@ -3311,8 +2799,7 @@
          </div>
          <div id="biblStruct-instance-30">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Administrative Law, Collective Consumption and Judicial Policy&lt;/title&gt;
@@ -3336,35 +2823,27 @@
          </div>
          <div id="biblStruct-generated-instance-30">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-40"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;Administrative Law, Collective Consumption and Judicial Policy&lt;/title&gt;
-      &lt;title level="j"&gt;Modern Law Rev.&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;P.&lt;/forename&gt;
-            &lt;surname&gt;McAuslan&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint&gt;
-         &lt;date when="1983"&gt;1983&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="volume"
-                 from="46"
-                 to="46"&gt;46&lt;/biblScope&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="1"&gt;1&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-40"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Administrative Law, Collective Consumption and Judicial Policy&lt;/title&gt;
+         &lt;title level="j"&gt;Modern Law Rev.&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;P.&lt;/forename&gt;
+               &lt;surname&gt;McAuslan&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1983"&gt;1983&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="46" to="46"&gt;46&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="1"&gt;1&lt;/biblScope&gt;
+         &lt;citedRange unit="page" from="8" to="8"&gt;at 8&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-31" class="raw-text">35 Le Brun and Johnstone, op. cit., n. 32, pp. 71–5.</div>
@@ -3376,11 +2855,7 @@
          </ul>
          <div id="block-instance-31">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="35"
-      place="bottom"&gt;
+&lt;note type="footnote" n="35" place="bottom"&gt;
    &lt;label&gt;35&lt;/label&gt;
    &lt;bibl&gt;Le Brun and Johnstone, op. cit., n. 32, pp. 71–5.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -3388,11 +2863,7 @@
          </div>
          <div id="bibl-instance-31">
             <pre><code>
-&lt;note
-     
-      n="35"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="35" type="footnote" place="bottom"&gt;
    &lt;label&gt;35&lt;/label&gt;
    &lt;bibl xml:id="bibl-41"&gt;
       &lt;author&gt;
@@ -3415,8 +2886,7 @@
          </div>
          <div id="biblStruct-instance-31">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title/&gt;
@@ -3441,28 +2911,10 @@
          </div>
          <div id="biblStruct-generated-instance-31">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-41"&gt;
-   &lt;monogr&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;surname&gt;Le Brun&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;surname&gt;Johnstone&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-41"/&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-32" class="raw-text">38 Goodrich, op. cit., n. 22.</div>
@@ -3474,11 +2926,7 @@
          </ul>
          <div id="block-instance-32">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="38"
-      place="bottom"&gt;
+&lt;note type="footnote" n="38" place="bottom"&gt;
    &lt;label&gt;38&lt;/label&gt;
    &lt;bibl&gt;Goodrich, op. cit., n. 22.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -3486,11 +2934,7 @@
          </div>
          <div id="bibl-instance-32">
             <pre><code>
-&lt;note
-     
-      n="38"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="38" type="footnote" place="bottom"&gt;
    &lt;label&gt;38&lt;/label&gt;
    &lt;bibl xml:id="bibl-42"&gt;
       &lt;author&gt;
@@ -3506,8 +2950,7 @@
          </div>
          <div id="biblStruct-instance-32">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title/&gt;
@@ -3526,23 +2969,10 @@
          </div>
          <div id="biblStruct-generated-instance-32">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-42"&gt;
-   &lt;monogr&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;surname&gt;Goodrich&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-42"/&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-33" class="raw-text">39 P. Samuelson, ‘The Convergence of the Law School and the University’ (1975) 44
@@ -3555,11 +2985,7 @@
          </ul>
          <div id="block-instance-33">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="39"
-      place="bottom"&gt;
+&lt;note type="footnote" n="39" place="bottom"&gt;
    &lt;label&gt;39&lt;/label&gt;
    &lt;bibl&gt;P. Samuelson, ‘The Convergence of the Law School and the University’ (1975) 44 The Am. Scholar 256 at 258.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -3567,11 +2993,7 @@
          </div>
          <div id="bibl-instance-33">
             <pre><code>
-&lt;note
-     
-      n="39"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="39" type="footnote" place="bottom"&gt;
    &lt;label&gt;39&lt;/label&gt;
    &lt;bibl xml:id="bibl-43"&gt;
       &lt;author&gt;
@@ -3592,8 +3014,7 @@
          </div>
          <div id="biblStruct-instance-33">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;The Convergence of the Law School and the University&lt;/title&gt;
@@ -3617,35 +3038,27 @@
          </div>
          <div id="biblStruct-generated-instance-33">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-43"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;The Convergence of the Law School and the University&lt;/title&gt;
-      &lt;title level="j"&gt;The Am. Scholar&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;P.&lt;/forename&gt;
-            &lt;surname&gt;Samuelson&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint&gt;
-         &lt;date when="1975"&gt;1975&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="volume"
-                 from="44"
-                 to="44"&gt;44&lt;/biblScope&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="256"&gt;256&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-43"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;The Convergence of the Law School and the University&lt;/title&gt;
+         &lt;title level="j"&gt;The Am. Scholar&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;P.&lt;/forename&gt;
+               &lt;surname&gt;Samuelson&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1975"&gt;1975&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="44" to="44"&gt;44&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="256"&gt;256&lt;/biblScope&gt;
+         &lt;citedRange unit="page" from="258" to="258"&gt;at 258&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-34" class="raw-text">40 P. Harris and M. Jones ‘A Survey of Law Schools in the United Kingdom, 1996’ (1997)
@@ -3658,11 +3071,7 @@
          </ul>
          <div id="block-instance-34">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="40"
-      place="bottom"&gt;
+&lt;note type="footnote" n="40" place="bottom"&gt;
    &lt;label&gt;40&lt;/label&gt;
    &lt;bibl&gt;P. Harris and M. Jones ‘A Survey of Law Schools in the United Kingdom, 1996’ (1997) 31 The Law Teacher 38 at 46.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -3670,11 +3079,7 @@
          </div>
          <div id="bibl-instance-34">
             <pre><code>
-&lt;note
-     
-      n="40"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="40" type="footnote" place="bottom"&gt;
    &lt;label&gt;40&lt;/label&gt;
    &lt;bibl xml:id="bibl-44"&gt;
       &lt;author&gt;
@@ -3702,8 +3107,7 @@
          </div>
          <div id="biblStruct-instance-34">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;A Survey of Law Schools in the United Kingdom, 1996&lt;/title&gt;
@@ -3735,43 +3139,35 @@
          </div>
          <div id="biblStruct-generated-instance-34">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-44"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;A Survey of Law Schools in the United Kingdom, 1996&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;P.&lt;/forename&gt;
-            &lt;surname&gt;Harris&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;M.&lt;/forename&gt;
-            &lt;surname&gt;Jones&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="j"&gt;The Law Teacher&lt;/title&gt;
-      &lt;imprint&gt;
-         &lt;date when="1997"&gt;1997&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="volume"
-                 from="31"
-                 to="31"&gt;31&lt;/biblScope&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="38"&gt;38&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-44"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;A Survey of Law Schools in the United Kingdom, 1996&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;P.&lt;/forename&gt;
+               &lt;surname&gt;Harris&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;M.&lt;/forename&gt;
+               &lt;surname&gt;Jones&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;The Law Teacher&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1997"&gt;1997&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="31" to="31"&gt;31&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="38"&gt;38&lt;/biblScope&gt;
+         &lt;citedRange unit="page" from="46" to="46"&gt;at 46&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-35" class="raw-text">41 J. Wilson, ‘A third survey of university legal education’ (1993) 13 Legal Studies
@@ -3784,11 +3180,7 @@
          </ul>
          <div id="block-instance-35">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="41"
-      place="bottom"&gt;
+&lt;note type="footnote" n="41" place="bottom"&gt;
    &lt;label&gt;41&lt;/label&gt;
    &lt;bibl&gt;J. Wilson, ‘A third survey of university legal education’ (1993) 13 Legal Studies 143 at 152.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -3796,11 +3188,7 @@
          </div>
          <div id="bibl-instance-35">
             <pre><code>
-&lt;note
-     
-      n="41"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="41" type="footnote" place="bottom"&gt;
    &lt;label&gt;41&lt;/label&gt;
    &lt;bibl xml:id="bibl-45"&gt;
       &lt;author&gt;
@@ -3821,8 +3209,7 @@
          </div>
          <div id="biblStruct-instance-35">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;A third survey of university legal education&lt;/title&gt;
@@ -3848,37 +3235,29 @@
          </div>
          <div id="biblStruct-generated-instance-35">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-45"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;A third survey of university legal education&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;J.&lt;/forename&gt;
-            &lt;surname&gt;Wilson&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="j"&gt;Legal Studies&lt;/title&gt;
-      &lt;imprint&gt;
-         &lt;date when="1993"&gt;1993&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="volume"
-                 from="13"
-                 to="13"&gt;13&lt;/biblScope&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="143"&gt;143&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-45"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;A third survey of university legal education&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;J.&lt;/forename&gt;
+               &lt;surname&gt;Wilson&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;Legal Studies&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1993"&gt;1993&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="13" to="13"&gt;13&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="143"&gt;143&lt;/biblScope&gt;
+         &lt;citedRange unit="page" from="152" to="152"&gt;at 152&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-36" class="raw-text">42 Thus, for example, Harris and Jones reported that 59.2 per cent of all particpating
@@ -3892,11 +3271,7 @@
          </ul>
          <div id="block-instance-36">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="42"
-      place="bottom"&gt;
+&lt;note type="footnote" n="42" place="bottom"&gt;
    &lt;label&gt;42&lt;/label&gt;
    &lt;seg&gt;Thus, for example, Harris and Jones reported that 59.2 per cent of all particpating institutions offered foriegn language tuition as part of their standard LLB programme. (&lt;/seg&gt;
    &lt;bibl&gt;Harris and Jones, op. cit., n. 40, at p. 54).&lt;/bibl&gt;
@@ -3905,11 +3280,7 @@
          </div>
          <div id="bibl-instance-36">
             <pre><code>
-&lt;note
-     
-      n="42"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="42" type="footnote" place="bottom"&gt;
    &lt;label&gt;42&lt;/label&gt;
    &lt;note type="comment"&gt;
                     Thus, for example, Harris and Jones reported that 59.2 per cent of all
@@ -3937,8 +3308,7 @@
          </div>
          <div id="biblStruct-instance-36">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title/&gt;
@@ -3963,28 +3333,10 @@
          </div>
          <div id="biblStruct-generated-instance-36">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-47"&gt;
-   &lt;monogr&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;surname&gt;Harris&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;surname&gt;Jones&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-47"/&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-37" class="raw-text">43 T. Mortimer, P. Leighton and N. Whatley, Law Teachers: Lawyers or Academics? (1995).
@@ -3997,22 +3349,14 @@
          </ul>
          <div id="block-instance-37">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="43"
-      place="bottom"&gt;
+&lt;note type="footnote" n="43" place="bottom"&gt;
    &lt;label&gt;43&lt;/label&gt;
    &lt;bibl&gt;T. Mortimer, P. Leighton and N. Whatley, Law Teachers: Lawyers or Academics? (1995).&lt;/bibl&gt; This would include teaching both non-law degree students and sub-degree students.&lt;/note&gt;
 </code></pre>
          </div>
          <div id="bibl-instance-37">
             <pre><code>
-&lt;note
-     
-      n="43"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="43" type="footnote" place="bottom"&gt;
    &lt;label&gt;43&lt;/label&gt;
    &lt;bibl xml:id="bibl-48"&gt;
       &lt;author&gt;
@@ -4043,8 +3387,7 @@
          </div>
          <div id="biblStruct-instance-37">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Law Teachers: Lawyers or Academics?&lt;/title&gt;
@@ -4076,39 +3419,35 @@
          </div>
          <div id="biblStruct-generated-instance-37">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-48"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;Law Teachers: Lawyers or Academics?&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;T.&lt;/forename&gt;
-            &lt;surname&gt;Mortimer&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;P.&lt;/forename&gt;
-            &lt;surname&gt;Leighton&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;N.&lt;/forename&gt;
-            &lt;surname&gt;Whatley&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint&gt;
-         &lt;date when="1995"&gt;1995&lt;/date&gt;
-      &lt;/imprint&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-48"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Law Teachers: Lawyers or Academics?&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;T.&lt;/forename&gt;
+               &lt;surname&gt;Mortimer&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;P.&lt;/forename&gt;
+               &lt;surname&gt;Leighton&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;N.&lt;/forename&gt;
+               &lt;surname&gt;Whatley&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1995"&gt;1995&lt;/date&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-38" class="raw-text">44 id., p 35</div>
@@ -4120,11 +3459,7 @@
          </ul>
          <div id="block-instance-38">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="44"
-      place="bottom"&gt;
+&lt;note type="footnote" n="44" place="bottom"&gt;
    &lt;label&gt;44&lt;/label&gt;
    &lt;seg&gt;id., p 35&lt;/seg&gt;
 &lt;/note&gt;
@@ -4132,11 +3467,7 @@
          </div>
          <div id="bibl-instance-38">
             <pre><code>
-&lt;note
-     
-      n="44"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="44" type="footnote" place="bottom"&gt;
    &lt;label&gt;44&lt;/label&gt;
    &lt;bibl xml:id="bibl-49"&gt;
       &lt;ref type="previous-work"&gt;id.&lt;/ref&gt;,
@@ -4147,8 +3478,7 @@
          </div>
          <div id="biblStruct-instance-38">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;imprint&gt;
@@ -4162,12 +3492,9 @@
          </div>
          <div id="biblStruct-generated-instance-38">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-49"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct xml:id="bibl-49"/&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-39" class="raw-text">45 L. Skwarok, ‘Business Law for Non-Lawyers: Setting the Stage for Teaching, Learning
@@ -4181,11 +3508,7 @@
          </ul>
          <div id="block-instance-39">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="45"
-      place="bottom"&gt;
+&lt;note type="footnote" n="45" place="bottom"&gt;
    &lt;label&gt;45&lt;/label&gt;
    &lt;bibl&gt;L. Skwarok, ‘Business Law for Non-Lawyers: Setting the Stage for Teaching, Learning and Assessment at Hong Kong Polytechnic University’ (1995) 29 The Law Teacher 189 at 189.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -4193,11 +3516,7 @@
          </div>
          <div id="bibl-instance-39">
             <pre><code>
-&lt;note
-     
-      n="45"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="45" type="footnote" place="bottom"&gt;
    &lt;label&gt;45&lt;/label&gt;
    &lt;bibl xml:id="bibl-50"&gt;
       &lt;author&gt;
@@ -4219,8 +3538,7 @@
          </div>
          <div id="biblStruct-instance-39">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Business Law for Non-Lawyers: Setting the Stage for Teaching, Learning and
@@ -4247,38 +3565,30 @@
          </div>
          <div id="biblStruct-generated-instance-39">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-50"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;Business Law for Non-Lawyers: Setting the Stage for Teaching, Learning and
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-50"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Business Law for Non-Lawyers: Setting the Stage for Teaching, Learning and
                         Assessment at Hong Kong Polytechnic University&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;L.&lt;/forename&gt;
-            &lt;surname&gt;Skwarok&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="j"&gt;The Law Teacher&lt;/title&gt;
-      &lt;imprint&gt;
-         &lt;date when="1995"&gt;1995&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="volume"
-                 from="29"
-                 to="29"&gt;29&lt;/biblScope&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="189"&gt;189&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;L.&lt;/forename&gt;
+               &lt;surname&gt;Skwarok&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;The Law Teacher&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1995"&gt;1995&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="29" to="29"&gt;29&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="189"&gt;189&lt;/biblScope&gt;
+         &lt;citedRange unit="page" from="189" to="189"&gt;at 189&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-40" class="raw-text">46 N. Bastin, ‘Law, Law Staff and CNAA Business Studies Degree Courses’ (1985) 19
@@ -4291,11 +3601,7 @@
          </ul>
          <div id="block-instance-40">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="46"
-      place="bottom"&gt;
+&lt;note type="footnote" n="46" place="bottom"&gt;
    &lt;label&gt;46&lt;/label&gt;
    &lt;bibl&gt;N. Bastin, ‘Law, Law Staff and CNAA Business Studies Degree Courses’ (1985) 19 The Law Teacher 12 at 13.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -4303,11 +3609,7 @@
          </div>
          <div id="bibl-instance-40">
             <pre><code>
-&lt;note
-     
-      n="46"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="46" type="footnote" place="bottom"&gt;
    &lt;label&gt;46&lt;/label&gt;
    &lt;bibl xml:id="bibl-51"&gt;
       &lt;author&gt;
@@ -4328,8 +3630,7 @@
          </div>
          <div id="biblStruct-instance-40">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Law, Law Staff and CNAA Business Studies Degree Courses&lt;/title&gt;
@@ -4355,37 +3656,29 @@
          </div>
          <div id="biblStruct-generated-instance-40">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-51"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;Law, Law Staff and CNAA Business Studies Degree Courses&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;N.&lt;/forename&gt;
-            &lt;surname&gt;Bastin&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="j"&gt;The Law Teacher&lt;/title&gt;
-      &lt;imprint&gt;
-         &lt;date when="1985"&gt;1985&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="volume"
-                 from="19"
-                 to="19"&gt;19&lt;/biblScope&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="12"&gt;12&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-51"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Law, Law Staff and CNAA Business Studies Degree Courses&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;N.&lt;/forename&gt;
+               &lt;surname&gt;Bastin&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;The Law Teacher&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1985"&gt;1985&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="19" to="19"&gt;19&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="12"&gt;12&lt;/biblScope&gt;
+         &lt;citedRange unit="page" from="13" to="13"&gt;at 13&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-41" class="raw-text">47 A. Ridley, ‘Legal Skills for Non-Law Students: Added Value or Irrelevant Diversion?’
@@ -4398,11 +3691,7 @@
          </ul>
          <div id="block-instance-41">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="47"
-      place="bottom"&gt;
+&lt;note type="footnote" n="47" place="bottom"&gt;
    &lt;label&gt;47&lt;/label&gt;
    &lt;bibl&gt;A. Ridley, ‘Legal Skills for Non-Law Students: Added Value or Irrelevant Diversion?’ (1994) 28 The Law Teacher 281 at 282.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -4410,11 +3699,7 @@
          </div>
          <div id="bibl-instance-41">
             <pre><code>
-&lt;note
-     
-      n="47"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="47" type="footnote" place="bottom"&gt;
    &lt;label&gt;47&lt;/label&gt;
    &lt;bibl xml:id="bibl-52"&gt;
       &lt;author&gt;
@@ -4435,8 +3720,7 @@
          </div>
          <div id="biblStruct-instance-41">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Legal Skills for Non-Law Students: Added Value or Irrelevant Diversion?&lt;/title&gt;
@@ -4462,37 +3746,29 @@
          </div>
          <div id="biblStruct-generated-instance-41">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-52"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;Legal Skills for Non-Law Students: Added Value or Irrelevant Diversion?&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;A.&lt;/forename&gt;
-            &lt;surname&gt;Ridley&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="j"&gt;The Law Teacher&lt;/title&gt;
-      &lt;imprint&gt;
-         &lt;date when="1994"&gt;1994&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="volume"
-                 from="28"
-                 to="28"&gt;28&lt;/biblScope&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="281"&gt;281&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-52"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Legal Skills for Non-Law Students: Added Value or Irrelevant Diversion?&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;A.&lt;/forename&gt;
+               &lt;surname&gt;Ridley&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;The Law Teacher&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1994"&gt;1994&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="28" to="28"&gt;28&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="281"&gt;281&lt;/biblScope&gt;
+         &lt;citedRange unit="page" from="282" to="282"&gt;at 282&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-42" class="raw-text">48 G. Cartan and T. Vilkinas, ‘Legal Literacy for Managers: The Role of the Educator’
@@ -4505,11 +3781,7 @@
          </ul>
          <div id="block-instance-42">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="48"
-      place="bottom"&gt;
+&lt;note type="footnote" n="48" place="bottom"&gt;
    &lt;label&gt;48&lt;/label&gt;
    &lt;bibl&gt;G. Cartan and T. Vilkinas, ‘Legal Literacy for Managers: The Role of the Educator’ (1990) 24 The Law Teacher 246 at 248.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -4517,11 +3789,7 @@
          </div>
          <div id="bibl-instance-42">
             <pre><code>
-&lt;note
-     
-      n="48"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="48" type="footnote" place="bottom"&gt;
    &lt;label&gt;48&lt;/label&gt;
    &lt;bibl xml:id="bibl-53"&gt;
       &lt;author&gt;
@@ -4549,8 +3817,7 @@
          </div>
          <div id="biblStruct-instance-42">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Legal Literacy for Managers: The Role of the Educator&lt;/title&gt;
@@ -4582,43 +3849,35 @@
          </div>
          <div id="biblStruct-generated-instance-42">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-53"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;Legal Literacy for Managers: The Role of the Educator&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;G.&lt;/forename&gt;
-            &lt;surname&gt;Cartan&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;T.&lt;/forename&gt;
-            &lt;surname&gt;Vilkinas&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="j"&gt;The Law Teacher&lt;/title&gt;
-      &lt;imprint&gt;
-         &lt;date when="1990"&gt;1990&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="volume"
-                 from="24"
-                 to="24"&gt;24&lt;/biblScope&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="246"&gt;246&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-53"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Legal Literacy for Managers: The Role of the Educator&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;G.&lt;/forename&gt;
+               &lt;surname&gt;Cartan&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;T.&lt;/forename&gt;
+               &lt;surname&gt;Vilkinas&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;The Law Teacher&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1990"&gt;1990&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="24" to="24"&gt;24&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="246"&gt;246&lt;/biblScope&gt;
+         &lt;citedRange unit="page" from="248" to="248"&gt;at 248&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-43" class="raw-text">49 Ridley, op. cit., n. 47, at p. 284.</div>
@@ -4630,11 +3889,7 @@
          </ul>
          <div id="block-instance-43">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="49"
-      place="bottom"&gt;
+&lt;note type="footnote" n="49" place="bottom"&gt;
    &lt;label&gt;49&lt;/label&gt;
    &lt;bibl&gt;Ridley, op. cit., n. 47, at p. 284.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -4642,11 +3897,7 @@
          </div>
          <div id="bibl-instance-43">
             <pre><code>
-&lt;note
-     
-      n="49"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="49" type="footnote" place="bottom"&gt;
    &lt;label&gt;49&lt;/label&gt;
    &lt;bibl xml:id="bibl-54"&gt;
       &lt;author&gt;
@@ -4663,8 +3914,7 @@
          </div>
          <div id="biblStruct-instance-43">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title/&gt;
@@ -4684,23 +3934,10 @@
          </div>
          <div id="biblStruct-generated-instance-43">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-54"&gt;
-   &lt;monogr&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;surname&gt;Ridley&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-54"/&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-44" class="raw-text">50 This, of course, is not always the case. For example, the BA Economics and Law
@@ -4714,11 +3951,7 @@
          </ul>
          <div id="block-instance-44">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="50"
-      place="bottom"&gt;
+&lt;note type="footnote" n="50" place="bottom"&gt;
    &lt;label&gt;50&lt;/label&gt;
    &lt;seg&gt;This, of course, is not always the case. For example, the BA Economics and Law degree at Leicester has a special course in each year given over to the consideration of the relationship between economics and law.&lt;/seg&gt;
 &lt;/note&gt;
@@ -4726,11 +3959,7 @@
          </div>
          <div id="bibl-instance-44">
             <pre><code>
-&lt;note
-     
-      n="50"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="50" type="footnote" place="bottom"&gt;
    &lt;label&gt;50&lt;/label&gt;
    &lt;note type="comment"&gt;
                     This, of course, is not always the case. For example, the BA Economics and Law
@@ -4746,6 +3975,7 @@
          </div>
          <div id="biblStruct-generated-instance-44">
             <pre><code>
+&lt;listBibl/&gt;
 </code></pre>
          </div>
          <div id="input-instance-45" class="raw-text">51 P. Birks, ‘Short Cuts’ in Pressing Problems in the Law, ed. P. Birks (1994) 10–24.</div>
@@ -4757,11 +3987,7 @@
          </ul>
          <div id="block-instance-45">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="51"
-      place="bottom"&gt;
+&lt;note type="footnote" n="51" place="bottom"&gt;
    &lt;label&gt;51&lt;/label&gt;
    &lt;bibl&gt;P. Birks, ‘Short Cuts’ in Pressing Problems in the Law, ed. P. Birks (1994) 10–24.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -4769,11 +3995,7 @@
          </div>
          <div id="bibl-instance-45">
             <pre><code>
-&lt;note
-     
-      n="51"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="51" type="footnote" place="bottom"&gt;
    &lt;label&gt;51&lt;/label&gt;
    &lt;bibl xml:id="bibl-56"&gt;
       &lt;author&gt;
@@ -4798,8 +4020,7 @@
          </div>
          <div id="biblStruct-instance-45">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Short Cuts&lt;/title&gt;
@@ -4829,40 +4050,33 @@
          </div>
          <div id="biblStruct-generated-instance-45">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-56"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;Short Cuts&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;P.&lt;/forename&gt;
-            &lt;surname&gt;Birks&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;Pressing Problems in the Law&lt;/title&gt;
-      &lt;editor&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;P.&lt;/forename&gt;
-            &lt;surname&gt;Birks&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/editor&gt;
-      &lt;imprint&gt;
-         &lt;date when="1994"&gt;1994&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="10"
-                 to="24"&gt;10–24&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-56"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Short Cuts&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;P.&lt;/forename&gt;
+               &lt;surname&gt;Birks&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Pressing Problems in the Law&lt;/title&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;P.&lt;/forename&gt;
+               &lt;surname&gt;Birks&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;imprint&gt;
+            &lt;date when="1994"&gt;1994&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="page" from="10" to="24"&gt;10–24&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-46" class="raw-text">52 Ridley, op. cit., n. 47, p. 283.</div>
@@ -4874,11 +4088,7 @@
          </ul>
          <div id="block-instance-46">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="52"
-      place="bottom"&gt;
+&lt;note type="footnote" n="52" place="bottom"&gt;
    &lt;label&gt;52&lt;/label&gt;
    &lt;bibl&gt;Ridley, op. cit., n. 47, p. 283.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -4886,11 +4096,7 @@
          </div>
          <div id="bibl-instance-46">
             <pre><code>
-&lt;note
-     
-      n="52"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="52" type="footnote" place="bottom"&gt;
    &lt;label&gt;52&lt;/label&gt;
    &lt;bibl xml:id="bibl-57"&gt;
       &lt;author&gt;
@@ -4907,8 +4113,7 @@
          </div>
          <div id="biblStruct-instance-46">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title/&gt;
@@ -4928,23 +4133,10 @@
          </div>
          <div id="biblStruct-generated-instance-46">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-57"&gt;
-   &lt;monogr&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;surname&gt;Ridley&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-57"/&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-47" class="raw-text">53 Cartan and Vilkinas, op. cit., n. 48, p. 248.</div>
@@ -4956,11 +4148,7 @@
          </ul>
          <div id="block-instance-47">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="53"
-      place="bottom"&gt;
+&lt;note type="footnote" n="53" place="bottom"&gt;
    &lt;label&gt;53&lt;/label&gt;
    &lt;bibl&gt;Cartan and Vilkinas, op. cit., n. 48, p. 248.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -4968,11 +4156,7 @@
          </div>
          <div id="bibl-instance-47">
             <pre><code>
-&lt;note
-     
-      n="53"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="53" type="footnote" place="bottom"&gt;
    &lt;label&gt;53&lt;/label&gt;
    &lt;bibl xml:id="bibl-58"&gt;
       &lt;author&gt;
@@ -4995,8 +4179,7 @@
          </div>
          <div id="biblStruct-instance-47">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title/&gt;
@@ -5021,28 +4204,10 @@
          </div>
          <div id="biblStruct-generated-instance-47">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-58"&gt;
-   &lt;monogr&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;surname&gt;Cartan&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;surname&gt;Vilkinas&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-58"/&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-48" class="raw-text">54 P. Harris, ‘Curriculum Development in Legal Studies’ (1986) 20 The Law Teacher
@@ -5055,11 +4220,7 @@
          </ul>
          <div id="block-instance-48">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="54"
-      place="bottom"&gt;
+&lt;note type="footnote" n="54" place="bottom"&gt;
    &lt;label&gt;54&lt;/label&gt;
    &lt;bibl&gt;P. Harris, ‘Curriculum Development in Legal Studies’ (1986) 20 The Law Teacher 110 at 112.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -5067,11 +4228,7 @@
          </div>
          <div id="bibl-instance-48">
             <pre><code>
-&lt;note
-     
-      n="54"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="54" type="footnote" place="bottom"&gt;
    &lt;label&gt;54&lt;/label&gt;
    &lt;bibl xml:id="bibl-59"&gt;
       &lt;author&gt;
@@ -5092,8 +4249,7 @@
          </div>
          <div id="biblStruct-instance-48">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;analytic&gt;
          &lt;title level="a"&gt;Curriculum Development in Legal Studies&lt;/title&gt;
@@ -5119,37 +4275,29 @@
          </div>
          <div id="biblStruct-generated-instance-48">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-59"&gt;
-   &lt;analytic&gt;
-      &lt;title level="a"&gt;Curriculum Development in Legal Studies&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;P.&lt;/forename&gt;
-            &lt;surname&gt;Harris&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-   &lt;/analytic&gt;
-   &lt;monogr&gt;
-      &lt;title level="j"&gt;The Law Teacher&lt;/title&gt;
-      &lt;imprint&gt;
-         &lt;date when="1986"&gt;1986&lt;/date&gt;
-      &lt;/imprint&gt;
-      &lt;biblScope
-                 unit="volume"
-                 from="20"
-                 to="20"&gt;20&lt;/biblScope&gt;
-      &lt;biblScope
-                 unit="page"
-                 from="110"&gt;110&lt;/biblScope&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-59"&gt;
+      &lt;analytic&gt;
+         &lt;title level="a"&gt;Curriculum Development in Legal Studies&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;P.&lt;/forename&gt;
+               &lt;surname&gt;Harris&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title level="j"&gt;The Law Teacher&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1986"&gt;1986&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="20" to="20"&gt;20&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="110"&gt;110&lt;/biblScope&gt;
+         &lt;citedRange unit="page" from="112" to="112"&gt;at 112&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-49" class="raw-text">55 Dearing, op. cit., n. 12, para 9.3.</div>
@@ -5161,11 +4309,7 @@
          </ul>
          <div id="block-instance-49">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="55"
-      place="bottom"&gt;
+&lt;note type="footnote" n="55" place="bottom"&gt;
    &lt;label&gt;55&lt;/label&gt;
    &lt;bibl&gt;Dearing, op. cit., n. 12, para 9.3.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -5173,11 +4317,7 @@
          </div>
          <div id="bibl-instance-49">
             <pre><code>
-&lt;note
-     
-      n="55"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="55" type="footnote" place="bottom"&gt;
    &lt;label&gt;55&lt;/label&gt;
    &lt;bibl xml:id="bibl-60"&gt;
       &lt;author&gt;
@@ -5194,8 +4334,7 @@
          </div>
          <div id="biblStruct-instance-49">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title/&gt;
@@ -5215,23 +4354,10 @@
          </div>
          <div id="biblStruct-generated-instance-49">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-60"&gt;
-   &lt;monogr&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;surname&gt;Dearing&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-60"/&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
          <div id="input-instance-50" class="raw-text">57 G. Steiner, Errata: An Examined Life (1997) 20.</div>
@@ -5243,11 +4369,7 @@
          </ul>
          <div id="block-instance-50">
             <pre><code>
-&lt;note
-     
-      type="footnote"
-      n="57"
-      place="bottom"&gt;
+&lt;note type="footnote" n="57" place="bottom"&gt;
    &lt;label&gt;57&lt;/label&gt;
    &lt;bibl&gt;G. Steiner, Errata: An Examined Life (1997) 20.&lt;/bibl&gt;
 &lt;/note&gt;
@@ -5255,11 +4377,7 @@
          </div>
          <div id="bibl-instance-50">
             <pre><code>
-&lt;note
-     
-      n="57"
-      type="footnote"
-      place="bottom"&gt;
+&lt;note n="57" type="footnote" place="bottom"&gt;
    &lt;label&gt;57&lt;/label&gt;
    &lt;bibl xml:id="bibl-61"&gt;
       &lt;author&gt;
@@ -5277,8 +4395,7 @@
          </div>
          <div id="biblStruct-instance-50">
             <pre><code>
-&lt;listBibl
-         &gt;
+&lt;listBibl&gt;
    &lt;biblStruct&gt;
       &lt;monogr&gt;
          &lt;title level="m"&gt;Errata: An Examined Life&lt;/title&gt;
@@ -5299,34 +4416,31 @@
          </div>
          <div id="biblStruct-generated-instance-50">
             <pre><code>
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#"&gt;
-   &lt;monogr&gt;
-      &lt;imprint/&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
-&lt;biblStruct
-            source="file:/src/data/gold/10.1111_1467-6478.00080.xml#bibl-61"&gt;
-   &lt;monogr&gt;
-      &lt;title level="m"&gt;Errata: An Examined Life&lt;/title&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;forename&gt;G.&lt;/forename&gt;
-            &lt;surname&gt;Steiner&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
-      &lt;imprint&gt;
-         &lt;date when="1997"&gt;1997&lt;/date&gt;
-      &lt;/imprint&gt;
-   &lt;/monogr&gt;
-&lt;/biblStruct&gt;
+&lt;listBibl&gt;
+   &lt;biblStruct/&gt;
+   &lt;biblStruct xml:id="bibl-61"&gt;
+      &lt;monogr&gt;
+         &lt;title level="m"&gt;Errata: An Examined Life&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;G.&lt;/forename&gt;
+               &lt;surname&gt;Steiner&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1997"&gt;1997&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;citedRange unit="page" from="20" to="20"&gt;20&lt;/citedRange&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;
 </code></pre>
          </div>
       </div><script>
           const tabSelectors = document.querySelectorAll('[data-tabs]');
           for (const [i, tabs] of [...tabSelectors].entries()) {
-              tabs.setAttribute(`data-tabs-${i}`, '');
-              new Tabby(`[data-tabs-${i}]`);
+          tabs.setAttribute(`data-tabs-${i}`, '');
+          new Tabby(`[data-tabs-${i}]`);
           }
           hljs.highlightAll();
         </script></body>
