@@ -1,0 +1,17 @@
+#!/bin/bash
+# Install gh-pages deployment tool
+sudo apt-get install -y python3-pip
+pip3 install ghp-import
+
+# Initialize the git repository and configure Git
+git config --global user.name "GitHub Actions"
+git config --global user.email "actions@github.com"
+
+# Add the HTML files from pages/
+git add docs/*.html
+
+# Commit the changes
+git commit -m "Deploy HTML files"
+
+# Push the changes to the gh-pages branch
+git push

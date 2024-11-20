@@ -1,0 +1,9 @@
+#!/bin/bash
+mkdir -p docs
+for xml_file in data/gold/*.xml; do
+    base_name=$(basename "$xml_file" .xml)
+    docker run --rm -i -u $(id -u) --volume "${PWD}:/src" klakegg/saxon:he xslt \
+    -s:$xml_file \
+    -xsl:xslt/dataset-to-html.xslt \
+    -o:docs/$base_name.html
+done

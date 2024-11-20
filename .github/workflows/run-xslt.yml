@@ -22,15 +22,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Transform XML files
-      run: |
-        mkdir -p docs
-        for xml_file in data/gold/*.xml; do
-          base_name=$(basename "$xml_file" .xml)
-          docker run --rm -i -u $(id -u) --volume "${PWD}:/src" klakegg/saxon:he xslt \
-            -s:$xml_file \
-            -xsl:xslt/dataset-to-html.xslt \
-            -o:docs/$base_name.html
-        done
+      run: /bin/bash .github/workflows/transform-files
 
     - name: Generate Directory Listings
       uses: jayanta525/github-pages-directory-listing@v4.0.0
@@ -38,20 +30,4 @@ jobs:
         FOLDER: docs
 
     - name: Deploy to GitHub Pages
-      run: |
-        # Install gh-pages deployment tool
-        sudo apt-get install -y python3-pip
-        pip3 install ghp-import
-
-        # Initialize the git repository and configure Git
-        git config --global user.name "GitHub Actions"
-        git config --global user.email "actions@github.com"
-
-        # Add the HTML files from pages/
-        git add docs/*.html
-
-        # Commit the changes
-        git commit -m "Deploy HTML files"
-
-        # Push the changes to the gh-pages branch
-        git push
+      run: /bin/bash .github/workflows/deploy-to-pages
