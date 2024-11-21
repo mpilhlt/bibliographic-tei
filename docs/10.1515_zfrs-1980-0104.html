@@ -672,7 +672,8 @@
             &lt;surname&gt;Carbonnier&lt;/surname&gt;
          &lt;/persName&gt;
       &lt;/author&gt;
-      &lt;ref type="footnote" n="-1"&gt;(vorige N.)&lt;/ref&gt;
+      &lt;!-- infer footnote number from "previous note" --&gt;
+      &lt;ref type="footnote" n="5"&gt;(vorige N.)&lt;/ref&gt;
       &lt;ref type="previous-work"&gt;a.a.O.&lt;/ref&gt;
    &lt;/bibl&gt;.
           &lt;/note&gt;
@@ -706,7 +707,7 @@
             &lt;surname&gt;Carbonnier&lt;/surname&gt;
          &lt;/persName&gt;
       &lt;/author&gt;
-      &lt;ref type="footnote" n="-1"&gt;(vorige N.)&lt;/ref&gt;
+      &lt;ref type="footnote" n="5"&gt;(vorige N.)&lt;/ref&gt;
       &lt;ref type="previous-work"&gt;a.a.O.&lt;/ref&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
@@ -715,7 +716,24 @@
             <div id="biblStruct-resolved-instance-6">
                <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct source="#bibl-16"/&gt;
+   &lt;biblStruct source="#bibl-16"&gt;
+      &lt;analytic source="#bibl-15"&gt;
+         &lt;title level="a"&gt;L’apport du droit compare ä la sociologie juridique&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Carbonnier&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr source="#bibl-15"&gt;
+         &lt;title level="m"&gt;Livre du centenaire de la Societe de legislation comparee&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1969"&gt;1969&lt;/date&gt;
+            &lt;pubPlace&gt;Paris&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="page" from="75"&gt;75&lt;/biblScope&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
             </div>
@@ -2429,30 +2447,20 @@
       &lt;citedRange unit="page" from="168"&gt;168 f.&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-36"&gt;
-      &lt;analytic source="#bibl-19 bibl-20"&gt;
+      &lt;analytic source="#bibl-19"&gt;
          &lt;title level="a"&gt;Probleme des interkulturellen Vergleichs in der Ethnologie&lt;/title&gt;
-         &lt;title level="a"&gt;Situation actuelle et Programme de travail de Techno logie juridique&lt;/title&gt;
          &lt;author&gt;
             &lt;persName&gt;
                &lt;surname&gt;Wirsing&lt;/surname&gt;
             &lt;/persName&gt;
          &lt;/author&gt;
-         &lt;author&gt;
-            &lt;persName&gt;
-               &lt;surname&gt;Poirier&lt;/surname&gt;
-            &lt;/persName&gt;
-         &lt;/author&gt;
       &lt;/analytic&gt;
-      &lt;monogr source="#bibl-19 bibl-20"&gt;
+      &lt;monogr source="#bibl-19"&gt;
          &lt;title level="j"&gt;Sociologus&lt;/title&gt;
-         &lt;title level="j"&gt;Rev. int. Sc. Soc&lt;/title&gt;
          &lt;imprint&gt;
             &lt;date when="1975"&gt;1975&lt;/date&gt;
-            &lt;date when="1970"&gt;1970&lt;/date&gt;
          &lt;/imprint&gt;
          &lt;biblScope unit="volume" from="25" to="25"&gt;25&lt;/biblScope&gt;
-         &lt;biblScope unit="volume" from="22" to="22"&gt;22&lt;/biblScope&gt;
-         &lt;biblScope unit="page" from="509"&gt;509&lt;/biblScope&gt;
       &lt;/monogr&gt;
       &lt;citedRange unit="page" from="115" to="115"&gt;115&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
@@ -4506,29 +4514,16 @@
       &lt;citedRange unit="page" from="175"&gt;175 f.&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-54"&gt;
-      &lt;analytic source="#bibl-44 bibl-45"&gt;
+      &lt;analytic source="#bibl-44"&gt;
          &lt;title level="a"&gt;Strafrecht und vergleichende Kriminologie&lt;/title&gt;
-         &lt;title level="a"&gt;Die Vergleichung als Methode der Strafrechtswissenschaft und der Kriminologie
-                    &lt;/title&gt;
          &lt;author&gt;
             &lt;persName&gt;
                &lt;surname&gt;Kaiser&lt;/surname&gt;
             &lt;/persName&gt;
          &lt;/author&gt;
-         &lt;author&gt;
-            &lt;persName&gt;
-               &lt;surname&gt;Villmow&lt;/surname&gt;
-            &lt;/persName&gt;
-         &lt;/author&gt;
-         &lt;author&gt;
-            &lt;persName&gt;
-               &lt;surname&gt;Albrecht&lt;/surname&gt;
-            &lt;/persName&gt;
-         &lt;/author&gt;
       &lt;/analytic&gt;
-      &lt;monogr source="#bibl-44 bibl-45"&gt;
+      &lt;monogr source="#bibl-44"&gt;
          &lt;title level="m"&gt;Strafrecht, Strafrechtsvergleichung&lt;/title&gt;
-         &lt;title level="j"&gt;MschrKrim&lt;/title&gt;
          &lt;editor&gt;
             &lt;persName&gt;
                &lt;surname&gt;Kaiser&lt;/surname&gt;
@@ -4541,9 +4536,7 @@
          &lt;/editor&gt;
          &lt;imprint&gt;
             &lt;date when="1975"&gt;1975&lt;/date&gt;
-            &lt;date when="1979"&gt;1979&lt;/date&gt;
          &lt;/imprint&gt;
-         &lt;biblScope unit="volume" from="62" to="62"&gt;62&lt;/biblScope&gt;
       &lt;/monogr&gt;
       &lt;citedRange unit="page" from="89" to="89"&gt;89&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
@@ -4672,37 +4665,21 @@
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-57"&gt;
-      &lt;analytic source="#bibl-30 bibl-31 bibl-32"&gt;
+      &lt;analytic source="#bibl-31"&gt;
          &lt;title level="a"&gt;Comparative Sociology — Some Problems of Theory and Method&lt;/title&gt;
-         &lt;title level="a"&gt;Social Institutions - Comparative Method&lt;/title&gt;
-         &lt;author&gt;
-            &lt;persName&gt;
-               &lt;surname&gt;Smelser&lt;/surname&gt;
-            &lt;/persName&gt;
-         &lt;/author&gt;
          &lt;author&gt;
             &lt;persName&gt;
                &lt;surname&gt;Payne&lt;/surname&gt;
             &lt;/persName&gt;
          &lt;/author&gt;
-         &lt;author&gt;
-            &lt;persName&gt;
-               &lt;surname&gt;Eisenstadt&lt;/surname&gt;
-            &lt;/persName&gt;
-         &lt;/author&gt;
       &lt;/analytic&gt;
-      &lt;monogr source="#bibl-30 bibl-31 bibl-32"&gt;
+      &lt;monogr source="#bibl-31"&gt;
          &lt;title level="j"&gt;Brit. J. Soc&lt;/title&gt;
-         &lt;title level="j"&gt;International Encyclopedia of the Social Sciences&lt;/title&gt;
          &lt;imprint&gt;
             &lt;date when="1973"&gt;1973&lt;/date&gt;
-            &lt;date when="1968"&gt;1968&lt;/date&gt;
-            &lt;pubPlace&gt;London&lt;/pubPlace&gt;
          &lt;/imprint&gt;
          &lt;biblScope unit="volume" from="24" to="24"&gt;24&lt;/biblScope&gt;
          &lt;biblScope unit="page" from="13"&gt;13&lt;/biblScope&gt;
-         &lt;biblScope unit="volume" from="14" to="14"&gt;Bd. 14&lt;/biblScope&gt;
-         &lt;biblScope unit="page" from="421"&gt;421&lt;/biblScope&gt;
       &lt;/monogr&gt;
       &lt;citedRange unit="page" from="15"&gt;15,&lt;/citedRange&gt;
       &lt;citedRange unit="page" from="25"&gt;25 f.&lt;/citedRange&gt;
@@ -6616,32 +6593,21 @@
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-75"&gt;
-      &lt;analytic source="#bibl-13 bibl-14"&gt;
+      &lt;analytic source="#bibl-13"&gt;
          &lt;title level="a"&gt;Law Books and Books About Law&lt;/title&gt;
-         &lt;title level="a"&gt;Einige Anmerkungen über die Beziehung zwischen Rechtssoziologie und
-                        Rechtsvergleichung
-                    &lt;/title&gt;
          &lt;author&gt;
             &lt;persName&gt;
                &lt;forename type="first"&gt;R.&lt;/forename&gt;
                &lt;surname&gt;Abel&lt;/surname&gt;
             &lt;/persName&gt;
          &lt;/author&gt;
-         &lt;author&gt;
-            &lt;persName&gt;
-               &lt;surname&gt;Benda-Beckmann&lt;/surname&gt;
-            &lt;/persName&gt;
-         &lt;/author&gt;
       &lt;/analytic&gt;
-      &lt;monogr source="#bibl-13 bibl-14"&gt;
+      &lt;monogr source="#bibl-13"&gt;
          &lt;title level="j"&gt;Stanford Law Rev&lt;/title&gt;
-         &lt;title level="j"&gt;ZvglRW&lt;/title&gt;
          &lt;imprint&gt;
             &lt;date when="1973"&gt;1973&lt;/date&gt;
-            &lt;date when="1979"&gt;1979&lt;/date&gt;
          &lt;/imprint&gt;
          &lt;biblScope unit="volume" from="26" to="26"&gt;26&lt;/biblScope&gt;
-         &lt;biblScope unit="volume" from="78" to="78"&gt;78&lt;/biblScope&gt;
       &lt;/monogr&gt;
       &lt;citedRange unit="page" from="194"&gt;194 ff.&lt;/citedRange&gt;
       &lt;citedRange unit="page" from="221"&gt;221 f.&lt;/citedRange&gt;
@@ -6803,32 +6769,21 @@
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-78"&gt;
-      &lt;analytic source="#bibl-13 bibl-14"&gt;
+      &lt;analytic source="#bibl-13"&gt;
          &lt;title level="a"&gt;Law Books and Books About Law&lt;/title&gt;
-         &lt;title level="a"&gt;Einige Anmerkungen über die Beziehung zwischen Rechtssoziologie und
-                        Rechtsvergleichung
-                    &lt;/title&gt;
          &lt;author&gt;
             &lt;persName&gt;
                &lt;forename type="first"&gt;R.&lt;/forename&gt;
                &lt;surname&gt;Abel&lt;/surname&gt;
             &lt;/persName&gt;
          &lt;/author&gt;
-         &lt;author&gt;
-            &lt;persName&gt;
-               &lt;surname&gt;Benda-Beckmann&lt;/surname&gt;
-            &lt;/persName&gt;
-         &lt;/author&gt;
       &lt;/analytic&gt;
-      &lt;monogr source="#bibl-13 bibl-14"&gt;
+      &lt;monogr source="#bibl-13"&gt;
          &lt;title level="j"&gt;Stanford Law Rev&lt;/title&gt;
-         &lt;title level="j"&gt;ZvglRW&lt;/title&gt;
          &lt;imprint&gt;
             &lt;date when="1973"&gt;1973&lt;/date&gt;
-            &lt;date when="1979"&gt;1979&lt;/date&gt;
          &lt;/imprint&gt;
          &lt;biblScope unit="volume" from="26" to="26"&gt;26&lt;/biblScope&gt;
-         &lt;biblScope unit="volume" from="78" to="78"&gt;78&lt;/biblScope&gt;
       &lt;/monogr&gt;
       &lt;citedRange unit="page" from="207"&gt;207 ff&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
@@ -7201,31 +7156,21 @@
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-82"&gt;
-      &lt;analytic source="#bibl-13 bibl-14"&gt;
-         &lt;title level="a"&gt;Law Books and Books About Law&lt;/title&gt;
+      &lt;analytic source="#bibl-14"&gt;
          &lt;title level="a"&gt;Einige Anmerkungen über die Beziehung zwischen Rechtssoziologie und
                         Rechtsvergleichung
                     &lt;/title&gt;
-         &lt;author&gt;
-            &lt;persName&gt;
-               &lt;forename type="first"&gt;R.&lt;/forename&gt;
-               &lt;surname&gt;Abel&lt;/surname&gt;
-            &lt;/persName&gt;
-         &lt;/author&gt;
          &lt;author&gt;
             &lt;persName&gt;
                &lt;surname&gt;Benda-Beckmann&lt;/surname&gt;
             &lt;/persName&gt;
          &lt;/author&gt;
       &lt;/analytic&gt;
-      &lt;monogr source="#bibl-13 bibl-14"&gt;
-         &lt;title level="j"&gt;Stanford Law Rev&lt;/title&gt;
+      &lt;monogr source="#bibl-14"&gt;
          &lt;title level="j"&gt;ZvglRW&lt;/title&gt;
          &lt;imprint&gt;
-            &lt;date when="1973"&gt;1973&lt;/date&gt;
             &lt;date when="1979"&gt;1979&lt;/date&gt;
          &lt;/imprint&gt;
-         &lt;biblScope unit="volume" from="26" to="26"&gt;26&lt;/biblScope&gt;
          &lt;biblScope unit="volume" from="78" to="78"&gt;78&lt;/biblScope&gt;
       &lt;/monogr&gt;
       &lt;citedRange unit="page" from="55"&gt;55 ff.&lt;/citedRange&gt;
@@ -7249,37 +7194,21 @@
       &lt;citedRange unit="page" from="154"&gt;154 ff.&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-84"&gt;
-      &lt;analytic source="#bibl-30 bibl-31 bibl-32"&gt;
+      &lt;analytic source="#bibl-31"&gt;
          &lt;title level="a"&gt;Comparative Sociology — Some Problems of Theory and Method&lt;/title&gt;
-         &lt;title level="a"&gt;Social Institutions - Comparative Method&lt;/title&gt;
-         &lt;author&gt;
-            &lt;persName&gt;
-               &lt;surname&gt;Smelser&lt;/surname&gt;
-            &lt;/persName&gt;
-         &lt;/author&gt;
          &lt;author&gt;
             &lt;persName&gt;
                &lt;surname&gt;Payne&lt;/surname&gt;
             &lt;/persName&gt;
          &lt;/author&gt;
-         &lt;author&gt;
-            &lt;persName&gt;
-               &lt;surname&gt;Eisenstadt&lt;/surname&gt;
-            &lt;/persName&gt;
-         &lt;/author&gt;
       &lt;/analytic&gt;
-      &lt;monogr source="#bibl-30 bibl-31 bibl-32"&gt;
+      &lt;monogr source="#bibl-31"&gt;
          &lt;title level="j"&gt;Brit. J. Soc&lt;/title&gt;
-         &lt;title level="j"&gt;International Encyclopedia of the Social Sciences&lt;/title&gt;
          &lt;imprint&gt;
             &lt;date when="1973"&gt;1973&lt;/date&gt;
-            &lt;date when="1968"&gt;1968&lt;/date&gt;
-            &lt;pubPlace&gt;London&lt;/pubPlace&gt;
          &lt;/imprint&gt;
          &lt;biblScope unit="volume" from="24" to="24"&gt;24&lt;/biblScope&gt;
          &lt;biblScope unit="page" from="13"&gt;13&lt;/biblScope&gt;
-         &lt;biblScope unit="volume" from="14" to="14"&gt;Bd. 14&lt;/biblScope&gt;
-         &lt;biblScope unit="page" from="421"&gt;421&lt;/biblScope&gt;
       &lt;/monogr&gt;
       &lt;citedRange unit="page" from="16"&gt;16 ff.&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
@@ -7683,31 +7612,21 @@
       &lt;citedRange unit="page" from="110"&gt;110 f.&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-89"&gt;
-      &lt;analytic source="#bibl-13 bibl-14"&gt;
-         &lt;title level="a"&gt;Law Books and Books About Law&lt;/title&gt;
+      &lt;analytic source="#bibl-14"&gt;
          &lt;title level="a"&gt;Einige Anmerkungen über die Beziehung zwischen Rechtssoziologie und
                         Rechtsvergleichung
                     &lt;/title&gt;
-         &lt;author&gt;
-            &lt;persName&gt;
-               &lt;forename type="first"&gt;R.&lt;/forename&gt;
-               &lt;surname&gt;Abel&lt;/surname&gt;
-            &lt;/persName&gt;
-         &lt;/author&gt;
          &lt;author&gt;
             &lt;persName&gt;
                &lt;surname&gt;Benda-Beckmann&lt;/surname&gt;
             &lt;/persName&gt;
          &lt;/author&gt;
       &lt;/analytic&gt;
-      &lt;monogr source="#bibl-13 bibl-14"&gt;
-         &lt;title level="j"&gt;Stanford Law Rev&lt;/title&gt;
+      &lt;monogr source="#bibl-14"&gt;
          &lt;title level="j"&gt;ZvglRW&lt;/title&gt;
          &lt;imprint&gt;
-            &lt;date when="1973"&gt;1973&lt;/date&gt;
             &lt;date when="1979"&gt;1979&lt;/date&gt;
          &lt;/imprint&gt;
-         &lt;biblScope unit="volume" from="26" to="26"&gt;26&lt;/biblScope&gt;
          &lt;biblScope unit="volume" from="78" to="78"&gt;78&lt;/biblScope&gt;
       &lt;/monogr&gt;
       &lt;citedRange unit="page" from="58"&gt;58 ff.&lt;/citedRange&gt;
@@ -8004,21 +7923,6 @@
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-92"&gt;
-      &lt;monogr source="#bibl-90"&gt;
-         &lt;title level="m"&gt;Industrial Democracy in Europe&lt;/title&gt;
-         &lt;author&gt;
-            &lt;persName&gt;
-               &lt;forename type="first"&gt;IDE-International&lt;/forename&gt;
-               &lt;forename type="middle"&gt;Research&lt;/forename&gt;
-               &lt;surname&gt;Group&lt;/surname&gt;
-            &lt;/persName&gt;
-         &lt;/author&gt;
-         &lt;imprint&gt;
-            &lt;date when="1980"&gt;1980&lt;/date&gt;
-            &lt;pubPlace&gt;London&lt;/pubPlace&gt;
-            &lt;publisher&gt;Oxford University Press,&lt;/publisher&gt;
-         &lt;/imprint&gt;
-      &lt;/monogr&gt;
       &lt;citedRange unit="chapter" from="VIII"&gt;Chapter VIII&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
@@ -9106,29 +9010,16 @@
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-103"&gt;
-      &lt;analytic source="#bibl-44 bibl-45"&gt;
+      &lt;analytic source="#bibl-44"&gt;
          &lt;title level="a"&gt;Strafrecht und vergleichende Kriminologie&lt;/title&gt;
-         &lt;title level="a"&gt;Die Vergleichung als Methode der Strafrechtswissenschaft und der Kriminologie
-                    &lt;/title&gt;
          &lt;author&gt;
             &lt;persName&gt;
                &lt;surname&gt;Kaiser&lt;/surname&gt;
             &lt;/persName&gt;
          &lt;/author&gt;
-         &lt;author&gt;
-            &lt;persName&gt;
-               &lt;surname&gt;Villmow&lt;/surname&gt;
-            &lt;/persName&gt;
-         &lt;/author&gt;
-         &lt;author&gt;
-            &lt;persName&gt;
-               &lt;surname&gt;Albrecht&lt;/surname&gt;
-            &lt;/persName&gt;
-         &lt;/author&gt;
       &lt;/analytic&gt;
-      &lt;monogr source="#bibl-44 bibl-45"&gt;
+      &lt;monogr source="#bibl-44"&gt;
          &lt;title level="m"&gt;Strafrecht, Strafrechtsvergleichung&lt;/title&gt;
-         &lt;title level="j"&gt;MschrKrim&lt;/title&gt;
          &lt;editor&gt;
             &lt;persName&gt;
                &lt;surname&gt;Kaiser&lt;/surname&gt;
@@ -9141,28 +9032,13 @@
          &lt;/editor&gt;
          &lt;imprint&gt;
             &lt;date when="1975"&gt;1975&lt;/date&gt;
-            &lt;date when="1979"&gt;1979&lt;/date&gt;
          &lt;/imprint&gt;
-         &lt;biblScope unit="volume" from="62" to="62"&gt;62&lt;/biblScope&gt;
       &lt;/monogr&gt;
       &lt;citedRange unit="page" from="88" to="88"&gt;88&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-104"&gt;
-      &lt;analytic source="#bibl-53 bibl-54 bibl-55 bibl-56"&gt;
+      &lt;analytic source="#bibl-55"&gt;
          &lt;title level="a"&gt;Some Comments on Comparative Methodologies in Criminal Justice&lt;/title&gt;
-         &lt;title level="a"&gt;Comparative Law and Social Change - On the Origins, Style, Decline and Revival of
-                        the Law and Development Movement
-                    &lt;/title&gt;
-         &lt;author&gt;
-            &lt;persName&gt;
-               &lt;surname&gt;Smelser&lt;/surname&gt;
-            &lt;/persName&gt;
-         &lt;/author&gt;
-         &lt;author&gt;
-            &lt;persName&gt;
-               &lt;surname&gt;Kaiser&lt;/surname&gt;
-            &lt;/persName&gt;
-         &lt;/author&gt;
          &lt;author&gt;
             &lt;persName&gt;
                &lt;surname&gt;Blazicek&lt;/surname&gt;
@@ -9173,25 +9049,15 @@
                &lt;surname&gt;Janeksela&lt;/surname&gt;
             &lt;/persName&gt;
          &lt;/author&gt;
-         &lt;author&gt;
-            &lt;persName&gt;
-               &lt;surname&gt;Merryman&lt;/surname&gt;
-            &lt;/persName&gt;
-         &lt;/author&gt;
       &lt;/analytic&gt;
-      &lt;monogr source="#bibl-53 bibl-54 bibl-55 bibl-56"&gt;
+      &lt;monogr source="#bibl-55"&gt;
          &lt;title level="j"&gt;Int. J. Crim. Pen&lt;/title&gt;
-         &lt;title level="j"&gt;Am. J. Comp. L&lt;/title&gt;
          &lt;imprint&gt;
             &lt;date when="1978"&gt;1978&lt;/date&gt;
-            &lt;date when="1977"&gt;1977&lt;/date&gt;
          &lt;/imprint&gt;
          &lt;biblScope unit="volume" from="6" to="6"&gt;6&lt;/biblScope&gt;
          &lt;biblScope unit="page" from="233"&gt;233&lt;/biblScope&gt;
-         &lt;biblScope unit="volume" from="25" to="25"&gt;25&lt;/biblScope&gt;
-         &lt;biblScope unit="page" from="457"&gt;457&lt;/biblScope&gt;
       &lt;/monogr&gt;
-      &lt;ref type="footnote" n="22"&gt;oben N. 22&lt;/ref&gt;
       &lt;citedRange unit="page" from="235"&gt;235 f.&lt;/citedRange&gt;
       &lt;citedRange unit="page" from="242" to="242"&gt;242&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
@@ -9928,7 +9794,7 @@
          <fieldset class="block-no-description">
             <legend><a name="instance-67" href="#instance-67">instance-67</a></legend>
             <div id="input-instance-67" class="raw-text">67 Kutchinsky, „The Legal Consciousness“: A Survey of Research on Knowledge and Opinion
-               about Law, in: Podgdrecki/Kaupen/van Houtte/Vinke/Kutchinsky, Knowledge and Opinion
+               about Law, in: Podgórecki/Kaupen/van Houtte/Vinke/Kutchinsky, Knowledge and Opinion
                about Law (Bristol 1973) 101 (126).</div>
             <ul data-tabs="">
                <li><a href="#block-instance-67">Block</a></li>
@@ -9941,7 +9807,7 @@
                <pre><code>
 &lt;note type="footnote" n="67" place="bottom"&gt;
    &lt;label&gt;67&lt;/label&gt;
-   &lt;bibl&gt;Kutchinsky, „The Legal Consciousness“: A Survey of Research on Knowledge and Opinion about Law, in: Podgdrecki/Kaupen/van Houtte/Vinke/Kutchinsky, Knowledge and Opinion about Law (Bristol 1973) 101 (126).&lt;/bibl&gt;
+   &lt;bibl&gt;Kutchinsky, „The Legal Consciousness“: A Survey of Research on Knowledge and Opinion about Law, in: Podgórecki/Kaupen/van Houtte/Vinke/Kutchinsky, Knowledge and Opinion about Law (Bristol 1973) 101 (126).&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
             </div>
@@ -9959,7 +9825,7 @@
                     &lt;/title&gt;, in:
                     &lt;editor&gt;
          &lt;persName&gt;
-            &lt;surname&gt;Podgdrecki&lt;/surname&gt;
+            &lt;surname&gt;Podgórecki&lt;/surname&gt;
          &lt;/persName&gt;
       &lt;/editor&gt;/
                     &lt;editor&gt;
@@ -9969,8 +9835,7 @@
       &lt;/editor&gt;/
                     &lt;editor&gt;
          &lt;persName&gt;
-            &lt;forename type="first"&gt;van&lt;/forename&gt;
-            &lt;surname&gt;Houtte&lt;/surname&gt;
+            &lt;surname&gt;van Houtte&lt;/surname&gt;
          &lt;/persName&gt;
       &lt;/editor&gt;/
                     &lt;surname&gt;
@@ -10007,7 +9872,7 @@
          &lt;/author&gt;
          &lt;editor&gt;
             &lt;persName&gt;
-               &lt;surname&gt;Podgdrecki&lt;/surname&gt;
+               &lt;surname&gt;Podgórecki&lt;/surname&gt;
             &lt;/persName&gt;
          &lt;/editor&gt;
          &lt;editor&gt;
@@ -10049,7 +9914,7 @@
          &lt;title level="m"&gt;Knowledge and Opinion about Law&lt;/title&gt;
          &lt;editor&gt;
             &lt;persName&gt;
-               &lt;surname&gt;Podgdrecki&lt;/surname&gt;
+               &lt;surname&gt;Podgórecki&lt;/surname&gt;
             &lt;/persName&gt;
          &lt;/editor&gt;
          &lt;editor&gt;
@@ -10059,8 +9924,7 @@
          &lt;/editor&gt;
          &lt;editor&gt;
             &lt;persName&gt;
-               &lt;forename type="first"&gt;van&lt;/forename&gt;
-               &lt;surname&gt;Houtte&lt;/surname&gt;
+               &lt;surname&gt;van Houtte&lt;/surname&gt;
             &lt;/persName&gt;
          &lt;/editor&gt;
          &lt;imprint&gt;
@@ -10091,7 +9955,7 @@
          &lt;title level="m"&gt;Knowledge and Opinion about Law&lt;/title&gt;
          &lt;editor&gt;
             &lt;persName&gt;
-               &lt;surname&gt;Podgdrecki&lt;/surname&gt;
+               &lt;surname&gt;Podgórecki&lt;/surname&gt;
             &lt;/persName&gt;
          &lt;/editor&gt;
          &lt;editor&gt;
@@ -10101,8 +9965,7 @@
          &lt;/editor&gt;
          &lt;editor&gt;
             &lt;persName&gt;
-               &lt;forename type="first"&gt;van&lt;/forename&gt;
-               &lt;surname&gt;Houtte&lt;/surname&gt;
+               &lt;surname&gt;van Houtte&lt;/surname&gt;
             &lt;/persName&gt;
          &lt;/editor&gt;
          &lt;imprint&gt;
@@ -10119,7 +9982,7 @@
          </fieldset>
          <fieldset class="block-no-description">
             <legend><a name="instance-68" href="#instance-68">instance-68</a></legend>
-            <div id="input-instance-68" class="raw-text">68 Podgdrecki, Public Opinion on Law, in: Knowledge and Opinion about Law (vorige
+            <div id="input-instance-68" class="raw-text">68 Podgórecki, Public Opinion on Law, in: Knowledge and Opinion about Law (vorige
                N.) 65 (84 ff.).</div>
             <ul data-tabs="">
                <li><a href="#block-instance-68">Block</a></li>
@@ -10132,7 +9995,7 @@
                <pre><code>
 &lt;note type="footnote" n="68" place="bottom"&gt;
    &lt;label&gt;68&lt;/label&gt;
-   &lt;bibl&gt;Podgdrecki, Public Opinion on Law, in: Knowledge and Opinion about Law (vorige N.) 65 (84 ff.).&lt;/bibl&gt;
+   &lt;bibl&gt;Podgórecki, Public Opinion on Law, in: Knowledge and Opinion about Law (vorige N.) 65 (84 ff.).&lt;/bibl&gt;
 &lt;/note&gt;
 </code></pre>
             </div>
@@ -10143,12 +10006,12 @@
    &lt;bibl xml:id="bibl-113"&gt;
       &lt;author&gt;
          &lt;persName&gt;
-            &lt;surname&gt;Podgdrecki&lt;/surname&gt;
+            &lt;surname&gt;Podgórecki&lt;/surname&gt;
          &lt;/persName&gt;
       &lt;/author&gt;,
                     &lt;title level="a"&gt;Public Opinion on Law&lt;/title&gt;, in:
                     &lt;title level="m"&gt;Knowledge and Opinion about Law&lt;/title&gt;
-                    (&lt;ref type="footnote" n="-1"&gt;vorige N.&lt;/ref&gt;)
+                    (&lt;ref type="footnote" n="67"&gt;vorige N.&lt;/ref&gt;)
                     &lt;citedRange unit="page" from="65"&gt;65 (84 ff.)&lt;/citedRange&gt;
    &lt;/bibl&gt;.
           &lt;/note&gt;
@@ -10163,7 +10026,7 @@
          &lt;title level="m"&gt;Knowledge and Opinion about Law&lt;/title&gt;
          &lt;author&gt;
             &lt;persName&gt;
-               &lt;surname&gt;Podgdrecki&lt;/surname&gt;
+               &lt;surname&gt;Podgórecki&lt;/surname&gt;
             &lt;/persName&gt;
          &lt;/author&gt;
          &lt;imprint&gt;
@@ -10183,7 +10046,7 @@
          &lt;title level="a"&gt;Public Opinion on Law&lt;/title&gt;
          &lt;author&gt;
             &lt;persName&gt;
-               &lt;surname&gt;Podgdrecki&lt;/surname&gt;
+               &lt;surname&gt;Podgórecki&lt;/surname&gt;
             &lt;/persName&gt;
          &lt;/author&gt;
       &lt;/analytic&gt;
@@ -10191,7 +10054,7 @@
          &lt;title level="m"&gt;Knowledge and Opinion about Law&lt;/title&gt;
          &lt;imprint/&gt;
       &lt;/monogr&gt;
-      &lt;ref type="footnote" n="-1"&gt;vorige N.&lt;/ref&gt;
+      &lt;ref type="footnote" n="67"&gt;vorige N.&lt;/ref&gt;
       &lt;citedRange unit="page" from="65"&gt;65 (84 ff.)&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
@@ -10200,7 +10063,22 @@
             <div id="biblStruct-resolved-instance-68">
                <pre><code>
 &lt;listBibl&gt;
-   &lt;biblStruct source="#bibl-113"/&gt;
+   &lt;biblStruct source="#bibl-113"&gt;
+      &lt;analytic source="#bibl-113"&gt;
+         &lt;title level="a"&gt;Public Opinion on Law&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Podgórecki&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr source="#bibl-113"&gt;
+         &lt;title level="m"&gt;Knowledge and Opinion about Law&lt;/title&gt;
+         &lt;imprint/&gt;
+      &lt;/monogr&gt;
+      &lt;ref type="footnote" n="67"&gt;vorige N.&lt;/ref&gt;
+      &lt;citedRange unit="page" from="65"&gt;65 (84 ff.)&lt;/citedRange&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
             </div>
@@ -11014,21 +10892,6 @@
       &lt;citedRange unit="page" from="49"&gt;49 ff.&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-121"&gt;
-      &lt;monogr source="#bibl-90"&gt;
-         &lt;title level="m"&gt;Industrial Democracy in Europe&lt;/title&gt;
-         &lt;author&gt;
-            &lt;persName&gt;
-               &lt;forename type="first"&gt;IDE-International&lt;/forename&gt;
-               &lt;forename type="middle"&gt;Research&lt;/forename&gt;
-               &lt;surname&gt;Group&lt;/surname&gt;
-            &lt;/persName&gt;
-         &lt;/author&gt;
-         &lt;imprint&gt;
-            &lt;date when="1980"&gt;1980&lt;/date&gt;
-            &lt;pubPlace&gt;London&lt;/pubPlace&gt;
-            &lt;publisher&gt;Oxford University Press,&lt;/publisher&gt;
-         &lt;/imprint&gt;
-      &lt;/monogr&gt;
       &lt;citedRange unit="chapter" from="I" to="I"&gt;Chapter I&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
