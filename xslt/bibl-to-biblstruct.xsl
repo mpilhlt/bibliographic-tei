@@ -33,8 +33,9 @@
   <xsl:template match="tei:bibl" mode="resolved">
     <biblStruct source="#{@xml:id}">
       <!-- variables that can identify the reference if incomplete -->
-      <xsl:variable name="original-author-surnames" select="tei:author//tei:surname/text()"/>
-      <xsl:variable name="original-editor-surnames" select="tei:editor//tei:surname/text()"/>
+      <xsl:variable name="original-author-surnames" select="tei:author//tei:surname"/>
+      <xsl:variable name="original-editor-surnames" select="tei:editor//tei:surname"/>
+      <xsl:variable name="count-creators" select="count($original-author-surnames) + count($original-editor-surnames)" />
       <xsl:variable name="ref-target" select="tei:ref/@target" />
       <xsl:choose>
         
@@ -73,12 +74,21 @@
           </xsl:choose> 
         </xsl:when>
 
+        <!-- op.cit etc simply refers to the previous <bibl>, that might or might not be always correct 
+        <xsl:when test="not(exists(tei:ref[@type = 'footnote'])) and exists(tei:ref[@type = 'footnote'])">
+          <xsl:choose>
+            <xsl:when test="exists(tei:author) or exists(tei:editor)">
+              <xsl:variable name="creator-surname" select="(tei:author[1]//surname | tei:editor[1]//surname)[1]"/>
+              <xsl:variable name="bibl-node" select="preceding::tei:bibl[tei:surname[1][text() = $author]][1]" />
+            </xsl:when>
+          </xsl:choose>
+        </xsl:when>-->
+
         <!-- find the target <bibl> via the footnote number and the author -->
-        <xsl:when test="tei:ref[@type = 'footnote' and @n]">
+        <xsl:when test="exists(tei:ref[@type = 'footnote' and @n])">
           <!-- find the footnote node -->
           <xsl:variable name="footnote-num" select="tei:ref/@n" />
           <xsl:variable name="footnote-node" select="//tei:note[@n = $footnote-num and exists(.//tei:surname | .//tei:orgName)]"/>
-          <xsl:variable name="count-creators" select="count($original-author-surnames | $original-editor-surnames)" />
           <xsl:choose>
             <!-- <note type='footnote'> exists and we do not have author or editor -->
             <xsl:when test="exists($footnote-node) and $count-creators = 0">
@@ -98,15 +108,16 @@
             <xsl:when test="exists($footnote-node) and $count-creators > 0">
               <xsl:variable name="bibl-node-author" select="
               if (exists($original-author-surnames)) then 
-                $footnote-node//tei:bibl[deep-equal(tei:author//tei:surname/text(), $original-author-surnames)]
+                $footnote-node//tei:bibl[deep-equal(tei:author//tei:surname/text(), $original-author-surnames/text())] |
+                $footnote-node//tei:bibl[deep-equal(tei:editor//tei:surname/text(), $original-author-surnames/text())]
               else ()"/>
               <xsl:variable name="bibl-node-editor" select="
                 if (exists($original-editor-surnames)) then 
-                  $footnote-node//tei:bibl[deep-equal(tei:editor//tei:surname/text(), $original-editor-surnames)]
+                  $footnote-node//tei:bibl[deep-equal(tei:editor//tei:surname/text(), $original-editor-surnames/text())]
                 else ()"/>
               <xsl:variable name="role-and-name" select="
-                if (exists($bibl-node-author)) then concat('author(s) ', string-join($original-author-surnames,'/'))
-                else if (exists($bibl-node-editor)) then concat('editors(s) ', string-join($original-editor-surnames,'/'))
+                if (exists($bibl-node-author)) then concat('author(s) ', string-join($original-author-surnames/text(),'/'))
+                else if (exists($bibl-node-editor)) then concat('editors(s) ', string-join($original-editor-surnames/text(),'/'))
                 else ''"/>
               <xsl:variable name="bibl-node" select="
                 if (exists($bibl-node-author)) then $bibl-node-author
