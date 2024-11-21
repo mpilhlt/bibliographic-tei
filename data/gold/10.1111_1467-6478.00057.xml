@@ -382,6 +382,10 @@
         </output>
     </instance>
     <instance xml:id="instance-7">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Referenced footnote</h2>
+        <p>This footnote is being referenced from <a href="#instance-10">footnote 11</a>.</p>
+      ]]></description>
       <input type="raw"><![CDATA[7 U. Vogel, ‘Marriage and the Boundaries of Citizenship’ in The Condition of Citizenship, ed. B. van Steenbergen (1994) 75.]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="7" place="bottom">
@@ -573,7 +577,8 @@
     </instance>
     <instance xml:id="instance-10">
       <description content-type="text/html"><![CDATA[ 
-        <h2>Op.cit. with reference to footnote</h2>
+        <h2>Op.cit. with reference to previous footnote</h2>
+        <p>This footnote is referencing <a href="#instance-7">footnote 7</a>.</p>
       ]]></description> 
       <input type="raw"><![CDATA[11 Vogel, op. cit., n. 7, pp. 80–1.]]></input>
         <output type="block">
@@ -592,8 +597,8 @@
                         </persName>
                     </author>,
                     <ref type="previous-work">op. cit.</ref>,
-                    <ref type="footnote" n="8">n. 7</ref>,
-                    <citedRange unit="page" from="80" to="1">pp. 80–1</citedRange>.
+                    <ref type="footnote" n="7">n. 7</ref>,
+                    <citedRange unit="page" from="80" to="81">pp. 80–1</citedRange>.
                 </bibl>
           </note>
         </output>
