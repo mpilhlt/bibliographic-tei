@@ -305,16 +305,17 @@
         </output>
         <output type="bibl">
           <note xmlns="http://www.tei-c.org/ns/1.0" n="6" type="footnote" place="bottom">
-              <label>6</label>
+            <label>6</label>
             <bibl xml:id="bibl-16">
-                  <author>
-                      <persName>
-                          <surname>Carbonnier</surname>
-                        </persName>
-                    </author>
-                    <ref type="footnote" n="-1">(vorige N.)</ref>
-                    <ref type="previous-work">a.a.O.</ref>
-                </bibl>.
+              <author>
+                <persName>
+                  <surname>Carbonnier</surname>
+                </persName>
+              </author>
+              <!-- infer footnote number from "previous note" -->
+              <ref type="footnote" n="5">(vorige N.)</ref>
+              <ref type="previous-work">a.a.O.</ref>
+            </bibl>.
           </note>
         </output>
         <output type="biblStruct">
@@ -4531,11 +4532,11 @@
         </output>
     </instance>
     <instance xml:id="instance-67">
-      <input type="raw"><![CDATA[67 Kutchinsky, „The Legal Consciousness“: A Survey of Research on Knowledge and Opinion about Law, in: Podgdrecki/Kaupen/van Houtte/Vinke/Kutchinsky, Knowledge and Opinion about Law (Bristol 1973) 101 (126).]]></input>
+      <input type="raw"><![CDATA[67 Kutchinsky, „The Legal Consciousness“: A Survey of Research on Knowledge and Opinion about Law, in: Podgórecki/Kaupen/van Houtte/Vinke/Kutchinsky, Knowledge and Opinion about Law (Bristol 1973) 101 (126).]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="67" place="bottom">
             <label>67</label>
-            <bibl>Kutchinsky, „The Legal Consciousness“: A Survey of Research on Knowledge and Opinion about Law, in: Podgdrecki/Kaupen/van Houtte/Vinke/Kutchinsky, Knowledge and Opinion about Law (Bristol 1973) 101 (126).</bibl>
+            <bibl>Kutchinsky, „The Legal Consciousness“: A Survey of Research on Knowledge and Opinion about Law, in: Podgórecki/Kaupen/van Houtte/Vinke/Kutchinsky, Knowledge and Opinion about Law (Bristol 1973) 101 (126).</bibl>
           </note>
         </output>
         <output type="bibl">
@@ -4551,7 +4552,7 @@
                     </title>, in:
                     <editor>
                       <persName>
-                          <surname>Podgdrecki</surname>
+                          <surname>Podgórecki</surname>
                         </persName>
                     </editor>/
                     <editor>
@@ -4561,8 +4562,7 @@
                     </editor>/
                     <editor>
                       <persName>
-                          <forename type="first">van</forename>
-                            <surname>Houtte</surname>
+                          <surname>van Houtte</surname>
                         </persName>
                     </editor>/
                     <surname>
@@ -4597,7 +4597,7 @@
                         </author>
                         <editor>
                           <persName>
-                              <surname>Podgdrecki</surname>
+                              <surname>Podgórecki</surname>
                             </persName>
                         </editor>
                         <editor>
@@ -4623,11 +4623,11 @@
         </output>
     </instance>
     <instance xml:id="instance-68">
-      <input type="raw"><![CDATA[68 Podgdrecki, Public Opinion on Law, in: Knowledge and Opinion about Law (vorige N.) 65 (84 ff.).]]></input>
+      <input type="raw"><![CDATA[68 Podgórecki, Public Opinion on Law, in: Knowledge and Opinion about Law (vorige N.) 65 (84 ff.).]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="68" place="bottom">
             <label>68</label>
-            <bibl>Podgdrecki, Public Opinion on Law, in: Knowledge and Opinion about Law (vorige N.) 65 (84 ff.).</bibl>
+            <bibl>Podgórecki, Public Opinion on Law, in: Knowledge and Opinion about Law (vorige N.) 65 (84 ff.).</bibl>
           </note>
         </output>
         <output type="bibl">
@@ -4636,12 +4636,12 @@
             <bibl xml:id="bibl-113">
                   <author>
                       <persName>
-                          <surname>Podgdrecki</surname>
+                          <surname>Podgórecki</surname>
                         </persName>
                     </author>,
                     <title level="a">Public Opinion on Law</title>, in:
                     <title level="m">Knowledge and Opinion about Law</title>
-                    (<ref type="footnote" n="-1">vorige N.</ref>)
+                    (<ref type="footnote" n="67">vorige N.</ref>)
                     <citedRange unit="page" from="65">65 (84 ff.)</citedRange>
                 </bibl>.
           </note>
@@ -4654,7 +4654,7 @@
                         <title level="m">Knowledge and Opinion about Law</title>
                         <author>
                           <persName>
-                              <surname>Podgdrecki</surname>
+                              <surname>Podgórecki</surname>
                             </persName>
                         </author>
                         <imprint><date/></imprint>

@@ -1339,49 +1339,43 @@
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="24" place="bottom">
             <label>24</label>
             <bibl>M. Freeman, ‘Contracting in the Haven: Balfour v. Balfour Revisited’ in Exploring the Boundaries of Contract, ed. R. Halson (1996) 74</bibl>
-            <bibl>R. Collier, Masculinity, Law and the Family (1995) 127 and throughout.</bibl> See Collier further for a comprehensive study of sexuality in marriage.</note>
+            <bibl>R. Collier, Masculinity, Law and the Family (1995) 127 and throughout.</bibl>
+            <seg>See Collier further for a comprehensive study of sexuality in marriage.</seg>
+          </note>
         </output>
         <output type="bibl">
           <note xmlns="http://www.tei-c.org/ns/1.0" n="24" type="footnote" place="bottom">
-              <label>24</label>
+            <label>24</label>
             <bibl xml:id="bibl-35">
-                  <author>
-                      <persName>
-                          <forename>M.</forename>
-                            <surname>Freeman</surname>
-                        </persName>
-                    </author>,
-                    ‘<title level="a">Contracting in the Haven: Balfour v. Balfour Revisited</title>’ in
-                    <title level="m">Exploring the Boundaries of Contract</title>, ed.
-                    <editor>
-                      <persName>
-                          <forename>R.</forename>
-                            <surname>Halson</surname>
-                        </persName>
-                    </editor>
-                    (<date when="1996">1996</date>)
-                    <biblScope unit="page" from="74">74</biblScope>
-                </bibl>
-                <bibl xml:id="bibl-36">
-                  <author>
-                      <persName>
-                          <forename>R.</forename>
-                            <surname>Collier</surname>
-                        </persName>
-                    </author>,
-                    <title level="a">Masculinity, Law and the Family</title>
-                    (<date when="1995">1995</date>)
-                    <citedRange unit="page" from="127">127 and throughout</citedRange>.
-                </bibl>
-                <note type="signal">See</note>
-                <bibl xml:id="bibl-37">
-                  <author>
-                      <persName>
-                          <surname>Collier</surname>
-                        </persName>
-                    </author>
-                </bibl>
-                <note type="comment">further for a comprehensive study of sexuality in marriage.</note>
+              <author>
+                <persName>
+                    <forename>M.</forename>
+                    <surname>Freeman</surname>
+                </persName>
+              </author>,
+              ‘<title level="a">Contracting in the Haven: Balfour v. Balfour Revisited</title>’ in
+              <title level="m">Exploring the Boundaries of Contract</title>, ed.
+              <editor>
+                <persName>
+                    <forename>R.</forename>
+                    <surname>Halson</surname>
+                </persName>
+              </editor>
+              (<date when="1996">1996</date>)
+              <biblScope unit="page" from="74">74</biblScope>
+            </bibl>
+            <bibl xml:id="bibl-36">
+              <author>
+                <persName>
+                    <forename>R.</forename>
+                    <surname>Collier</surname>
+                </persName>
+              </author>,
+              <title level="a">Masculinity, Law and the Family</title>
+              (<date when="1995">1995</date>)
+              <citedRange unit="page" from="127">127 and throughout</citedRange>.
+            </bibl>
+            <note type="comment">See Collier further for a comprehensive study of sexuality in marriage.</note>
           </note>
         </output>
         <output type="biblStruct">
@@ -1392,8 +1386,8 @@
                         <author>
                           <persName>
                               <forename>M.</forename>
-                                <surname>Freeman</surname>
-                            </persName>
+                              <surname>Freeman</surname>
+                          </persName>
                         </author>
                     </analytic>
                     <monogr>
@@ -1401,8 +1395,8 @@
                         <editor>
                           <persName>
                               <forename>R.</forename>
-                                <surname>Halson</surname>
-                            </persName>
+                              <surname>Halson</surname>
+                          </persName>
                         </editor>
                         <imprint>
                           <date when="1996">1996</date>
@@ -1426,17 +1420,6 @@
                         </imprint>
                     </monogr>
                 <citedRange unit="page" from="127">127 and throughout</citedRange>
-                </biblStruct>
-                <biblStruct>
-                  <monogr>
-                    <title/>
-                      <author>
-                          <persName>
-                              <surname>Collier</surname>
-                            </persName>
-                        </author>
-                        <imprint><date/></imprint>
-                    </monogr>
                 </biblStruct>
             </listBibl>
         </output>
@@ -1753,11 +1736,11 @@
       <description content-type="text/html"><![CDATA[ 
         <h2>Op. cit. with comment and reference</h2>
       ]]></description>   
-      <input type="raw"><![CDATA[30 Freeman, op. cit., n. 24. While acknowledging the trends towards contractualism and private ordering, Regan cautions against it, noting that greater freedom to contract invites greater scrutiny by the courts. More significantly, however, he would rather reclaim the idea of status by injecting it with new notions of responsibility andrelationality, as well as divesting it of its sexist assumptions. See M.C. Regan ., Family Law and the Pursuit of Intimacy (1993).]]></input>
+      <input type="raw"><![CDATA[30 Freeman, op. cit., n. 24. While acknowledging the trends towards contractualism and private ordering, Regan cautions against it, noting that greater freedom to contract invites greater scrutiny by the courts. More significantly, however, he would rather reclaim the idea of status by injecting it with new notions of responsibility andrelationality, as well as divesting it of its sexist assumptions. See M.C. Regan, Family Law and the Pursuit of Intimacy (1993).]]></input>
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="30" place="bottom">
             <label>30</label>
-            <bibl>Freeman, op. cit., n. 24.</bibl> While acknowledging the trends towards contractualism and private ordering, Regan cautions against it, noting that greater freedom to contract invites greater scrutiny by the courts. More significantly, however, he would rather reclaim the idea of status by injecting it with new notions of responsibility andrelationality, as well as divesting it of its sexist assumptions. See <bibl>M.C. Regan ., Family Law and the Pursuit of Intimacy (1993).</bibl>
+            <bibl>Freeman, op. cit., n. 24.</bibl> While acknowledging the trends towards contractualism and private ordering, Regan cautions against it, noting that greater freedom to contract invites greater scrutiny by the courts. More significantly, however, he would rather reclaim the idea of status by injecting it with new notions of responsibility andrelationality, as well as divesting it of its sexist assumptions. See <bibl>M.C. Regan, Family Law and the Pursuit of Intimacy (1993).</bibl>
           </note>
         </output>
         <output type="bibl">
@@ -1786,7 +1769,7 @@
                   <forename>M.C.</forename>
                     <surname>Regan</surname>
                 </persName>
-              </author>.,
+              </author>,
               <title level="m">Family Law and the Pursuit of Intimacy</title>
               (<date when="1993">1993</date>).
             </bibl>
@@ -1902,25 +1885,25 @@
           <note xmlns="http://www.tei-c.org/ns/1.0" n="32" type="footnote" place="bottom">
               <label>32</label>
             <bibl xml:id="bibl-53">
-                  <author>
-                      <persName>
-                          <forename>G.S.</forename>
-                            <surname>Frost</surname>
-                        </persName>
-                    </author>,
-                    <title level="m">Promises Broken: Courtship, Class, and Gender in Victorian England</title>
-                    (<date when="1995">1995</date>)
-                </bibl>;
-                <bibl xml:id="bibl-54">
-                  <author>
-                      <persName>
-                          <surname>Thornton</surname>
-                        </persName>
-                    </author>,
-                    <ref type="previous-work">op. cit.</ref>
-                    (<date when="1996">1996</date>),
-                    <ref type="footnote" n="4">n. 4</ref>
-                </bibl>.
+              <author>
+                  <persName>
+                    <forename>G.S.</forename>
+                    <surname>Frost</surname>
+                  </persName>
+                </author>,
+                <title level="m">Promises Broken: Courtship, Class, and Gender in Victorian England</title>
+                (<date when="1995">1995</date>)
+            </bibl>;
+            <bibl xml:id="bibl-54">
+              <author>
+                <persName>
+                  <surname>Thornton</surname>
+                </persName>
+              </author>,
+              <ref type="previous-work">op. cit.</ref>
+              (<date when="1996">1996</date>),
+              <ref type="footnote" n="4">n. 4</ref>
+            </bibl>.
           </note>
         </output>
         <output type="biblStruct">
@@ -4410,8 +4393,8 @@
           <note xmlns="http://www.tei-c.org/ns/1.0" n="78" type="footnote" place="bottom">
               <label>78</label>
             <bibl xml:id="bibl-122">
-                  <ref type="footnote" n="30">Above, n. 30</ref>.
-                </bibl>
+              <ref type="footnote" n="30">Above, n. 30</ref>.
+            </bibl>
           </note>
         </output>
         <output type="biblStruct">

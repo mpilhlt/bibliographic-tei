@@ -577,76 +577,79 @@ xsi:schemaLocation="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore ../../schema/x
         <output type="block">
           <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="12" place="bottom">
             <label>12</label>
-            <bibl>Committee of Inquiry into Higher Education, Higher Education in the learning society (1997) (</bibl>the Dearing report); <bibl>ACLEC, First Report on Legal Education and Training (1996).</bibl> The Government’s White Paper on further and higher education had not been published at the time of writing this essay.</note>
+            <bibl>Committee of Inquiry into Higher Education, Higher Education in the learning society (1997) (the Dearing report);</bibl>
+            <bibl>ACLEC, First Report on Legal Education and Training (1996).</bibl>
+            <seg>The Government’s White Paper on further and higher education had not been published at the time of writing this essay.</seg>
+          </note>
         </output>
         <output type="bibl">
           <note xmlns="http://www.tei-c.org/ns/1.0" n="12" type="footnote" place="bottom">
-              <label>12</label>
+            <label>12</label>
             <bibl xml:id="bibl-14">
-                  <author>
-                      <orgName>Committee of Inquiry into Higher Education</orgName>
-                    </author>,
-                    <title level="m">Higher Education in the learning society</title>
-                    (<date when="1997">1997</date>)
-                    (</bibl>
-                <note type="comment">the Dearing report</note>);
-                <bibl xml:id="bibl-15">
-                  <author>
-                      <orgName>ACLEC</orgName>
-                    </author>,
-                    <title level="m">First Report on Legal Education and Training</title>
-                    (<date when="1996">1996</date>).
-                    </bibl>
-                <note type="comment">The Government’s White Paper on further and higher education had not been
-                        published at the time of writing this essay.
-                  </note>
+              <author>
+                <orgName>Committee of Inquiry into Higher Education</orgName>
+              </author>,
+              <title level="m">Higher Education in the learning society</title>
+              (<date when="1997">1997</date>)
+              (<note type="comment">the Dearing report</note>);
+            </bibl>
+            <bibl xml:id="bibl-15">
+              <author>
+                  <orgName>ACLEC</orgName>
+              </author>,
+              <title level="m">First Report on Legal Education and Training</title>
+              (<date when="1996">1996</date>).
+            </bibl>
+            <note type="comment">The Government’s White Paper on further and higher education had not been
+                    published at the time of writing this essay.
+            </note>
           </note>
         </output>
         <output type="biblStruct">
           <listBibl xmlns="http://www.tei-c.org/ns/1.0">
-              <biblStruct>
-                  <monogr>
-                      <title level="m">Higher Education in the learning society</title>
-                        <author>
-                          <orgName>Committee of Inquiry into Higher Education</orgName>
-                        </author>
-                        <imprint>
-                          <date when="1997">1997</date>
-                        </imprint>
-                    </monogr>
-                </biblStruct>
-                <biblStruct>
-                  <monogr>
-                      <title level="m">First Report on Legal Education and Training</title>
-                        <author>
-                          <orgName>ACLEC</orgName>
-                        </author>
-                        <imprint>
-                          <date when="1996">1996</date>
-                        </imprint>
-                    </monogr>
-                </biblStruct>
-            </listBibl>
-        </output>
+            <biblStruct>
+              <monogr>
+                <title level="m">Higher Education in the learning society</title>
+                <author>
+                  <orgName>Committee of Inquiry into Higher Education</orgName>
+                </author>
+                <imprint>
+                  <date when="1997">1997</date>
+                </imprint>
+              </monogr>
+          </biblStruct>
+          <biblStruct>
+            <monogr>
+              <title level="m">First Report on Legal Education and Training</title>
+              <author>
+                <orgName>ACLEC</orgName>
+              </author>
+              <imprint>
+                <date when="1996">1996</date>
+              </imprint>
+            </monogr>
+          </biblStruct>
+        </listBibl>
+      </output>
     </instance>
     <instance xml:id="instance-11">
-      <input type="raw"><![CDATA[12 ACLEC, id., para 4.6.]]></input>
+      <input type="raw"><![CDATA[13 ACLEC, id., para 4.6.]]></input>
         <output type="block">
-          <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="12" place="bottom">
-            <label>12</label>
+          <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="13" place="bottom">
+            <label>13</label>
             <bibl>ACLEC, id., para 4.6.</bibl>
           </note>
         </output>
         <output type="bibl">
-          <note xmlns="http://www.tei-c.org/ns/1.0" n="12" type="footnote" place="bottom">
-              <label>12</label>
-           <bibl xml:id="bibl-16">
-                  <author>
-                      <orgName>ACLEC</orgName>
-                    </author>,
-                    <ref type="previous-work">id.</ref>,
-                    <citedRange unit="para" from="4.6">para 4.6</citedRange>.
-                </bibl>
+          <note xmlns="http://www.tei-c.org/ns/1.0" type="footnote" n="13" place="bottom">
+            <label>13</label>
+            <bibl xml:id="bibl-16">
+              <author>
+                  <orgName>ACLEC</orgName>
+              </author>,
+              <ref type="previous-work">id.</ref>,
+              <citedRange unit="para" from="4.6">para 4.6</citedRange>.
+            </bibl>
           </note>
         </output>
         <output type="biblStruct">
