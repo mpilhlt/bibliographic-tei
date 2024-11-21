@@ -21,6 +21,7 @@
 
   <!-- Match <llm:dataset> and process its children -->
   <xsl:template match="llm:dataset">
+    <xsl:message>Processing <xsl:value-of select="base-uri(/)"/></xsl:message>
     
     <html lang="en">
       <head>
