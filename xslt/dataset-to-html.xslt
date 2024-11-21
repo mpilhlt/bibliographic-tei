@@ -9,6 +9,9 @@
   <!-- taken from https://github.com/OpenArabicPE/convert_tei-to-bibliographic-data -->
   <xsl:import href="bibl-to-biblstruct.xsl" />
 
+  <!-- you can pass `-param verbose yes` to the saxon cli command to get more verbose output -->
+  <xsl:param name="verbose" select="'off'"/> 
+
   <!-- output html -->
   <xsl:output method="html" indent="yes" encoding="UTF-8"
     doctype-public="-//W3C//DTD HTML5//EN" doctype-system="http://www.w3.org/TR/html5/html.html" />
@@ -18,6 +21,7 @@
 
   <!-- Match <llm:dataset> and process its children -->
   <xsl:template match="llm:dataset">
+    
     <html lang="en">
       <head>
         <title>Dataset</title>
