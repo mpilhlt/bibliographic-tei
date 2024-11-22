@@ -225,7 +225,10 @@
 
     <!-- Serialize the node with pretty-printing enabled -->
     <xsl:variable name="serialized"
-      select="serialize($node, map {'method': 'xml', 'indent': false()})" />
+      select="serialize($node, map {
+        'method': 'xml', 
+        'indent': if ($node/self::tei:note) then false() else true()
+      })" />
 
     <!-- Replace whitespace before a opening characters -->
     <xsl:variable name="whitespace-fixes" 
@@ -249,6 +252,7 @@
     <!-- Output the final formatted and pretty-printed XML -->
     <xsl:value-of select="$de-indented" />
   </xsl:template>
+
 
   <!-- function to recursively search/replace as long as a certain regular expression matches or
   does not match -->
