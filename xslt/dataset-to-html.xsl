@@ -4,10 +4,9 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:tei="http://www.tei-c.org/ns/1.0">
 
-  <!-- this stylesheet generates a TEI/XML bibliography from all <bibl> elements found in the text
-  of a TEI/XML document -->
-  <!-- taken from https://github.com/OpenArabicPE/convert_tei-to-bibliographic-data -->
-  <xsl:import href="bibl-to-biblstruct.xsl" />
+  <!-- this stylesheet generates a set of static sites to view and analyze the gold standard files -->
+
+  <xsl:import href="bibl-to-resolved-biblstruct.xsl" />
 
   <!-- you can pass `-param verbose yes` to the saxon cli command to get more verbose output -->
   <xsl:param name="verbose" select="'off'"/> 
