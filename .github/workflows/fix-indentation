@@ -8,15 +8,12 @@ for xml_file in data/gold/*.xml; do
     docker run --rm -i -u $(id -u) --volume "${PWD}:/src" --platform=linux/amd64/v8 klakegg/saxon:he xslt \
         -s:$xml_file \
         -xsl:xslt/fix-indentation.xsl \
-        -o:docs/$base_name.xml \
+        -o:docs/gold/$base_name.xml \
         $1
 
     if [ $? -ne 0 ]; then
         echo "Error: Saxon failed for $xml_file. Aborting script."
         exit 1
     fi
-
-    sed -i 's|(\s+)(</.+?>)(.*?)(<.+?>)|$1$2$3\n$1$4|g' docs/$base_name.xml
-    #sed -i 's|(\s+)(</.+?>)(.*?)(<.+?>)|$1$2$3\n$1$4|g' docs/$base_name.xml
 
 done

@@ -1,73 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet 
-  version="2.0" 
+<xsl:stylesheet version="2.0"
+  xmlns:ns="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:llam="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore" 
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  xmlns:tei="http://www.tei-c.org/ns/1.0">
+    
+    <xsl:output method="xml"
+      omit-xml-declaration="yes" indent="no" 
+      cdata-section-elements="input description"/>
 
-  <xsl:output  method="xml" indent="yes"/>
+    <xsl:strip-space elements="*"/>
 
-  <xsl:strip-space elements="*"/>
+    <xsl:template match="/">
+        <!-- Manually create the root element with the target namespace -->
+        <xsl:element name="dataset" namespace="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore">
+            <xsl:copy-of select="/*/@*"/>
+            <xsl:apply-templates select="/*/node()"/>
+        </xsl:element>
+    </xsl:template>    
 
-  <!-- Template for the root node -->
-  <xsl:template match="/">
-    <xsl:apply-templates/>
-  </xsl:template>
+    <xsl:template match="*">
+        <xsl:param name="indent" select="'  '" />
+        <xsl:text>&#10;</xsl:text>
+        <xsl:value-of select="$indent"/>
+        
+        <!-- Get the namespace of the current element -->
+        <xsl:variable name="namespace" select="namespace-uri()"/>
+        
+        <!-- Create a new element with the same name and namespace -->
+        <xsl:element name="{name()}" namespace="{$namespace}">
+            <xsl:copy-of select="@*"/>  <!-- Copy attributes -->
+            
+            <!-- Apply templates to child nodes, passing the updated indent -->
+            <xsl:apply-templates>
+                <xsl:with-param name="indent" select="concat($indent, '  ')"/>
+            </xsl:apply-templates>
+            
+            <!-- If there are child elements, print a newline and indent again -->
+            <xsl:if test="*">
+                <xsl:text>&#10;</xsl:text>
+                <xsl:value-of select="$indent"/>
+            </xsl:if>
+        </xsl:element>
+    </xsl:template>    
 
-  <!-- Template for elements -->
-  <xsl:template match="*">
-    <xsl:element name="{name()}">
-      <xsl:copy-of select="@*"/>
-      <xsl:apply-templates select="node()"/>
-    </xsl:element>
-  </xsl:template>
+    <xsl:template match="text()">
+        <!-- Normalize the text -->
+        <xsl:variable name="normalized" select="normalize-space()" />
+        
+        <!-- Replace whitespace before a opening characters -->
+        <xsl:variable name="formatted" 
+            select="replace($normalized, '(\p{Pi}|\p{Ps})\n(\s*)', '&#10;$2$1')" />
+        
+        <!-- Output the processed result -->
+        <xsl:value-of select="$formatted" />
+    </xsl:template>
+    
 
-  <!-- make sure to have the TEI namespace in the root element -->
-  <xsl:template match="llam:dataset">
-    <xsl:copy>
-        <xsl:namespace name="tei" select="'http://www.tei-c.org/ns/1.0'"/>
-        <xsl:apply-templates select="@*|node()"/>
-    </xsl:copy>
-  </xsl:template>
-
-  <xsl:template match="llam:description">
-    <xsl:copy>
-      <xsl:apply-templates/>
-    </xsl:copy>
-  </xsl:template>
-
-  <!-- Preserve inline mixed content without splitting -->
-  <xsl:template match="*[text() and node()]">
-    <xsl:element name="{name()}">
-      <xsl:copy-of select="@*"/>
-      <xsl:for-each select="node()">
-        <xsl:choose>
-          <xsl:when test="self::text()">
-            <xsl:value-of select="normalize-space(.)" disable-output-escaping="yes"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:apply-templates select="."/>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:for-each>
-    </xsl:element>
-  </xsl:template>
-
-  <!-- Template to handle comments -->
-  <xsl:template match="comment()">
-    <xsl:comment>
-      <xsl:value-of select="."/>
-    </xsl:comment>
-  </xsl:template>
-
-  <!-- Template to handle processing instructions -->
-  <xsl:template match="processing-instruction()">
-    <xsl:processing-instruction name="{name()}">
-      <xsl:value-of select="."/>
-    </xsl:processing-instruction>
-  </xsl:template>
-
-  <!-- Handle pure text nodes -->
-  <xsl:template match="text()">
-    <xsl:value-of select="normalize-space(.)" disable-output-escaping="yes"/>
-  </xsl:template>
 </xsl:stylesheet>

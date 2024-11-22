@@ -225,17 +225,21 @@
 
     <!-- Serialize the node with pretty-printing enabled -->
     <xsl:variable name="serialized"
-      select="serialize($node, map {'method': 'xml', 'indent': true()})" />
+      select="serialize($node, map {'method': 'xml', 'indent': false()})" />
+
+    <!-- Replace whitespace before a opening characters -->
+    <xsl:variable name="whitespace-fixes" 
+        select="replace($serialized, '(\p{Pi}|\p{Ps})\n(\s*)', '&#10;$2$1')" />
 
     <!-- Post-process to remove indentation of attributes -->
     <xsl:variable
-      name="attributes-fixed"
-      select="replace($serialized, '[\n\r]+\s+([^\s&lt;]+=&quot;.+?&quot;)', ' $1')" />
+      name="attribute-fixes"
+      select="replace($whitespace-fixes, '[\n\r]+\s+([^\s&lt;]+=&quot;.+?&quot;)', ' $1')" />
 
     <!-- Remove namespace expressions -->
     <xsl:variable
       name="namespace-stripped"
-      select="replace($attributes-fixed, ' xmlns(:\w+)?=&quot;[^&quot;]*&quot;', '')" />
+      select="replace($attribute-fixes, ' xmlns(:\w+)?=&quot;[^&quot;]*&quot;', '')" />
 
     <!-- De-indent -->
     <xsl:variable

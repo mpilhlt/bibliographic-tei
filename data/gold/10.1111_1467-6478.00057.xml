@@ -1,7 +1,6 @@
 <dataset xmlns="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore" 
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-          xsi:schemaLocation="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore ../../schema/xsd/dataset.xsd
-                       http://www.tei-c.org/ns/1.0 ../../schema/xsd/document.xsd">
+          xsi:schemaLocation="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore ../../schema/xsd/dataset.xsd http://www.tei-c.org/ns/1.0 ../../schema/xsd/document.xsd">
   <description content-type="text/html"><![CDATA[ 
     <h1>English-language socio-legal article with endnotes</h1>
     <p>Source: Thornton, M. (1997) ‘The Judicial Gendering of Citizenship: A Look at Property Interests During Marriage’, Journal of Law and Society, 24(4), pp. 486–503,

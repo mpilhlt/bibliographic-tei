@@ -1,4 +1,4 @@
-name: XSLT Transformation
+name: Generate static html pages to view the gold standard
 
 on:
   push:
@@ -20,6 +20,9 @@ jobs:
     steps:
     - name: Check out source code
       uses: actions/checkout@v2
+
+    - name: Fix indentation of gold files
+      run: /bin/bash .github/workflows/fix-indentation
 
     - name: Transform XML files
       run: /bin/bash .github/workflows/transform-files
