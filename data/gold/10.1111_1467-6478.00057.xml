@@ -2,13 +2,11 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
           xsi:schemaLocation="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore ../../schema/xsd/dataset.xsd
                        http://www.tei-c.org/ns/1.0 ../../schema/xsd/document.xsd">
-
   <description content-type="text/html"><![CDATA[ 
     <h1>English-language socio-legal article with endnotes</h1>
     <p>Source: Thornton, M. (1997) ‘The Judicial Gendering of Citizenship: A Look at Property Interests During Marriage’, Journal of Law and Society, 24(4), pp. 486–503,
      DOI <a href="https://doi.org/10.1111/1467-6478.00057">10.1111/1467-6478.00057</a></p>
   ]]></description>
-
   <instance xml:id="instance-1">
     <description content-type="text/html"><![CDATA[ 
       <h2>Chapter in edited volume</h2>
@@ -347,9 +345,7 @@
                     <title level="m">The Metaphysics of Morals</title>
                     (<respStmt>
                       <resp>trans.</resp>
-                        <persName role="translator">
-                            M. Gregor
-                        </persName>
+                        <persName role="translator">M. Gregor</persName>
                     </respStmt>,
                     <date when="1991">1991</date>)
                     <biblScope unit="page" from="125" to="126">125–6</biblScope>
@@ -397,23 +393,23 @@
           <note xmlns="http://www.tei-c.org/ns/1.0" n="7" type="footnote" place="bottom">
             <label>7</label>
             <bibl xml:id="bibl-8">
-                <author>
-                    <persName>
-                        <forename>U.</forename>
-                          <surname>Vogel</surname>
-                      </persName>
-                  </author>,
-                  ‘<title level="a">Marriage and the Boundaries of Citizenship</title>’ in
-                  <title level="m">The Condition of Citizenship</title>, ed.
-                  <editor>
-                    <persName>
-                        <forename>B.</forename>
-                          <surname>van Steenbergen</surname>
-                      </persName>
-                  </editor>
-                  (<date when="1994">1994</date>)
-                  <biblScope unit="page" from="75">75</biblScope>.
-              </bibl>
+              <author>
+                <persName>
+                    <forename>U.</forename>
+                    <surname>Vogel</surname>
+                </persName>
+              </author>,
+              ‘<title level="a">Marriage and the Boundaries of Citizenship</title>’ in
+              <title level="m">The Condition of Citizenship</title>, ed.
+              <editor>
+                <persName>
+                    <forename>B.</forename>
+                    <surname>van Steenbergen</surname>
+                </persName>
+              </editor>
+              (<date when="1994">1994</date>)
+              <biblScope unit="page" from="75">75</biblScope>.
+            </bibl>
           </note>
         </output>
         <output type="biblStruct">
