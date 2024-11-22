@@ -7,7 +7,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <!-- 
-    Convert a <tei:bibl> to a <tei:biblStruct>, optionally resolving <ref> references 
+    Convert a <tei:bibl> to a <tei:biblStruct>
     some code is originally from https://github.com/OpenArabicPE/convert_tei-to-bibliographic-data/blob/master/xslt/convert_tei-to-zotero-rdf_functions.xsl
   -->
 
