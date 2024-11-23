@@ -11,7 +11,7 @@
     some code is originally from https://github.com/OpenArabicPE/convert_tei-to-bibliographic-data/blob/master/xslt/convert_tei-to-zotero-rdf_functions.xsl
   -->
 
-  <!-- configure HTML output-->
+  <!-- configure output-->
   <xsl:output encoding="UTF-8" indent="yes" method="xml" name="xml" omit-xml-declaration="no" version="1.0"/>
 
   <!-- Default behavior is unresolved -->

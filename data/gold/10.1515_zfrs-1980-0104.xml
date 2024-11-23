@@ -1,9 +1,13 @@
-<dataset xmlns="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore ../../schema/xsd/dataset.xsd                       http://www.tei-c.org/ns/1.0 ../../schema/xsd/document.xsd">
-
+<dataset 
+  xmlns="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore ../../schema/xsd/dataset.xsd http://www.tei-c.org/ns/1.0 ../../schema/xsd/document.xsd"
+  source="https://doi.org/10.1515/zfrs-1980-0104">
+  <title>German-language socio-legal article with references in the footnotes only</title>
   <description content-type="text/html"><![CDATA[ 
-    <h1>German-language socio-legal article with references in the footnotes only</h1>
-  ]]></description>
-
+    <p>Source: Martiny, D. (1980) ‘Rechtsvergleichung und vergleichende Rechtssoziologie’, 
+    Zeitschrift für Rechtssoziologie, 1(1), pp. 65–84.  DOI 10.1515/zfrs-1980-0104.</p>
+    ]]></description>
   <instance xml:id="instance-1">
     <input type="raw"><![CDATA[1 Siehe näher Zweigert/Kötz I 12 ff.]]></input>
     <output type="block">

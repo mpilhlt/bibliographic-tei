@@ -12,7 +12,7 @@
 
   <xsl:import href="bibl-to-biblstruct.xsl" />
 
-  <!-- configure HTML output-->
+  <!-- configure output-->
   <xsl:output encoding="UTF-8" indent="yes" method="xml" name="xml" omit-xml-declaration="no" version="1.0"/>
 
   <!-- resolve incomplete references, adding information from the referenced elements -->

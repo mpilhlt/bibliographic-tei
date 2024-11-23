@@ -9,11 +9,40 @@
     <xsd:import namespace="http://www.tei-c.org/ns/1.0" schemaLocation="document.xsd" />
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd" />
 
+    <xsd:element name="dataset">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="llamore:title" minOccurs="0" maxOccurs="1" />    
+                <xsd:element ref="llamore:description" minOccurs="0" maxOccurs="1" />            
+                <xsd:element name="instance" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element ref="llamore:description" minOccurs="0" maxOccurs="1" />
+                            <xsd:element ref="llamore:input" minOccurs="1" maxOccurs="1" />
+                            <xsd:element ref="llamore:output" minOccurs="1" maxOccurs="unbounded" />
+                        </xsd:sequence>
+                        <xsd:attribute ref="xml:id" />
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="source" type="xsd:string" />
+        </xsd:complexType>
+    </xsd:element>
+
     <xsd:element name="description">
         <xsd:complexType>
             <xsd:simpleContent>
                 <xsd:extension base="xsd:string">
                     <xsd:attribute name="content-type" type="xsd:string" fixed="text/html" />
+                </xsd:extension>
+            </xsd:simpleContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="title">
+        <xsd:complexType>
+            <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
                 </xsd:extension>
             </xsd:simpleContent>
         </xsd:complexType>
@@ -40,21 +69,5 @@
         </xsd:complexType>
     </xsd:element>
 
-    <xsd:element name="dataset">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element ref="llamore:description" minOccurs="0" maxOccurs="1" />
-                <xsd:element name="instance" maxOccurs="unbounded">
-                    <xsd:complexType>
-                        <xsd:sequence>
-                            <xsd:element ref="llamore:description" minOccurs="0" maxOccurs="1" />
-                            <xsd:element ref="llamore:input" minOccurs="1" maxOccurs="1" />
-                            <xsd:element ref="llamore:output" minOccurs="1" maxOccurs="unbounded" />
-                        </xsd:sequence>
-                        <xsd:attribute ref="xml:id" />
-                    </xsd:complexType>
-                </xsd:element>
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
+
 </xsd:schema>

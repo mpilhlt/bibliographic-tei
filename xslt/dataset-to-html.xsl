@@ -24,7 +24,7 @@
     
     <html lang="en">
       <head>
-        <title>Dataset</title>
+        <title><xsl:value-of select="llm:title"/></title>
         <meta charset="UTF-8"></meta>
         <!-- tabby -->
         <link rel="stylesheet" href="resources/tabby/dist/css/tabby-ui.min.css"></link>
@@ -43,16 +43,29 @@
           }
           .block-with-description, .block-no-description {
           }
+          ul[data-tabs] > li > a {
+            font-size: small;
+          }
         </style>
       </head>
       <body>
-        <div class="document-container">
-          <div class="document-description">
+        <!-- title, description, source -->
+        <h1><xsl:value-of select="llm:title"/></h1>
+        <xsl:if test="llm:description">
+          <div class="description-dataset">
             <xsl:value-of select="llm:description" disable-output-escaping="yes" />
           </div>
-          <!-- Apply templates to all llm:instance elements -->
-          <xsl:apply-templates select="llm:instance" />
+        </xsl:if>
+        <xsl:if test="starts-with(@source, 'http')">
+          <div class="source-dataset">
+              <a href="{@source}" target="_blank">Source URL</a>
+          </div>
+      </xsl:if>
+        <!-- main content -->
+        <div class="document-container">
+          <xsl:apply-templates />
         </div>
+        <!-- UI - related scripts -->
         <script>
           const tabs = []
           const tabSelectors = document.querySelectorAll('[data-tabs]');
@@ -93,20 +106,16 @@
     </html>
   </xsl:template>
 
-  <!-- Template for top-level <llm:description> -->
-  <xsl:template match="llm:description">
-    <div class="description-dataset">
-      <xsl:copy-of select="." />
-    </div>
-  </xsl:template>
-
-  <!-- Template to process <llm:instance> with a <description> child -->
-  <xsl:template match="llm:instance[llm:description]">
+  <!-- Template to process <llm:instance> -->
+  <xsl:template match="llm:instance">
     <fieldset id="{@xml:id}" class="block-with-description">
       <legend><a href="#{@xml:id}"><xsl:value-of select="@xml:id"/></a></legend>
-      <div class="description-instance">
-        <xsl:value-of select="llm:description" disable-output-escaping="yes" />
-      </div>
+      <!-- description element -->
+      <xsl:if test="llm:description">
+        <div class="description-instance">
+          <xsl:value-of select="llm:description" disable-output-escaping="yes" />
+        </div>
+      </xsl:if>
       <!-- Process <llm:input[@type='raw']> -->
         <div
         id="input-{@xml:id}" class="raw-text">
@@ -119,35 +128,19 @@
     </fieldset>
   </xsl:template>
 
-  <!-- Template to process <llm:instance> without a <description> child -->
-  <xsl:template match="llm:instance[not(llm:description)]">
-    <fieldset class="block-no-description">
-      <legend><a name="{@xml:id}" href="#{@xml:id}"><xsl:value-of select="@xml:id"/></a></legend>
-      <!-- Process <llm:input[@type='raw']> -->
-      <div id="input-{@xml:id}"
-      class="raw-text">
-      <xsl:value-of select="llm:input[@type='raw']" />
-    </div>
-    <!-- Process <llm:output> nodes -->    
-    <xsl:call-template name="tabbed-codeblocks">
-      <xsl:with-param name="node" select="." />
-    </xsl:call-template>
-    </fieldset>
-  </xsl:template>
-
   <!-- Template for the tabbed code blocks -->
   <xsl:template name="tabbed-codeblocks">
     <xsl:param name="node" />
     
     <ul data-tabs="">
       <li>
-        <a href="#block-{$node/@xml:id}">Block</a>
+        <a href="#bibl-{$node/@xml:id}">&lt;bibl&gt; (gold)</a>
       </li>
       <li>
-        <a href="#bibl-{$node/@xml:id}">&lt;bibl&gt;</a>
+        <a href="#block-{$node/@xml:id}">&lt;bibl&gt; (unsegmented)</a>
       </li>
       <li>
-        <a href="#biblstruct-source-{$node/@xml:id}">&lt;biblStruct&gt; (from source)</a>
+        <a href="#biblstruct-source-{$node/@xml:id}">&lt;biblStruct&gt; (source)</a>
       </li>
       <li>
         <a href="#biblstruct-unresolved-{$node/@xml:id}">&lt;biblStruct&gt; (unresolved)</a>
@@ -157,18 +150,8 @@
       </li>
     </ul>
 
-    <!-- Process <llm:output[@type='block']> -->
-    <div
-      id="block-{$node/@xml:id}">
-      <pre><code>
-            <xsl:call-template name="serialize-stripped">
-                <xsl:with-param name="node" select="$node/llm:output[@type='block']/*[1]"/>
-            </xsl:call-template>
-        </code></pre>
-    </div>
-
-    <!-- Process <llm:output[@type='bibl']> -->     
-    <div
+    <!-- Main gold <llm:output[@type='bibl']> -->     
+      <div
       id="bibl-{$node/@xml:id}"
       data-bibl-ids="{string-join($node//tei:bibl/@xml:id, ' ')}"
       data-tab-index="{replace(@xml:id, '^[^\d]*(\d+)$', '$1')}">
@@ -178,6 +161,18 @@
             </xsl:call-template>
         </code></pre>
     </div>
+
+    <!-- <llm:output[@type='block']> -->
+    <div
+      id="block-{$node/@xml:id}">
+      <pre><code>
+            <xsl:call-template name="serialize-stripped">
+                <xsl:with-param name="node" select="$node/llm:output[@type='block']/*[1]"/>
+            </xsl:call-template>
+        </code></pre>
+    </div>
+
+
 
     <!-- Process <llm:output[@type='biblStruct']> -->
     <div id="biblstruct-source-{$node/@xml:id}">

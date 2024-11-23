@@ -1,13 +1,13 @@
-<dataset xmlns="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore" 
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-xsi:schemaLocation="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore ../../schema/xsd/dataset.xsd
-                       http://www.tei-c.org/ns/1.0 ../../schema/xsd/document.xsd">
-
+<dataset 
+  xmlns="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore ../../schema/xsd/dataset.xsd http://www.tei-c.org/ns/1.0 ../../schema/xsd/document.xsd"
+  source="https://doi.org/10.1111/1467-6478.00080">
+  <title>English-language socio-legal article with footnotes</title>
   <description content-type="text/html"><![CDATA[ 
-    <h1>English-language socio-legal article with footnotes</h1>
-    <p>Source: Bradney, A. (1998) ‘Law as a Parasitic Discipline’, Journal of Law and Society, 25(1), pp. 71–84, DOI <a href="https://doi.org/10.1111/1467-6478.00080">10.1111/1467-6478.00080</a></p>
+    <p>Source: Bradney, A. (1998) ‘Law as a Parasitic Discipline’, Journal of Law and Society, 25(1), pp. 71–84, 
+    DOI 10.1111/1467-6478.00080</p>
   ]]></description>
-
   <instance xml:id="instance-1">
       <input type="raw"><![CDATA[1 For a contrary view, see G. Jones, ‘“Traditional” Legal Scholarship: a Personal View’ in What Are Law Schools For?, ed. P. Birks (1996) 14.]]></input>
         <output type="block">
