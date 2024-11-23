@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
   <!--
-    Schema generated from ODD source 2024-11-15T06:41:54Z. . 
+    Schema generated from ODD source 2024-11-23T21:55:32Z. . 
     TEI Edition: P5 Version 4.8.1. Last updated on 1st November 2024, revision 0a2bff95a 
     TEI Edition Location: https://www.tei-c.org/Vault/P5/4.8.1/ 
     
@@ -5045,17 +5045,17 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
                     <xs:documentation>A footnote or endnote</xs:documentation>
                   </xs:annotation>
                 </xs:enumeration>
-                <xs:enumeration value="">
+                <xs:enumeration value="name">
                   <xs:annotation>
-                    <xs:documentation/>
+                    <xs:documentation>The name a previously mentioned author or editor</xs:documentation>
                   </xs:annotation>
                 </xs:enumeration>
-                <xs:enumeration value="previous-author">
+                <xs:enumeration value="idem">
                   <xs:annotation>
-                    <xs:documentation>A reference to a previously stated name of an author, replaced by abbreviations such as "id.", "eadem" in English or "ders.", "dies." in German</xs:documentation>
+                    <xs:documentation>A reference to a previously mentioned name of an author, replaced by abbreviations such as "id.", "eadem" in English or "ders.", "dies." in German</xs:documentation>
                   </xs:annotation>
                 </xs:enumeration>
-                <xs:enumeration value="previous-work">
+                <xs:enumeration value="op-cit">
                   <xs:annotation>
                     <xs:documentation>A reference to a previously referenced work, usually indicated by abbreviations such as "op. cit.", "ibid." in English or "ebd.", "a.a.O." in German.</xs:documentation>
                   </xs:annotation>

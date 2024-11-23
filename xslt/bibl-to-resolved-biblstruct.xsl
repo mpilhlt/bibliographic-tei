@@ -10,13 +10,20 @@
     Convert a <tei:bibl> to a <tei:biblStruct>,
   -->
 
+  <!-- handle complete references only -->
   <xsl:import href="bibl-to-biblstruct.xsl" />
 
   <!-- configure output-->
-  <xsl:output encoding="UTF-8" indent="yes" method="xml" name="xml" omit-xml-declaration="no" version="1.0"/>
+  <xsl:output 
+    method="xml"
+    version="1.0" 
+    name="xml" 
+    encoding="UTF-8" 
+    indent="yes"
+    omit-xml-declaration="yes"/>
 
   <!-- resolve incomplete references, adding information from the referenced elements -->
-  <xsl:template match="tei:bibl" mode="resolved">
+  <xsl:template match="tei:bibl" mode="bibl-to-resolved-biblstruct">
     <biblStruct source="#{@xml:id}">
       <!-- variables that can identify the reference if incomplete -->
       <xsl:variable name="original-author-surnames" select="tei:author//tei:surname"/>

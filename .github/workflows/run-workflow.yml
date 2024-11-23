@@ -21,11 +21,11 @@ jobs:
     - name: Check out source code
       uses: actions/checkout@v2
 
-    - name: Fix indentation of gold files
-      run: /bin/bash .github/workflows/fix-indentation
+    - name: Generate training data from gold
+      run: .github/workflows/generate-training-data
 
-    - name: Transform XML files
-      run: /bin/bash .github/workflows/transform-files
+    - name: Generate html files to view gold data
+      run: .github/workflows/generate-gold-viewer
 
     - name: Generate Directory Listings
       uses: jayanta525/github-pages-directory-listing@v4.0.0
@@ -33,4 +33,4 @@ jobs:
         FOLDER: docs
 
     - name: Deploy to GitHub Pages
-      run: /bin/bash .github/workflows/deploy-to-pages
+      run: .github/workflows/deploy-to-pages

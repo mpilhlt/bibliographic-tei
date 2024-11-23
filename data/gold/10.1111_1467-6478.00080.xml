@@ -427,7 +427,7 @@
                           <surname>Thomas</surname>
                         </persName>
                     </editor>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="8">n. 8</ref>,
                     <citedRange unit="page" from="285" to="285">at p. 285</citedRange>.
                 </bibl>
@@ -647,7 +647,7 @@
               <author>
                   <orgName>ACLEC</orgName>
               </author>,
-              <ref type="previous-work">id.</ref>,
+              <ref type="op-cit">id.</ref>,
               <citedRange unit="para" from="4.6">para 4.6</citedRange>.
             </bibl>
           </note>
@@ -944,7 +944,7 @@
                           <surname>Dearing</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="12">n. 12</ref>,
                     <citedRange unit="para" from="9.32" to="9.32">para. 9.32</citedRange>.
                 </bibl>
@@ -979,7 +979,7 @@
           <note xmlns="http://www.tei-c.org/ns/1.0" n="19" type="footnote" place="bottom">
               <label>19</label>
             <bibl xml:id="bibl-23">
-                  <ref type="previous-work">id.</ref>,
+                  <ref type="op-cit">id.</ref>,
                     <citedRange unit="para" from="5.11" to="5.11">para. 5.11</citedRange>.
                 </bibl>
           </note>
@@ -1122,7 +1122,7 @@
                           <surname>Birks</surname>
                         </persName>
                     </editor>
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="1">n. 1</ref>,
                     <citedRange unit="page" from="59" to="59">p. 59</citedRange>.
                 </bibl>
@@ -1271,7 +1271,7 @@
                           <surname>Kahn-Freund</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">id.</ref>).
+                    <ref type="op-cit">id.</ref>).
                 </bibl>
           </note>
         </output>
@@ -1308,7 +1308,7 @@
                           <surname>Leavis</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="20">n. 20</ref>,
                     <citedRange unit="page" from="120" to="120">p. 120</citedRange>.
                 </bibl>
@@ -1719,7 +1719,7 @@
                           <surname>Johnstone</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="32">n. 32</ref>,
                     <citedRange unit="page" from="71" to="75">pp. 71–5</citedRange>.
                 </bibl>
@@ -1764,7 +1764,7 @@
                           <surname>Goodrich</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="22">n. 22</ref>.
                 </bibl>
           </note>
@@ -1981,7 +1981,7 @@
                           <surname>Jones</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="40">n. 40</ref>,
                     <citedRange unit="page" from="54" to="54">at p. 54</citedRange>
                 </bibl>).
@@ -2088,7 +2088,7 @@
           <note xmlns="http://www.tei-c.org/ns/1.0" n="44" type="footnote" place="bottom">
               <label>44</label>
             <bibl xml:id="bibl-49">
-                  <ref type="previous-work">id.</ref>,
+                  <ref type="op-cit">id.</ref>,
                     <citedRange unit="page" from="35" to="35">p 35</citedRange>
                 </bibl>
           </note>
@@ -2344,7 +2344,7 @@
                           <surname>Ridley</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="47">n. 47</ref>,
                     <citedRange unit="page" from="284" to="284">at p. 284</citedRange>.
                 </bibl>
@@ -2464,7 +2464,7 @@
                           <surname>Ridley</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="47">n. 47</ref>,
                     <citedRange unit="page" from="283" to="283">p. 283</citedRange>.
                 </bibl>
@@ -2510,7 +2510,7 @@
                           <surname>Vilkinas</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="48">n. 48</ref>,
                     <citedRange unit="page" from="248" to="248">p. 248</citedRange>.
                 </bibl>
@@ -2607,7 +2607,7 @@
                           <surname>Dearing</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="12">n. 12</ref>,
                     <citedRange unit="para" from="9.3" to="9.3">para 9.3</citedRange>.
                 </bibl>

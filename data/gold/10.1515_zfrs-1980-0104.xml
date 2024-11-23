@@ -318,7 +318,7 @@
               </author>
               <!-- infer footnote number from "previous note" -->
               <ref type="footnote" n="5">(vorige N.)</ref>
-              <ref type="previous-work">a.a.O.</ref>
+              <ref type="op-cit">a.a.O.</ref>
             </bibl>.
           </note>
         </output>
@@ -3853,7 +3853,7 @@
                 </bibl>
                 <bibl xml:id="bibl-97">
                   <author/>
-                  <ref type="previous-author">ders.</ref>,
+                  <ref type="idem">ders.</ref>,
                   <title level="a">The Legal Profession in Comparative Perspective</title>, in:
                   <editor>
                       <persName>

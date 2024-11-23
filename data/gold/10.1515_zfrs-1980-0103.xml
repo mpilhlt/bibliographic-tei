@@ -1854,7 +1854,7 @@
           <note xmlns="http://www.tei-c.org/ns/1.0" n="34" type="footnote" place="bottom">
               <label>34</label>
             <bibl xml:id="bibl-42">
-                  <ref type="previous-work">Ebenda</ref>,
+                  <ref type="op-cit">Ebenda</ref>,
                   <citedRange unit="page" from="138" to="186">S. 138-186</citedRange>.
           </bibl>
           </note>

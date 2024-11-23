@@ -471,7 +471,7 @@
                         </persName>
                     </author>,
                     ‘<title level="a">Civil Citizenship against Social Citizenship?</title>’
-                    <ref type="previous-work">in id.</ref>,
+                    <ref type="op-cit">in id.</ref>,
                     <citedRange unit="page" from="97" to="97">p. 97</citedRange>.
                 </bibl>
           </note>
@@ -523,7 +523,7 @@
                           <surname>Vogel</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">id.</ref>,
+                    <ref type="op-cit">id.</ref>,
                     <citedRange unit="page" from="79" to="79">p. 79</citedRange>.
                 </bibl>
                 <bibl xml:id="bibl-11">
@@ -593,7 +593,7 @@
                           <surname>Vogel</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="7">n. 7</ref>,
                     <citedRange unit="page" from="80" to="81">pp. 80–1</citedRange>.
                 </bibl>
@@ -1368,7 +1368,7 @@
                     <surname>Collier</surname>
                 </persName>
               </author>,
-              <title level="a">Masculinity, Law and the Family</title>
+              <title level="m">Masculinity, Law and the Family</title>
               (<date when="1995">1995</date>)
               <citedRange unit="page" from="127">127 and throughout</citedRange>.
             </bibl>
@@ -1517,7 +1517,7 @@
                           <surname>Thornton</surname>
                         </persName>
                     </editor>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="4">n. 4</ref>.
                 </bibl>
                 <note type="signal">For a feminist critique of contract in the American context, see</note>
@@ -1667,7 +1667,7 @@
                   <surname>Grossberg</surname>
                 </persName>
               </author>,
-              <ref type="previous-work" target="#bibl-21">op. cit.</ref>,
+              <ref type="op-cit" target="#bibl-21">op. cit.</ref>,
               <ref type="footnote" n="18">n. 18</ref>,
               <citedRange unit="page" from="52" to="52">p. 52</citedRange>.
             </bibl>
@@ -1749,7 +1749,7 @@
                   <surname>Freeman</surname>
                 </persName>
               </author>,
-              <ref type="previous-work">op. cit.</ref>,
+              <ref type="op-cit">op. cit.</ref>,
               <ref type="footnote" n="24">n. 24</ref>.
             </bibl>
             <note type="comment">
@@ -1897,7 +1897,7 @@
                   <surname>Thornton</surname>
                 </persName>
               </author>,
-              <ref type="previous-work">op. cit.</ref>
+              <ref type="op-cit">op. cit.</ref>
               (<date when="1996">1996</date>),
               <ref type="footnote" n="4">n. 4</ref>
             </bibl>.
@@ -1952,7 +1952,7 @@
                           <surname>Grossberg</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="18">n. 18</ref>,
                     <citedRange unit="page" from="38" to="38">p. 38</citedRange>.
                 </bibl>
@@ -2298,7 +2298,7 @@
                           <surname>O’Donovan</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="21">n. 21</ref>
                 </bibl>
                 <note type="signal">and</note>
@@ -2308,7 +2308,7 @@
                           <surname>Collier</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="24">n. 24</ref>.
                 </bibl>
           </note>
@@ -2366,7 +2366,7 @@
                           <surname>Thornton</surname>
                         </persName>
                     </editor>,
-                    <ref type="previous-work">op. cit.</ref>
+                    <ref type="op-cit">op. cit.</ref>
                     (<date when="1995">1995</date>),
                     <ref type="footnote" n="4">n. 4</ref>.
                 </bibl>
@@ -2637,7 +2637,7 @@
           <note xmlns="http://www.tei-c.org/ns/1.0" n="45" type="footnote" place="bottom">
               <label>45</label>
             <bibl xml:id="bibl-74">
-                <ref type="previous-work">id.</ref>,
+                <ref type="op-cit">id.</ref>,
                 <citedRange unit="page" from="24" to="24">p. 24</citedRange>
               </bibl>
               <bibl xml:id="bibl-74b">
@@ -2723,7 +2723,7 @@
                           <surname>Baron</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="44">n. 44</ref>,
                     <citedRange unit="page" from="34" to="34">p. 34</citedRange>.
                 </bibl>
@@ -2816,7 +2816,7 @@
                           <surname>Howell</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="43">n. 43</ref>.
                 </bibl>
           </note>
@@ -3595,7 +3595,7 @@
                           <surname>O’Donovan</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="57">n. 57</ref>;
                 </bibl>
                 <bibl xml:id="bibl-100">
@@ -3604,7 +3604,7 @@
                           <surname>Thornton</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit. (1995)</ref>,
+                    <ref type="op-cit">op. cit. (1995)</ref>,
                     <ref type="footnote" n="4">n. 4.</ref>
                 </bibl>
           </note>
@@ -3791,7 +3791,7 @@
                           <surname>Freeman</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="24">n. 24</ref>;
                 </bibl>
                 <bibl xml:id="bibl-106">
@@ -3800,7 +3800,7 @@
                           <surname>Neave</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="26">n. 26</ref>;
                 </bibl>
                 <bibl xml:id="bibl-107">
@@ -3809,7 +3809,7 @@
                           <surname>Regan</surname>
                         </persName>
                     </author>,
-                    <ref type="previous-work">op. cit.</ref>,
+                    <ref type="op-cit">op. cit.</ref>,
                     <ref type="footnote" n="30">n. 30</ref>.
                 </bibl>
           </note>
@@ -4362,7 +4362,7 @@
           <note xmlns="http://www.tei-c.org/ns/1.0" n="77" type="footnote" place="bottom">
               <label>77</label>
             <bibl xml:id="bibl-121">
-                  <ref type="previous-work">id.</ref>,
+                  <ref type="op-cit">id.</ref>,
                     <citedRange unit="page" from="3" to="3">p. 3</citedRange>.
                 </bibl>
           </note>

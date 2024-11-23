@@ -4,16 +4,24 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:tei="http://www.tei-c.org/ns/1.0">
 
-  <!-- this stylesheet generates a set of static sites to view and analyze the gold standard files -->
+  <!-- 
+    This stylesheet generates a set of static sites to view and analyze 
+    the gold standard files 
+  -->
 
+  <!-- imports -->
   <xsl:import href="bibl-to-resolved-biblstruct.xsl" />
 
-  <!-- you can pass `-param verbose yes` to the saxon cli command to get more verbose output -->
+  <!-- params -->
   <xsl:param name="verbose" select="'off'"/> 
 
-  <!-- output html -->
-  <xsl:output method="html" indent="yes" encoding="UTF-8"
-    doctype-public="-//W3C//DTD HTML5//EN" doctype-system="http://www.w3.org/TR/html5/html.html" />
+  <!-- output configuration -->
+  <xsl:output   
+    encoding="utf-8"
+    method="html" 
+    indent="yes" 
+    doctype-public="-//W3C//DTD HTML5//EN" 
+    doctype-system="http://www.w3.org/TR/html5/html.html" />
 
   <!-- prevent pass-through of text nodes -->
   <xsl:template match="text()"></xsl:template>

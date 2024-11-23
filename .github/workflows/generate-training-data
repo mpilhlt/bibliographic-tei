@@ -1,11 +1,14 @@
-echo "Fixing indentation..."
+#!/bin/bash
+set -e  # Abort on error
 
-for xml_file in data/training/*.xml; do
+echo "Generating training data..."
+
+for xml_file in data/gold/*.xml; do
     base_name=$(basename "$xml_file" .xml)
 
     docker run --rm -i -u $(id -u) --volume "${PWD}:/src" --platform=linux/amd64/v8 klakegg/saxon:he xslt \
         -s:$xml_file \
-        -xsl:xslt/fix-indentation.xsl \
+        -xsl:xslt/dataset-to-training.xsl \
         -o:data/training/$base_name.xml \
         $1
 

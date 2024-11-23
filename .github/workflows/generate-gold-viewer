@@ -3,6 +3,8 @@ set -e  # Abort on error
 
 mkdir -p docs
 
+echo "Generating Gold Viewer files..."
+
 for xml_file in docs/gold/*.xml; do
     base_name=$(basename "$xml_file" .xml)
     docker run --rm -i -u $(id -u) --volume "${PWD}:/src" --platform=linux/amd64/v8 klakegg/saxon:he xslt \
