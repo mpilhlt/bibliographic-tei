@@ -11,16 +11,16 @@
     some code is originally from https://github.com/OpenArabicPE/convert_tei-to-bibliographic-data/blob/master/xslt/convert_tei-to-zotero-rdf_functions.xsl
   -->
 
-  <!-- configure HTML output-->
+  <!-- configure output-->
   <xsl:output encoding="UTF-8" indent="yes" method="xml" name="xml" omit-xml-declaration="no" version="1.0"/>
 
   <!-- Default behavior is unresolved -->
   <xsl:template match="tei:bibl">
-    <xsl:apply-templates select="." mode="unresolved"/>
+    <xsl:apply-templates select="." mode="bibl-to-biblstruct"/>
   </xsl:template>
 
   <!-- output context-free <biblStruct> -->
-  <xsl:template match="tei:bibl" mode="unresolved">
+  <xsl:template match="tei:bibl" mode="bibl-to-biblstruct">
     <biblStruct source="#{@xml:id}">
       <xsl:call-template name="process-bibl-children">
         <xsl:with-param name="node" select="." />
@@ -69,12 +69,12 @@
                 </xsl:otherwise>
             </xsl:choose>
             <xsl:copy-of select="$node/tei:editor" />
+            <xsl:copy-of select="$node/tei:edition" />
             <imprint>
                 <xsl:copy-of select="$node/descendant::tei:date" />
                 <xsl:copy-of select="$node/tei:pubPlace" />
                 <xsl:copy-of select="$node/tei:publisher" />
             </imprint>
-            <xsl:copy-of select="$node/tei:edition" />
             <xsl:copy-of select="$node/tei:biblScope" />
         </monogr>
     </xsl:if>

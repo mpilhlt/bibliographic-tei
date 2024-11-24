@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysis>
+   <element name="analytic" total-occurrences="62" leaf-occurrences="0"/>
+   <element name="author" total-occurrences="737" leaf-occurrences="3"/>
+   <element name="bibl" total-occurrences="680" leaf-occurrences="325"/>
+   <element name="biblScope" total-occurrences="385" leaf-occurrences="385">
+      <attribute-values name="unit">
+         <value name="issue" count="6"/>
+         <value name="page" count="192"/>
+         <value name="volume" count="187"/>
+      </attribute-values>
+      <attribute-occurrences name="from" count="383"/>
+      <attribute-occurrences name="to" count="205"/>
+   </element>
+   <element name="biblStruct" total-occurrences="327" leaf-occurrences="0"/>
+   <element name="citedRange" total-occurrences="432" leaf-occurrences="432">
+      <attribute-values name="unit">
+         <value name="chapter" count="8"/>
+         <value name="entry" count="4"/>
+         <value name="footnote" count="4"/>
+         <value name="page" count="402"/>
+         <value name="para" count="10"/>
+         <value name="part" count="2"/>
+         <value name="section" count="2"/>
+      </attribute-values>
+      <attribute-occurrences name="from" count="430"/>
+      <attribute-occurrences name="to" count="240"/>
+   </element>
+   <element name="date" total-occurrences="587" leaf-occurrences="587">
+      <attribute-occurrences name="when" count="469"/>
+   </element>
+   <element name="edition" total-occurrences="7" leaf-occurrences="7"/>
+   <element name="editor" total-occurrences="146" leaf-occurrences="0"/>
+   <element name="forename" total-occurrences="342" leaf-occurrences="342">
+      <attribute-values name="full">
+         <value name="init" count="2"/>
+      </attribute-values>
+      <attribute-values name="type">
+         <value name="first" count="72"/>
+         <value name="middle" count="12"/>
+      </attribute-values>
+   </element>
+   <element name="idno" total-occurrences="18" leaf-occurrences="18">
+      <attribute-values name="type">
+         <value name="caseNumber" count="10"/>
+         <value name="document" count="4"/>
+      </attribute-values>
+   </element>
+   <element name="imprint" total-occurrences="327" leaf-occurrences="0"/>
+   <element name="label" total-occurrences="476" leaf-occurrences="476"/>
+   <element name="listBibl" total-occurrences="238" leaf-occurrences="0"/>
+   <element name="monogr" total-occurrences="327" leaf-occurrences="0"/>
+   <element name="note" total-occurrences="676" leaf-occurrences="200">
+      <attribute-values name="type">
+         <value name="comment" count="62"/>
+         <value name="document-type" count="6"/>
+         <value name="footnote" count="476"/>
+         <value name="signal" count="132"/>
+      </attribute-values>
+      <attribute-occurrences name="n" count="476"/>
+   </element>
+   <element name="orgName" total-occurrences="21" leaf-occurrences="21"/>
+   <element name="persName" total-occurrences="867" leaf-occurrences="1">
+      <attribute-values name="role">
+         <value name="translator" count="1"/>
+      </attribute-values>
+   </element>
+   <element name="pubPlace" total-occurrences="101" leaf-occurrences="101"/>
+   <element name="publisher" total-occurrences="14" leaf-occurrences="8"/>
+   <element name="ref" total-occurrences="94" leaf-occurrences="94">
+      <attribute-values name="type">
+         <value name="footnote" count="56"/>
+         <value name="previous-author" count="1"/>
+         <value name="previous-work" count="37"/>
+      </attribute-values>
+      <attribute-occurrences name="n" count="56"/>
+   </element>
+   <element name="resp" total-occurrences="1" leaf-occurrences="1"/>
+   <element name="respStmt" total-occurrences="1" leaf-occurrences="0"/>
+   <element name="roleName" total-occurrences="4" leaf-occurrences="4">
+      <attribute-values name="type">
+         <value name="honorific" count="4"/>
+      </attribute-values>
+   </element>
+   <element name="seg" total-occurrences="114" leaf-occurrences="114"/>
+   <element name="surname" total-occurrences="867" leaf-occurrences="864"/>
+   <element name="title" total-occurrences="803" leaf-occurrences="803">
+      <attribute-values name="level">
+         <value name="a" count="247"/>
+         <value name="j" count="167"/>
+         <value name="m" count="273"/>
+         <value name="s" count="9"/>
+      </attribute-values>
+   </element>
+</analysis>

@@ -6,7 +6,7 @@
     
     <xsl:output method="xml"
       omit-xml-declaration="yes" indent="no" 
-      cdata-section-elements="input description"/>
+      cdata-section-elements="llam:input llam:description"/>
 
     <xsl:strip-space elements="*"/>
 
