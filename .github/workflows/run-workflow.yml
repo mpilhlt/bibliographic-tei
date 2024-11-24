@@ -24,6 +24,9 @@ jobs:
     - name: Generate training data from gold
       run: .github/workflows/generate-training-data
 
+    - name: Fix indentation of training data
+      run: .github/workflows/fix-indentation
+
     - name: Generate html files to view gold data
       run: .github/workflows/generate-gold-viewer
 
