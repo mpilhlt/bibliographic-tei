@@ -37,7 +37,7 @@
     </xsl:element>
   </xsl:template>
 
-  <xsl:template match="llam:title|llam:description">
+  <xsl:template match="llam:title|llam:description|llam:input">
     <xsl:copy-of select="."/>
   </xsl:template>
 
@@ -54,14 +54,6 @@
       </xsl:copy>
   </xsl:template>
 
-  <!-- Process <llam:input> -->
-  <xsl:template match="llam:input">
-      <xsl:copy>
-        <xsl:copy-of select="@*"/>
-        <xsl:copy-of select="text()"/>
-      </xsl:copy>
-  </xsl:template>
-  
   <!-- Process <llam:output type="bibl">  -->
   <xsl:template match="llam:output[@type='bibl']">
       <xsl:copy>
