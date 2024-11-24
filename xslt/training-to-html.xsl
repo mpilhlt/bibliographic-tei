@@ -1,5 +1,5 @@
 <xsl:stylesheet version="2.0"
-  xmlns:llm="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore"
+  xmlns:llam="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:tei="http://www.tei-c.org/ns/1.0">
@@ -8,9 +8,6 @@
     This stylesheet generates a set of static sites to view and analyze 
     the gold standard files 
   -->
-
-  <!-- imports -->
-  <xsl:import href="bibl-to-resolved-biblstruct.xsl" />
 
   <!-- params -->
   <xsl:param name="verbose" select="'off'"/> 
@@ -26,13 +23,13 @@
   <!-- prevent pass-through of text nodes -->
   <xsl:template match="text()"></xsl:template>
 
-  <!-- Match <llm:dataset> and process its children -->
-  <xsl:template match="llm:dataset">
+  <!-- Match <llam:dataset> and process its children -->
+  <xsl:template match="llam:dataset">
     <xsl:message>Processing <xsl:value-of select="base-uri(/)"/></xsl:message>
     
     <html lang="en">
       <head>
-        <title><xsl:value-of select="llm:title"/></title>
+        <title><xsl:value-of select="llam:title"/></title>
         <meta charset="UTF-8"></meta>
         <!-- tabby -->
         <link rel="stylesheet" href="resources/tabby/dist/css/tabby-ui.min.css"></link>
@@ -58,10 +55,10 @@
       </head>
       <body>
         <!-- title, description, source -->
-        <h1><xsl:value-of select="llm:title"/></h1>
-        <xsl:if test="llm:description">
+        <h1><xsl:value-of select="llam:title"/></h1>
+        <xsl:if test="llam:description">
           <div class="description-dataset">
-            <xsl:value-of select="llm:description" disable-output-escaping="yes" />
+            <xsl:value-of select="llam:description" disable-output-escaping="yes" />
           </div>
         </xsl:if>
         <xsl:if test="starts-with(@source, 'http')">
@@ -114,22 +111,22 @@
     </html>
   </xsl:template>
 
-  <!-- Template to process <llm:instance> -->
-  <xsl:template match="llm:instance">
+  <!-- Template to process <llam:instance> -->
+  <xsl:template match="llam:instance">
     <fieldset id="{@xml:id}" class="block-with-description">
       <legend><a href="#{@xml:id}"><xsl:value-of select="@xml:id"/></a></legend>
       <!-- description element -->
-      <xsl:if test="llm:description">
+      <xsl:if test="llam:description">
         <div class="description-instance">
-          <xsl:value-of select="llm:description" disable-output-escaping="yes" />
+          <xsl:value-of select="llam:description" disable-output-escaping="yes" />
         </div>
       </xsl:if>
-      <!-- Process <llm:input[@type='raw']> -->
+      <!-- Process <llam:input[@type='raw']> -->
         <div
         id="input-{@xml:id}" class="raw-text">
-        <xsl:value-of select="llm:input[@type='raw']" />
+        <xsl:value-of select="llam:input[@type='raw']" />
       </div>
-      <!-- Process <llm:output> nodes -->
+      <!-- Process <llam:output> nodes -->
       <xsl:call-template name="tabbed-codeblocks">
         <xsl:with-param name="node" select="." />
       </xsl:call-template>
@@ -142,80 +139,55 @@
     
     <ul data-tabs="">
       <li>
-        <a href="#bibl-{$node/@xml:id}">&lt;bibl&gt; (gold)</a>
+        <a href="#segmented-instance-{$node/@xml:id}">Segmented &lt;instance&gt;</a>
       </li>
       <li>
-        <a href="#block-{$node/@xml:id}">&lt;bibl&gt; (unsegmented)</a>
+        <a href="#bibl-{$node/@xml:id}">Segmented &lt;bibl&gt; (gold)</a>
       </li>
       <li>
-        <a href="#biblstruct-source-{$node/@xml:id}">&lt;biblStruct&gt; (source)</a>
+        <a href="#unresolved-biblstruct-{$node/@xml:id}">Unresolved &lt;biblStruct&gt;</a>
       </li>
       <li>
-        <a href="#biblstruct-unresolved-{$node/@xml:id}">&lt;biblStruct&gt; (unresolved)</a>
-      </li>
-      <li>
-        <a href="#biblstruct-resolved-{$node/@xml:id}">&lt;biblStruct&gt; (resolved)</a>
+        <a href="#resolved-biblstruct-{$node/@xml:id}">Resolved &lt;biblStruct&gt;</a>
       </li>
     </ul>
 
-    <!-- Main gold <llm:output[@type='bibl']> -->     
-      <div
-      id="bibl-{$node/@xml:id}"
+    <!-- <llam:output[@type='block']> -->
+    <div id="segmented-instance-{$node/@xml:id}">
+      <pre><code>
+            <xsl:call-template name="serialize-stripped">
+                <xsl:with-param name="node" select="$node/llam:output[@type='segmented-instance']/*[1]"/>
+            </xsl:call-template>
+        </code></pre>
+    </div>    
+
+    <!-- Main gold <llam:output[@type='bibl']> -->     
+    <div id="bibl-{$node/@xml:id}"
       data-bibl-ids="{string-join($node//tei:bibl/@xml:id, ' ')}"
       data-tab-index="{replace(@xml:id, '^[^\d]*(\d+)$', '$1')}">
       <pre><code>
             <xsl:call-template name="serialize-stripped">
-                <xsl:with-param name="node" select="$node/llm:output[@type='bibl']/*[1]"/>
-            </xsl:call-template>
-        </code></pre>
-    </div>
-
-    <!-- <llm:output[@type='block']> -->
-    <div
-      id="block-{$node/@xml:id}">
-      <pre><code>
-            <xsl:call-template name="serialize-stripped">
-                <xsl:with-param name="node" select="$node/llm:output[@type='block']/*[1]"/>
+                <xsl:with-param name="node" select="$node/llam:output[@type='bibl']/*[1]"/>
             </xsl:call-template>
         </code></pre>
     </div>
 
 
-
-    <!-- Process <llm:output[@type='biblStruct']> -->
-    <div id="biblstruct-source-{$node/@xml:id}">
+    <!-- Process <llam:output[@type='biblStruct']> -->
+    <div id="unresolved-biblstruct-{$node/@xml:id}">
       <pre><code>
         <xsl:call-template name="serialize-stripped">
-            <xsl:with-param name="node" select="$node/llm:output[@type='biblStruct']/*[1]"/>
+            <xsl:with-param name="node" select="$node/llam:output[@type='biblstruct']/*[1]"/>
         </xsl:call-template>
         </code></pre>
     </div>
 
-    <!-- Unresolved biblStruct -->
-    <div id="biblstruct-unresolved-{$node/@xml:id}">
+    <!-- Process <llam:output[@type='biblStruct']> -->
+    <div id="resolved-biblstruct-{$node/@xml:id}">
       <pre><code>
-          <xsl:variable name="biblStructResult">
-            <listBibl>
-              <xsl:apply-templates select="$node/llm:output[@type='bibl']//tei:bibl" mode="unresolved" />
-            </listBibl>
-          </xsl:variable>
-          <xsl:call-template name="serialize-stripped">
-            <xsl:with-param name="node" select="$biblStructResult"/>
-          </xsl:call-template>
-        </code></pre>
-    </div>
-
-    <!-- Resolved biblStruct -->
-    <div id="biblstruct-resolved-{$node/@xml:id}" class="tab-biblstruct-resolved">
-      <pre><code>
-          <xsl:variable name="biblStructResult">
-            <listBibl>
-              <xsl:apply-templates select="$node/llm:output[@type='bibl']//tei:bibl" mode="resolved"/>
-            </listBibl>
-          </xsl:variable>
-          <xsl:call-template name="serialize-stripped">
-            <xsl:with-param name="node" select="$biblStructResult"/>
-          </xsl:call-template>
+        <xsl:call-template name="serialize-stripped">
+            <xsl:with-param name="node" select="$node/llam:output[@type='resolved-biblstruct']/*[1]"/>
+        </xsl:call-template>
         </code></pre>
     </div>
 
@@ -249,7 +221,7 @@
     <!-- De-indent -->
     <xsl:variable
       name="de-indented"
-      select="llm:replace_while_match($namespace-stripped, '', '[\n\r]&lt;', '([\n\r]+)\s', '$1')" />
+      select="llam:replace_while_match($namespace-stripped, '', '[\n\r]&lt;', '([\n\r]+)\s', '$1')" />
 
     <!-- Output the final formatted and pretty-printed XML -->
     <xsl:value-of select="$de-indented" />
@@ -258,7 +230,7 @@
 
   <!-- function to recursively search/replace as long as a certain regular expression matches or
   does not match -->
-  <xsl:function name="llm:replace_while_match" as="xs:string">
+  <xsl:function name="llam:replace_while_match" as="xs:string">
     <xsl:param name="input" as="xs:string" />
     <xsl:param name="match" as="xs:string" />
     <xsl:param name="not-match" as="xs:string" />
@@ -274,14 +246,14 @@
       <!-- Continue replacing if there's a match and the input changed -->
       <xsl:when test="($match != '' and matches($input, $match)) and ($replaced != $input)">
         <xsl:sequence
-          select="llm:replace_while_match($replaced, $match, $not-match, $search, $replace)" />
+          select="llam:replace_while_match($replaced, $match, $not-match, $search, $replace)" />
       </xsl:when>
 
       <!-- Check if the input does not match the 'not-match' pattern and continue -->
       <xsl:when
         test="($not-match != '' and not(matches($input, $not-match))) and ($replaced != $input)">
         <xsl:sequence
-          select="llm:replace_while_match($replaced, $match, $not-match, $search, $replace)" />
+          select="llam:replace_while_match($replaced, $match, $not-match, $search, $replace)" />
       </xsl:when>
 
       <!-- If no match occurs or the string didn't change, return the input -->

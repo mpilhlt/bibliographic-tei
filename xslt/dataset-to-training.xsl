@@ -5,7 +5,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:tei="http://www.tei-c.org/ns/1.0"
-    xmlns:llm="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore">
+    xmlns:llam="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore">
 
   <!-- 
     Convert the dataset to different forms of training data 
@@ -20,10 +20,10 @@
   <xsl:output 
     method="xml" 
     version="1.0"
-    encoding="utf-8" 
+    encoding="UTF-8" 
     indent="yes" 
     omit-xml-declaration="yes"
-    cdata-section-elements="input description"/>
+    cdata-section-elements="llam:input llam:description"/>
 
   <!-- prevent pass-through of text nodes -->
   <xsl:template match="text()"/>
@@ -37,39 +37,79 @@
     </xsl:element>
   </xsl:template>
 
-  <!-- Process <llm:instance> -->
-  <xsl:template match="llm:instance">
+  <xsl:template match="llam:title|llam:description">
+    <xsl:copy-of select="."/>
+  </xsl:template>
+
+  <!-- Process <llam:instance> -->
+  <xsl:template match="llam:instance">
       <xsl:copy>
           <xsl:copy-of select="@*"/>
-          <xsl:apply-templates select="llm:input"/>
-          <xsl:apply-templates select="llm:output[@type='bibl']"/>
-          <xsl:apply-templates select="llm:output[@type='bibl']" mode="biblstruct"/>
-          <xsl:apply-templates select="llm:output[@type='bibl']" mode="resolved-biblstruct"/>
+          <xsl:apply-templates select="llam:description"/>
+          <xsl:apply-templates select="llam:input" />
+          <xsl:apply-templates select="llam:output[@type='bibl']" mode="segmented-instance"/>
+          <xsl:apply-templates select="llam:output[@type='bibl']"/>
+          <xsl:apply-templates select="llam:output[@type='bibl']" mode="biblstruct"/>
+          <xsl:apply-templates select="llam:output[@type='bibl']" mode="resolved-biblstruct"/>
       </xsl:copy>
   </xsl:template>
 
-  <!-- Process <llm:input> -->
-  <xsl:template match="llm:input">
+  <!-- Process <llam:input> -->
+  <xsl:template match="llam:input">
       <xsl:copy>
         <xsl:copy-of select="@*"/>
         <xsl:copy-of select="text()"/>
       </xsl:copy>
   </xsl:template>
   
-  <!-- Process <llm:output type="bibl">  -->
-  <xsl:template match="llm:output[@type='bibl']">
+  <!-- Process <llam:output type="bibl">  -->
+  <xsl:template match="llam:output[@type='bibl']">
       <xsl:copy>
         <xsl:copy-of select="@*"/>
         <xsl:copy-of select="node()"/>
       </xsl:copy>
   </xsl:template>
 
-  <!-- ignore sections to be deleted -->
-  <xsl:template match="llm:output[@type='block']" /> 
-  <xsl:template match="llm:output[@type='biblStruct']" /> 
-
-  <!-- Create <llm:output type="biblstruct">  -->
-  <xsl:template match="llm:output[@type='bibl']" mode="biblstruct">
+  <!-- Create <llam:output type="segmented-instance">  -->
+  <xsl:template match="llam:output[@type='bibl']" mode="segmented-instance">
+    <xsl:element name="output" namespace="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore">
+      <xsl:attribute name="type" select="'segmented-instance'"/>
+        <xsl:for-each select="*[1]">
+          <xsl:element name="{name()}" namespace="http://www.tei-c.org/ns/1.0">
+            <xsl:for-each select="./*">
+              <xsl:element name="{name()}">
+                <xsl:value-of>
+                  <!-- serialize the content of the node-->
+                  <xsl:variable name="var1" select="normalize-space(serialize(text()|node(), map {'method':'text'}))"/>
+                  <!-- remove whitespace before punctuation at the end of a clause -->
+                  <xsl:variable name="var2" select="replace($var1, ' ([.;,!?%:])( |$)', '$1$2')"></xsl:variable>
+                  <!-- remove whitespace after opening puntuation -->
+                  <xsl:variable name="var3" select="replace($var2, '(\p{Pi}|\p{Ps})\s+', '$1')" />
+                  <!-- remove whitespace before closing puntuation -->
+                  <xsl:variable name="var4" select="replace($var3, '\s+(\p{Pe}|\p{Pf})', '$1')" />
+                  <!-- remove whitespace before and after slash -->
+                  <xsl:variable name="var5" select="replace($var4, '\s+/\s+', '/')" />
+                  <xsl:variable name="result" select="$var5"></xsl:variable>
+                  <!-- check serialization, in case the above rules do not cover all serialization problems -->
+                  <xsl:variable name="raw-input" select="../../preceding-sibling::llam:input[@type='raw']/text()"/>
+                  <xsl:if test="not(contains($raw-input, $result))">
+                    <xsl:message>
+                      <xsl:text>&#10;Warning: In </xsl:text><xsl:value-of select="ancestor::llam:instance[1]/@xml:id"/>
+                      <xsl:text>, """</xsl:text><xsl:value-of select="$result"/>
+                      <xsl:text>""" is not contained in the raw input.&#10;</xsl:text>
+                  </xsl:message>
+                  </xsl:if>
+                  <xsl:value-of select="$result"/>
+                </xsl:value-of>
+              </xsl:element>
+            </xsl:for-each>
+          </xsl:element>
+        </xsl:for-each>
+    </xsl:element>
+  </xsl:template>
+  
+  <!-- Create <llam:output type="biblstruct">  -->
+  <xsl:template match="llam:output[@type='bibl']" mode="biblstruct">
       <xsl:element name="output" namespace="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore">
         <xsl:attribute name="type" select="'biblstruct'"/>
         <xsl:element name="listBibl" namespace="http://www.tei-c.org/ns/1.0">
@@ -78,8 +118,8 @@
       </xsl:element>
   </xsl:template>
 
-  <!-- Create <llm:output type="resolved-biblstruct">  -->
-  <xsl:template match="llm:output[@type='bibl']" mode="resolved-biblstruct">
+  <!-- Create <llam:output type="resolved-biblstruct">  -->
+  <xsl:template match="llam:output[@type='bibl']" mode="resolved-biblstruct">
     <xsl:element name="output" namespace="https://gitlab.mpcdf.mpg.de/dcfidalgo/llamore">
       <xsl:attribute name="type" select="'resolved-biblstruct'"/>
       <xsl:element name="listBibl" namespace="http://www.tei-c.org/ns/1.0">
@@ -87,8 +127,5 @@
       </xsl:element>
     </xsl:element>
   </xsl:template>
-
-  
-
 
 </xsl:stylesheet>
