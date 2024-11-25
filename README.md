@@ -22,6 +22,6 @@ that exist in this kind of literature.
 
 ## Example annotations
 
-See our current [set of examples](docs/)
+See our current [set of examples](https://mpilhlt.github.io/bibliographic-tei/)
 
 This is a work-in-progress meant to be discussed. The schema might change any time.
