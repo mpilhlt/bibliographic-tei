@@ -136,6 +136,9 @@
   <!-- Template for the tabbed code blocks -->
   <xsl:template name="tabbed-codeblocks">
     <xsl:param name="node" />
+
+    <!-- heuristic: if we have a <ref> element, the reference is probably incomplete -->
+    <xsl:variable name="biblstruct-is-incomplete" select="exists($node/llam:output[@type='bibl']//tei:ref)"/>
     
     <ul data-tabs="">
       <li>
@@ -145,11 +148,14 @@
         <a href="#bibl-{$node/@xml:id}">Segmented &lt;bibl&gt; (gold)</a>
       </li>
       <li>
-        <a href="#unresolved-biblstruct-{$node/@xml:id}">Unresolved &lt;biblStruct&gt;</a>
+        <a href="#unresolved-biblstruct-{$node/@xml:id}">&lt;biblStruct&gt;</a>
       </li>
-      <li>
-        <a href="#resolved-biblstruct-{$node/@xml:id}">Resolved &lt;biblStruct&gt;</a>
-      </li>
+      <xsl:if test="$biblstruct-is-incomplete">
+        <li>
+          <a href="#resolved-biblstruct-{$node/@xml:id}">Resolved &lt;biblStruct&gt;</a>
+        </li>
+      </xsl:if>
+
     </ul>
 
     <!-- <llam:output[@type='block']> -->
@@ -182,14 +188,16 @@
         </code></pre>
     </div>
 
-    <!-- Process <llam:output[@type='biblStruct']> -->
-    <div id="resolved-biblstruct-{$node/@xml:id}">
-      <pre><code>
-        <xsl:call-template name="serialize-stripped">
-            <xsl:with-param name="node" select="$node/llam:output[@type='resolved-biblstruct']/*[1]"/>
-        </xsl:call-template>
-        </code></pre>
-    </div>
+    <!-- Process <llam:output[@type='biblStruct']> containing <ref> elements -->
+    <xsl:if test="$biblstruct-is-incomplete">
+      <div id="resolved-biblstruct-{$node/@xml:id}">
+        <pre><code>
+          <xsl:call-template name="serialize-stripped">
+              <xsl:with-param name="node" select="$node/llam:output[@type='resolved-biblstruct']/*[1]"/>
+          </xsl:call-template>
+          </code></pre>
+      </div>
+    </xsl:if>
 
   </xsl:template>
 
