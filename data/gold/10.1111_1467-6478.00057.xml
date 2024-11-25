@@ -120,7 +120,7 @@
                     </editor>
                     (<date when="1995">1995</date>)
                 </bibl>
-                <note type="signal">and</note>
+                <note type="comment">and</note>
                 <bibl xml:id="bibl-5">
                     ‘<title level="a">Historicising Citizenship: Remembering Broken Promises</title>’
                     (<date when="1996">1996</date>)

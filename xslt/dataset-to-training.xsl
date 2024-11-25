@@ -68,6 +68,7 @@
       <xsl:attribute name="type" select="'segmented-instance'"/>
         <xsl:for-each select="*[1]">
           <xsl:element name="{name()}" namespace="http://www.tei-c.org/ns/1.0">
+            <xsl:copy-of select="@*"/>
             <xsl:for-each select="./*">
               <xsl:element name="{name()}">
                 <xsl:value-of>
