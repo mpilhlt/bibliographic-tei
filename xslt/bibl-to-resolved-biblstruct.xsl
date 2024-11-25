@@ -67,15 +67,51 @@
           </xsl:choose> 
         </xsl:when>
 
-        <!-- op.cit etc simply refers to the previous <bibl>, that might or might not be always correct 
-        <xsl:when test="not(exists(tei:ref[@type = 'footnote'])) and exists(tei:ref[@type = 'footnote'])">
+        <!-- op.cit etc simply refers to the previous <bibl>, that might or might not be always correct -->
+        <xsl:when test="not(exists(tei:ref[@type = 'footnote'])) and exists(tei:ref[@type = 'op-cit'])">
+          <xsl:variable name="op-cit" select="tei:ref[@type = 'op-cit'][1]/text()"/>
+          <xsl:variable name="surname" select="(tei:author[1]//surname | tei:editor[1]//surname)[1]"/>
+          <xsl:variable name="bibl-node">
+            <xsl:choose>
+              <xsl:when test="exists($surname)">
+                <xsl:value-of select="preceding::tei:bibl[tei:surname[1][text() = $surname]][1]" />
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="preceding::tei:bibl[1]" />
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:variable>
           <xsl:choose>
-            <xsl:when test="exists(tei:author) or exists(tei:editor)">
-              <xsl:variable name="creator-surname" select="(tei:author[1]//surname | tei:editor[1]//surname)[1]"/>
-              <xsl:variable name="bibl-node" select="preceding::tei:bibl[tei:surname[1][text() = $author]][1]" />
-            </xsl:when>
+            <!-- referenced <bibl> exists -->
+            <xsl:when test="exists($bibl-node)">
+              <xsl:if test="$verbose = 'on'">
+                <xsl:message>
+                  <xsl:text>[+] Footnote </xsl:text><xsl:value-of select="parent::node()/@n"/>
+                  <xsl:text> (#</xsl:text><xsl:value-of select="@xml:id"/><xsl:text>): </xsl:text>
+                  <xsl:text>found reference for '</xsl:text><xsl:value-of select="$op-cit"/><xsl:text>'.</xsl:text>
+                </xsl:message>
+              </xsl:if>
+              <xsl:call-template name="process-bibl-children">
+                <xsl:with-param name="node" select="$bibl-node" />
+                <xsl:with-param name="original-node" select="." />
+              </xsl:call-template>
+            </xsl:when>            
+            <!-- <bibl> not found -->
+            <xsl:otherwise>
+              <xsl:message>
+                <xsl:text>[-] Footnote </xsl:text><xsl:value-of select="parent::node()/@n"/>
+                <xsl:text> (#</xsl:text><xsl:value-of select="@xml:id"/><xsl:text>): </xsl:text>
+                <xsl:text>Cannot find reference for '</xsl:text>
+                <xsl:value-of select="concat($surname, if ($surname) then ', ' else '', $op-cit)" />
+                <xsl:text>'.</xsl:text>
+              </xsl:message>
+              <xsl:call-template name="process-bibl-children">
+                <xsl:with-param name="node" select="." />
+                <xsl:with-param name="original-node" select="." />
+              </xsl:call-template>
+            </xsl:otherwise>            
           </xsl:choose>
-        </xsl:when>-->
+        </xsl:when>
 
         <!-- find the target <bibl> via the footnote number and the author -->
         <xsl:when test="exists(tei:ref[@type = 'footnote' and @n])">
