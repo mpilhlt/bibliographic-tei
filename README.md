@@ -7,18 +7,11 @@ https://roma.tei-c.org/ tool.
 
 ## Motivation
 
-While annotating entries in properly formatted bibliographies can be done with
-standard TEI, a number of edge cases need to be addressed which can be expressed
-in a variety of ways using the TEI elements in order to achieve interoperability.
+While the standard TEI format allows for the annotation of entries in properly formatted bibliographies, a number of edge cases exist that need to be addressed in order to achieve interoperable annotation data.
 
-In the domain of footnoted literature mainly from the Humanities, the TEI 
-documentation does not yet provide sufficient guidance. Footnotes contain messy and
-incomplete bibliographic information, interspersed with additional commentary.  
-As our aim is to annotate this textual data in a way that allows interoperability and 
-the training of models that will allow reference extraction, we think that 
-there is a real need of standardization. We also propose a couple of refinements 
-to the current schema which would allow to unambiguously encode citation conventions 
-that exist in this kind of literature. 
+In particular, the TEI documentation does not yet provide sufficient guidance and examples for footnoted literature, which is a distinctive feature of humanities scholarship. The footnotes contain a combination of incomplete bibliographic information and additional commentary, often cross-referencing other footnotes.
+
+Our objective is to annotate this textual data in a way that allows interoperability and the training of reference extraction models. To achieve this, we believe that annotation in this domain should be standardised to the necessary extent. We also propose a couple of refinements to the current schema which would allow unambiguous encoding of citation conventions that exist in this kind of literature.
 
 ## Example annotations
 
