@@ -33,7 +33,7 @@ jobs:
       run: bash .github/workflows/fix-indentation
 
     - name: Add validation error annotations
-      run: .bash github/workflows/annotate-errors
+      run: bash github/workflows/annotate-errors
 
     - name: Generate html files to view gold data
       run: bash .github/workflows/generate-gold-viewer
