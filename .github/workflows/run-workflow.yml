@@ -18,6 +18,11 @@ jobs:
         options: --entrypoint /bin/sh
 
     steps:
+    - name: Install libxml2-tools
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libxml2-utils
+
     - name: Check out source code
       uses: actions/checkout@v2
 
@@ -26,6 +31,9 @@ jobs:
 
     - name: Fix indentation of training data
       run: .github/workflows/fix-indentation
+
+    - name: Add validation error annotations
+      run: .github/workflows/annotate-errors
 
     - name: Generate html files to view gold data
       run: .github/workflows/generate-gold-viewer

@@ -51,6 +51,9 @@
           ul[data-tabs] > li > a {
             font-size: small;
           }
+          .validation-error {
+            color: 'red'
+          }
         </style>
       </head>
       <body>
@@ -103,7 +106,14 @@
                   }
                 }
               }
-            });            
+            });
+            // mark errors
+            let firstSpan = false;
+            document.querySelectorAll("span").forEach(span =&gt; {
+              if (span.textContent == "error") {
+                span.style.color = "red";
+              }
+            });
           }
           setTimeout(addLinks, 2000)
         </script>
@@ -161,7 +171,7 @@
     <!-- <llam:output[@type='block']> -->
     <div id="segmented-instance-{$node/@xml:id}">
       <pre><code>
-            <xsl:call-template name="serialize-stripped">
+            <xsl:call-template name="serialize-to-html">
                 <xsl:with-param name="node" select="$node/llam:output[@type='segmented-instance']/*[1]"/>
             </xsl:call-template>
         </code></pre>
@@ -172,7 +182,7 @@
       data-bibl-ids="{string-join($node//tei:bibl/@xml:id, ' ')}"
       data-tab-index="{replace(@xml:id, '^[^\d]*(\d+)$', '$1')}">
       <pre><code>
-            <xsl:call-template name="serialize-stripped">
+            <xsl:call-template name="serialize-to-html">
                 <xsl:with-param name="node" select="$node/llam:output[@type='bibl']/*[1]"/>
             </xsl:call-template>
         </code></pre>
@@ -182,7 +192,7 @@
     <!-- Process <llam:output[@type='biblStruct']> -->
     <div id="unresolved-biblstruct-{$node/@xml:id}">
       <pre><code>
-        <xsl:call-template name="serialize-stripped">
+        <xsl:call-template name="serialize-to-html">
             <xsl:with-param name="node" select="$node/llam:output[@type='biblstruct']/*[1]"/>
         </xsl:call-template>
         </code></pre>
@@ -192,7 +202,7 @@
     <xsl:if test="$biblstruct-is-incomplete">
       <div id="resolved-biblstruct-{$node/@xml:id}">
         <pre><code>
-          <xsl:call-template name="serialize-stripped">
+          <xsl:call-template name="serialize-to-html">
               <xsl:with-param name="node" select="$node/llam:output[@type='resolved-biblstruct']/*[1]"/>
           </xsl:call-template>
           </code></pre>
@@ -202,7 +212,7 @@
   </xsl:template>
 
   <!-- Template to escape XML data and remove indentation and namespaces, then pretty-print -->
-  <xsl:template name="serialize-stripped">
+  <xsl:template name="serialize-to-html">
     <xsl:param name="node" />
 
     <!-- Serialize the node with pretty-printing enabled -->
@@ -224,7 +234,7 @@
     <!-- Remove namespace expressions -->
     <xsl:variable
       name="namespace-stripped"
-      select="replace($attribute-fixes, ' xmlns(:\w+)?=&quot;[^&quot;]*&quot;', '')" />
+      select="replace(replace($attribute-fixes, '\{http://www\.tei-c\.org/ns/1\.0\}', 'tei:'), '( xmlns(:\w+)?=&quot;[^&quot;]*&quot;)', '')" />
 
     <!-- De-indent -->
     <xsl:variable

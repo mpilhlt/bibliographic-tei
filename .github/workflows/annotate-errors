@@ -1,0 +1,39 @@
+#!/bin/bash
+
+echo "Annotating schema validation errors..."
+
+for xml_file in data/training/*.xml; do
+    base_name=$(basename "$xml_file" .xml)
+
+    # Input file
+    INPUT_XML="./data/training/$base_name.xml"
+    OUTPUT_XML="./data/validation/$base_name.xml"
+
+    # Step 1: Run xmllint and save the errors
+    ERRORS=$(xmllint --noout --schema schema/xsd/dataset.xsd "$INPUT_XML" 2>&1 | grep "Schemas validity error")
+
+    # Step 2: Create a temporary file for processing
+    cp "$INPUT_XML" "$OUTPUT_XML"
+
+    OFFSET=0
+
+    # Step 3: Parse errors and inject them into the XML
+    echo "$ERRORS" | while read -r line; do
+        # Extract line number
+        LINE_NUM=$(echo "$line" | awk -F ':' '{print $2}')
+
+        # Extract the element name and clean up superfluous characters
+        ELEMENT=$(echo "$line" | awk -F '{http://www.tei-c.org/ns/1.0}' '{print $2}' | awk '{print $1}' | sed "s/[':]*$//")
+
+        # Extract the error message and trim leading/trailing spaces
+        ERROR_MSG=$(echo "$line" | cut -d':' -f3- | sed 's/Schemas validity error : //' | sed 's/^ *//;s/ *$//')
+
+        # Prepare the comment to insert
+        ANNOTATION="<error>${ERROR_MSG}</error>"
+
+        # Insert the comment above the problematic line using sed
+        sed -i "$((LINE_NUM + OFFSET))i $ANNOTATION" "$OUTPUT_XML"
+        OFFSET=$((OFFSET + 1))
+    done
+
+done
