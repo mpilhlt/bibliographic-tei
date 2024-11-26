@@ -18,6 +18,10 @@
           ul[data-tabs] > li > a {
             font-size: small;
           }
+          fieldset.validation-error legend::before,
+          a.validation-error::before {
+              content: '⚠️';
+          }
         </style>
    </head>
    <body>
@@ -40,13 +44,13 @@
                <li><a href="#bibl-instance-1">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-1">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-1">
+            <div id="segmented-instance-instance-1" data-instance-id="instance-1">
                <pre><code>&lt;note n="1" type="footnote" place="bottom"&gt;
   &lt;label&gt;1&lt;/label&gt;
   &lt;bibl&gt;A. Phillips, ‘Citizenship and Feminist Politics’ in Citizenship, ed. G. Andrews (1991) 77.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-1" data-bibl-ids="bibl-1" data-tab-index="1">
+            <div id="bibl-instance-1" data-instance-id="instance-1" data-bibl-ids="bibl-1" data-tab-index="1">
                <pre><code>&lt;note n="1" type="footnote" place="bottom"&gt;
   &lt;label&gt;1&lt;/label&gt;
   &lt;bibl xml:id="bibl-1"&gt;
@@ -69,7 +73,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-1">
+            <div id="unresolved-biblstruct-instance-1" data-instance-id="instance-1">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-1"&gt;
@@ -112,13 +116,13 @@
                <li><a href="#bibl-instance-2">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-2">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-2">
+            <div id="segmented-instance-instance-2" data-instance-id="instance-2">
                <pre><code>&lt;note n="2" type="footnote" place="bottom"&gt;
   &lt;label&gt;2&lt;/label&gt;
   &lt;bibl&gt;T. Brennan and C. Pateman, ‘“Mere Auxiliaries to the Commonwealth”: Women and the Origins of Liberalism’ (1979) 27 Political Studies 183.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-2" data-bibl-ids="bibl-2" data-tab-index="2">
+            <div id="bibl-instance-2" data-instance-id="instance-2" data-bibl-ids="bibl-2" data-tab-index="2">
                <pre><code>&lt;note n="2" type="footnote" place="bottom"&gt;
   &lt;label&gt;2&lt;/label&gt;
   &lt;bibl xml:id="bibl-2"&gt;
@@ -142,7 +146,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-2">
+            <div id="unresolved-biblstruct-instance-2" data-instance-id="instance-2">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-2"&gt;
@@ -186,13 +190,13 @@
                <li><a href="#bibl-instance-3">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-3">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-3">
+            <div id="segmented-instance-instance-3" data-instance-id="instance-3">
                <pre><code>&lt;note n="3" type="footnote" place="bottom"&gt;
   &lt;label&gt;3&lt;/label&gt;
   &lt;bibl&gt;M. Sawer and M. Simms, A Woman’s Place: Women and Politics in Australia (2nd ed., 1993).&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-3" data-bibl-ids="bibl-3" data-tab-index="3">
+            <div id="bibl-instance-3" data-instance-id="instance-3" data-bibl-ids="bibl-3" data-tab-index="3">
                <pre><code>&lt;note n="3" type="footnote" place="bottom"&gt;
   &lt;label&gt;3&lt;/label&gt;
   &lt;bibl xml:id="bibl-3"&gt;
@@ -214,7 +218,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-3">
+            <div id="unresolved-biblstruct-instance-3" data-instance-id="instance-3">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-3"&gt;
@@ -256,7 +260,7 @@
                <li><a href="#bibl-instance-4">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-4">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-4">
+            <div id="segmented-instance-instance-4" data-instance-id="instance-4">
                <pre><code>&lt;note n="4" type="footnote" place="bottom"&gt;
   &lt;label&gt;4&lt;/label&gt;
   &lt;note&gt;I have explored the gendered nature of citizenship at greater length in two complementary papers:&lt;/note&gt;
@@ -265,7 +269,7 @@
   &lt;bibl&gt;‘Historicising Citizenship: Remembering Broken Promises’ (1996) 20 Melbourne University Law Rev. 1072.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-4" data-bibl-ids="bibl-4 bibl-5" data-tab-index="4">
+            <div id="bibl-instance-4" data-instance-id="instance-4" data-bibl-ids="bibl-4 bibl-5" data-tab-index="4">
                <pre><code>&lt;note n="4" type="footnote" place="bottom"&gt;
   &lt;label&gt;4&lt;/label&gt;
   &lt;note type="comment"&gt;I have explored the gendered nature of citizenship at greater length in two complementary papers:&lt;/note&gt;
@@ -290,7 +294,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-4">
+            <div id="unresolved-biblstruct-instance-4" data-instance-id="instance-4">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-4"&gt;
@@ -335,13 +339,13 @@
                <li><a href="#bibl-instance-5">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-5">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-5">
+            <div id="segmented-instance-instance-5" data-instance-id="instance-5">
                <pre><code>&lt;note n="5" type="footnote" place="bottom"&gt;
   &lt;label&gt;5&lt;/label&gt;
   &lt;bibl&gt;S. Walby, ‘Is Citizenship Gendered?’ (1994) 28 Sociology 379&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-5" data-bibl-ids="bibl-6" data-tab-index="5">
+            <div id="bibl-instance-5" data-instance-id="instance-5" data-bibl-ids="bibl-6" data-tab-index="5">
                <pre><code>&lt;note n="5" type="footnote" place="bottom"&gt;
   &lt;label&gt;5&lt;/label&gt;
   &lt;bibl xml:id="bibl-6"&gt;
@@ -359,7 +363,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-5">
+            <div id="unresolved-biblstruct-instance-5" data-instance-id="instance-5">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-6"&gt;
@@ -397,13 +401,13 @@
                <li><a href="#bibl-instance-6">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-6">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-6">
+            <div id="segmented-instance-instance-6" data-instance-id="instance-6">
                <pre><code>&lt;note n="6" type="footnote" place="bottom"&gt;
   &lt;label&gt;6&lt;/label&gt;
   &lt;bibl&gt;I. Kant, ‘Metaphysical First Principles of the Doctrine of Right [1785]’ in The Metaphysics of Morals (trans. M. Gregor, 1991) 125–6 s. 146.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-6" data-bibl-ids="bibl-7" data-tab-index="6">
+            <div id="bibl-instance-6" data-instance-id="instance-6" data-bibl-ids="bibl-7" data-tab-index="6">
                <pre><code>&lt;note n="6" type="footnote" place="bottom"&gt;
   &lt;label&gt;6&lt;/label&gt;
   &lt;bibl xml:id="bibl-7"&gt;
@@ -425,7 +429,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-6">
+            <div id="unresolved-biblstruct-instance-6" data-instance-id="instance-6">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-7"&gt;
@@ -464,13 +468,13 @@
                <li><a href="#bibl-instance-7">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-7">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-7">
+            <div id="segmented-instance-instance-7" data-instance-id="instance-7">
                <pre><code>&lt;note n="7" type="footnote" place="bottom"&gt;
   &lt;label&gt;7&lt;/label&gt;
   &lt;bibl&gt;U. Vogel, ‘Marriage and the Boundaries of Citizenship’ in The Condition of Citizenship, ed. B. van Steenbergen (1994) 75.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-7" data-bibl-ids="bibl-8" data-tab-index="7">
+            <div id="bibl-instance-7" data-instance-id="instance-7" data-bibl-ids="bibl-8" data-tab-index="7">
                <pre><code>&lt;note n="7" type="footnote" place="bottom"&gt;
   &lt;label&gt;7&lt;/label&gt;
   &lt;bibl xml:id="bibl-8"&gt;
@@ -493,7 +497,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-7">
+            <div id="unresolved-biblstruct-instance-7" data-instance-id="instance-7">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-8"&gt;
@@ -537,13 +541,13 @@
                <li><a href="#unresolved-biblstruct-instance-8">&lt;biblStruct&gt;</a></li>
                <li><a href="#resolved-biblstruct-instance-8">Resolved &lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-8">
+            <div id="segmented-instance-instance-8" data-instance-id="instance-8">
                <pre><code>&lt;note n="8" type="footnote" place="bottom"&gt;
   &lt;label&gt;8&lt;/label&gt;
   &lt;bibl&gt;N. Fraser and L. Gordon, ‘Civil Citizenship against Social Citizenship?’ in id., p. 97.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-8" data-bibl-ids="bibl-9" data-tab-index="8">
+            <div id="bibl-instance-8" data-instance-id="instance-8" data-bibl-ids="bibl-9" data-tab-index="8">
                <pre><code>&lt;note n="8" type="footnote" place="bottom"&gt;
   &lt;label&gt;8&lt;/label&gt;
   &lt;bibl xml:id="bibl-9"&gt;
@@ -565,7 +569,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-8">
+            <div id="unresolved-biblstruct-instance-8" data-instance-id="instance-8">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-9"&gt;
@@ -584,13 +588,14 @@
             &lt;/persName&gt;
          &lt;/author&gt;
       &lt;/analytic&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;ref type="op-cit"&gt;in id.&lt;/ref&gt;
       &lt;citedRange unit="page" from="97" to="97"&gt;p. 97&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="resolved-biblstruct-instance-8">
+            <div id="resolved-biblstruct-instance-8" data-instance-id="instance-8">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-9"&gt;
@@ -609,6 +614,7 @@
             &lt;/persName&gt;
          &lt;/author&gt;
       &lt;/analytic&gt;
+      &lt;error&gt;element citedRange: Element 'tei:citedRange': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;citedRange unit="page" from="97" to="97"&gt;p. 97&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
@@ -628,14 +634,14 @@
                <li><a href="#unresolved-biblstruct-instance-9">&lt;biblStruct&gt;</a></li>
                <li><a href="#resolved-biblstruct-instance-9">Resolved &lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-9">
+            <div id="segmented-instance-instance-9" data-instance-id="instance-9">
                <pre><code>&lt;note n="9" type="footnote" place="bottom"&gt;
   &lt;label&gt;9&lt;/label&gt;
   &lt;bibl&gt;Vogel, id., p. 79.&lt;/bibl&gt;
   &lt;bibl&gt;W. Blackstone, Commentaries (Facsimile of 1st. ed. of 1765–69, 1979) 442.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-9" data-bibl-ids="bibl-10 bibl-11" data-tab-index="9">
+            <div id="bibl-instance-9" data-instance-id="instance-9" data-bibl-ids="bibl-10 bibl-11" data-tab-index="9">
                <pre><code>&lt;note n="9" type="footnote" place="bottom"&gt;
   &lt;label&gt;9&lt;/label&gt;
   &lt;bibl xml:id="bibl-10"&gt;
@@ -661,10 +667,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-9">
+            <div id="unresolved-biblstruct-instance-9" data-instance-id="instance-9">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-10"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Vogel&lt;/surname&gt;
@@ -692,10 +699,11 @@
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="resolved-biblstruct-instance-9">
+            <div id="resolved-biblstruct-instance-9" data-instance-id="instance-9">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-10"&gt;
+      &lt;error&gt;element citedRange: Element 'tei:citedRange': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;citedRange unit="page" from="79" to="79"&gt;p. 79&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-11"&gt;
@@ -731,13 +739,13 @@
                <li><a href="#unresolved-biblstruct-instance-10">&lt;biblStruct&gt;</a></li>
                <li><a href="#resolved-biblstruct-instance-10">Resolved &lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-10">
+            <div id="segmented-instance-instance-10" data-instance-id="instance-10">
                <pre><code>&lt;note n="11" type="footnote" place="bottom"&gt;
   &lt;label&gt;11&lt;/label&gt;
   &lt;bibl&gt;Vogel, op. cit., n. 7, pp. 80–1.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-10" data-bibl-ids="bibl-12" data-tab-index="10">
+            <div id="bibl-instance-10" data-instance-id="instance-10" data-bibl-ids="bibl-12" data-tab-index="10">
                <pre><code>&lt;note n="11" type="footnote" place="bottom"&gt;
   &lt;label&gt;11&lt;/label&gt;
   &lt;bibl xml:id="bibl-12"&gt;
@@ -752,10 +760,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-10">
+            <div id="unresolved-biblstruct-instance-10" data-instance-id="instance-10">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-12"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Vogel&lt;/surname&gt;
@@ -768,7 +777,7 @@
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="resolved-biblstruct-instance-10">
+            <div id="resolved-biblstruct-instance-10" data-instance-id="instance-10">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-12"&gt;
@@ -811,13 +820,13 @@
                <li><a href="#bibl-instance-11">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-11">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-11">
+            <div id="segmented-instance-instance-11" data-instance-id="instance-11">
                <pre><code>&lt;note n="12" type="footnote" place="bottom"&gt;
   &lt;label&gt;12&lt;/label&gt;
   &lt;bibl&gt;F. Haug (ed.), Female Sexualization: A Collective Work of Memory (1987) 196.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-11" data-bibl-ids="bibl-13" data-tab-index="11">
+            <div id="bibl-instance-11" data-instance-id="instance-11" data-bibl-ids="bibl-13" data-tab-index="11">
                <pre><code>&lt;note n="12" type="footnote" place="bottom"&gt;
   &lt;label&gt;12&lt;/label&gt;
   &lt;bibl xml:id="bibl-13"&gt;
@@ -833,7 +842,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-11">
+            <div id="unresolved-biblstruct-instance-11" data-instance-id="instance-11">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-13"&gt;
@@ -864,13 +873,13 @@
                <li><a href="#bibl-instance-12">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-12">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-12">
+            <div id="segmented-instance-instance-12" data-instance-id="instance-12">
                <pre><code>&lt;note n="13" type="footnote" place="bottom"&gt;
   &lt;label&gt;13&lt;/label&gt;
   &lt;bibl&gt;A. Bottomley, ‘Self and Subjectivities: Languages of Claim in Property Law’ (1993) 20 J. of Law and Society 56, 61.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-12" data-bibl-ids="bibl-14" data-tab-index="12">
+            <div id="bibl-instance-12" data-instance-id="instance-12" data-bibl-ids="bibl-14" data-tab-index="12">
                <pre><code>&lt;note n="13" type="footnote" place="bottom"&gt;
   &lt;label&gt;13&lt;/label&gt;
   &lt;bibl xml:id="bibl-14"&gt;
@@ -889,7 +898,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-12">
+            <div id="unresolved-biblstruct-instance-12" data-instance-id="instance-12">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-14"&gt;
@@ -929,7 +938,7 @@
                <li><a href="#bibl-instance-13">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-13">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-13">
+            <div id="segmented-instance-instance-13" data-instance-id="instance-13">
                <pre><code>&lt;note n="14" type="footnote" place="bottom"&gt;
   &lt;label&gt;14&lt;/label&gt;
   &lt;bibl&gt;D. West, ‘Power and Formation: New Foundations for a Radical Concept of Power’ (1987) 30 Inquiry 137, 145.&lt;/bibl&gt;
@@ -937,7 +946,7 @@
   &lt;bibl&gt;M. Foucault, Power/Knowledge: Selected Interviews and Other Writings 1972–1977, ed. C. Gordon (1980) 98.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-13" data-bibl-ids="bibl-15 bibl-16" data-tab-index="13">
+            <div id="bibl-instance-13" data-instance-id="instance-13" data-bibl-ids="bibl-15 bibl-16" data-tab-index="13">
                <pre><code>&lt;note n="14" type="footnote" place="bottom"&gt;
   &lt;label&gt;14&lt;/label&gt;
   &lt;bibl xml:id="bibl-15"&gt;
@@ -974,7 +983,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-13">
+            <div id="unresolved-biblstruct-instance-13" data-instance-id="instance-13">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-15"&gt;
@@ -1035,14 +1044,14 @@
                <li><a href="#bibl-instance-14">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-14">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-14">
+            <div id="segmented-instance-instance-14" data-instance-id="instance-14">
                <pre><code>&lt;note n="15" type="footnote" place="bottom"&gt;
   &lt;label&gt;15&lt;/label&gt;
   &lt;note&gt;For a detailed analysis of legal method and the political role it plays, see&lt;/note&gt;
   &lt;bibl&gt;M.J. Mossman, ‘Feminism, and Legal Method: The Difference it Makes’ (1986) 3 Aust. J. of Law and Society 30.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-14" data-bibl-ids="bibl-17" data-tab-index="14">
+            <div id="bibl-instance-14" data-instance-id="instance-14" data-bibl-ids="bibl-17" data-tab-index="14">
                <pre><code>&lt;note n="15" type="footnote" place="bottom"&gt;
   &lt;label&gt;15&lt;/label&gt;
   &lt;note type="signal"&gt;For a detailed analysis of legal method and the political role it plays, see&lt;/note&gt;
@@ -1061,7 +1070,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-14">
+            <div id="unresolved-biblstruct-instance-14" data-instance-id="instance-14">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-17"&gt;
@@ -1099,13 +1108,13 @@
                <li><a href="#bibl-instance-15">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-15">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-15">
+            <div id="segmented-instance-instance-15" data-instance-id="instance-15">
                <pre><code>&lt;note n="16" type="footnote" place="bottom"&gt;
   &lt;label&gt;16&lt;/label&gt;
   &lt;bibl&gt;H.S. Maine, Ancient Law: Its Connection with the Early History of Society and its Relation to Modern Ideas (10th ed., 1912) 174.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-15" data-bibl-ids="bibl-18" data-tab-index="15">
+            <div id="bibl-instance-15" data-instance-id="instance-15" data-bibl-ids="bibl-18" data-tab-index="15">
                <pre><code>&lt;note n="16" type="footnote" place="bottom"&gt;
   &lt;label&gt;16&lt;/label&gt;
   &lt;bibl xml:id="bibl-18"&gt;
@@ -1122,7 +1131,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-15">
+            <div id="unresolved-biblstruct-instance-15" data-instance-id="instance-15">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-18"&gt;
@@ -1157,7 +1166,7 @@
                <li><a href="#bibl-instance-16">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-16">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-16">
+            <div id="segmented-instance-instance-16" data-instance-id="instance-16">
                <pre><code>&lt;note n="17" type="footnote" place="bottom"&gt;
   &lt;label&gt;17&lt;/label&gt;
   &lt;note&gt;This was particularly the case in the United States of America.&lt;/note&gt;
@@ -1165,7 +1174,7 @@
   &lt;bibl&gt;M.J. Horwitz, The Transformation of American Law, 1780–1860 (1977) 160.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-16" data-bibl-ids="bibl-20" data-tab-index="16">
+            <div id="bibl-instance-16" data-instance-id="instance-16" data-bibl-ids="bibl-20" data-tab-index="16">
                <pre><code>&lt;note n="17" type="footnote" place="bottom"&gt;
   &lt;label&gt;17&lt;/label&gt;
   &lt;note type="comment"&gt;This was particularly the case in the United States of America.&lt;/note&gt;
@@ -1183,7 +1192,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-16">
+            <div id="unresolved-biblstruct-instance-16" data-instance-id="instance-16">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-20"&gt;
@@ -1214,13 +1223,13 @@
                <li><a href="#bibl-instance-17">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-17">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-17">
+            <div id="segmented-instance-instance-17" data-instance-id="instance-17">
                <pre><code>&lt;note n="18" type="footnote" place="bottom"&gt;
   &lt;label&gt;18&lt;/label&gt;
   &lt;bibl&gt;M. Grossberg, Governing the Hearth: Law and the Family in Nineteenth-Century America (1985) ix.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-17" data-bibl-ids="bibl-21" data-tab-index="17">
+            <div id="bibl-instance-17" data-instance-id="instance-17" data-bibl-ids="bibl-21" data-tab-index="17">
                <pre><code>&lt;note n="18" type="footnote" place="bottom"&gt;
   &lt;label&gt;18&lt;/label&gt;
   &lt;bibl xml:id="bibl-21"&gt;
@@ -1236,7 +1245,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-17">
+            <div id="unresolved-biblstruct-instance-17" data-instance-id="instance-17">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-21"&gt;
@@ -1272,7 +1281,7 @@
                <li><a href="#bibl-instance-18">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-18">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-18">
+            <div id="segmented-instance-instance-18" data-instance-id="instance-18">
                <pre><code>&lt;note n="19" type="footnote" place="bottom"&gt;
   &lt;label&gt;19&lt;/label&gt;
   &lt;note&gt;Staves postulates that the position was somewhat more complicated in that marriage, as a status, crumbled in response to contract ideology in the seventeenth century but, by the end of the eighteenth century, deeper patriarchal structures were re-imposed.&lt;/note&gt;
@@ -1280,7 +1289,7 @@
   &lt;bibl&gt;S. Staves, Married Women’s Separate Property in England, 1660–1833 (1990) 4, 220.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-18" data-bibl-ids="bibl-23" data-tab-index="18">
+            <div id="bibl-instance-18" data-instance-id="instance-18" data-bibl-ids="bibl-23" data-tab-index="18">
                <pre><code>&lt;note n="19" type="footnote" place="bottom"&gt;
   &lt;label&gt;19&lt;/label&gt;
   &lt;note type="comment"&gt;Staves postulates that the position was somewhat more complicated in that marriage, as a status, crumbled in response to contract ideology in the seventeenth century but, by the end of the eighteenth century, deeper patriarchal structures were re-imposed.&lt;/note&gt;
@@ -1299,7 +1308,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-18">
+            <div id="unresolved-biblstruct-instance-18" data-instance-id="instance-18">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-23"&gt;
@@ -1332,7 +1341,7 @@
                <li><a href="#bibl-instance-19">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-19">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-19">
+            <div id="segmented-instance-instance-19" data-instance-id="instance-19">
                <pre><code>&lt;note n="20" type="footnote" place="bottom"&gt;
   &lt;label&gt;20&lt;/label&gt;
   &lt;note&gt;Siegel presents a valuable study of the changing norms of marriage in the context of wife beating.&lt;/note&gt;
@@ -1340,7 +1349,7 @@
   &lt;bibl&gt;R.B. Siegel, ‘"The Rule of Love”: Wife Beating as Prerogative and Privacy’ (1996) 105 Yale Law J. 2117.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-19" data-bibl-ids="bibl-25" data-tab-index="19">
+            <div id="bibl-instance-19" data-instance-id="instance-19" data-bibl-ids="bibl-25" data-tab-index="19">
                <pre><code>&lt;note n="20" type="footnote" place="bottom"&gt;
   &lt;label&gt;20&lt;/label&gt;
   &lt;note type="comment"&gt;Siegel presents a valuable study of the changing norms of marriage in the context of wife beating.&lt;/note&gt;
@@ -1360,7 +1369,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-19">
+            <div id="unresolved-biblstruct-instance-19" data-instance-id="instance-19">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-25"&gt;
@@ -1398,7 +1407,7 @@
                <li><a href="#bibl-instance-20">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-20">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-20">
+            <div id="segmented-instance-instance-20" data-instance-id="instance-20">
                <pre><code>&lt;note n="21" type="footnote" place="bottom"&gt;
   &lt;label&gt;21&lt;/label&gt;
   &lt;bibl&gt;C. Pateman, The Sexual Contract (1988).&lt;/bibl&gt;
@@ -1406,7 +1415,7 @@
   &lt;bibl&gt;K. O’Donovan, Family Matters (1993), especially 43–59.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-20" data-bibl-ids="bibl-26 bibl-27" data-tab-index="20">
+            <div id="bibl-instance-20" data-instance-id="instance-20" data-bibl-ids="bibl-26 bibl-27" data-tab-index="20">
                <pre><code>&lt;note n="21" type="footnote" place="bottom"&gt;
   &lt;label&gt;21&lt;/label&gt;
   &lt;bibl xml:id="bibl-26"&gt;
@@ -1433,7 +1442,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-20">
+            <div id="unresolved-biblstruct-instance-20" data-instance-id="instance-20">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-26"&gt;
@@ -1485,7 +1494,7 @@
                <li><a href="#bibl-instance-21">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-21">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-21">
+            <div id="segmented-instance-instance-21" data-instance-id="instance-21">
                <pre><code>&lt;note n="23" type="footnote" place="bottom"&gt;
   &lt;label&gt;23&lt;/label&gt;
   &lt;bibl&gt;Crimes (Sexual Assault) Amendment Act 1981 (N.S.W.)&lt;/bibl&gt;
@@ -1501,7 +1510,7 @@
   &lt;bibl&gt;R. v. R. [1991] 2 All E.R. 257)&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-21" data-bibl-ids="bibl-28 bibl-29 bibl-30 bibl-31 bibl-32 bibl-33 bibl-34" data-tab-index="21">
+            <div id="bibl-instance-21" data-instance-id="instance-21" data-bibl-ids="bibl-28 bibl-29 bibl-30 bibl-31 bibl-32 bibl-33 bibl-34" data-tab-index="21">
                <pre><code>&lt;note n="23" type="footnote" place="bottom"&gt;
   &lt;label&gt;23&lt;/label&gt;
   &lt;bibl xml:id="bibl-28"&gt;
@@ -1547,7 +1556,7 @@
   &lt;/bibl&gt;.
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-21">
+            <div id="unresolved-biblstruct-instance-21" data-instance-id="instance-21">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-28"&gt;
@@ -1633,7 +1642,7 @@
                <li><a href="#bibl-instance-22">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-22">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-22">
+            <div id="segmented-instance-instance-22" data-instance-id="instance-22">
                <pre><code>&lt;note n="24" type="footnote" place="bottom"&gt;
   &lt;label&gt;24&lt;/label&gt;
   &lt;bibl&gt;M. Freeman, ‘Contracting in the Haven: Balfour v. Balfour Revisited’ in Exploring the Boundaries of Contract, ed. R. Halson (1996) 74&lt;/bibl&gt;
@@ -1641,7 +1650,7 @@
   &lt;note&gt;See Collier further for a comprehensive study of sexuality in marriage.&lt;/note&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-22" data-bibl-ids="bibl-35 bibl-36" data-tab-index="22">
+            <div id="bibl-instance-22" data-instance-id="instance-22" data-bibl-ids="bibl-35 bibl-36" data-tab-index="22">
                <pre><code>&lt;note n="24" type="footnote" place="bottom"&gt;
   &lt;label&gt;24&lt;/label&gt;
   &lt;bibl xml:id="bibl-35"&gt;
@@ -1676,7 +1685,7 @@
   &lt;note type="comment"&gt;See Collier further for a comprehensive study of sexuality in marriage.&lt;/note&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-22">
+            <div id="unresolved-biblstruct-instance-22" data-instance-id="instance-22">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-35"&gt;
@@ -1730,13 +1739,13 @@
                <li><a href="#bibl-instance-23">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-23">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-23">
+            <div id="segmented-instance-instance-23" data-instance-id="instance-23">
                <pre><code>&lt;note n="25" type="footnote" place="bottom"&gt;
   &lt;label&gt;25&lt;/label&gt;
   &lt;bibl&gt;P.S. Atiyah, An Introduction to the Law of Contract (5th ed., 1995) 3.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-23" data-bibl-ids="bibl-38" data-tab-index="23">
+            <div id="bibl-instance-23" data-instance-id="instance-23" data-bibl-ids="bibl-38" data-tab-index="23">
                <pre><code>&lt;note n="25" type="footnote" place="bottom"&gt;
   &lt;label&gt;25&lt;/label&gt;
   &lt;bibl xml:id="bibl-38"&gt;
@@ -1753,7 +1762,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-23">
+            <div id="unresolved-biblstruct-instance-23" data-instance-id="instance-23">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-38"&gt;
@@ -1794,7 +1803,7 @@
                <li><a href="#unresolved-biblstruct-instance-24">&lt;biblStruct&gt;</a></li>
                <li><a href="#resolved-biblstruct-instance-24">Resolved &lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-24">
+            <div id="segmented-instance-instance-24" data-instance-id="instance-24">
                <pre><code>&lt;note n="26" type="footnote" place="bottom"&gt;
   &lt;label&gt;26&lt;/label&gt;
   &lt;note&gt;The Australian Law Reform Commission has addressed the issue and recommended recognition of prenuptial agreements.&lt;/note&gt;
@@ -1807,7 +1816,7 @@
   &lt;bibl&gt;C. Dalton, ‘An Essay in the Deconstruction of Contract Doctrine’ (1985) 94 Yale Law J. 997.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-24" data-bibl-ids="bibl-40 bibl-41 bibl-42 bibl-43" data-tab-index="24">
+            <div id="bibl-instance-24" data-instance-id="instance-24" data-bibl-ids="bibl-40 bibl-41 bibl-42 bibl-43" data-tab-index="24">
                <pre><code>&lt;note n="26" type="footnote" place="bottom"&gt;
   &lt;label&gt;26&lt;/label&gt;
   &lt;note type="comment"&gt;The Australian Law Reform Commission has addressed the issue and recommended recognition of prenuptial agreements.&lt;/note&gt;
@@ -1859,7 +1868,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-24">
+            <div id="unresolved-biblstruct-instance-24" data-instance-id="instance-24">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-40"&gt;
@@ -1894,6 +1903,7 @@
             &lt;/persName&gt;
          &lt;/author&gt;
       &lt;/analytic&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;ref type="op-cit"&gt;op. cit.&lt;/ref&gt;
       &lt;ref type="footnote" n="4"&gt;n. 4&lt;/ref&gt;
    &lt;/biblStruct&gt;
@@ -1919,7 +1929,7 @@
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="resolved-biblstruct-instance-24">
+            <div id="resolved-biblstruct-instance-24" data-instance-id="instance-24">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-40"&gt;
@@ -1999,13 +2009,13 @@
                <li><a href="#bibl-instance-25">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-25">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-25">
+            <div id="segmented-instance-instance-25" data-instance-id="instance-25">
                <pre><code>&lt;note n="27" type="footnote" place="bottom"&gt;
   &lt;label&gt;27&lt;/label&gt;
   &lt;bibl&gt;L. J. Weitzman, The Marriage Contract: Spouses, Lovers, and the Law (1981) 347 ff.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-25" data-bibl-ids="bibl-44" data-tab-index="25">
+            <div id="bibl-instance-25" data-instance-id="instance-25" data-bibl-ids="bibl-44" data-tab-index="25">
                <pre><code>&lt;note n="27" type="footnote" place="bottom"&gt;
   &lt;label&gt;27&lt;/label&gt;
   &lt;bibl xml:id="bibl-44"&gt;
@@ -2022,7 +2032,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-25">
+            <div id="unresolved-biblstruct-instance-25" data-instance-id="instance-25">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-44"&gt;
@@ -2054,13 +2064,13 @@
                <li><a href="#unresolved-biblstruct-instance-26">&lt;biblStruct&gt;</a></li>
                <li><a href="#resolved-biblstruct-instance-26">Resolved &lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-26">
+            <div id="segmented-instance-instance-26" data-instance-id="instance-26">
                <pre><code>&lt;note n="28" type="footnote" place="bottom"&gt;
   &lt;label&gt;28&lt;/label&gt;
   &lt;bibl&gt;Grossberg, op. cit., n. 18, p. 52.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-26" data-bibl-ids="bibl-45" data-tab-index="26">
+            <div id="bibl-instance-26" data-instance-id="instance-26" data-bibl-ids="bibl-45" data-tab-index="26">
                <pre><code>&lt;note n="28" type="footnote" place="bottom"&gt;
   &lt;label&gt;28&lt;/label&gt;
   &lt;bibl xml:id="bibl-45"&gt;
@@ -2075,10 +2085,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-26">
+            <div id="unresolved-biblstruct-instance-26" data-instance-id="instance-26">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-45"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Grossberg&lt;/surname&gt;
@@ -2091,7 +2102,7 @@
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="resolved-biblstruct-instance-26">
+            <div id="resolved-biblstruct-instance-26" data-instance-id="instance-26">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-45"&gt;
@@ -2124,13 +2135,13 @@
                <li><a href="#bibl-instance-27">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-27">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-27">
+            <div id="segmented-instance-instance-27" data-instance-id="instance-27">
                <pre><code>&lt;note n="29" type="footnote" place="bottom"&gt;
   &lt;label&gt;29&lt;/label&gt;
   &lt;bibl&gt;Balfour v. Balfour [1919] 2 K.B. 571.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-27" data-bibl-ids="bibl-46" data-tab-index="27">
+            <div id="bibl-instance-27" data-instance-id="instance-27" data-bibl-ids="bibl-46" data-tab-index="27">
                <pre><code>&lt;note n="29" type="footnote" place="bottom"&gt;
   &lt;label&gt;29&lt;/label&gt;
   &lt;bibl xml:id="bibl-46"&gt;
@@ -2142,7 +2153,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-27">
+            <div id="unresolved-biblstruct-instance-27" data-instance-id="instance-27">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-46"&gt;
@@ -2176,7 +2187,7 @@
                <li><a href="#unresolved-biblstruct-instance-28">&lt;biblStruct&gt;</a></li>
                <li><a href="#resolved-biblstruct-instance-28">Resolved &lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-28">
+            <div id="segmented-instance-instance-28" data-instance-id="instance-28">
                <pre><code>&lt;note n="30" type="footnote" place="bottom"&gt;
   &lt;label&gt;30&lt;/label&gt;
   &lt;bibl&gt;Freeman, op. cit., n. 24.&lt;/bibl&gt;
@@ -2185,7 +2196,7 @@
   &lt;bibl&gt;M.C. Regan, Family Law and the Pursuit of Intimacy (1993).&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-28" data-bibl-ids="bibl-47 bibl-49" data-tab-index="28">
+            <div id="bibl-instance-28" data-instance-id="instance-28" data-bibl-ids="bibl-47 bibl-49" data-tab-index="28">
                <pre><code>&lt;note n="30" type="footnote" place="bottom"&gt;
   &lt;label&gt;30&lt;/label&gt;
   &lt;bibl xml:id="bibl-47"&gt;
@@ -2211,10 +2222,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-28">
+            <div id="unresolved-biblstruct-instance-28" data-instance-id="instance-28">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-47"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Freeman&lt;/surname&gt;
@@ -2240,7 +2252,7 @@
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="resolved-biblstruct-instance-28">
+            <div id="resolved-biblstruct-instance-28" data-instance-id="instance-28">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-47"&gt;
@@ -2297,7 +2309,7 @@
                <li><a href="#bibl-instance-29">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-29">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-29">
+            <div id="segmented-instance-instance-29" data-instance-id="instance-29">
                <pre><code>&lt;note n="31" type="footnote" place="bottom"&gt;
   &lt;label&gt;31&lt;/label&gt;
   &lt;note&gt;For example,&lt;/note&gt;
@@ -2306,7 +2318,7 @@
   &lt;bibl&gt;Marriage Act Amendment Act 1976 (Cwth.)&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-29" data-bibl-ids="bibl-50 bibl-51 bibl-52" data-tab-index="29">
+            <div id="bibl-instance-29" data-instance-id="instance-29" data-bibl-ids="bibl-50 bibl-51 bibl-52" data-tab-index="29">
                <pre><code>&lt;note n="31" type="footnote" place="bottom"&gt;
   &lt;label&gt;31&lt;/label&gt;
   &lt;note type="signal"&gt;For example,&lt;/note&gt;
@@ -2327,7 +2339,7 @@
   &lt;/bibl&gt;.
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-29">
+            <div id="unresolved-biblstruct-instance-29" data-instance-id="instance-29">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-50"&gt;
@@ -2371,14 +2383,14 @@
                <li><a href="#unresolved-biblstruct-instance-30">&lt;biblStruct&gt;</a></li>
                <li><a href="#resolved-biblstruct-instance-30">Resolved &lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-30">
+            <div id="segmented-instance-instance-30" data-instance-id="instance-30">
                <pre><code>&lt;note n="32" type="footnote" place="bottom"&gt;
   &lt;label&gt;32&lt;/label&gt;
   &lt;bibl&gt;G.S. Frost, Promises Broken: Courtship, Class, and Gender in Victorian England (1995)&lt;/bibl&gt;
   &lt;bibl&gt;Thornton, op. cit. (1996), n. 4&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-30" data-bibl-ids="bibl-53 bibl-54" data-tab-index="30">
+            <div id="bibl-instance-30" data-instance-id="instance-30" data-bibl-ids="bibl-53 bibl-54" data-tab-index="30">
                <pre><code>&lt;note n="32" type="footnote" place="bottom"&gt;
   &lt;label&gt;32&lt;/label&gt;
   &lt;bibl xml:id="bibl-53"&gt;
@@ -2403,7 +2415,7 @@
   &lt;/bibl&gt;.
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-30">
+            <div id="unresolved-biblstruct-instance-30" data-instance-id="instance-30">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-53"&gt;
@@ -2421,6 +2433,7 @@
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-54"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Thornton&lt;/surname&gt;
@@ -2432,7 +2445,7 @@
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="resolved-biblstruct-instance-30">
+            <div id="resolved-biblstruct-instance-30" data-instance-id="instance-30">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-53"&gt;
@@ -2479,13 +2492,13 @@
                <li><a href="#unresolved-biblstruct-instance-31">&lt;biblStruct&gt;</a></li>
                <li><a href="#resolved-biblstruct-instance-31">Resolved &lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-31">
+            <div id="segmented-instance-instance-31" data-instance-id="instance-31">
                <pre><code>&lt;note n="33" type="footnote" place="bottom"&gt;
   &lt;label&gt;33&lt;/label&gt;
   &lt;bibl&gt;Grossberg, op. cit., n. 18, p. 38.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-31" data-bibl-ids="bibl-55" data-tab-index="31">
+            <div id="bibl-instance-31" data-instance-id="instance-31" data-bibl-ids="bibl-55" data-tab-index="31">
                <pre><code>&lt;note n="33" type="footnote" place="bottom"&gt;
   &lt;label&gt;33&lt;/label&gt;
   &lt;bibl xml:id="bibl-55"&gt;
@@ -2500,10 +2513,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-31">
+            <div id="unresolved-biblstruct-instance-31" data-instance-id="instance-31">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-55"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Grossberg&lt;/surname&gt;
@@ -2516,7 +2530,7 @@
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="resolved-biblstruct-instance-31">
+            <div id="resolved-biblstruct-instance-31" data-instance-id="instance-31">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-55"&gt;
@@ -2547,14 +2561,14 @@
                <li><a href="#bibl-instance-32">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-32">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-32">
+            <div id="segmented-instance-instance-32" data-instance-id="instance-32">
                <pre><code>&lt;note n="34" type="footnote" place="bottom"&gt;
   &lt;label&gt;34&lt;/label&gt;
   &lt;note&gt;Compare&lt;/note&gt;
   &lt;bibl&gt;U. Vogel, ‘Is Citizenship Gender-Specific?’ in The Frontiers of Citizenship, eds. U. Vogel and M. Moran (1991) 59.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-32" data-bibl-ids="bibl-56" data-tab-index="32">
+            <div id="bibl-instance-32" data-instance-id="instance-32" data-bibl-ids="bibl-56" data-tab-index="32">
                <pre><code>&lt;note n="34" type="footnote" place="bottom"&gt;
   &lt;label&gt;34&lt;/label&gt;
   &lt;note type="signal"&gt;Compare&lt;/note&gt;
@@ -2584,7 +2598,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-32">
+            <div id="unresolved-biblstruct-instance-32" data-instance-id="instance-32">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-56"&gt;
@@ -2629,14 +2643,14 @@
                <li><a href="#bibl-instance-33">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-33">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-33">
+            <div id="segmented-instance-instance-33" data-instance-id="instance-33">
                <pre><code>&lt;note n="35" type="footnote" place="bottom"&gt;
   &lt;label&gt;35&lt;/label&gt;
   &lt;note&gt;See, for example,&lt;/note&gt;
   &lt;bibl&gt;Bradwell v. Illinois 83 U.S. (16 Wall) 130 (1873).&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-33" data-bibl-ids="bibl-57" data-tab-index="33">
+            <div id="bibl-instance-33" data-instance-id="instance-33" data-bibl-ids="bibl-57" data-tab-index="33">
                <pre><code>&lt;note n="35" type="footnote" place="bottom"&gt;
   &lt;label&gt;35&lt;/label&gt;
   &lt;note type="signal"&gt;See, for example,&lt;/note&gt;
@@ -2646,7 +2660,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-33">
+            <div id="unresolved-biblstruct-instance-33" data-instance-id="instance-33">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-57"&gt;
@@ -2669,14 +2683,14 @@
                <li><a href="#bibl-instance-34">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-34">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-34">
+            <div id="segmented-instance-instance-34" data-instance-id="instance-34">
                <pre><code>&lt;note n="36" type="footnote" place="bottom"&gt;
   &lt;label&gt;36&lt;/label&gt;
   &lt;note&gt;Compare&lt;/note&gt;
   &lt;bibl&gt;J. Pahl, Money and Marriage (1989) 5.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-34" data-bibl-ids="bibl-58" data-tab-index="34">
+            <div id="bibl-instance-34" data-instance-id="instance-34" data-bibl-ids="bibl-58" data-tab-index="34">
                <pre><code>&lt;note n="36" type="footnote" place="bottom"&gt;
   &lt;label&gt;36&lt;/label&gt;
   &lt;note type="signal"&gt;Compare&lt;/note&gt;
@@ -2693,7 +2707,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-34">
+            <div id="unresolved-biblstruct-instance-34" data-instance-id="instance-34">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-58"&gt;
@@ -2734,7 +2748,7 @@
                <li><a href="#bibl-instance-35">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-35">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-35">
+            <div id="segmented-instance-instance-35" data-instance-id="instance-35">
                <pre><code>&lt;note n="37" type="footnote" place="bottom"&gt;
   &lt;label&gt;37&lt;/label&gt;
   &lt;note&gt;Although Australia, like the United Kingdom, has a separate property regime, the courts are endowed with broad powers under the Family Law Act 1975 (Cwth.) to distribute property equitably.&lt;/note&gt;
@@ -2747,7 +2761,7 @@
   &lt;bibl&gt;C. Donahue, ‘What Causes Fundamental Legal Ideas? Marital Property in England and France in the Thirteenth Century’ (1979) 78 Michigan Law Rev. 59.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-35" data-bibl-ids="bibl-61 bibl-63 bibl-64" data-tab-index="35">
+            <div id="bibl-instance-35" data-instance-id="instance-35" data-bibl-ids="bibl-61 bibl-63 bibl-64" data-tab-index="35">
                <pre><code>&lt;note n="37" type="footnote" place="bottom"&gt;
   &lt;label&gt;37&lt;/label&gt;
   &lt;note type="comment"&gt;Although Australia, like the United Kingdom, has a separate property regime, the courts are endowed with broad powers under the Family Law Act 1975 (Cwth.) to distribute property equitably.&lt;/note&gt;
@@ -2805,7 +2819,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-35">
+            <div id="unresolved-biblstruct-instance-35" data-instance-id="instance-35">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-61"&gt;
@@ -2887,7 +2901,7 @@
                <li><a href="#unresolved-biblstruct-instance-36">&lt;biblStruct&gt;</a></li>
                <li><a href="#resolved-biblstruct-instance-36">Resolved &lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-36">
+            <div id="segmented-instance-instance-36" data-instance-id="instance-36">
                <pre><code>&lt;note n="38" type="footnote" place="bottom"&gt;
   &lt;label&gt;38&lt;/label&gt;
   &lt;note&gt;The legal construction of masculinity and femininity in family law has been the subject of recent scholarly interest.&lt;/note&gt;
@@ -2897,7 +2911,7 @@
   &lt;bibl&gt;Collier, op. cit., n. 24.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-36" data-bibl-ids="bibl-66 bibl-67" data-tab-index="36">
+            <div id="bibl-instance-36" data-instance-id="instance-36" data-bibl-ids="bibl-66 bibl-67" data-tab-index="36">
                <pre><code>&lt;note n="38" type="footnote" place="bottom"&gt;
   &lt;label&gt;38&lt;/label&gt;
   &lt;note type="comment"&gt;The legal construction of masculinity and femininity in family law has been the subject of recent scholarly interest.&lt;/note&gt;
@@ -2923,10 +2937,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-36">
+            <div id="unresolved-biblstruct-instance-36" data-instance-id="instance-36">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-66"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;O’Donovan&lt;/surname&gt;
@@ -2936,6 +2951,7 @@
       &lt;ref type="footnote" n="21"&gt;n. 21&lt;/ref&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-67"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Collier&lt;/surname&gt;
@@ -2947,7 +2963,7 @@
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="resolved-biblstruct-instance-36">
+            <div id="resolved-biblstruct-instance-36" data-instance-id="instance-36">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-66"&gt;
@@ -2992,14 +3008,14 @@
                <li><a href="#unresolved-biblstruct-instance-37">&lt;biblStruct&gt;</a></li>
                <li><a href="#resolved-biblstruct-instance-37">Resolved &lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-37">
+            <div id="segmented-instance-instance-37" data-instance-id="instance-37">
                <pre><code>&lt;note n="39" type="footnote" place="bottom"&gt;
   &lt;label&gt;39&lt;/label&gt;
   &lt;note&gt;For discussion of sex and legal subjecthood, see&lt;/note&gt;
   &lt;bibl&gt;N. Naffine ‘Sexing the Subject (of Law)’ in Thornton, op. cit. (1995), n. 4.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-37" data-bibl-ids="bibl-68" data-tab-index="37">
+            <div id="bibl-instance-37" data-instance-id="instance-37" data-bibl-ids="bibl-68" data-tab-index="37">
                <pre><code>&lt;note n="39" type="footnote" place="bottom"&gt;
   &lt;label&gt;39&lt;/label&gt;
   &lt;note type="signal"&gt;For discussion of sex and legal subjecthood, see&lt;/note&gt;
@@ -3022,7 +3038,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-37">
+            <div id="unresolved-biblstruct-instance-37" data-instance-id="instance-37">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-68"&gt;
@@ -3035,13 +3051,14 @@
             &lt;/persName&gt;
          &lt;/author&gt;
       &lt;/analytic&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;ref type="op-cit"&gt;op. cit.&lt;/ref&gt;
       &lt;ref type="footnote" n="4"&gt;n. 4&lt;/ref&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="resolved-biblstruct-instance-37">
+            <div id="resolved-biblstruct-instance-37" data-instance-id="instance-37">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-68"&gt;
@@ -3079,13 +3096,13 @@
                <li><a href="#bibl-instance-38">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-38">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-38">
+            <div id="segmented-instance-instance-38" data-instance-id="instance-38">
                <pre><code>&lt;note n="40" type="footnote" place="bottom"&gt;
   &lt;label&gt;40&lt;/label&gt;
   &lt;bibl&gt;Contracts Review Act 1980 (N.S.W.).&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-38" data-bibl-ids="bibl-69" data-tab-index="38">
+            <div id="bibl-instance-38" data-instance-id="instance-38" data-bibl-ids="bibl-69" data-tab-index="38">
                <pre><code>&lt;note n="40" type="footnote" place="bottom"&gt;
   &lt;label&gt;40&lt;/label&gt;
   &lt;bibl xml:id="bibl-69"&gt;
@@ -3095,7 +3112,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-38">
+            <div id="unresolved-biblstruct-instance-38" data-instance-id="instance-38">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-69"&gt;
@@ -3120,13 +3137,13 @@
                <li><a href="#bibl-instance-39">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-39">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-39">
+            <div id="segmented-instance-instance-39" data-instance-id="instance-39">
                <pre><code>&lt;note n="41" type="footnote" place="bottom"&gt;
   &lt;label&gt;41&lt;/label&gt;
   &lt;bibl&gt;J. Nedelsky, Private Property and the Limits of American Constitutionalism: The Madisonian Framework and its Legacy (1990), especially 223 ff&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-39" data-bibl-ids="bibl-70" data-tab-index="39">
+            <div id="bibl-instance-39" data-instance-id="instance-39" data-bibl-ids="bibl-70" data-tab-index="39">
                <pre><code>&lt;note n="41" type="footnote" place="bottom"&gt;
   &lt;label&gt;41&lt;/label&gt;
   &lt;bibl xml:id="bibl-70"&gt;
@@ -3142,7 +3159,7 @@
   &lt;/bibl&gt;.
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-39">
+            <div id="unresolved-biblstruct-instance-39" data-instance-id="instance-39">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-70"&gt;
@@ -3172,13 +3189,13 @@
                <li><a href="#bibl-instance-40">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-40">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-40">
+            <div id="segmented-instance-instance-40" data-instance-id="instance-40">
                <pre><code>&lt;note n="42" type="footnote" place="bottom"&gt;
   &lt;label&gt;42&lt;/label&gt;
   &lt;bibl&gt;C.B. Macpherson, Democratic Theory: Essays in Retrieval (1973) 120.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-40" data-bibl-ids="bibl-71" data-tab-index="40">
+            <div id="bibl-instance-40" data-instance-id="instance-40" data-bibl-ids="bibl-71" data-tab-index="40">
                <pre><code>&lt;note n="42" type="footnote" place="bottom"&gt;
   &lt;label&gt;42&lt;/label&gt;
   &lt;bibl xml:id="bibl-71"&gt;
@@ -3194,7 +3211,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-40">
+            <div id="unresolved-biblstruct-instance-40" data-instance-id="instance-40">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-71"&gt;
@@ -3225,14 +3242,14 @@
                <li><a href="#bibl-instance-41">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-41">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-41">
+            <div id="segmented-instance-instance-41" data-instance-id="instance-41">
                <pre><code>&lt;note n="43" type="footnote" place="bottom"&gt;
   &lt;label&gt;43&lt;/label&gt;
   &lt;note&gt;For example,&lt;/note&gt;
   &lt;bibl&gt;N. Howell, ‘“Sexually Transmitted Debt”: A Feminist Analysis of Laws Regulating Guarantors and Co-Borrowers’ (1995) 4 Aust. Feminist Law J. 93.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-41" data-bibl-ids="bibl-72" data-tab-index="41">
+            <div id="bibl-instance-41" data-instance-id="instance-41" data-bibl-ids="bibl-72" data-tab-index="41">
                <pre><code>&lt;note n="43" type="footnote" place="bottom"&gt;
   &lt;label&gt;43&lt;/label&gt;
   &lt;note type="signal"&gt;For example,&lt;/note&gt;
@@ -3251,7 +3268,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-41">
+            <div id="unresolved-biblstruct-instance-41" data-instance-id="instance-41">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-72"&gt;
@@ -3286,13 +3303,13 @@
                <li><a href="#bibl-instance-42">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-42">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-42">
+            <div id="segmented-instance-instance-42" data-instance-id="instance-42">
                <pre><code>&lt;note n="44" type="footnote" place="bottom"&gt;
   &lt;label&gt;44&lt;/label&gt;
   &lt;bibl&gt;P. Baron, ‘The Free Exercise of Her Will: Women and Emotionally Transmitted Debt’ (1995) 13 Law in Context 23.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-42" data-bibl-ids="bibl-73" data-tab-index="42">
+            <div id="bibl-instance-42" data-instance-id="instance-42" data-bibl-ids="bibl-73" data-tab-index="42">
                <pre><code>&lt;note n="44" type="footnote" place="bottom"&gt;
   &lt;label&gt;44&lt;/label&gt;
   &lt;bibl xml:id="bibl-73"&gt;
@@ -3310,7 +3327,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-42">
+            <div id="unresolved-biblstruct-instance-42" data-instance-id="instance-42">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-73"&gt;
@@ -3347,7 +3364,7 @@
                <li><a href="#unresolved-biblstruct-instance-43">&lt;biblStruct&gt;</a></li>
                <li><a href="#resolved-biblstruct-instance-43">Resolved &lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-43">
+            <div id="segmented-instance-instance-43" data-instance-id="instance-43">
                <pre><code>&lt;note n="45" type="footnote" place="bottom"&gt;
   &lt;label&gt;45&lt;/label&gt;
   &lt;bibl&gt;id., p. 24&lt;/bibl&gt;
@@ -3357,7 +3374,7 @@
   &lt;note&gt;per Brown-Wilkinson L.&lt;/note&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-43" data-bibl-ids="bibl-74 bibl-74b bibl-75" data-tab-index="43">
+            <div id="bibl-instance-43" data-instance-id="instance-43" data-bibl-ids="bibl-74 bibl-74b bibl-75" data-tab-index="43">
                <pre><code>&lt;note n="45" type="footnote" place="bottom"&gt;
   &lt;label&gt;45&lt;/label&gt;
   &lt;bibl xml:id="bibl-74"&gt;
@@ -3388,10 +3405,11 @@
   &lt;note type="comment"&gt;per Brown-Wilkinson L.&lt;/note&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-43">
+            <div id="unresolved-biblstruct-instance-43" data-instance-id="instance-43">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-74"&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;ref type="op-cit"&gt;id.&lt;/ref&gt;
       &lt;citedRange unit="page" from="24" to="24"&gt;p. 24&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
@@ -3428,10 +3446,11 @@
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="resolved-biblstruct-instance-43">
+            <div id="resolved-biblstruct-instance-43" data-instance-id="instance-43">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-74"&gt;
+      &lt;error&gt;element citedRange: Element 'tei:citedRange': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;citedRange unit="page" from="24" to="24"&gt;p. 24&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-74b"&gt;
@@ -3479,14 +3498,14 @@
                <li><a href="#unresolved-biblstruct-instance-44">&lt;biblStruct&gt;</a></li>
                <li><a href="#resolved-biblstruct-instance-44">Resolved &lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-44">
+            <div id="segmented-instance-instance-44" data-instance-id="instance-44">
                <pre><code>&lt;note n="46" type="footnote" place="bottom"&gt;
   &lt;label&gt;46&lt;/label&gt;
   &lt;bibl&gt;Baron, op. cit., n. 44, p. 34.&lt;/bibl&gt;
   &lt;bibl&gt;M. Richardson, ‘Protecting Women who provide Security for a Husband's, Partner's or Child's Debts. The Value and Limits of an Economic Perspective’ (1996) 16 Legal Studies 368.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-44" data-bibl-ids="bibl-76 bibl-77" data-tab-index="44">
+            <div id="bibl-instance-44" data-instance-id="instance-44" data-bibl-ids="bibl-76 bibl-77" data-tab-index="44">
                <pre><code>&lt;note n="46" type="footnote" place="bottom"&gt;
   &lt;label&gt;46&lt;/label&gt;
   &lt;bibl xml:id="bibl-76"&gt;
@@ -3514,10 +3533,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-44">
+            <div id="unresolved-biblstruct-instance-44" data-instance-id="instance-44">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-76"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Baron&lt;/surname&gt;
@@ -3549,7 +3569,7 @@
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="resolved-biblstruct-instance-44">
+            <div id="resolved-biblstruct-instance-44" data-instance-id="instance-44">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-76"&gt;
@@ -3608,7 +3628,7 @@
                <li><a href="#unresolved-biblstruct-instance-45">&lt;biblStruct&gt;</a></li>
                <li><a href="#resolved-biblstruct-instance-45">Resolved &lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-45">
+            <div id="segmented-instance-instance-45" data-instance-id="instance-45">
                <pre><code>&lt;note n="47" type="footnote" place="bottom"&gt;
   &lt;label&gt;47&lt;/label&gt;
   &lt;note&gt;Examples are legion, and by no means confined to the more sensational criminal law cases picked up by the media,&lt;/note&gt;
@@ -3619,7 +3639,7 @@
   &lt;bibl&gt;Howell, op. cit., n. 43.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-45" data-bibl-ids="bibl-78 bibl-79" data-tab-index="45">
+            <div id="bibl-instance-45" data-instance-id="instance-45" data-bibl-ids="bibl-78 bibl-79" data-tab-index="45">
                <pre><code>&lt;note n="47" type="footnote" place="bottom"&gt;
   &lt;label&gt;47&lt;/label&gt;
   &lt;note type="comment"&gt;Examples are legion, and by no means confined to the more sensational criminal law cases picked up by the media,&lt;/note&gt;
@@ -3644,7 +3664,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-45">
+            <div id="unresolved-biblstruct-instance-45" data-instance-id="instance-45">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-78"&gt;
@@ -3659,6 +3679,7 @@
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-79"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Howell&lt;/surname&gt;
@@ -3670,7 +3691,7 @@
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="resolved-biblstruct-instance-45">
+            <div id="resolved-biblstruct-instance-45" data-instance-id="instance-45">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-78"&gt;
@@ -3716,13 +3737,13 @@
                <li><a href="#bibl-instance-46">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-46">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-46">
+            <div id="segmented-instance-instance-46" data-instance-id="instance-46">
                <pre><code>&lt;note n="48" type="footnote" place="bottom"&gt;
   &lt;label&gt;48&lt;/label&gt;
   &lt;bibl&gt;B. Fehlberg, ‘The Husband, the Bank, the Wife and Her Signature – the Sequel’ (1996) 59 Modern Law Rev. 675.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-46" data-bibl-ids="bibl-80" data-tab-index="46">
+            <div id="bibl-instance-46" data-instance-id="instance-46" data-bibl-ids="bibl-80" data-tab-index="46">
                <pre><code>&lt;note n="48" type="footnote" place="bottom"&gt;
   &lt;label&gt;48&lt;/label&gt;
   &lt;bibl xml:id="bibl-80"&gt;
@@ -3740,7 +3761,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-46">
+            <div id="unresolved-biblstruct-instance-46" data-instance-id="instance-46">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-80"&gt;
@@ -3774,13 +3795,13 @@
                <li><a href="#bibl-instance-47">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-47">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-47">
+            <div id="segmented-instance-instance-47" data-instance-id="instance-47">
                <pre><code>&lt;note n="49" type="footnote" place="bottom"&gt;
   &lt;label&gt;49&lt;/label&gt;
   &lt;bibl&gt;National Australia Bank Ltd v. Garcia (1996) 39 N.S.W.L.R. 577 (N.S.W.C.A.).&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-47" data-bibl-ids="bibl-81" data-tab-index="47">
+            <div id="bibl-instance-47" data-instance-id="instance-47" data-bibl-ids="bibl-81" data-tab-index="47">
                <pre><code>&lt;note n="49" type="footnote" place="bottom"&gt;
   &lt;label&gt;49&lt;/label&gt;
   &lt;bibl xml:id="bibl-81"&gt;
@@ -3793,7 +3814,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-47">
+            <div id="unresolved-biblstruct-instance-47" data-instance-id="instance-47">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-81"&gt;
@@ -3820,13 +3841,13 @@
                <li><a href="#bibl-instance-48">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-48">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-48">
+            <div id="segmented-instance-instance-48" data-instance-id="instance-48">
                <pre><code>&lt;note n="50" type="footnote" place="bottom"&gt;
   &lt;label&gt;50&lt;/label&gt;
   &lt;bibl&gt;(1991) 25 N.S.W.L.R. 32 (C.A.).&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-48" data-bibl-ids="bibl-82" data-tab-index="48">
+            <div id="bibl-instance-48" data-instance-id="instance-48" data-bibl-ids="bibl-82" data-tab-index="48">
                <pre><code>&lt;note n="50" type="footnote" place="bottom"&gt;
   &lt;label&gt;50&lt;/label&gt;
   &lt;bibl xml:id="bibl-82"&gt;
@@ -3838,7 +3859,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-48">
+            <div id="unresolved-biblstruct-instance-48" data-instance-id="instance-48">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-82"&gt;
@@ -3864,13 +3885,13 @@
                <li><a href="#bibl-instance-49">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-49">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-49">
+            <div id="segmented-instance-instance-49" data-instance-id="instance-49">
                <pre><code>&lt;note n="52" type="footnote" place="bottom"&gt;
   &lt;label&gt;52&lt;/label&gt;
   &lt;bibl&gt;(1994) A.S.C. 56–268 (N.S.W.C.A.).&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-49" data-bibl-ids="bibl-83" data-tab-index="49">
+            <div id="bibl-instance-49" data-instance-id="instance-49" data-bibl-ids="bibl-83" data-tab-index="49">
                <pre><code>&lt;note n="52" type="footnote" place="bottom"&gt;
   &lt;label&gt;52&lt;/label&gt;
   &lt;bibl xml:id="bibl-83"&gt;
@@ -3880,9 +3901,10 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-49">
+            <div id="unresolved-biblstruct-instance-49" data-instance-id="instance-49">
                <pre><code>
 &lt;listBibl&gt;
+   &lt;error&gt;element biblStruct: Element 'tei:biblStruct': Missing child element(s). Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
    &lt;biblStruct source="#bibl-83"/&gt;
 &lt;/listBibl&gt;
 </code></pre>
@@ -3897,14 +3919,14 @@
                <li><a href="#bibl-instance-50">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-50">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-50">
+            <div id="segmented-instance-instance-50" data-instance-id="instance-50">
                <pre><code>&lt;note n="53" type="footnote" place="bottom"&gt;
   &lt;label&gt;53&lt;/label&gt;
   &lt;bibl&gt;Trade Practices Act 1974 (Cwth.), s. 52&lt;/bibl&gt;
   &lt;bibl&gt;Contracts Review Act 1980 (N.S.W.). 54 (1994) A.S.C. 56–270 (N.S.W.C.A.)&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-50" data-bibl-ids="bibl-84 bibl-85" data-tab-index="50">
+            <div id="bibl-instance-50" data-instance-id="instance-50" data-bibl-ids="bibl-84 bibl-85" data-tab-index="50">
                <pre><code>&lt;note n="53" type="footnote" place="bottom"&gt;Based on the
   &lt;label&gt;53&lt;/label&gt;
   &lt;bibl xml:id="bibl-84"&gt;
@@ -3923,7 +3945,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-50">
+            <div id="unresolved-biblstruct-instance-50" data-instance-id="instance-50">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-84"&gt;
@@ -3963,7 +3985,7 @@
                <li><a href="#bibl-instance-51">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-51">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-51">
+            <div id="segmented-instance-instance-51" data-instance-id="instance-51">
                <pre><code>&lt;note n="55" type="footnote" place="bottom"&gt;
   &lt;label&gt;55&lt;/label&gt;
   &lt;note&gt;A number of recent English cases have also turned on the question of whether the wife received independent legal advice. The House of Lords considered the issue in&lt;/note&gt;
@@ -3972,7 +3994,7 @@
   &lt;bibl&gt;Banco Exterior Internacional v. Mann [1995] 1 All E.R. 936.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-51" data-bibl-ids="bibl-86 bibl-87" data-tab-index="51">
+            <div id="bibl-instance-51" data-instance-id="instance-51" data-bibl-ids="bibl-86 bibl-87" data-tab-index="51">
                <pre><code>&lt;note n="55" type="footnote" place="bottom"&gt;
   &lt;label&gt;55&lt;/label&gt;
   &lt;note type="comment"&gt;A number of recent English cases have also turned on the question of whether the wife received independent legal advice. The House of Lords considered the issue in&lt;/note&gt;
@@ -3991,7 +4013,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-51">
+            <div id="unresolved-biblstruct-instance-51" data-instance-id="instance-51">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-86"&gt;
@@ -4026,14 +4048,14 @@
                <li><a href="#bibl-instance-52">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-52">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-52">
+            <div id="segmented-instance-instance-52" data-instance-id="instance-52">
                <pre><code>&lt;note n="56" type="footnote" place="bottom"&gt;
   &lt;label&gt;56&lt;/label&gt;
   &lt;note&gt;See&lt;/note&gt;
   &lt;bibl&gt;I.J. Hardingham and M.A. Neave, Australian Family Property Law (1984) 94.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-52" data-bibl-ids="bibl-88" data-tab-index="52">
+            <div id="bibl-instance-52" data-instance-id="instance-52" data-bibl-ids="bibl-88" data-tab-index="52">
                <pre><code>&lt;note n="56" type="footnote" place="bottom"&gt;
   &lt;label&gt;56&lt;/label&gt;
   &lt;note type="signal"&gt;See&lt;/note&gt;
@@ -4056,7 +4078,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-52">
+            <div id="unresolved-biblstruct-instance-52" data-instance-id="instance-52">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-88"&gt;
@@ -4092,14 +4114,14 @@
                <li><a href="#bibl-instance-53">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-53">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-53">
+            <div id="segmented-instance-instance-53" data-instance-id="instance-53">
                <pre><code>&lt;note n="57" type="footnote" place="bottom"&gt;
   &lt;label&gt;57&lt;/label&gt;
   &lt;note&gt;Compare&lt;/note&gt;
   &lt;bibl&gt;K. O’Donovan, Sexual Divisions in Law (1985), especially 112–18.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-53" data-bibl-ids="bibl-89" data-tab-index="53">
+            <div id="bibl-instance-53" data-instance-id="instance-53" data-bibl-ids="bibl-89" data-tab-index="53">
                <pre><code>&lt;note n="57" type="footnote" place="bottom"&gt;
   &lt;label&gt;57&lt;/label&gt;
   &lt;note type="signal"&gt;Compare&lt;/note&gt;
@@ -4116,7 +4138,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-53">
+            <div id="unresolved-biblstruct-instance-53" data-instance-id="instance-53">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-89"&gt;
@@ -4152,7 +4174,7 @@
                <li><a href="#bibl-instance-54">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-54">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-54">
+            <div id="segmented-instance-instance-54" data-instance-id="instance-54">
                <pre><code>&lt;note n="58" type="footnote" place="bottom"&gt;
   &lt;label&gt;58&lt;/label&gt;
   &lt;note&gt;Although Reich’s work on the conceptualization of non-traditional sources of wealth, such as employment and professional qualifications, as forms of ‘new property’ has been influential, he did not broach the subject of caring work.&lt;/note&gt;
@@ -4163,7 +4185,7 @@
   &lt;bibl&gt;M.A. Glendon, The New Family and the New Property (1981).&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-54" data-bibl-ids="bibl-90 bibl-92" data-tab-index="54">
+            <div id="bibl-instance-54" data-instance-id="instance-54" data-bibl-ids="bibl-90 bibl-92" data-tab-index="54">
                <pre><code>&lt;note n="58" type="footnote" place="bottom"&gt;
   &lt;label&gt;58&lt;/label&gt;
   &lt;note type="comment"&gt;Although Reich’s work on the conceptualization of non-traditional sources of wealth, such as employment and professional qualifications, as forms of ‘new property’ has been influential, he did not broach the subject of caring work.&lt;/note&gt;
@@ -4195,7 +4217,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-54">
+            <div id="unresolved-biblstruct-instance-54" data-instance-id="instance-54">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-90"&gt;
@@ -4243,13 +4265,13 @@
                <li><a href="#bibl-instance-55">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-55">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-55">
+            <div id="segmented-instance-instance-55" data-instance-id="instance-55">
                <pre><code>&lt;note n="59" type="footnote" place="bottom"&gt;
   &lt;label&gt;59&lt;/label&gt;
   &lt;bibl&gt;(1992) 29 N.S.W.L.R. 188 (C.A.)&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-55" data-bibl-ids="bibl-93" data-tab-index="55">
+            <div id="bibl-instance-55" data-instance-id="instance-55" data-bibl-ids="bibl-93" data-tab-index="55">
                <pre><code>&lt;note n="59" type="footnote" place="bottom"&gt;
   &lt;label&gt;59&lt;/label&gt;
   &lt;bibl xml:id="bibl-93"&gt;
@@ -4261,7 +4283,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-55">
+            <div id="unresolved-biblstruct-instance-55" data-instance-id="instance-55">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-93"&gt;
@@ -4293,7 +4315,7 @@
                <li><a href="#bibl-instance-56">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-56">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-56">
+            <div id="segmented-instance-instance-56" data-instance-id="instance-56">
                <pre><code>&lt;note n="60" type="footnote" place="bottom"&gt;
   &lt;label&gt;60&lt;/label&gt;
   &lt;note&gt;Trusts of this kind have been judicially created in order to obviate injustice. Ironically, such devices have been commonly utilized over the last twenty years or so in property disputes arising out of de facto relationships, where divisibility has permitted separate interests to crystallize in ways not recognized within marriage.&lt;/note&gt;
@@ -4301,7 +4323,7 @@
   &lt;bibl&gt;P. Parkinson, ‘Property Rights and Third Party Creditors – the Scope and Limitations of Equitable Doctrines’ (1997) 11 Australian J. Family Law 100.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-56" data-bibl-ids="bibl-95" data-tab-index="56">
+            <div id="bibl-instance-56" data-instance-id="instance-56" data-bibl-ids="bibl-95" data-tab-index="56">
                <pre><code>&lt;note n="60" type="footnote" place="bottom"&gt;
   &lt;label&gt;60&lt;/label&gt;
   &lt;note type="comment"&gt;Trusts of this kind have been judicially created in order to obviate injustice. Ironically, such devices have been commonly utilized over the last twenty years or so in property disputes arising out of de facto relationships, where divisibility has permitted separate interests to crystallize in ways not recognized within marriage.&lt;/note&gt;
@@ -4321,7 +4343,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-56">
+            <div id="unresolved-biblstruct-instance-56" data-instance-id="instance-56">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-95"&gt;
@@ -4356,14 +4378,14 @@
                <li><a href="#bibl-instance-57">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-57">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-57">
+            <div id="segmented-instance-instance-57" data-instance-id="instance-57">
                <pre><code>&lt;note n="61" type="footnote" place="bottom"&gt;
   &lt;label&gt;61&lt;/label&gt;
   &lt;note&gt;For discussion, see&lt;/note&gt;
   &lt;bibl&gt;J. Riley, ‘The Property Rights of Home-Makers under General Law: Bryson v. Bryant’ (1994) 16 Sydney Law Rev. 412.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-57" data-bibl-ids="bibl-96" data-tab-index="57">
+            <div id="bibl-instance-57" data-instance-id="instance-57" data-bibl-ids="bibl-96" data-tab-index="57">
                <pre><code>&lt;note n="61" type="footnote" place="bottom"&gt;
   &lt;label&gt;61&lt;/label&gt;
   &lt;note type="signal"&gt;For discussion, see&lt;/note&gt;
@@ -4382,7 +4404,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-57">
+            <div id="unresolved-biblstruct-instance-57" data-instance-id="instance-57">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-96"&gt;
@@ -4417,13 +4439,13 @@
                <li><a href="#bibl-instance-58">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-58">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-58">
+            <div id="segmented-instance-instance-58" data-instance-id="instance-58">
                <pre><code>&lt;note n="62" type="footnote" place="bottom"&gt;
   &lt;label&gt;62&lt;/label&gt;
   &lt;bibl&gt;The Hon. Justice T. E. Lindenmayer and P.A. Doolan, ‘When Bankruptcy and Family Law Collide’ (1994) 8 Aust. J. Family Law 111, 133.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-58" data-bibl-ids="bibl-97" data-tab-index="58">
+            <div id="bibl-instance-58" data-instance-id="instance-58" data-bibl-ids="bibl-97" data-tab-index="58">
                <pre><code>&lt;note n="62" type="footnote" place="bottom"&gt;
   &lt;label&gt;62&lt;/label&gt;
   &lt;bibl xml:id="bibl-97"&gt;
@@ -4449,7 +4471,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-58">
+            <div id="unresolved-biblstruct-instance-58" data-instance-id="instance-58">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-97"&gt;
@@ -4492,13 +4514,13 @@
                <li><a href="#bibl-instance-59">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-59">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-59">
+            <div id="segmented-instance-instance-59" data-instance-id="instance-59">
                <pre><code>&lt;note n="63" type="footnote" place="bottom"&gt;
   &lt;label&gt;63&lt;/label&gt;
   &lt;bibl&gt;B. Bennett, ‘The Economics of Wifing Services: Law and Economics on the Family’ (1991) 18 J. of Law and Society 206.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-59" data-bibl-ids="bibl-98" data-tab-index="59">
+            <div id="bibl-instance-59" data-instance-id="instance-59" data-bibl-ids="bibl-98" data-tab-index="59">
                <pre><code>&lt;note n="63" type="footnote" place="bottom"&gt;
   &lt;label&gt;63&lt;/label&gt;
   &lt;bibl xml:id="bibl-98"&gt;
@@ -4516,7 +4538,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-59">
+            <div id="unresolved-biblstruct-instance-59" data-instance-id="instance-59">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-98"&gt;
@@ -4551,14 +4573,14 @@
                <li><a href="#unresolved-biblstruct-instance-60">&lt;biblStruct&gt;</a></li>
                <li><a href="#resolved-biblstruct-instance-60">Resolved &lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-60">
+            <div id="segmented-instance-instance-60" data-instance-id="instance-60">
                <pre><code>&lt;note n="64" type="footnote" place="bottom"&gt;
   &lt;label&gt;64&lt;/label&gt;
   &lt;bibl&gt;O’Donovan, op. cit., n. 57;&lt;/bibl&gt;
   &lt;bibl&gt;Thornton, op. cit. (1995), n. 4.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-60" data-bibl-ids="bibl-99 bibl-100" data-tab-index="60">
+            <div id="bibl-instance-60" data-instance-id="instance-60" data-bibl-ids="bibl-99 bibl-100" data-tab-index="60">
                <pre><code>&lt;note n="64" type="footnote" place="bottom"&gt;
   &lt;label&gt;64&lt;/label&gt;
   &lt;bibl xml:id="bibl-99"&gt;
@@ -4581,10 +4603,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-60">
+            <div id="unresolved-biblstruct-instance-60" data-instance-id="instance-60">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-99"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;O’Donovan&lt;/surname&gt;
@@ -4594,6 +4617,7 @@
       &lt;ref type="footnote" n="57"&gt;n. 57&lt;/ref&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-100"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Thornton&lt;/surname&gt;
@@ -4605,7 +4629,7 @@
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="resolved-biblstruct-instance-60">
+            <div id="resolved-biblstruct-instance-60" data-instance-id="instance-60">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-99"&gt;
@@ -4651,13 +4675,13 @@
                <li><a href="#bibl-instance-61">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-61">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-61">
+            <div id="segmented-instance-instance-61" data-instance-id="instance-61">
                <pre><code>&lt;note n="65" type="footnote" place="bottom"&gt;
   &lt;label&gt;65&lt;/label&gt;
   &lt;bibl&gt;N.S.W.C.A., unreported, 23 May 1994.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-61" data-bibl-ids="bibl-101" data-tab-index="61">
+            <div id="bibl-instance-61" data-instance-id="instance-61" data-bibl-ids="bibl-101" data-tab-index="61">
                <pre><code>&lt;note n="65" type="footnote" place="bottom"&gt;
   &lt;label&gt;65&lt;/label&gt;
   &lt;bibl xml:id="bibl-101"&gt;
@@ -4669,10 +4693,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-61">
+            <div id="unresolved-biblstruct-instance-61" data-instance-id="instance-61">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-101"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;orgName&gt;N.S.W.C.A.&lt;/orgName&gt;
       &lt;/author&gt;
@@ -4692,14 +4717,14 @@
                <li><a href="#bibl-instance-62">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-62">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-62">
+            <div id="segmented-instance-instance-62" data-instance-id="instance-62">
                <pre><code>&lt;note n="66" type="footnote" place="bottom"&gt;
   &lt;label&gt;66&lt;/label&gt;
   &lt;note&gt;For detailed discussion of the ramifications, see&lt;/note&gt;
   &lt;bibl&gt;L.J. Weitzman, The Divorce Revolution: The Unexpected Social and Economic Consequences for Women and Children in America (1985).&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-62" data-bibl-ids="bibl-102" data-tab-index="62">
+            <div id="bibl-instance-62" data-instance-id="instance-62" data-bibl-ids="bibl-102" data-tab-index="62">
                <pre><code>&lt;note n="66" type="footnote" place="bottom"&gt;
   &lt;label&gt;66&lt;/label&gt;
   &lt;note type="signal"&gt;For detailed discussion of the ramifications, see&lt;/note&gt;
@@ -4715,7 +4740,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-62">
+            <div id="unresolved-biblstruct-instance-62" data-instance-id="instance-62">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-102"&gt;
@@ -4745,13 +4770,13 @@
                <li><a href="#bibl-instance-63">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-63">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-63">
+            <div id="segmented-instance-instance-63" data-instance-id="instance-63">
                <pre><code>&lt;note n="67" type="footnote" place="bottom"&gt;
   &lt;label&gt;67&lt;/label&gt;
   &lt;bibl&gt;M.L. Shanley, Feminism, Marriage, and the Law in Victorian England, 1850–1895 (1989) 46.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-63" data-bibl-ids="bibl-103" data-tab-index="63">
+            <div id="bibl-instance-63" data-instance-id="instance-63" data-bibl-ids="bibl-103" data-tab-index="63">
                <pre><code>&lt;note n="67" type="footnote" place="bottom"&gt;
   &lt;label&gt;67&lt;/label&gt;
   &lt;bibl xml:id="bibl-103"&gt;
@@ -4767,7 +4792,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-63">
+            <div id="unresolved-biblstruct-instance-63" data-instance-id="instance-63">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-103"&gt;
@@ -4800,7 +4825,7 @@
                <li><a href="#unresolved-biblstruct-instance-64">&lt;biblStruct&gt;</a></li>
                <li><a href="#resolved-biblstruct-instance-64">Resolved &lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-64">
+            <div id="segmented-instance-instance-64" data-instance-id="instance-64">
                <pre><code>&lt;note n="68" type="footnote" place="bottom"&gt;
   &lt;label&gt;68&lt;/label&gt;
   &lt;note&gt;The move to contract as the governing principle of family law has been noted by commentators.&lt;/note&gt;
@@ -4810,7 +4835,7 @@
   &lt;bibl&gt;Regan, op. cit., n. 30.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-64" data-bibl-ids="bibl-105 bibl-106 bibl-107" data-tab-index="64">
+            <div id="bibl-instance-64" data-instance-id="instance-64" data-bibl-ids="bibl-105 bibl-106 bibl-107" data-tab-index="64">
                <pre><code>&lt;note n="68" type="footnote" place="bottom"&gt;
   &lt;label&gt;68&lt;/label&gt;
   &lt;note type="comment"&gt;The move to contract as the governing principle of family law has been noted by commentators.&lt;/note&gt;
@@ -4844,10 +4869,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-64">
+            <div id="unresolved-biblstruct-instance-64" data-instance-id="instance-64">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-105"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Freeman&lt;/surname&gt;
@@ -4857,6 +4883,7 @@
       &lt;ref type="footnote" n="24"&gt;n. 24&lt;/ref&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-106"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Neave&lt;/surname&gt;
@@ -4866,6 +4893,7 @@
       &lt;ref type="footnote" n="26"&gt;n. 26&lt;/ref&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-107"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Regan&lt;/surname&gt;
@@ -4877,7 +4905,7 @@
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="resolved-biblstruct-instance-64">
+            <div id="resolved-biblstruct-instance-64" data-instance-id="instance-64">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-105"&gt;
@@ -4914,6 +4942,7 @@
             &lt;/persName&gt;
          &lt;/author&gt;
       &lt;/analytic&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;ref type="op-cit"&gt;op. cit.&lt;/ref&gt;
       &lt;ref type="footnote" n="4"&gt;n. 4&lt;/ref&gt;
    &lt;/biblStruct&gt;
@@ -4947,7 +4976,7 @@
                <li><a href="#bibl-instance-65">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-65">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-65">
+            <div id="segmented-instance-instance-65" data-instance-id="instance-65">
                <pre><code>&lt;note n="69" type="footnote" place="bottom"&gt;
   &lt;label&gt;69&lt;/label&gt;
   &lt;bibl&gt;Bryson v. Bryant&lt;/bibl&gt;
@@ -4956,7 +4985,7 @@
   &lt;bibl&gt;M. Neave ‘Three Approaches to Family Law Disputes – Intention/Belief, Unjust Enrichment and Unconscionability’ in Equity, Fiduciaries and Trusts, ed. T.G. Youdan (1989) 262–4.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-65" data-bibl-ids="bibl-108 bibl-109" data-tab-index="65">
+            <div id="bibl-instance-65" data-instance-id="instance-65" data-bibl-ids="bibl-108 bibl-109" data-tab-index="65">
                <pre><code>&lt;note n="69" type="footnote" place="bottom"&gt;
   &lt;label&gt;69&lt;/label&gt;
   &lt;bibl xml:id="bibl-108"&gt;
@@ -4984,12 +5013,13 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-65">
+            <div id="unresolved-biblstruct-instance-65" data-instance-id="instance-65">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-108"&gt;
       &lt;monogr source="#bibl-108"&gt;
          &lt;title level="m"&gt;Bryson v. Bryant&lt;/title&gt;
+         &lt;error&gt;element imprint: Element 'tei:imprint': Missing child element(s). Expected is one of ( tei:classCode, tei:catRef, tei:publisher, tei:biblScope, tei:pubPlace, tei:distributor, tei:date, tei:time ).&lt;/error&gt;
          &lt;imprint/&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
@@ -5031,14 +5061,14 @@
                <li><a href="#bibl-instance-66">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-66">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-66">
+            <div id="segmented-instance-instance-66" data-instance-id="instance-66">
                <pre><code>&lt;note n="70" type="footnote" place="bottom"&gt;
   &lt;label&gt;70&lt;/label&gt;
   &lt;note&gt;For an interesting case study of this phenomenon, see&lt;/note&gt;
   &lt;bibl&gt;L. Sarmas, ‘Storytelling and the Law: A Case Study of Louth v. Diprose’ (1994) 19 Melbourne University Law Rev. 701.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-66" data-bibl-ids="bibl-110" data-tab-index="66">
+            <div id="bibl-instance-66" data-instance-id="instance-66" data-bibl-ids="bibl-110" data-tab-index="66">
                <pre><code>&lt;note n="70" type="footnote" place="bottom"&gt;
   &lt;label&gt;70&lt;/label&gt;
   &lt;note type="signal"&gt;For an interesting case study of this phenomenon, see&lt;/note&gt;
@@ -5057,7 +5087,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-66">
+            <div id="unresolved-biblstruct-instance-66" data-instance-id="instance-66">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-110"&gt;
@@ -5092,13 +5122,13 @@
                <li><a href="#bibl-instance-67">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-67">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-67">
+            <div id="segmented-instance-instance-67" data-instance-id="instance-67">
                <pre><code>&lt;note n="71" type="footnote" place="bottom"&gt;
   &lt;label&gt;71&lt;/label&gt;
   &lt;bibl&gt;C. Colebrook, ‘Feminist Ethics and Historicism’ (1996) 11 Aust. Feminist Studies 295, 300.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-67" data-bibl-ids="bibl-111" data-tab-index="67">
+            <div id="bibl-instance-67" data-instance-id="instance-67" data-bibl-ids="bibl-111" data-tab-index="67">
                <pre><code>&lt;note n="71" type="footnote" place="bottom"&gt;
   &lt;label&gt;71&lt;/label&gt;
   &lt;bibl xml:id="bibl-111"&gt;
@@ -5117,7 +5147,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-67">
+            <div id="unresolved-biblstruct-instance-67" data-instance-id="instance-67">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-111"&gt;
@@ -5153,13 +5183,13 @@
                <li><a href="#bibl-instance-68">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-68">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-68">
+            <div id="segmented-instance-instance-68" data-instance-id="instance-68">
                <pre><code>&lt;note n="72" type="footnote" place="bottom"&gt;
   &lt;label&gt;72&lt;/label&gt;
   &lt;bibl&gt;M. Albertson Fineman, The Neutered Mother, the Sexual Family and Other Twentieth Century Tragedies (1995) 7.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-68" data-bibl-ids="bibl-112" data-tab-index="68">
+            <div id="bibl-instance-68" data-instance-id="instance-68" data-bibl-ids="bibl-112" data-tab-index="68">
                <pre><code>&lt;note n="72" type="footnote" place="bottom"&gt;
   &lt;label&gt;72&lt;/label&gt;
   &lt;bibl xml:id="bibl-112"&gt;
@@ -5176,7 +5206,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-68">
+            <div id="unresolved-biblstruct-instance-68" data-instance-id="instance-68">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-112"&gt;
@@ -5208,14 +5238,14 @@
                <li><a href="#bibl-instance-69">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-69">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-69">
+            <div id="segmented-instance-instance-69" data-instance-id="instance-69">
                <pre><code>&lt;note n="73" type="footnote" place="bottom"&gt;
   &lt;label&gt;73&lt;/label&gt;
   &lt;note&gt;Compare&lt;/note&gt;
   &lt;bibl&gt;K. O’Donovan, ‘Should all Maintenance of Spouses be abolished?’ (1982) 45 Modern Law Rev. 424, 431–3.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-69" data-bibl-ids="bibl-113" data-tab-index="69">
+            <div id="bibl-instance-69" data-instance-id="instance-69" data-bibl-ids="bibl-113" data-tab-index="69">
                <pre><code>&lt;note n="73" type="footnote" place="bottom"&gt;
   &lt;label&gt;73&lt;/label&gt;
   &lt;note type="signal"&gt;Compare&lt;/note&gt;
@@ -5235,7 +5265,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-69">
+            <div id="unresolved-biblstruct-instance-69" data-instance-id="instance-69">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-113"&gt;
@@ -5273,7 +5303,7 @@
                <li><a href="#bibl-instance-70">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-70">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-70">
+            <div id="segmented-instance-instance-70" data-instance-id="instance-70">
                <pre><code>&lt;note n="74" type="footnote" place="bottom"&gt;
   &lt;label&gt;74&lt;/label&gt;
   &lt;note&gt;For example,&lt;/note&gt;
@@ -5283,7 +5313,7 @@
   &lt;bibl&gt;New South Wales Law Reform Commission, De Facto Relationships: Issues Paper (1981).&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-70" data-bibl-ids="bibl-114 bibl-115 bibl-116" data-tab-index="70">
+            <div id="bibl-instance-70" data-instance-id="instance-70" data-bibl-ids="bibl-114 bibl-115 bibl-116" data-tab-index="70">
                <pre><code>&lt;note n="74" type="footnote" place="bottom"&gt;
   &lt;label&gt;74&lt;/label&gt;
   &lt;note type="signal"&gt;For example,&lt;/note&gt;
@@ -5318,7 +5348,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-70">
+            <div id="unresolved-biblstruct-instance-70" data-instance-id="instance-70">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-114"&gt;
@@ -5375,7 +5405,7 @@
                <li><a href="#bibl-instance-71">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-71">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-71">
+            <div id="segmented-instance-instance-71" data-instance-id="instance-71">
                <pre><code>&lt;note n="75" type="footnote" place="bottom"&gt;
   &lt;label&gt;75&lt;/label&gt;
   &lt;bibl&gt;Eds. of the Harvard Law Review, Sexual Orientation and the Law (1990);&lt;/bibl&gt;
@@ -5383,7 +5413,7 @@
   &lt;bibl&gt;C. Overington, ‘Why can’t They Marry?’ The Age, 26 April 1997.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-71" data-bibl-ids="bibl-117 bibl-118 bibl-119" data-tab-index="71">
+            <div id="bibl-instance-71" data-instance-id="instance-71" data-bibl-ids="bibl-117 bibl-118 bibl-119" data-tab-index="71">
                <pre><code>&lt;note n="75" type="footnote" place="bottom"&gt;
   &lt;label&gt;75&lt;/label&gt;
   &lt;bibl xml:id="bibl-117"&gt;
@@ -5412,7 +5442,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-71">
+            <div id="unresolved-biblstruct-instance-71" data-instance-id="instance-71">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-117"&gt;
@@ -5466,14 +5496,14 @@
                <li><a href="#bibl-instance-72">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-72">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-72">
+            <div id="segmented-instance-instance-72" data-instance-id="instance-72">
                <pre><code>&lt;note n="76" type="footnote" place="bottom"&gt;
   &lt;label&gt;76&lt;/label&gt;
   &lt;note&gt;For example,&lt;/note&gt;
   &lt;bibl&gt;Lesbian and Gay Rights Service The Bride Wore Pink; Legal Recognition of Our Relationships (1994).&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-72" data-bibl-ids="bibl-120" data-tab-index="72">
+            <div id="bibl-instance-72" data-instance-id="instance-72" data-bibl-ids="bibl-120" data-tab-index="72">
                <pre><code>&lt;note n="76" type="footnote" place="bottom"&gt;
   &lt;label&gt;76&lt;/label&gt;
   &lt;note type="signal"&gt;For example,&lt;/note&gt;
@@ -5486,7 +5516,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-72">
+            <div id="unresolved-biblstruct-instance-72" data-instance-id="instance-72">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-120"&gt;
@@ -5513,13 +5543,13 @@
                <li><a href="#unresolved-biblstruct-instance-73">&lt;biblStruct&gt;</a></li>
                <li><a href="#resolved-biblstruct-instance-73">Resolved &lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-73">
+            <div id="segmented-instance-instance-73" data-instance-id="instance-73">
                <pre><code>&lt;note n="77" type="footnote" place="bottom"&gt;
   &lt;label&gt;77&lt;/label&gt;
   &lt;bibl&gt;id., p. 3.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-73" data-bibl-ids="bibl-121" data-tab-index="73">
+            <div id="bibl-instance-73" data-instance-id="instance-73" data-bibl-ids="bibl-121" data-tab-index="73">
                <pre><code>&lt;note n="77" type="footnote" place="bottom"&gt;
   &lt;label&gt;77&lt;/label&gt;
   &lt;bibl xml:id="bibl-121"&gt;
@@ -5528,20 +5558,22 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-73">
+            <div id="unresolved-biblstruct-instance-73" data-instance-id="instance-73">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-121"&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;ref type="op-cit"&gt;id.&lt;/ref&gt;
       &lt;citedRange unit="page" from="3" to="3"&gt;p. 3&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="resolved-biblstruct-instance-73">
+            <div id="resolved-biblstruct-instance-73" data-instance-id="instance-73">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-121"&gt;
+      &lt;error&gt;element citedRange: Element 'tei:citedRange': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;citedRange unit="page" from="3" to="3"&gt;p. 3&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
@@ -5557,13 +5589,13 @@
                <li><a href="#unresolved-biblstruct-instance-74">&lt;biblStruct&gt;</a></li>
                <li><a href="#resolved-biblstruct-instance-74">Resolved &lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-74">
+            <div id="segmented-instance-instance-74" data-instance-id="instance-74">
                <pre><code>&lt;note n="78" type="footnote" place="bottom"&gt;
   &lt;label&gt;78&lt;/label&gt;
   &lt;bibl&gt;Above, n. 30.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-74" data-bibl-ids="bibl-122" data-tab-index="74">
+            <div id="bibl-instance-74" data-instance-id="instance-74" data-bibl-ids="bibl-122" data-tab-index="74">
                <pre><code>&lt;note n="78" type="footnote" place="bottom"&gt;
   &lt;label&gt;78&lt;/label&gt;
   &lt;bibl xml:id="bibl-122"&gt;
@@ -5571,18 +5603,20 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-74">
+            <div id="unresolved-biblstruct-instance-74" data-instance-id="instance-74">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-122"&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;ref type="footnote" n="30"&gt;Above, n. 30&lt;/ref&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="resolved-biblstruct-instance-74">
+            <div id="resolved-biblstruct-instance-74" data-instance-id="instance-74">
                <pre><code>
 &lt;listBibl&gt;
+   &lt;error&gt;element biblStruct: Element 'tei:biblStruct': Missing child element(s). Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
    &lt;biblStruct source="#bibl-122"/&gt;
 &lt;/listBibl&gt;
 </code></pre>
@@ -5617,6 +5651,28 @@
                   } else {
                     const tabIndex = tabElement.dataset.tabIndex;
                     span.innerHTML = `"<a href="#${biblId}" onclick="tabs[${tabIndex}].toggle('${tabElement.id}')">#${biblId}</a>"`;
+                  }
+                }
+              }
+            });
+            // mark errors
+            document.querySelectorAll("span").forEach(span => {
+              if (span.textContent == "error") {
+                span.style.color = "red";
+                let el = span;
+                while (el && el.parentElement && (!el.dataset || !el.dataset.instanceId)) { 
+                  el = el.parentElement; 
+                }
+                if (el && el.dataset && el.dataset.instanceId ) {
+                  let instanceId = el.dataset.instanceId
+                  let tabId = el.id
+                  let instanceNode = document.getElementById(instanceId)
+                  let tabNode = document.querySelector(`a[href="#${tabId}"]`)
+                  if(instanceNode) {
+                    instanceNode.classList.add("validation-error")
+                  }
+                  if(tabNode) {
+                    tabNode.classList.add("validation-error")
                   }
                 }
               }

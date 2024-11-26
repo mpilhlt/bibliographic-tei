@@ -18,6 +18,10 @@
           ul[data-tabs] > li > a {
             font-size: small;
           }
+          fieldset.validation-error legend::before,
+          a.validation-error::before {
+              content: '⚠️';
+          }
         </style>
    </head>
    <body>
@@ -36,13 +40,13 @@
                <li><a href="#bibl-instance-1">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-1">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-1">
+            <div id="segmented-instance-instance-1" data-instance-id="instance-1">
                <pre><code>&lt;note n="1" type="footnote" place="bottom"&gt;
   &lt;label&gt;1&lt;/label&gt;
   &lt;bibl&gt;Geiger 1964, insbesondere S. 65—83.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-1" data-bibl-ids="bibl-1" data-tab-index="1">
+            <div id="bibl-instance-1" data-instance-id="instance-1" data-bibl-ids="bibl-1" data-tab-index="1">
                <pre><code>&lt;note n="1" type="footnote" place="bottom"&gt;
   &lt;label&gt;1&lt;/label&gt;
   &lt;bibl xml:id="bibl-1"&gt;
@@ -56,10 +60,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-1">
+            <div id="unresolved-biblstruct-instance-1" data-instance-id="instance-1">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-1"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Geiger&lt;/surname&gt;
@@ -81,7 +86,7 @@
                <li><a href="#bibl-instance-2">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-2">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-2">
+            <div id="segmented-instance-instance-2" data-instance-id="instance-2">
                <pre><code>&lt;note n="2" type="footnote" place="bottom"&gt;
   &lt;label&gt;2&lt;/label&gt;
   &lt;note&gt;Vgl.&lt;/note&gt;
@@ -90,7 +95,7 @@
   &lt;bibl&gt;‘Nichtkriminalisierung als Struktur und Routine’, 1976.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-2" data-bibl-ids="bibl-2 bibl-3" data-tab-index="2">
+            <div id="bibl-instance-2" data-instance-id="instance-2" data-bibl-ids="bibl-2 bibl-3" data-tab-index="2">
                <pre><code>&lt;note n="2" type="footnote" place="bottom"&gt;
   &lt;label&gt;2&lt;/label&gt;
   &lt;note type="signal"&gt;Vgl.&lt;/note&gt;
@@ -114,10 +119,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-2">
+            <div id="unresolved-biblstruct-instance-2" data-instance-id="instance-2">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-2"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Feest&lt;/surname&gt;
@@ -153,7 +159,7 @@
                <li><a href="#bibl-instance-3">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-3">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-3">
+            <div id="segmented-instance-instance-3" data-instance-id="instance-3">
                <pre><code>&lt;note n="3" type="footnote" place="bottom"&gt;
   &lt;label&gt;3&lt;/label&gt;
   &lt;note&gt;Angaben aus einer Befragung von&lt;/note&gt;
@@ -163,7 +169,7 @@
   &lt;bibl&gt;Richard Rosellen erscheint in Kürze unter dem Titel ‘Private Verbrechenskontrolle — eine empirische Untersuchung zur Anzeigeerstattung’, Berlin, voraussichtlich 1980.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-3" data-bibl-ids="bibl-4 bibl-5" data-tab-index="3">
+            <div id="bibl-instance-3" data-instance-id="instance-3" data-bibl-ids="bibl-4 bibl-5" data-tab-index="3">
                <pre><code>&lt;note n="3" type="footnote" place="bottom"&gt;
   &lt;label&gt;3&lt;/label&gt;
   &lt;note type="signal"&gt;Angaben aus einer Befragung von&lt;/note&gt;
@@ -201,7 +207,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-3">
+            <div id="unresolved-biblstruct-instance-3" data-instance-id="instance-3">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-4"&gt;
@@ -254,14 +260,14 @@
                <li><a href="#bibl-instance-4">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-4">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-4">
+            <div id="segmented-instance-instance-4" data-instance-id="instance-4">
                <pre><code>&lt;note n="4" type="footnote" place="bottom"&gt;
   &lt;label&gt;4&lt;/label&gt;
   &lt;note&gt;Vgl.&lt;/note&gt;
   &lt;bibl&gt;Blankenburg/Sessar/Steffen, 1978, S. 66-85.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-4" data-bibl-ids="bibl-6" data-tab-index="4">
+            <div id="bibl-instance-4" data-instance-id="instance-4" data-bibl-ids="bibl-6" data-tab-index="4">
                <pre><code>&lt;note n="4" type="footnote" place="bottom"&gt;
   &lt;label&gt;4&lt;/label&gt;
   &lt;note type="signal"&gt;Vgl.&lt;/note&gt;
@@ -286,10 +292,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-4">
+            <div id="unresolved-biblstruct-instance-4" data-instance-id="instance-4">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-6"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Blankenburg&lt;/surname&gt;
@@ -319,13 +326,13 @@
                <li><a href="#bibl-instance-5">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-5">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-5">
+            <div id="segmented-instance-instance-5" data-instance-id="instance-5">
                <pre><code>&lt;note n="5" type="footnote" place="bottom"&gt;
   &lt;label&gt;5&lt;/label&gt;
   &lt;bibl&gt;Black, 1973 S. 125 ff.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-5" data-bibl-ids="bibl-7" data-tab-index="5">
+            <div id="bibl-instance-5" data-instance-id="instance-5" data-bibl-ids="bibl-7" data-tab-index="5">
                <pre><code>&lt;note n="5" type="footnote" place="bottom"&gt;
   &lt;label&gt;5&lt;/label&gt;
   &lt;bibl xml:id="bibl-7"&gt;
@@ -339,10 +346,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-5">
+            <div id="unresolved-biblstruct-instance-5" data-instance-id="instance-5">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-7"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Black&lt;/surname&gt;
@@ -363,14 +371,14 @@
                <li><a href="#bibl-instance-6">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-6">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-6">
+            <div id="segmented-instance-instance-6" data-instance-id="instance-6">
                <pre><code>&lt;note n="6" type="footnote" place="bottom"&gt;
   &lt;label&gt;6&lt;/label&gt;
   &lt;note&gt;Zur höheren Wahrscheinlichkeit der Normierung von Verhalten in weniger komplexen Beziehungen vgl. die Konflikttheorie von&lt;/note&gt;
   &lt;bibl&gt;Gessner 1976, insbesondere S. 170—183.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-6" data-bibl-ids="bibl-8" data-tab-index="6">
+            <div id="bibl-instance-6" data-instance-id="instance-6" data-bibl-ids="bibl-8" data-tab-index="6">
                <pre><code>&lt;note n="6" type="footnote" place="bottom"&gt;
   &lt;label&gt;6&lt;/label&gt;
   &lt;note type="signal"&gt;Zur höheren Wahrscheinlichkeit der Normierung von Verhalten in weniger komplexen Beziehungen vgl. die Konflikttheorie von&lt;/note&gt;
@@ -385,10 +393,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-6">
+            <div id="unresolved-biblstruct-instance-6" data-instance-id="instance-6">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-8"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Gessner&lt;/surname&gt;
@@ -408,14 +417,14 @@
                <li><a href="#bibl-instance-7">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-7">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-7">
+            <div id="segmented-instance-instance-7" data-instance-id="instance-7">
                <pre><code>&lt;note n="7" type="footnote" place="bottom"&gt;
   &lt;label&gt;7&lt;/label&gt;
   &lt;note&gt;Zum Konzept der 'Thematisierung von Recht' vgl.&lt;/note&gt;
   &lt;bibl&gt;Luhmann 1980, S. 99—112.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-7" data-bibl-ids="bibl-9" data-tab-index="7">
+            <div id="bibl-instance-7" data-instance-id="instance-7" data-bibl-ids="bibl-9" data-tab-index="7">
                <pre><code>&lt;note n="7" type="footnote" place="bottom"&gt;
   &lt;label&gt;7&lt;/label&gt;
   &lt;note type="signal"&gt;Zum Konzept der 'Thematisierung von Recht' vgl.&lt;/note&gt;
@@ -430,10 +439,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-7">
+            <div id="unresolved-biblstruct-instance-7" data-instance-id="instance-7">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-9"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Luhmann&lt;/surname&gt;
@@ -453,14 +463,14 @@
                <li><a href="#bibl-instance-8">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-8">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-8">
+            <div id="segmented-instance-instance-8" data-instance-id="instance-8">
                <pre><code>&lt;note n="8" type="footnote" place="bottom"&gt;
   &lt;label&gt;8&lt;/label&gt;
   &lt;note&gt;Ausführlicher bei&lt;/note&gt;
   &lt;bibl&gt;Gessner 1976&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-8" data-bibl-ids="bibl-10" data-tab-index="8">
+            <div id="bibl-instance-8" data-instance-id="instance-8" data-bibl-ids="bibl-10" data-tab-index="8">
                <pre><code>&lt;note n="8" type="footnote" place="bottom"&gt;
   &lt;label&gt;8&lt;/label&gt;
   &lt;note type="signal"&gt;Ausführlicher bei&lt;/note&gt;
@@ -474,10 +484,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-8">
+            <div id="unresolved-biblstruct-instance-8" data-instance-id="instance-8">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-10"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Gessner&lt;/surname&gt;
@@ -496,14 +507,14 @@
                <li><a href="#bibl-instance-9">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-9">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-9">
+            <div id="segmented-instance-instance-9" data-instance-id="instance-9">
                <pre><code>&lt;note n="9" type="footnote" place="bottom"&gt;
   &lt;label&gt;9&lt;/label&gt;
   &lt;note&gt;Vgl.&lt;/note&gt;
   &lt;bibl&gt;Schönholz 1980.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-9" data-bibl-ids="bibl-11" data-tab-index="9">
+            <div id="bibl-instance-9" data-instance-id="instance-9" data-bibl-ids="bibl-11" data-tab-index="9">
                <pre><code>&lt;note n="9" type="footnote" place="bottom"&gt;
   &lt;label&gt;9&lt;/label&gt;
   &lt;note type="signal"&gt;Vgl.&lt;/note&gt;
@@ -517,10 +528,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-9">
+            <div id="unresolved-biblstruct-instance-9" data-instance-id="instance-9">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-11"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Schönholz&lt;/surname&gt;
@@ -539,13 +551,13 @@
                <li><a href="#bibl-instance-10">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-10">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-10">
+            <div id="segmented-instance-instance-10" data-instance-id="instance-10">
                <pre><code>&lt;note n="10" type="footnote" place="bottom"&gt;
   &lt;label&gt;10&lt;/label&gt;
   &lt;bibl&gt;Blankenburg/Schönholz/Rogowski 1979, S. 64 ff.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-10" data-bibl-ids="bibl-12" data-tab-index="10">
+            <div id="bibl-instance-10" data-instance-id="instance-10" data-bibl-ids="bibl-12" data-tab-index="10">
                <pre><code>&lt;note n="10" type="footnote" place="bottom"&gt;
   &lt;label&gt;10&lt;/label&gt;
   &lt;bibl xml:id="bibl-12"&gt;
@@ -569,10 +581,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-10">
+            <div id="unresolved-biblstruct-instance-10" data-instance-id="instance-10">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-12"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Blankenburg&lt;/surname&gt;
@@ -602,13 +615,13 @@
                <li><a href="#bibl-instance-11">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-11">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-11">
+            <div id="segmented-instance-instance-11" data-instance-id="instance-11">
                <pre><code>&lt;note n="11" type="footnote" place="bottom"&gt;
   &lt;label&gt;11&lt;/label&gt;
   &lt;bibl&gt;Hilden 1976, S. 64 ff.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-11" data-bibl-ids="bibl-13" data-tab-index="11">
+            <div id="bibl-instance-11" data-instance-id="instance-11" data-bibl-ids="bibl-13" data-tab-index="11">
                <pre><code>&lt;note n="11" type="footnote" place="bottom"&gt;
   &lt;label&gt;11&lt;/label&gt;
   &lt;bibl xml:id="bibl-13"&gt;
@@ -622,10 +635,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-11">
+            <div id="unresolved-biblstruct-instance-11" data-instance-id="instance-11">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-13"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Hilden&lt;/surname&gt;
@@ -646,14 +660,14 @@
                <li><a href="#bibl-instance-12">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-12">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-12">
+            <div id="segmented-instance-instance-12" data-instance-id="instance-12">
                <pre><code>&lt;note n="12" type="footnote" place="bottom"&gt;
   &lt;label&gt;12&lt;/label&gt;
   &lt;bibl&gt;Koch 1975, S. 75&lt;/bibl&gt;
   &lt;note&gt;der allerdings nur streitige Urteile und Vergleiche untersucht hat.&lt;/note&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-12" data-bibl-ids="bibl-14" data-tab-index="12">
+            <div id="bibl-instance-12" data-instance-id="instance-12" data-bibl-ids="bibl-14" data-tab-index="12">
                <pre><code>&lt;note n="12" type="footnote" place="bottom"&gt;
   &lt;label&gt;12&lt;/label&gt;
   &lt;bibl xml:id="bibl-14"&gt;
@@ -668,10 +682,11 @@
   &lt;note type="comment"&gt;der allerdings nur streitige Urteile und Vergleiche untersucht hat.&lt;/note&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-12">
+            <div id="unresolved-biblstruct-instance-12" data-instance-id="instance-12">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-14"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Koch&lt;/surname&gt;
@@ -693,14 +708,14 @@
                <li><a href="#bibl-instance-13">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-13">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-13">
+            <div id="segmented-instance-instance-13" data-instance-id="instance-13">
                <pre><code>&lt;note n="13" type="footnote" place="bottom"&gt;
   &lt;label&gt;13&lt;/label&gt;
   &lt;note&gt;Für Angaben der Zählkartenstatistik für die Familiengerichte siehe:&lt;/note&gt;
   &lt;bibl&gt;Statistisches Bundesamt Wiesbaden, Fachserie 10 (Rechtspflege) Reihe 2.1, Tabelle 10, Wiesbaden 1978.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-13" data-bibl-ids="bibl-15" data-tab-index="13">
+            <div id="bibl-instance-13" data-instance-id="instance-13" data-bibl-ids="bibl-15" data-tab-index="13">
                <pre><code>&lt;note n="13" type="footnote" place="bottom"&gt;
   &lt;label&gt;13&lt;/label&gt;
   &lt;note type="signal"&gt;Für Angaben der Zählkartenstatistik für die Familiengerichte siehe:&lt;/note&gt;
@@ -715,7 +730,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-13">
+            <div id="unresolved-biblstruct-instance-13" data-instance-id="instance-13">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-15"&gt;
@@ -743,13 +758,13 @@
                <li><a href="#bibl-instance-14">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-14">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-14">
+            <div id="segmented-instance-instance-14" data-instance-id="instance-14">
                <pre><code>&lt;note n="14" type="footnote" place="bottom"&gt;
   &lt;label&gt;14&lt;/label&gt;
   &lt;bibl&gt;Blankenburg/Schönholz/Rogowski 1979, S. 78 ff.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-14" data-bibl-ids="bibl-16" data-tab-index="14">
+            <div id="bibl-instance-14" data-instance-id="instance-14" data-bibl-ids="bibl-16" data-tab-index="14">
                <pre><code>&lt;note n="14" type="footnote" place="bottom"&gt;
   &lt;label&gt;14&lt;/label&gt;
   &lt;bibl xml:id="bibl-16"&gt;
@@ -773,10 +788,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-14">
+            <div id="unresolved-biblstruct-instance-14" data-instance-id="instance-14">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-16"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Blankenburg&lt;/surname&gt;
@@ -809,14 +825,14 @@
                <li><a href="#bibl-instance-15">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-15">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-15">
+            <div id="segmented-instance-instance-15" data-instance-id="instance-15">
                <pre><code>&lt;note n="15" type="footnote" place="bottom"&gt;
   &lt;label&gt;15&lt;/label&gt;
   &lt;bibl&gt;Steinbach 1979&lt;/bibl&gt;
   &lt;note&gt;hat in einer Erhebung von 1144 Amtsgerichtsprozessen in der Bundesrepublik ohne Berlin in den Jahren 1974—1976 ein Verhältnis von 1 Räumungsklage je 1,2 Forderungsklagen, in Berlin allerdings von 1 Räumungsklage je 0,12 Forderungsklagen ermittelt. Im folgenden auch als GMD-Erhebung zitiert.&lt;/note&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-15" data-bibl-ids="bibl-16a" data-tab-index="15">
+            <div id="bibl-instance-15" data-instance-id="instance-15" data-bibl-ids="bibl-16a" data-tab-index="15">
                <pre><code>&lt;note n="15" type="footnote" place="bottom"&gt;
   &lt;label&gt;15&lt;/label&gt;
   &lt;bibl xml:id="bibl-16a"&gt;
@@ -830,10 +846,11 @@
   &lt;note type="comment"&gt;hat in einer Erhebung von 1144 Amtsgerichtsprozessen in der Bundesrepublik ohne Berlin in den Jahren 1974—1976 ein Verhältnis von 1 Räumungsklage je 1,2 Forderungsklagen, in Berlin allerdings von 1 Räumungsklage je 0,12 Forderungsklagen ermittelt. Im folgenden auch als GMD-Erhebung zitiert.&lt;/note&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-15">
+            <div id="unresolved-biblstruct-instance-15" data-instance-id="instance-15">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-16a"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Steinbach&lt;/surname&gt;
@@ -853,14 +870,14 @@
                <li><a href="#bibl-instance-16">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-16">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-16">
+            <div id="segmented-instance-instance-16" data-instance-id="instance-16">
                <pre><code>&lt;note n="16" type="footnote" place="bottom"&gt;
   &lt;label&gt;16&lt;/label&gt;
   &lt;bibl&gt;Johnson 1979 S. 90 ff.&lt;/bibl&gt;
   &lt;note&gt;berichtet von dem erfolgreichen Versuch einer Unfall-Schadensregulierung ohne Berücksichtigung einer Schuldzuschreibung in Neuseeland (no fault accident compensation)&lt;/note&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-16" data-bibl-ids="bibl-18" data-tab-index="16">
+            <div id="bibl-instance-16" data-instance-id="instance-16" data-bibl-ids="bibl-18" data-tab-index="16">
                <pre><code>&lt;note n="16" type="footnote" place="bottom"&gt;
   &lt;label&gt;16&lt;/label&gt;
   &lt;bibl xml:id="bibl-18"&gt;
@@ -875,10 +892,11 @@
   &lt;note type="comment"&gt;berichtet von dem erfolgreichen Versuch einer Unfall-Schadensregulierung ohne Berücksichtigung einer Schuldzuschreibung in Neuseeland (no fault accident compensation)&lt;/note&gt;,
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-16">
+            <div id="unresolved-biblstruct-instance-16" data-instance-id="instance-16">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-18"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Johnson&lt;/surname&gt;
@@ -898,14 +916,14 @@
                <li><a href="#bibl-instance-17">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-17">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-17">
+            <div id="segmented-instance-instance-17" data-instance-id="instance-17">
                <pre><code>&lt;note n="17" type="footnote" place="bottom"&gt;
   &lt;label&gt;17&lt;/label&gt;
   &lt;bibl&gt;Steinbach 1979, S. 66 ff.&lt;/bibl&gt;
   &lt;bibl&gt;Blankenburg/Blankenburg/Morasch 1972, S.82 ff.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-17" data-bibl-ids="bibl-19 bibl-20" data-tab-index="17">
+            <div id="bibl-instance-17" data-instance-id="instance-17" data-bibl-ids="bibl-19 bibl-20" data-tab-index="17">
                <pre><code>&lt;note n="17" type="footnote" place="bottom"&gt;
   &lt;label&gt;17&lt;/label&gt;
   &lt;bibl xml:id="bibl-19"&gt;
@@ -938,10 +956,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-17">
+            <div id="unresolved-biblstruct-instance-17" data-instance-id="instance-17">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-19"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Steinbach&lt;/surname&gt;
@@ -950,6 +969,7 @@
       &lt;citedRange unit="page" from="66"&gt;S. 66 ff&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-20"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Blankenburg&lt;/surname&gt;
@@ -981,13 +1001,13 @@
                <li><a href="#bibl-instance-18">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-18">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-18">
+            <div id="segmented-instance-instance-18" data-instance-id="instance-18">
                <pre><code>&lt;note n="18" type="footnote" place="bottom"&gt;
   &lt;label&gt;18&lt;/label&gt;
   &lt;bibl&gt;Projektbericht ‚Rechtshilfebedürfnisse sozial Schwacher‘, (Blankenburg/Gorges/Reifner Tiemann). Befragt wurden im Januar bis März 1979 je eine Person in 835 Haushalten Westberlins. Veröffentlichung ist vorgesehen für Ende 1980.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-18" data-bibl-ids="bibl-21" data-tab-index="18">
+            <div id="bibl-instance-18" data-instance-id="instance-18" data-bibl-ids="bibl-21" data-tab-index="18">
                <pre><code>&lt;note n="18" type="footnote" place="bottom"&gt;
   &lt;label&gt;18&lt;/label&gt;
   &lt;bibl xml:id="bibl-21"&gt;
@@ -1017,7 +1037,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-18">
+            <div id="unresolved-biblstruct-instance-18" data-instance-id="instance-18">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-21"&gt;
@@ -1044,6 +1064,7 @@
             &lt;/persName&gt;
          &lt;/author&gt;
       &lt;/analytic&gt;
+      &lt;error&gt;element note: Element 'tei:note': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;note type="comment"&gt;Befragt wurden im Januar bis März 1979 je eine Person in 835 Haushalten Westberlins. Veröffentlichung ist vorgesehen für&lt;/note&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
@@ -1058,14 +1079,14 @@
                <li><a href="#bibl-instance-19">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-19">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-19">
+            <div id="segmented-instance-instance-19" data-instance-id="instance-19">
                <pre><code>&lt;note n="19" type="footnote" place="bottom"&gt;
   &lt;label&gt;19&lt;/label&gt;
   &lt;note&gt;Explizit bei&lt;/note&gt;
   &lt;bibl&gt;Baumgärtel 1976, S. 113-128.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-19" data-bibl-ids="bibl-22" data-tab-index="19">
+            <div id="bibl-instance-19" data-instance-id="instance-19" data-bibl-ids="bibl-22" data-tab-index="19">
                <pre><code>&lt;note n="19" type="footnote" place="bottom"&gt;
   &lt;label&gt;19&lt;/label&gt;
   &lt;note type="signal"&gt;Explizit bei&lt;/note&gt;
@@ -1080,10 +1101,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-19">
+            <div id="unresolved-biblstruct-instance-19" data-instance-id="instance-19">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-22"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Baumgärtel&lt;/surname&gt;
@@ -1109,21 +1131,21 @@
                <li><a href="#bibl-instance-20">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-20">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-20">
+            <div id="segmented-instance-instance-20" data-instance-id="instance-20">
                <pre><code>&lt;note n="20" type="footnote" place="bottom"&gt;
   &lt;label&gt;20&lt;/label&gt;
   &lt;note&gt;Laut einer GMD-Erhebung aus der Zählkartenstatistik wurde in Baden-Württemberg 1978 in 25,6% aller Scheidungssachen vor dem Familiengericht Armenrecht beantragt, 35,6% bei Unterhaltsklagen. 1976 (nach alten Familien recht) sind die Anteile 14,2% bei den Scheidungsprozessen und 42,79% bei den Unterhaltsklagen. Zum Vergleich: Bei Mietsachen wird in etwa 2% das Armenrecht beantragt (GMD-Erhebung), bei Zivilprozessen vor dem Amtsgericht insgesamt (laut Zählkartenstatistik) 0,4% (mündliche Mitteilung von Jörg Dotterweich).&lt;/note&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-20" data-bibl-ids="" data-tab-index="20">
+            <div id="bibl-instance-20" data-instance-id="instance-20" data-bibl-ids="" data-tab-index="20">
                <pre><code>&lt;note n="20" type="footnote" place="bottom"&gt;
   &lt;label&gt;20&lt;/label&gt;
   &lt;note type="comment"&gt;Laut einer GMD-Erhebung aus der Zählkartenstatistik wurde in Baden-Württemberg 1978 in 25,6 % aller Scheidungssachen vor dem Familiengericht Armenrecht beantragt, 35,6 % bei Unterhaltsklagen. 1976 (nach alten Familien recht) sind die Anteile 14,2 % bei den Scheidungsprozessen und 42,79 % bei den Unterhaltsklagen. Zum Vergleich: Bei Mietsachen wird in etwa 2 % das Armenrecht beantragt (GMD-Erhebung), bei Zivilprozessen vor dem Amtsgericht insgesamt (laut Zählkartenstatistik) 0,4 % (mündliche Mitteilung von Jörg Dotterweich).&lt;/note&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-20">
+            <div id="unresolved-biblstruct-instance-20" data-instance-id="instance-20">
                <pre><code>
-&lt;listBibl/&gt;
+&lt;error&gt;element listBibl: Element 'tei:listBibl': Missing child element(s). Expected is one of ( tei:head, tei:desc, tei:milestone, tei:gb, tei:pb, tei:lb, tei:cb, tei:anchor, tei:bibl, tei:biblStruct ).&lt;/error&gt;
 </code></pre>
             </div>
          </fieldset>
@@ -1136,13 +1158,13 @@
                <li><a href="#bibl-instance-21">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-21">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-21">
+            <div id="segmented-instance-instance-21" data-instance-id="instance-21">
                <pre><code>&lt;note n="21" type="footnote" place="bottom"&gt;
   &lt;label&gt;21&lt;/label&gt;
   &lt;bibl&gt;Projektbericht ‚Rechtsschutzversicherung‘. (Blankenburg/Fiedler), Veröffentlichung voraussichtlich Mitte 1980.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-21" data-bibl-ids="bibl-23" data-tab-index="21">
+            <div id="bibl-instance-21" data-instance-id="instance-21" data-bibl-ids="bibl-23" data-tab-index="21">
                <pre><code>&lt;note n="21" type="footnote" place="bottom"&gt;
   &lt;label&gt;21&lt;/label&gt;
   &lt;bibl xml:id="bibl-23"&gt;
@@ -1162,7 +1184,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-21">
+            <div id="unresolved-biblstruct-instance-21" data-instance-id="instance-21">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-23"&gt;
@@ -1179,6 +1201,7 @@
             &lt;/persName&gt;
          &lt;/author&gt;
       &lt;/analytic&gt;
+      &lt;error&gt;element note: Element 'tei:note': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;note type="comment"&gt;Veröffentlichung voraussichtlich Mitte&lt;/note&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
@@ -1193,14 +1216,14 @@
                <li><a href="#bibl-instance-22">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-22">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-22">
+            <div id="segmented-instance-instance-22" data-instance-id="instance-22">
                <pre><code>&lt;note n="22" type="footnote" place="bottom"&gt;
   &lt;label&gt;22&lt;/label&gt;
   &lt;note&gt;Vgl. auch&lt;/note&gt;
   &lt;bibl&gt;Reifner/Gorges 1980.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-22" data-bibl-ids="bibl-24" data-tab-index="22">
+            <div id="bibl-instance-22" data-instance-id="instance-22" data-bibl-ids="bibl-24" data-tab-index="22">
                <pre><code>&lt;note n="22" type="footnote" place="bottom"&gt;
   &lt;label&gt;22&lt;/label&gt;
   &lt;note type="signal"&gt;Vgl. auch&lt;/note&gt;
@@ -1219,10 +1242,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-22">
+            <div id="unresolved-biblstruct-instance-22" data-instance-id="instance-22">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-24"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Reifner&lt;/surname&gt;
@@ -1246,13 +1270,13 @@
                <li><a href="#bibl-instance-23">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-23">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-23">
+            <div id="segmented-instance-instance-23" data-instance-id="instance-23">
                <pre><code>&lt;note n="23" type="footnote" place="bottom"&gt;
   &lt;label&gt;23&lt;/label&gt;
   &lt;bibl&gt;Reifner 1979.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-23" data-bibl-ids="bibl-25" data-tab-index="23">
+            <div id="bibl-instance-23" data-instance-id="instance-23" data-bibl-ids="bibl-25" data-tab-index="23">
                <pre><code>&lt;note n="23" type="footnote" place="bottom"&gt;
   &lt;label&gt;23&lt;/label&gt;
   &lt;bibl xml:id="bibl-25"&gt;
@@ -1265,10 +1289,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-23">
+            <div id="unresolved-biblstruct-instance-23" data-instance-id="instance-23">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-25"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Reifner&lt;/surname&gt;
@@ -1287,14 +1312,14 @@
                <li><a href="#bibl-instance-24">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-24">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-24">
+            <div id="segmented-instance-instance-24" data-instance-id="instance-24">
                <pre><code>&lt;note n="24" type="footnote" place="bottom"&gt;
   &lt;label&gt;24&lt;/label&gt;
   &lt;note&gt;Klassisch bei&lt;/note&gt;
   &lt;bibl&gt;Carlin/Howard/Messinger 1967.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-24" data-bibl-ids="bibl-26" data-tab-index="24">
+            <div id="bibl-instance-24" data-instance-id="instance-24" data-bibl-ids="bibl-26" data-tab-index="24">
                <pre><code>&lt;note n="24" type="footnote" place="bottom"&gt;
   &lt;label&gt;24&lt;/label&gt;
   &lt;note type="signal"&gt;Klassisch bei&lt;/note&gt;
@@ -1318,10 +1343,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-24">
+            <div id="unresolved-biblstruct-instance-24" data-instance-id="instance-24">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-26"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Carlin&lt;/surname&gt;
@@ -1352,7 +1378,7 @@
                <li><a href="#bibl-instance-25">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-25">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-25">
+            <div id="segmented-instance-instance-25" data-instance-id="instance-25">
                <pre><code>&lt;note n="25" type="footnote" place="bottom"&gt;
   &lt;label&gt;25&lt;/label&gt;
   &lt;note&gt;Grundsätzlich vgl. hierzu den klassischen Beitrag von&lt;/note&gt;
@@ -1361,7 +1387,7 @@
   &lt;bibl&gt;Sarat 1976, S. 339-375.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-25" data-bibl-ids="bibl-27 bibl-28" data-tab-index="25">
+            <div id="bibl-instance-25" data-instance-id="instance-25" data-bibl-ids="bibl-27 bibl-28" data-tab-index="25">
                <pre><code>&lt;note n="25" type="footnote" place="bottom"&gt;
   &lt;label&gt;25&lt;/label&gt;
   &lt;note type="signal"&gt;Grundsätzlich vgl. hierzu den klassischen Beitrag von&lt;/note&gt;
@@ -1386,10 +1412,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-25">
+            <div id="unresolved-biblstruct-instance-25" data-instance-id="instance-25">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-27"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Galanter&lt;/surname&gt;
@@ -1398,6 +1425,7 @@
       &lt;citedRange unit="page" from="95" to="160"&gt;S. 95—160&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-28"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Sarat&lt;/surname&gt;
@@ -1417,13 +1445,13 @@
                <li><a href="#bibl-instance-26">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-26">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-26">
+            <div id="segmented-instance-instance-26" data-instance-id="instance-26">
                <pre><code>&lt;note n="26" type="footnote" place="bottom"&gt;
   &lt;label&gt;26&lt;/label&gt;
   &lt;bibl&gt;Bender/Schumacher 1980, S. 138.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-26" data-bibl-ids="bibl-29" data-tab-index="26">
+            <div id="bibl-instance-26" data-instance-id="instance-26" data-bibl-ids="bibl-29" data-tab-index="26">
                <pre><code>&lt;note n="26" type="footnote" place="bottom"&gt;
   &lt;label&gt;26&lt;/label&gt;
   &lt;bibl xml:id="bibl-29"&gt;
@@ -1442,10 +1470,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-26">
+            <div id="unresolved-biblstruct-instance-26" data-instance-id="instance-26">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-29"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Bender&lt;/surname&gt;
@@ -1471,7 +1500,7 @@
                <li><a href="#bibl-instance-27">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-27">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-27">
+            <div id="segmented-instance-instance-27" data-instance-id="instance-27">
                <pre><code>&lt;note n="27" type="footnote" place="bottom"&gt;
   &lt;label&gt;27&lt;/label&gt;
   &lt;bibl&gt;Steinbach 1979, S. 96 ff,&lt;/bibl&gt;
@@ -1479,7 +1508,7 @@
   &lt;bibl&gt;Blankenburg/Blankenburg/Morasch 1972, S. 89 Fn. 17&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-27" data-bibl-ids="bibl-30 bibl-31" data-tab-index="27">
+            <div id="bibl-instance-27" data-instance-id="instance-27" data-bibl-ids="bibl-30 bibl-31" data-tab-index="27">
                <pre><code>&lt;note n="27" type="footnote" place="bottom"&gt;
   &lt;label&gt;27&lt;/label&gt;
   &lt;bibl xml:id="bibl-30"&gt;
@@ -1514,10 +1543,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-27">
+            <div id="unresolved-biblstruct-instance-27" data-instance-id="instance-27">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-30"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Steinbach&lt;/surname&gt;
@@ -1526,6 +1556,7 @@
       &lt;citedRange unit="page" from="96"&gt;S. 96 ff&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-31"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Blankenburg&lt;/surname&gt;
@@ -1556,13 +1587,13 @@
                <li><a href="#bibl-instance-28">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-28">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-28">
+            <div id="segmented-instance-instance-28" data-instance-id="instance-28">
                <pre><code>&lt;note n="28" type="footnote" place="bottom"&gt;
   &lt;label&gt;28&lt;/label&gt;
   &lt;bibl&gt;Reifner 1978.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-28" data-bibl-ids="bibl-32" data-tab-index="28">
+            <div id="bibl-instance-28" data-instance-id="instance-28" data-bibl-ids="bibl-32" data-tab-index="28">
                <pre><code>&lt;note n="28" type="footnote" place="bottom"&gt;
   &lt;label&gt;28&lt;/label&gt;
   &lt;bibl xml:id="bibl-32"&gt;
@@ -1575,10 +1606,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-28">
+            <div id="unresolved-biblstruct-instance-28" data-instance-id="instance-28">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-32"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Reifner&lt;/surname&gt;
@@ -1597,13 +1629,13 @@
                <li><a href="#bibl-instance-29">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-29">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-29">
+            <div id="segmented-instance-instance-29" data-instance-id="instance-29">
                <pre><code>&lt;note n="29" type="footnote" place="bottom"&gt;
   &lt;label&gt;29&lt;/label&gt;
   &lt;bibl&gt;Blankenburg/Schönholz/Rogowski 1979, S. 102 ff.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-29" data-bibl-ids="bibl-33" data-tab-index="29">
+            <div id="bibl-instance-29" data-instance-id="instance-29" data-bibl-ids="bibl-33" data-tab-index="29">
                <pre><code>&lt;note n="29" type="footnote" place="bottom"&gt;
   &lt;label&gt;29&lt;/label&gt;
   &lt;bibl xml:id="bibl-33"&gt;
@@ -1627,10 +1659,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-29">
+            <div id="unresolved-biblstruct-instance-29" data-instance-id="instance-29">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-33"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Blankenburg&lt;/surname&gt;
@@ -1661,14 +1694,14 @@
                <li><a href="#bibl-instance-30">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-30">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-30">
+            <div id="segmented-instance-instance-30" data-instance-id="instance-30">
                <pre><code>&lt;note n="30" type="footnote" place="bottom"&gt;
   &lt;label&gt;30&lt;/label&gt;
   &lt;note&gt;Vgl. zum Verrechtlichungsbegriff meinen Beitrag über:&lt;/note&gt;
   &lt;bibl&gt;Recht als gradualisiertes Konzept 1980, S. 83—98.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-30" data-bibl-ids="bibl-34" data-tab-index="30">
+            <div id="bibl-instance-30" data-instance-id="instance-30" data-bibl-ids="bibl-34" data-tab-index="30">
                <pre><code>&lt;note n="30" type="footnote" place="bottom"&gt;
   &lt;label&gt;30&lt;/label&gt;
   &lt;note type="signal"&gt;Vgl. zum Verrechtlichungsbegriff meinen Beitrag über:&lt;/note&gt;
@@ -1679,13 +1712,14 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-30">
+            <div id="unresolved-biblstruct-instance-30" data-instance-id="instance-30">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-34"&gt;
       &lt;analytic source="#bibl-34"&gt;
          &lt;title level="a"&gt;Recht als gradualisiertes Konzept&lt;/title&gt;
       &lt;/analytic&gt;
+      &lt;error&gt;element citedRange: Element 'tei:citedRange': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;citedRange unit="page" from="83" to="98"&gt;S. 83—98&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
@@ -1700,14 +1734,14 @@
                <li><a href="#bibl-instance-31">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-31">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-31">
+            <div id="segmented-instance-instance-31" data-instance-id="instance-31">
                <pre><code>&lt;note n="31" type="footnote" place="bottom"&gt;
   &lt;label&gt;31&lt;/label&gt;
   &lt;bibl&gt;Steinbach 1979, S. 35&lt;/bibl&gt;
   &lt;bibl&gt;Bender Schumacher 1980, S. 24 und S. 49.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-31" data-bibl-ids="bibl-35 bibl-36" data-tab-index="31">
+            <div id="bibl-instance-31" data-instance-id="instance-31" data-bibl-ids="bibl-35 bibl-36" data-tab-index="31">
                <pre><code>&lt;note n="31" type="footnote" place="bottom"&gt;
   &lt;label&gt;31&lt;/label&gt;
   &lt;bibl xml:id="bibl-35"&gt;
@@ -1736,10 +1770,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-31">
+            <div id="unresolved-biblstruct-instance-31" data-instance-id="instance-31">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-35"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Steinbach&lt;/surname&gt;
@@ -1748,6 +1783,7 @@
       &lt;citedRange unit="page" from="35" to="35"&gt;S. 35&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-36"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Bender&lt;/surname&gt;
@@ -1774,7 +1810,7 @@
                <li><a href="#bibl-instance-32">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-32">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-32">
+            <div id="segmented-instance-instance-32" data-instance-id="instance-32">
                <pre><code>&lt;note n="32" type="footnote" place="bottom"&gt;
   &lt;label&gt;32&lt;/label&gt;
   &lt;bibl&gt;Wanner 1975, S. 293—306&lt;/bibl&gt;
@@ -1786,7 +1822,7 @@
   &lt;bibl&gt;Sarat 1976.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-32" data-bibl-ids="bibl-37 bibl-38 bibl-39 bibl-40" data-tab-index="32">
+            <div id="bibl-instance-32" data-instance-id="instance-32" data-bibl-ids="bibl-37 bibl-38 bibl-39 bibl-40" data-tab-index="32">
                <pre><code>&lt;note n="32" type="footnote" place="bottom"&gt;
   &lt;label&gt;32&lt;/label&gt;
   &lt;bibl xml:id="bibl-37"&gt;
@@ -1833,10 +1869,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-32">
+            <div id="unresolved-biblstruct-instance-32" data-instance-id="instance-32">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-37"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Wanner&lt;/surname&gt;
@@ -1845,6 +1882,7 @@
       &lt;citedRange unit="page" from="293" to="306"&gt;S. 293—306&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-38"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Bender&lt;/surname&gt;
@@ -1858,6 +1896,7 @@
       &lt;citedRange unit="page" from="72"&gt;S. 72 ff&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-39"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Galanter&lt;/surname&gt;
@@ -1865,6 +1904,7 @@
       &lt;/author&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-40"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Sarat&lt;/surname&gt;
@@ -1883,13 +1923,13 @@
                <li><a href="#bibl-instance-33">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-33">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-33">
+            <div id="segmented-instance-instance-33" data-instance-id="instance-33">
                <pre><code>&lt;note n="33" type="footnote" place="bottom"&gt;
   &lt;label&gt;33&lt;/label&gt;
   &lt;bibl&gt;Blankenburg/Schönholz/Rogowski 1979, S. 78 ff.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-33" data-bibl-ids="bibl-41" data-tab-index="33">
+            <div id="bibl-instance-33" data-instance-id="instance-33" data-bibl-ids="bibl-41" data-tab-index="33">
                <pre><code>&lt;note n="33" type="footnote" place="bottom"&gt;
   &lt;label&gt;33&lt;/label&gt;
   &lt;bibl xml:id="bibl-41"&gt;
@@ -1913,10 +1953,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-33">
+            <div id="unresolved-biblstruct-instance-33" data-instance-id="instance-33">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-41"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Blankenburg&lt;/surname&gt;
@@ -1947,13 +1988,13 @@
                <li><a href="#unresolved-biblstruct-instance-34">&lt;biblStruct&gt;</a></li>
                <li><a href="#resolved-biblstruct-instance-34">Resolved &lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-34">
+            <div id="segmented-instance-instance-34" data-instance-id="instance-34">
                <pre><code>&lt;note n="34" type="footnote" place="bottom"&gt;
   &lt;label&gt;34&lt;/label&gt;
   &lt;bibl&gt;Ebenda, S. 138-186.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-34" data-bibl-ids="bibl-42" data-tab-index="34">
+            <div id="bibl-instance-34" data-instance-id="instance-34" data-bibl-ids="bibl-42" data-tab-index="34">
                <pre><code>&lt;note n="34" type="footnote" place="bottom"&gt;
   &lt;label&gt;34&lt;/label&gt;
   &lt;bibl xml:id="bibl-42"&gt;
@@ -1962,20 +2003,22 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-34">
+            <div id="unresolved-biblstruct-instance-34" data-instance-id="instance-34">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-42"&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;ref type="op-cit"&gt;Ebenda&lt;/ref&gt;
       &lt;citedRange unit="page" from="138" to="186"&gt;S. 138-186&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="resolved-biblstruct-instance-34">
+            <div id="resolved-biblstruct-instance-34" data-instance-id="instance-34">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-42"&gt;
+      &lt;error&gt;element citedRange: Element 'tei:citedRange': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;citedRange unit="page" from="138" to="186"&gt;S. 138-186&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
@@ -1990,13 +2033,13 @@
                <li><a href="#bibl-instance-35">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-35">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-35">
+            <div id="segmented-instance-instance-35" data-instance-id="instance-35">
                <pre><code>&lt;note n="35" type="footnote" place="bottom"&gt;
   &lt;label&gt;35&lt;/label&gt;
   &lt;bibl&gt;Luhmann 1969.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-35" data-bibl-ids="bibl-43" data-tab-index="35">
+            <div id="bibl-instance-35" data-instance-id="instance-35" data-bibl-ids="bibl-43" data-tab-index="35">
                <pre><code>&lt;note n="35" type="footnote" place="bottom"&gt;
   &lt;label&gt;35&lt;/label&gt;
   &lt;bibl xml:id="bibl-43"&gt;
@@ -2009,10 +2052,11 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-35">
+            <div id="unresolved-biblstruct-instance-35" data-instance-id="instance-35">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-43"&gt;
+      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
       &lt;author&gt;
          &lt;persName&gt;
             &lt;surname&gt;Luhmann&lt;/surname&gt;
@@ -2032,14 +2076,14 @@
                <li><a href="#bibl-instance-36">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-36">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-36">
+            <div id="segmented-instance-instance-36" data-instance-id="instance-36">
                <pre><code>&lt;note n="36" type="footnote" place="bottom"&gt;
   &lt;label&gt;36&lt;/label&gt;
   &lt;note&gt;Für eine überaus positive Bewertung des ‚Vermeidens‘vgl.&lt;/note&gt;
   &lt;bibl&gt;Felstiner und Danzig/Lowy in Law and Society Review, vol. 9, 1974/75.&lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="bibl-instance-36" data-bibl-ids="bibl-44" data-tab-index="36">
+            <div id="bibl-instance-36" data-instance-id="instance-36" data-bibl-ids="bibl-44" data-tab-index="36">
                <pre><code>&lt;note n="36" type="footnote" place="bottom"&gt;
   &lt;label&gt;36&lt;/label&gt;
   &lt;note type="signal"&gt;Für eine überaus positive Bewertung des ‚Vermeidens‘ vgl.&lt;/note&gt;
@@ -2065,7 +2109,7 @@
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-36">
+            <div id="unresolved-biblstruct-instance-36" data-instance-id="instance-36">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-44"&gt;
@@ -2160,7 +2204,7 @@
                <li><a href="#bibl-instance-37">Segmented &lt;bibl&gt; (gold)</a></li>
                <li><a href="#unresolved-biblstruct-instance-37">&lt;biblStruct&gt;</a></li>
             </ul>
-            <div id="segmented-instance-instance-37">
+            <div id="segmented-instance-instance-37" data-instance-id="instance-37">
                <pre><code>
 &lt;listBibl&gt;
    &lt;bibl&gt;Baumgärtel, Gottfried, 1976: Gleicher Zugang zum Recht für alle. Köln.&lt;/bibl&gt;
@@ -2194,7 +2238,7 @@
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="bibl-instance-37" data-bibl-ids="bibl-45 bibl-46 bibl-47 bibl-48 bibl-49 bibl-50 bibl-51 bibl-52 bibl-53 bibl-54 bibl-55 bibl-56 bibl-57 bibl-58 bibl-59 bibl-60 bibl-61 bibl-62 bibl-63 bibl-64 bibl-65 bibl-66 bibl-67 bibl-68 bibl-69 bibl-70 bibl-71 bibl-72" data-tab-index="37">
+            <div id="bibl-instance-37" data-instance-id="instance-37" data-bibl-ids="bibl-45 bibl-46 bibl-47 bibl-48 bibl-49 bibl-50 bibl-51 bibl-52 bibl-53 bibl-54 bibl-55 bibl-56 bibl-57 bibl-58 bibl-59 bibl-60 bibl-61 bibl-62 bibl-63 bibl-64 bibl-65 bibl-66 bibl-67 bibl-68 bibl-69 bibl-70 bibl-71 bibl-72" data-tab-index="37">
                <pre><code>
 &lt;listBibl&gt;
    &lt;bibl xml:id="bibl-45"&gt;
@@ -2687,7 +2731,7 @@
 &lt;/listBibl&gt;
 </code></pre>
             </div>
-            <div id="unresolved-biblstruct-instance-37">
+            <div id="unresolved-biblstruct-instance-37" data-instance-id="instance-37">
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-45"&gt;
@@ -3177,6 +3221,7 @@
          &lt;/imprint&gt;
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
+   &lt;error&gt;element biblStruct: Element 'tei:biblStruct': Missing child element(s). Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
    &lt;biblStruct source="#bibl-67"&gt;
       &lt;analytic source="#bibl-67"&gt;
          &lt;title level="a"&gt;Gewerkschaftlicher Rechtsschutz — Geschichte des freigewerkschaftlichen Rechtsschutzes und der Rechtsberatung der Deutschen Arbeitsfront von 1894—1945&lt;/title&gt;
@@ -3337,6 +3382,28 @@
                   } else {
                     const tabIndex = tabElement.dataset.tabIndex;
                     span.innerHTML = `"<a href="#${biblId}" onclick="tabs[${tabIndex}].toggle('${tabElement.id}')">#${biblId}</a>"`;
+                  }
+                }
+              }
+            });
+            // mark errors
+            document.querySelectorAll("span").forEach(span => {
+              if (span.textContent == "error") {
+                span.style.color = "red";
+                let el = span;
+                while (el && el.parentElement && (!el.dataset || !el.dataset.instanceId)) { 
+                  el = el.parentElement; 
+                }
+                if (el && el.dataset && el.dataset.instanceId ) {
+                  let instanceId = el.dataset.instanceId
+                  let tabId = el.id
+                  let instanceNode = document.getElementById(instanceId)
+                  let tabNode = document.querySelector(`a[href="#${tabId}"]`)
+                  if(instanceNode) {
+                    instanceNode.classList.add("validation-error")
+                  }
+                  if(tabNode) {
+                    tabNode.classList.add("validation-error")
                   }
                 }
               }
