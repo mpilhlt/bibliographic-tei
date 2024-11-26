@@ -51,8 +51,9 @@
           ul[data-tabs] > li > a {
             font-size: small;
           }
-          .validation-error {
-            color: 'red'
+          fieldset.validation-error legend::before,
+          a.validation-error::before {
+              content: '⚠️';
           }
         </style>
       </head>
@@ -108,12 +109,27 @@
               }
             });
             // mark errors
-            let firstSpan = false;
             document.querySelectorAll("span").forEach(span =&gt; {
               if (span.textContent == "error") {
                 span.style.color = "red";
+                let el = span;
+                while (el &amp;&amp; el.parentElement &amp;&amp; (!el.dataset || !el.dataset.instanceId)) { 
+                  el = el.parentElement; 
+                }
+                if (el &amp;&amp; el.dataset &amp;&amp; el.dataset.instanceId ) {
+                  let instanceId = el.dataset.instanceId
+                  let tabId = el.id
+                  let instanceNode = document.getElementById(instanceId)
+                  let tabNode = document.querySelector(`a[href="#${tabId}"]`)
+                  if(instanceNode) {
+                    instanceNode.classList.add("validation-error")
+                  }
+                  if(tabNode) {
+                    tabNode.classList.add("validation-error")
+                  }
+                }
               }
-            });
+            });            
           }
           setTimeout(addLinks, 2000)
         </script>
@@ -169,7 +185,7 @@
     </ul>
 
     <!-- <llam:output[@type='block']> -->
-    <div id="segmented-instance-{$node/@xml:id}">
+    <div id="segmented-instance-{$node/@xml:id}" data-instance-id="{$node/@xml:id}">
       <pre><code>
             <xsl:call-template name="serialize-to-html">
                 <xsl:with-param name="node" select="$node/llam:output[@type='segmented-instance']/*[1]"/>
@@ -179,6 +195,7 @@
 
     <!-- Main gold <llam:output[@type='bibl']> -->     
     <div id="bibl-{$node/@xml:id}"
+      data-instance-id="{$node/@xml:id}"
       data-bibl-ids="{string-join($node//tei:bibl/@xml:id, ' ')}"
       data-tab-index="{replace(@xml:id, '^[^\d]*(\d+)$', '$1')}">
       <pre><code>
@@ -190,7 +207,7 @@
 
 
     <!-- Process <llam:output[@type='biblStruct']> -->
-    <div id="unresolved-biblstruct-{$node/@xml:id}">
+    <div id="unresolved-biblstruct-{$node/@xml:id}" data-instance-id="{$node/@xml:id}">
       <pre><code>
         <xsl:call-template name="serialize-to-html">
             <xsl:with-param name="node" select="$node/llam:output[@type='biblstruct']/*[1]"/>
@@ -200,7 +217,7 @@
 
     <!-- Process <llam:output[@type='biblStruct']> containing <ref> elements -->
     <xsl:if test="$biblstruct-is-incomplete">
-      <div id="resolved-biblstruct-{$node/@xml:id}">
+      <div id="resolved-biblstruct-{$node/@xml:id}" data-instance-id="{$node/@xml:id}">
         <pre><code>
           <xsl:call-template name="serialize-to-html">
               <xsl:with-param name="node" select="$node/llam:output[@type='resolved-biblstruct']/*[1]"/>
