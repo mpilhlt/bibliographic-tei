@@ -56,9 +56,6 @@
                 <valItem mode="add" ident="footnote">
                   <desc versionDate="2024-11-13" xml:lang="en">A footnote or endnote</desc>
                 </valItem>
-                <valItem mode="add" ident="name">
-                  <desc versionDate="2024-11-23" xml:lang="en">The name of a previously mentioned author or editor</desc>
-                </valItem>
                 <valItem mode="add" ident="idem">
                   <desc versionDate="2024-11-23" xml:lang="en">A reference to a previously mentioned
                     name of an author, replaced by abbreviations such as "id.", "eadem" in
@@ -68,6 +65,10 @@
                   <desc versionDate="2024-11-23" xml:lang="en">A reference to a previously
                     referenced work, usually indicated by abbreviations such as "op. cit.", "ibid."
                     in English or "ebd.", "a.a.O." in German.</desc>
+                </valItem>
+                <valItem mode="add" ident="bibl">
+                  <desc versionDate="2024-11-26" xml:lang="en">A reference that points to a completed bibl element, 
+                    usually containing a persName element for the author mentioned, plus .</desc>
                 </valItem>
               </valList>
             </attDef>
