@@ -51,6 +51,10 @@
           ul[data-tabs] > li > a {
             font-size: small;
           }
+          fieldset.validation-error legend::before,
+          a.validation-error::before {
+              content: '⚠️';
+          }
         </style>
       </head>
       <body>
@@ -100,6 +104,28 @@
                   } else {
                     const tabIndex = tabElement.dataset.tabIndex;
                     span.innerHTML = `"&lt;a href="#${biblId}" onclick=&quot;tabs[${tabIndex}].toggle(&apos;${tabElement.id}&apos;)&quot;&gt;#${biblId}&lt;/a&gt;"`;
+                  }
+                }
+              }
+            });
+            // mark errors
+            document.querySelectorAll("span").forEach(span =&gt; {
+              if (span.textContent == "error") {
+                span.style.color = "red";
+                let el = span;
+                while (el &amp;&amp; el.parentElement &amp;&amp; (!el.dataset || !el.dataset.instanceId)) { 
+                  el = el.parentElement; 
+                }
+                if (el &amp;&amp; el.dataset &amp;&amp; el.dataset.instanceId ) {
+                  let instanceId = el.dataset.instanceId
+                  let tabId = el.id
+                  let instanceNode = document.getElementById(instanceId)
+                  let tabNode = document.querySelector(`a[href="#${tabId}"]`)
+                  if(instanceNode) {
+                    instanceNode.classList.add("validation-error")
+                  }
+                  if(tabNode) {
+                    tabNode.classList.add("validation-error")
                   }
                 }
               }
@@ -159,9 +185,9 @@
     </ul>
 
     <!-- <llam:output[@type='block']> -->
-    <div id="segmented-instance-{$node/@xml:id}">
+    <div id="segmented-instance-{$node/@xml:id}" data-instance-id="{$node/@xml:id}">
       <pre><code>
-            <xsl:call-template name="serialize-stripped">
+            <xsl:call-template name="serialize-to-html">
                 <xsl:with-param name="node" select="$node/llam:output[@type='segmented-instance']/*[1]"/>
             </xsl:call-template>
         </code></pre>
@@ -169,10 +195,11 @@
 
     <!-- Main gold <llam:output[@type='bibl']> -->     
     <div id="bibl-{$node/@xml:id}"
+      data-instance-id="{$node/@xml:id}"
       data-bibl-ids="{string-join($node//tei:bibl/@xml:id, ' ')}"
       data-tab-index="{replace(@xml:id, '^[^\d]*(\d+)$', '$1')}">
       <pre><code>
-            <xsl:call-template name="serialize-stripped">
+            <xsl:call-template name="serialize-to-html">
                 <xsl:with-param name="node" select="$node/llam:output[@type='bibl']/*[1]"/>
             </xsl:call-template>
         </code></pre>
@@ -180,9 +207,9 @@
 
 
     <!-- Process <llam:output[@type='biblStruct']> -->
-    <div id="unresolved-biblstruct-{$node/@xml:id}">
+    <div id="unresolved-biblstruct-{$node/@xml:id}" data-instance-id="{$node/@xml:id}">
       <pre><code>
-        <xsl:call-template name="serialize-stripped">
+        <xsl:call-template name="serialize-to-html">
             <xsl:with-param name="node" select="$node/llam:output[@type='biblstruct']/*[1]"/>
         </xsl:call-template>
         </code></pre>
@@ -190,9 +217,9 @@
 
     <!-- Process <llam:output[@type='biblStruct']> containing <ref> elements -->
     <xsl:if test="$biblstruct-is-incomplete">
-      <div id="resolved-biblstruct-{$node/@xml:id}">
+      <div id="resolved-biblstruct-{$node/@xml:id}" data-instance-id="{$node/@xml:id}">
         <pre><code>
-          <xsl:call-template name="serialize-stripped">
+          <xsl:call-template name="serialize-to-html">
               <xsl:with-param name="node" select="$node/llam:output[@type='resolved-biblstruct']/*[1]"/>
           </xsl:call-template>
           </code></pre>
@@ -202,7 +229,7 @@
   </xsl:template>
 
   <!-- Template to escape XML data and remove indentation and namespaces, then pretty-print -->
-  <xsl:template name="serialize-stripped">
+  <xsl:template name="serialize-to-html">
     <xsl:param name="node" />
 
     <!-- Serialize the node with pretty-printing enabled -->
@@ -224,7 +251,7 @@
     <!-- Remove namespace expressions -->
     <xsl:variable
       name="namespace-stripped"
-      select="replace($attribute-fixes, ' xmlns(:\w+)?=&quot;[^&quot;]*&quot;', '')" />
+      select="replace(replace($attribute-fixes, '\{http://www\.tei-c\.org/ns/1\.0\}', 'tei:'), '( xmlns(:\w+)?=&quot;[^&quot;]*&quot;)', '')" />
 
     <!-- De-indent -->
     <xsl:variable

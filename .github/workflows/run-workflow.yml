@@ -18,17 +18,25 @@ jobs:
         options: --entrypoint /bin/sh
 
     steps:
+    - name: Install libxml2-tools
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libxml2-utils
+
     - name: Check out source code
       uses: actions/checkout@v2
 
     - name: Generate training data from gold
-      run: .github/workflows/generate-training-data
+      run: bash .github/workflows/generate-training-data
 
     - name: Fix indentation of training data
-      run: .github/workflows/fix-indentation
+      run: bash .github/workflows/fix-indentation
+
+    - name: Add validation error annotations
+      run: bash .github/workflows/annotate-errors
 
     - name: Generate html files to view gold data
-      run: .github/workflows/generate-gold-viewer
+      run: bash .github/workflows/generate-gold-viewer
 
     - name: Generate Directory Listings
       uses: jayanta525/github-pages-directory-listing@v4.0.0
@@ -37,4 +45,4 @@ jobs:
 
     - name: Deploy to GitHub Pages
       if: github.event_name == 'push' && github.ref == 'refs/heads/main'  
-      run: .github/workflows/deploy-to-pages
+      run: bash .github/workflows/deploy-to-pages
