@@ -27,10 +27,11 @@
    <xsl:template name="schxslt.validate">
       <xsl:apply-templates select="document($schxslt.validate.initial-document-uri)"/>
    </xsl:template>
-   <xsl:template match="root()" mode="schematron">
+   <xsl:template match="root()">
       <xsl:param name="schxslt.validate.recursive-call"
                  as="xs:boolean"
                  select="false()"/>
+                 <xsl:message>Schematron called!</xsl:message>
       <xsl:choose>
          <xsl:when test="not($schxslt.validate.recursive-call) and (normalize-space($schxslt.validate.initial-document-uri) != '')">
             <xsl:apply-templates select="document($schxslt.validate.initial-document-uri)">

@@ -151,7 +151,7 @@
         <a href="#bibl-{$node/@xml:id}">Segmented &lt;bibl&gt; (gold)</a>
       </li>
       <li>
-        <a href="#unresolved-biblstruct-{$node/@xml:id}">&lt;biblStruct&gt;</a>
+        <a href="#biblstruct-{$node/@xml:id}">&lt;biblStruct&gt;</a>
       </li>
       <xsl:if test="$biblstruct-is-incomplete">
         <li>
@@ -180,21 +180,20 @@
       </code></pre>
     </div>
 
-
-    <!-- Process <llam:output[@type='biblStruct']> -->
+    
+    <!-- Process <llam:output[@type='biblstruct']> -->
     <div id="unresolved-biblstruct-{$node/@xml:id}">
       <xsl:variable name="tei" select="$node/llam:output[@type='biblstruct']/*[1]"/>
       <pre><code>
         <xsl:call-template name="serialize-stripped">
             <xsl:with-param name="node" select="$tei"/>
         </xsl:call-template>
-        </code></pre>
-        <!-- provide validation report -->
-        <xsl:call-template name="validate-and-report-schematron-errors">
-          <xsl:with-param name="subtree">
-            <xsl:sequence select="$tei"/>
-          </xsl:with-param>
-        </xsl:call-template>
+      </code></pre>
+      <xsl:call-template name="validate-and-report-schematron-errors">
+        <xsl:with-param name="subtree">
+          <xsl:sequence select="$tei"/>
+        </xsl:with-param>
+      </xsl:call-template>
     </div>
 
     <!-- Process <llam:output[@type='biblStruct']> and resolve <ref> elements -->
@@ -223,7 +222,7 @@
             <div class="schematron-error">
                 <xsl:value-of select="svrl:text"/>
             </div>
-        </xsl:for-each>
+        </xsl:for-each>    
     </div>
   </xsl:template>
   
