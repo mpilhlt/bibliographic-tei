@@ -9,6 +9,9 @@
     the gold standard files 
   -->
 
+  <!-- import validation schematron -->
+  <xsl:import href="../schema/schematron/tei-bib.xsl" />
+
   <!-- params -->
   <xsl:param name="verbose" select="'off'"/> 
 
@@ -155,10 +158,9 @@
           <a href="#resolved-biblstruct-{$node/@xml:id}">Resolved &lt;biblStruct&gt;</a>
         </li>
       </xsl:if>
-
     </ul>
 
-    <!-- <llam:output[@type='block']> -->
+    <!-- <llam:output[@type='segmeented-instance']> -->
     <div id="segmented-instance-{$node/@xml:id}">
       <pre><code>
             <xsl:call-template name="serialize-stripped">
@@ -172,23 +174,30 @@
       data-bibl-ids="{string-join($node//tei:bibl/@xml:id, ' ')}"
       data-tab-index="{replace(@xml:id, '^[^\d]*(\d+)$', '$1')}">
       <pre><code>
-            <xsl:call-template name="serialize-stripped">
-                <xsl:with-param name="node" select="$node/llam:output[@type='bibl']/*[1]"/>
-            </xsl:call-template>
-        </code></pre>
+        <xsl:call-template name="serialize-stripped">
+            <xsl:with-param name="node" select="$node/llam:output[@type='bibl']/*[1]"/>
+        </xsl:call-template>
+      </code></pre>
     </div>
 
 
     <!-- Process <llam:output[@type='biblStruct']> -->
     <div id="unresolved-biblstruct-{$node/@xml:id}">
+      <xsl:variable name="tei" select="$node/llam:output[@type='biblstruct']/*[1]"/>
       <pre><code>
         <xsl:call-template name="serialize-stripped">
-            <xsl:with-param name="node" select="$node/llam:output[@type='biblstruct']/*[1]"/>
+            <xsl:with-param name="node" select="$tei"/>
         </xsl:call-template>
         </code></pre>
+        <!-- provide validation report -->
+        <xsl:call-template name="validate-and-report-schematron-errors">
+          <xsl:with-param name="subtree">
+            <xsl:sequence select="$tei"/>
+          </xsl:with-param>
+        </xsl:call-template>
     </div>
 
-    <!-- Process <llam:output[@type='biblStruct']> containing <ref> elements -->
+    <!-- Process <llam:output[@type='biblStruct']> and resolve <ref> elements -->
     <xsl:if test="$biblstruct-is-incomplete">
       <div id="resolved-biblstruct-{$node/@xml:id}">
         <pre><code>
@@ -201,6 +210,23 @@
 
   </xsl:template>
 
+  <!-- transform schematron report into html messages -->
+  <xsl:template name="validate-and-report-schematron-errors"
+                xmlns:svrl="http://purl.oclc.org/dsdl/svrl">
+    <xsl:param name="subtree" />
+    <xsl:variable name="svrl">
+      <xsl:apply-templates select="$subtree" mode="schematron"/>
+    </xsl:variable>
+    <div class="schematron-error-report">
+        <!-- Select all svrl:failed-assert elements and process them -->
+        <xsl:for-each select="$svrl//svrl:failed-assert">
+            <div class="schematron-error">
+                <xsl:value-of select="svrl:text"/>
+            </div>
+        </xsl:for-each>
+    </div>
+  </xsl:template>
+  
   <!-- Template to escape XML data and remove indentation and namespaces, then pretty-print -->
   <xsl:template name="serialize-stripped">
     <xsl:param name="node" />
