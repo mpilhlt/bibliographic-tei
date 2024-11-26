@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "Fixing indentation..."
 
 for xml_file in data/training/*.xml; do

@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo "Annotating schema validation errors..."
 
 for xml_file in data/training/*.xml; do
