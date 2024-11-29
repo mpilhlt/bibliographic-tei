@@ -876,11 +876,11 @@
                 (<date when="1995">1995</date>)
             </bibl>;
             <bibl xml:id="bibl-54">
-              <author>
+              <editor>
                 <persName>
                   <surname>Thornton</surname>
                 </persName>
-              </author>,
+              </editor>,
               <ref type="op-cit">op. cit.</ref>
               (<date when="1996">1996</date>),
               <ref type="footnote" n="4">n. 4</ref>
