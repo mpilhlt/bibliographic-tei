@@ -83,9 +83,38 @@
             tabs[i+1] = new Tabby(`[data-tab-${i+1}]`);
           }
           hljs.highlightAll();
-          
+
+          // function to show code that is hidden in tabs
+          function revealTabBasedOnHash() {
+            let scrollElem; 
+            if(window.location.hash) {
+              const hash = window.location.hash.substring(1);
+              // bibl elements might be in a hidden tab
+              if (hash.includes("bibl")) {
+                const tabElement = document.querySelector(`[data-bibl-ids*="${hash}"]`);
+                if (tabElement) {
+                  const tabIndex = tabElement.dataset.tabIndex;
+                  tabs[tabIndex].toggle(tabElement.id);
+                  scrollElem = tabElement;
+                } else {
+                  console.error(`Cannot find tab containing #${hash}`)
+                }
+              } else {
+                scrollElem = document.querySelector(`#${hash}`)
+              }
+              if (scrollElem) {
+                scrollElem.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'}); 
+              }
+            }
+          }
+
+          // Trigger at page load and whenever hash changes
+          document.addEventListener("DOMContentLoaded", revealTabBasedOnHash);
+          window.addEventListener("hashchange", revealTabBasedOnHash);
+
           // add links
           function addLinks() {
+            console.log("Adding links to 'source' attributes...")
             const spans = document.querySelectorAll('span') 
             spans.forEach((span, idx) => {
               if (span.textContent.trim() == 'xml:id') {
@@ -103,7 +132,7 @@
                     console.error(`Cannot find tab containing #${biblId}`)
                   } else {
                     const tabIndex = tabElement.dataset.tabIndex;
-                    span.innerHTML = `"&lt;a href="#${biblId}" onclick=&quot;tabs[${tabIndex}].toggle(&apos;${tabElement.id}&apos;)&quot;&gt;#${biblId}&lt;/a&gt;"`;
+                    span.innerHTML = `"&lt;a href="#${biblId}"&gt;#${biblId}&lt;/a&gt;"`;
                   }
                 }
               }
