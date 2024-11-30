@@ -212,7 +212,7 @@
     </instance>
     <instance xml:id="instance-8">
       <description content-type="text/html"><![CDATA[ 
-        <h2>Back-reference to collected volume</h2>
+        <h2>Back-reference to collected volume with "in id."</h2>
       ]]></description> 
       <input type="raw"><![CDATA[8 N. Fraser and L. Gordon, ‘Civil Citizenship against Social Citizenship?’ in id., p. 97.]]></input>
         <output type="bibl">
@@ -233,7 +233,7 @@
                         </persName>
                     </author>,
                     ‘<title level="a">Civil Citizenship against Social Citizenship?</title>’
-                    <ref type="op-cit" target="#bibl-7">in id.</ref>,
+                    <ref type="op-cit" target="#bibl-8">in id.</ref>,
                     <citedRange unit="page" from="97" to="97">p. 97</citedRange>.
                 </bibl>
           </note>
