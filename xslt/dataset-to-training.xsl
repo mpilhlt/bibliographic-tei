@@ -15,6 +15,7 @@
 
   <!-- you can pass `verbose=yes` to the cli command to get more verbose output -->
   <xsl:param name="verbose" select="'off'"/> 
+  <xsl:param name="disable-warnings" select="'off'"/> 
 
   <!-- configure output-->
   <xsl:output 
@@ -85,11 +86,11 @@
                   <xsl:variable name="result" select="$var5"></xsl:variable>
                   <!-- check serialization, in case the above rules do not cover all serialization problems -->
                   <xsl:variable name="raw-input" select="../../preceding-sibling::llam:input[@type='raw']/text()"/>
-                  <xsl:if test="not(contains($raw-input, $result))">
+                  <xsl:if test="not(contains($raw-input, $result)) and $disable-warnings != 'on'">
                     <xsl:message>
-                      <xsl:text>&#10;Warning: In </xsl:text><xsl:value-of select="ancestor::llam:instance[1]/@xml:id"/>
+                      <xsl:text>[!] Warning: In </xsl:text><xsl:value-of select="ancestor::llam:instance[1]/@xml:id"/>
                       <xsl:text>, """</xsl:text><xsl:value-of select="$result"/>
-                      <xsl:text>""" is not contained in the raw input.&#10;</xsl:text>
+                      <xsl:text>""" is not contained in the raw input.</xsl:text>
                   </xsl:message>
                   </xsl:if>
                   <xsl:value-of select="$result"/>

@@ -3,7 +3,8 @@
     xmlns="http://www.tei-c.org/ns/1.0" 
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <!-- 
@@ -36,9 +37,14 @@
     <!-- the referring bibl node, when resolving incomplete references, otherwise the same as $node -->
     <xsl:param name="original-node" />
 
-    <!-- free-standing author, usually with a <ref> -->
-    <xsl:if test="not($node/tei:title)">
-      <xsl:copy-of select="$node/tei:author" />
+    <!-- free-standing authors without a title, usually with a <ref> indicating where to find the missing reference data -->
+    <xsl:if test="not($node/tei:title) and exists($node/tei:author | $node/tei:persName | $node/tei:orgName )">
+      <xsl:element name="ref" namespace="http://www.tei-c.org/ns/1.0">
+        <xsl:copy-of select="$node/tei:author/tei:persName" />
+        <xsl:copy-of select="$node/tei:author/tei:orgName" />
+        <xsl:copy-of select="$node/tei:persName" />
+        <xsl:copy-of select="$node/tei:orgName" />
+      </xsl:element>
     </xsl:if>
 
     <!-- Process analytic section from current or original node-->
@@ -58,7 +64,7 @@
       </xsl:choose>
     
     <!-- Process monographic section -->
-    <xsl:if test="$node/tei:title[@level != 'a']">
+    <xsl:if test="$node/tei:title[@level != 'a'] | $node/tei:editor | $node/tei:idno | $node/tei:date">
         <monogr source="#{$node/@xml:id}">
             <xsl:copy-of select="$node/tei:title[@level != 'a']" />
             <xsl:copy-of select="$node/tei:idno" />

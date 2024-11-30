@@ -13,7 +13,10 @@
     ]]></description>
       <input type="raw"><![CDATA[1 A. Phillips, ‘Citizenship and Feminist Politics’ in Citizenship, ed. G. Andrews (1991) 77.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="1"
+               type="footnote"
+               place="bottom">
             <label>1</label>
             <bibl>A. Phillips, ‘Citizenship and Feminist Politics’ in Citizenship, ed. G. Andrews (1991) 77.</bibl>
          </note>
@@ -107,7 +110,10 @@
       ]]></description>
       <input type="raw"><![CDATA[2 T. Brennan and C. Pateman, ‘“Mere Auxiliaries to the Commonwealth”: Women and the Origins of Liberalism’ (1979) 27 Political Studies 183.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="2"
+               type="footnote"
+               place="bottom">
             <label>2</label>
             <bibl>T. Brennan and C. Pateman, ‘“Mere Auxiliaries to the Commonwealth”: Women and the Origins of Liberalism’ (1979) 27 Political Studies 183.</bibl>
          </note>
@@ -205,7 +211,10 @@
       ]]></description>
       <input type="raw"><![CDATA[3 M. Sawer and M. Simms, A Woman’s Place: Women and Politics in Australia (2nd ed., 1993).]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="3"
+               type="footnote"
+               place="bottom">
             <label>3</label>
             <bibl>M. Sawer and M. Simms, A Woman’s Place: Women and Politics in Australia (2nd ed., 1993).</bibl>
          </note>
@@ -293,7 +302,10 @@
       ]]></description>
       <input type="raw"><![CDATA[4 I have explored the gendered nature of citizenship at greater length in two complementary papers: ‘Embodying the Citizen’ in Public and Private: Feminist Legal Debates, ed. M. Thornton (1995) and ‘Historicising Citizenship: Remembering Broken Promises’ (1996) 20 Melbourne University Law Rev. 1072.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="4"
+               type="footnote"
+               place="bottom">
             <label>4</label>
             <note>I have explored the gendered nature of citizenship at greater length in two complementary papers:</note>
             <bibl>‘Embodying the Citizen’ in Public and Private: Feminist Legal Debates, ed. M. Thornton (1995)</bibl>
@@ -322,7 +334,7 @@
                </editor>
                     (<date when="1995">1995</date>)
                 </bibl>
-            <note type="signal">and</note>
+            <note type="comment">and</note>
             <bibl xml:id="bibl-5">
                     ‘<title level="a">Historicising Citizenship: Remembering Broken Promises</title>’
                     (<date when="1996">1996</date>)
@@ -404,7 +416,10 @@
    <instance xml:id="instance-5">
       <input type="raw"><![CDATA[5 S. Walby, ‘Is Citizenship Gendered?’ (1994) 28 Sociology 379]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="5"
+               type="footnote"
+               place="bottom">
             <label>5</label>
             <bibl>S. Walby, ‘Is Citizenship Gendered?’ (1994) 28 Sociology 379</bibl>
          </note>
@@ -483,7 +498,10 @@
       ]]></description>
       <input type="raw"><![CDATA[6 I. Kant, ‘Metaphysical First Principles of the Doctrine of Right [1785]’ in The Metaphysics of Morals (trans. M. Gregor, 1991) 125–6 s. 146.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="6"
+               type="footnote"
+               place="bottom">
             <label>6</label>
             <bibl>I. Kant, ‘Metaphysical First Principles of the Doctrine of Right [1785]’ in The Metaphysics of Morals (trans. M. Gregor, 1991) 125–6 s. 146.</bibl>
          </note>
@@ -567,7 +585,10 @@
       ]]></description>
       <input type="raw"><![CDATA[7 U. Vogel, ‘Marriage and the Boundaries of Citizenship’ in The Condition of Citizenship, ed. B. van Steenbergen (1994) 75.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="7"
+               type="footnote"
+               place="bottom">
             <label>7</label>
             <bibl>U. Vogel, ‘Marriage and the Boundaries of Citizenship’ in The Condition of Citizenship, ed. B. van Steenbergen (1994) 75.</bibl>
          </note>
@@ -661,7 +682,10 @@
       ]]></description>
       <input type="raw"><![CDATA[8 N. Fraser and L. Gordon, ‘Civil Citizenship against Social Citizenship?’ in id., p. 97.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="8"
+               type="footnote"
+               place="bottom">
             <label>8</label>
             <bibl>N. Fraser and L. Gordon, ‘Civil Citizenship against Social Citizenship?’ in id., p. 97.</bibl>
          </note>
@@ -687,7 +711,7 @@
                   </persName>
                </author>,
                     ‘<title level="a">Civil Citizenship against Social Citizenship?</title>’
-                    <ref type="op-cit">in id.</ref>,
+                    <ref type="op-cit" target="#bibl-7">in id.</ref>,
                     <citedRange unit="page" from="97" to="97">p. 97</citedRange>.
                 </bibl>
          </note>
@@ -710,7 +734,7 @@
                      </persName>
                   </author>
                </analytic>
-               <ref type="op-cit">in id.</ref>
+               <ref type="op-cit" target="#bibl-7">in id.</ref>
                <citedRange unit="page" from="97" to="97">p. 97</citedRange>
             </biblStruct>
          </listBibl>
@@ -733,7 +757,13 @@
                      </persName>
                   </author>
                </analytic>
-               <ref type="op-cit">in id.</ref>
+               <monogr source="#bibl-7">
+                  <title level="m">The Metaphysics of Morals</title>
+                  <imprint>
+                     <date when="1991">1991</date>
+                  </imprint>
+                  <biblScope unit="page" from="125" to="126">125–6</biblScope>
+               </monogr>
                <citedRange unit="page" from="97" to="97">p. 97</citedRange>
             </biblStruct>
          </listBibl>
@@ -745,7 +775,10 @@
       ]]></description>
       <input type="raw"><![CDATA[9 Vogel, id., p. 79. W. Blackstone, Commentaries (Facsimile of 1st. ed. of 1765–69, 1979) 442.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="9"
+               type="footnote"
+               place="bottom">
             <label>9</label>
             <bibl>Vogel, id., p. 79.</bibl>
             <bibl>W. Blackstone, Commentaries (Facsimile of 1st. ed. of 1765–69, 1979) 442.</bibl>
@@ -783,11 +816,11 @@
       <output type="biblstruct">
          <listBibl xmlns="http://www.tei-c.org/ns/1.0">
             <biblStruct source="#bibl-10">
-               <author>
+               <ref>
                   <persName>
                      <surname>Vogel</surname>
                   </persName>
-               </author>
+               </ref>
                <ref type="op-cit">id.</ref>
                <citedRange unit="page" from="79" to="79">p. 79</citedRange>
             </biblStruct>
@@ -812,12 +845,28 @@
       <output type="resolved-biblstruct">
          <listBibl xmlns="http://www.tei-c.org/ns/1.0">
             <biblStruct source="#bibl-10">
-               <author>
-                  <persName>
-                     <surname>Vogel</surname>
-                  </persName>
-               </author>
-               <ref type="op-cit">id.</ref>
+               <analytic source="#bibl-8">
+                  <title level="a">Marriage and the Boundaries of Citizenship</title>
+                  <author>
+                     <persName>
+                        <forename>U.</forename>
+                        <surname>Vogel</surname>
+                     </persName>
+                  </author>
+               </analytic>
+               <monogr source="#bibl-8">
+                  <title level="m">The Condition of Citizenship</title>
+                  <editor>
+                     <persName>
+                        <forename>B.</forename>
+                        <surname>van Steenbergen</surname>
+                     </persName>
+                  </editor>
+                  <imprint>
+                     <date when="1994">1994</date>
+                  </imprint>
+                  <biblScope unit="page" from="75">75</biblScope>
+               </monogr>
                <citedRange unit="page" from="79" to="79">p. 79</citedRange>
             </biblStruct>
             <biblStruct source="#bibl-11">
@@ -846,7 +895,10 @@
       ]]></description>
       <input type="raw"><![CDATA[11 Vogel, op. cit., n. 7, pp. 80–1.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="11"
+               type="footnote"
+               place="bottom">
             <label>11</label>
             <bibl>Vogel, op. cit., n. 7, pp. 80–1.</bibl>
          </note>
@@ -872,11 +924,11 @@
       <output type="biblstruct">
          <listBibl xmlns="http://www.tei-c.org/ns/1.0">
             <biblStruct source="#bibl-12">
-               <author>
+               <ref>
                   <persName>
                      <surname>Vogel</surname>
                   </persName>
-               </author>
+               </ref>
                <ref type="op-cit">op. cit.</ref>
                <ref type="footnote" n="7">n. 7</ref>
                <citedRange unit="page" from="80" to="81">pp. 80–1</citedRange>
@@ -919,7 +971,10 @@
       ]]></description>
       <input type="raw"><![CDATA[12 F. Haug (ed.), Female Sexualization: A Collective Work of Memory (1987) 196.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="12"
+               type="footnote"
+               place="bottom">
             <label>12</label>
             <bibl>F. Haug (ed.), Female Sexualization: A Collective Work of Memory (1987) 196.</bibl>
          </note>
@@ -986,7 +1041,10 @@
    <instance xml:id="instance-12">
       <input type="raw"><![CDATA[13 A. Bottomley, ‘Self and Subjectivities: Languages of Claim in Property Law’ (1993) 20 J. of Law and Society 56, 61.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="13"
+               type="footnote"
+               place="bottom">
             <label>13</label>
             <bibl>A. Bottomley, ‘Self and Subjectivities: Languages of Claim in Property Law’ (1993) 20 J. of Law and Society 56, 61.</bibl>
          </note>
@@ -1068,7 +1126,10 @@
       ]]></description>
       <input type="raw"><![CDATA[14 D. West, ‘Power and Formation: New Foundations for a Radical Concept of Power’ (1987) 30 Inquiry 137, 145. Compare M. Foucault, Power/Knowledge: Selected Interviews and Other Writings 1972–1977, ed. C. Gordon (1980) 98.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="14"
+               type="footnote"
+               place="bottom">
             <label>14</label>
             <bibl>D. West, ‘Power and Formation: New Foundations for a Radical Concept of Power’ (1987) 30 Inquiry 137, 145.</bibl>
             <note>Compare</note>
@@ -1212,7 +1273,10 @@
       ]]></description>
       <input type="raw"><![CDATA[15 For a detailed analysis of legal method and the political role it plays, see M.J. Mossman, ‘Feminism, and Legal Method: The Difference it Makes’ (1986) 3 Aust. J. of Law and Society 30.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="15"
+               type="footnote"
+               place="bottom">
             <label>15</label>
             <note>For a detailed analysis of legal method and the political role it plays, see</note>
             <bibl>M.J. Mossman, ‘Feminism, and Legal Method: The Difference it Makes’ (1986) 3 Aust. J. of Law and Society 30.</bibl>
@@ -1294,7 +1358,10 @@
       ]]></description>
       <input type="raw"><![CDATA[16 H.S. Maine, Ancient Law: Its Connection with the Early History of Society and its Relation to Modern Ideas (10th ed., 1912) 174.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="16"
+               type="footnote"
+               place="bottom">
             <label>16</label>
             <bibl>H.S. Maine, Ancient Law: Its Connection with the Early History of Society and its Relation to Modern Ideas (10th ed., 1912) 174.</bibl>
          </note>
@@ -1372,7 +1439,10 @@
       ]]></description>
       <input type="raw"><![CDATA[17 This was particularly the case in the United States of America. See M.J. Horwitz, The Transformation of American Law, 1780–1860 (1977) 160.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="17"
+               type="footnote"
+               place="bottom">
             <label>17</label>
             <note>This was particularly the case in the United States of America.</note>
             <note>See</note>
@@ -1442,7 +1512,10 @@
    <instance xml:id="instance-17">
       <input type="raw"><![CDATA[18 M. Grossberg, Governing the Hearth: Law and the Family in Nineteenth-Century America (1985) ix.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="18"
+               type="footnote"
+               place="bottom">
             <label>18</label>
             <bibl>M. Grossberg, Governing the Hearth: Law and the Family in Nineteenth-Century America (1985) ix.</bibl>
          </note>
@@ -1511,7 +1584,10 @@
       ]]></description>
       <input type="raw"><![CDATA[19 Staves postulates that the position was somewhat more complicated in that marriage, as a status, crumbled in response to contract ideology in the seventeenth century but, by the end of the eighteenth century, deeper patriarchal structures were re-imposed. See S. Staves, Married Women’s Separate Property in England, 1660–1833 (1990) 4, 220.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="19"
+               type="footnote"
+               place="bottom">
             <label>19</label>
             <note>Staves postulates that the position was somewhat more complicated in that marriage, as a status, crumbled in response to contract ideology in the seventeenth century but, by the end of the eighteenth century, deeper patriarchal structures were re-imposed.</note>
             <note>See</note>
@@ -1588,7 +1664,10 @@
    <instance xml:id="instance-19">
       <input type="raw"><![CDATA[20 Siegel presents a valuable study of the changing norms of marriage in the context of wife beating. See R.B. Siegel, ‘"The Rule of Love”: Wife Beating as Prerogative and Privacy’ (1996) 105 Yale Law J. 2117.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="20"
+               type="footnote"
+               place="bottom">
             <label>20</label>
             <note>Siegel presents a valuable study of the changing norms of marriage in the context of wife beating.</note>
             <note>See</note>
@@ -1674,7 +1753,10 @@
       ]]></description>
       <input type="raw"><![CDATA[21 C. Pateman, The Sexual Contract (1988). For further analysis of the marriage contract, see K. O’Donovan, Family Matters (1993), especially 43–59.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="21"
+               type="footnote"
+               place="bottom">
             <label>21</label>
             <bibl>C. Pateman, The Sexual Contract (1988).</bibl>
             <note>For further analysis of the marriage contract, see</note>
@@ -1784,7 +1866,10 @@
       ]]></description>
       <input type="raw"><![CDATA[23 Crimes (Sexual Assault) Amendment Act 1981 (N.S.W.); Criminal Law Consolidation Act Amendment Act 1976 (S.A.); Criminal Code (Sexual Offences) Act 1987 (Tas.); Crimes (Sexual Offences) 1991 (Vic.); Acts Amendment (Sexual Assault) Act 1985 (W.A.). The High Court upheld the validity of the South Australian law in 1991 (see R. v. L. (1991) 103 A.L.R. 577), the same year that the House of Lords abolished the immunity (see R. v. R. [1991] 2 All E.R. 257).]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="23"
+               type="footnote"
+               place="bottom">
             <label>23</label>
             <bibl>Crimes (Sexual Assault) Amendment Act 1981 (N.S.W.)</bibl>
             <bibl>Criminal Law Consolidation Act Amendment Act 1976 (S.A.)</bibl>
@@ -1993,7 +2078,10 @@
       ]]></description>
       <input type="raw"><![CDATA[24 M. Freeman, ‘Contracting in the Haven: Balfour v. Balfour Revisited’ in Exploring the Boundaries of Contract, ed. R. Halson (1996) 74 R. Collier, Masculinity, Law and the Family (1995) 127 and throughout. See Collier further for a comprehensive study of sexuality in marriage.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="24"
+               type="footnote"
+               place="bottom">
             <label>24</label>
             <bibl>M. Freeman, ‘Contracting in the Haven: Balfour v. Balfour Revisited’ in Exploring the Boundaries of Contract, ed. R. Halson (1996) 74</bibl>
             <bibl>R. Collier, Masculinity, Law and the Family (1995) 127 and throughout.</bibl>
@@ -2128,7 +2216,10 @@
    <instance xml:id="instance-23">
       <input type="raw"><![CDATA[25 P.S. Atiyah, An Introduction to the Law of Contract (5th ed., 1995) 3.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="25"
+               type="footnote"
+               place="bottom">
             <label>25</label>
             <bibl>P.S. Atiyah, An Introduction to the Law of Contract (5th ed., 1995) 3.</bibl>
          </note>
@@ -2200,7 +2291,10 @@
       ]]></description>
       <input type="raw"><![CDATA[26 The Australian Law Reform Commission has addressed the issue and recommended recognition of prenuptial agreements. See A.L.R.C., Matrimonial Property, report no. 37 (1987); A.L.R.C. ., Report of the Joint Select Committee on Certain Aspects of the Operation and Interpretation of the Family Law Act (1992). For critique, see M. Neave, ‘Private Ordering in Family Law – Will Women Benefit?’ in Thornton, op. cit., n. 4. For a feminist critique of contract in the American context, see C. Dalton, ‘An Essay in the Deconstruction of Contract Doctrine’ (1985) 94 Yale Law J. 997.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="26"
+               type="footnote"
+               place="bottom">
             <label>26</label>
             <note>The Australian Law Reform Commission has addressed the issue and recommended recognition of prenuptial agreements.</note>
             <note>See</note>
@@ -2308,6 +2402,14 @@
                      </persName>
                   </author>
                </analytic>
+               <monogr source="#bibl-42">
+                  <editor>
+                     <persName>
+                        <surname>Thornton</surname>
+                     </persName>
+                  </editor>
+                  <imprint/>
+               </monogr>
                <ref type="op-cit">op. cit.</ref>
                <ref type="footnote" n="4">n. 4</ref>
             </biblStruct>
@@ -2406,7 +2508,10 @@
    <instance xml:id="instance-25">
       <input type="raw"><![CDATA[27 L. J. Weitzman, The Marriage Contract: Spouses, Lovers, and the Law (1981) 347 ff.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="27"
+               type="footnote"
+               place="bottom">
             <label>27</label>
             <bibl>L. J. Weitzman, The Marriage Contract: Spouses, Lovers, and the Law (1981) 347 ff.</bibl>
          </note>
@@ -2475,7 +2580,10 @@
    <instance xml:id="instance-26">
       <input type="raw"><![CDATA[28 Grossberg, op. cit., n. 18, p. 52.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="28"
+               type="footnote"
+               place="bottom">
             <label>28</label>
             <bibl>Grossberg, op. cit., n. 18, p. 52.</bibl>
          </note>
@@ -2501,11 +2609,11 @@
       <output type="biblstruct">
          <listBibl xmlns="http://www.tei-c.org/ns/1.0">
             <biblStruct source="#bibl-45">
-               <author>
+               <ref>
                   <persName>
                      <surname>Grossberg</surname>
                   </persName>
-               </author>
+               </ref>
                <ref type="op-cit" target="#bibl-21">op. cit.</ref>
                <ref type="footnote" n="18">n. 18</ref>
                <citedRange unit="page" from="52" to="52">p. 52</citedRange>
@@ -2538,7 +2646,10 @@
       ]]></description>
       <input type="raw"><![CDATA[29 Balfour v. Balfour [1919] 2 K.B. 571.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="29"
+               type="footnote"
+               place="bottom">
             <label>29</label>
             <bibl>Balfour v. Balfour [1919] 2 K.B. 571.</bibl>
          </note>
@@ -2593,7 +2704,10 @@
       ]]></description>
       <input type="raw"><![CDATA[30 Freeman, op. cit., n. 24. While acknowledging the trends towards contractualism and private ordering, Regan cautions against it, noting that greater freedom to contract invites greater scrutiny by the courts. More significantly, however, he would rather reclaim the idea of status by injecting it with new notions of responsibility andrelationality, as well as divesting it of its sexist assumptions. See M.C. Regan, Family Law and the Pursuit of Intimacy (1993).]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="30"
+               type="footnote"
+               place="bottom">
             <label>30</label>
             <bibl>Freeman, op. cit., n. 24.</bibl>
             <note>While acknowledging the trends towards contractualism and private ordering, Regan cautions against it, noting that greater freedom to contract invites greater scrutiny by the courts. More significantly, however, he would rather reclaim the idea of status by injecting it with new notions of responsibility andrelationality, as well as divesting it of its sexist assumptions.</note>
@@ -2639,11 +2753,11 @@
       <output type="biblstruct">
          <listBibl xmlns="http://www.tei-c.org/ns/1.0">
             <biblStruct source="#bibl-47">
-               <author>
+               <ref>
                   <persName>
                      <surname>Freeman</surname>
                   </persName>
-               </author>
+               </ref>
                <ref type="op-cit">op. cit.</ref>
                <ref type="footnote" n="24">n. 24</ref>
             </biblStruct>
@@ -2712,7 +2826,10 @@
       ]]></description>
       <input type="raw"><![CDATA[31 For example, Law Reform (Miscellaneous Provisions) Act 1970 (U.K.); Domestic Relations Act 1975 (N.Z.); Marriage Act Amendment Act 1976 (Cwth.).]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="31"
+               type="footnote"
+               place="bottom">
             <label>31</label>
             <note>For example,</note>
             <bibl>Law Reform (Miscellaneous Provisions) Act 1970 (U.K.)</bibl>
@@ -2810,7 +2927,10 @@
    <instance xml:id="instance-30">
       <input type="raw"><![CDATA[32 G.S. Frost, Promises Broken: Courtship, Class, and Gender in Victorian England (1995); Thornton, op. cit. (1996), n. 4.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="32"
+               type="footnote"
+               place="bottom">
             <label>32</label>
             <bibl>G.S. Frost, Promises Broken: Courtship, Class, and Gender in Victorian England (1995)</bibl>
             <bibl>Thornton, op. cit. (1996), n. 4</bibl>
@@ -2833,11 +2953,11 @@
                 (<date when="1995">1995</date>)
             </bibl>;
             <bibl xml:id="bibl-54">
-               <author>
+               <editor>
                   <persName>
                      <surname>Thornton</surname>
                   </persName>
-               </author>,
+               </editor>,
               <ref type="op-cit">op. cit.</ref>
               (<date when="1996">1996</date>),
               <ref type="footnote" n="4">n. 4</ref>
@@ -2861,11 +2981,16 @@
                </monogr>
             </biblStruct>
             <biblStruct source="#bibl-54">
-               <author>
-                  <persName>
-                     <surname>Thornton</surname>
-                  </persName>
-               </author>
+               <monogr source="#bibl-54">
+                  <editor>
+                     <persName>
+                        <surname>Thornton</surname>
+                     </persName>
+                  </editor>
+                  <imprint>
+                     <date when="1996">1996</date>
+                  </imprint>
+               </monogr>
                <ref type="op-cit">op. cit.</ref>
                <ref type="footnote" n="4">n. 4</ref>
             </biblStruct>
@@ -2910,7 +3035,10 @@
    <instance xml:id="instance-31">
       <input type="raw"><![CDATA[33 Grossberg, op. cit., n. 18, p. 38.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="33"
+               type="footnote"
+               place="bottom">
             <label>33</label>
             <bibl>Grossberg, op. cit., n. 18, p. 38.</bibl>
          </note>
@@ -2936,11 +3064,11 @@
       <output type="biblstruct">
          <listBibl xmlns="http://www.tei-c.org/ns/1.0">
             <biblStruct source="#bibl-55">
-               <author>
+               <ref>
                   <persName>
                      <surname>Grossberg</surname>
                   </persName>
-               </author>
+               </ref>
                <ref type="op-cit">op. cit.</ref>
                <ref type="footnote" n="18">n. 18</ref>
                <citedRange unit="page" from="38" to="38">p. 38</citedRange>
@@ -2970,7 +3098,10 @@
    <instance xml:id="instance-32">
       <input type="raw"><![CDATA[34 Compare U. Vogel, ‘Is Citizenship Gender-Specific?’ in The Frontiers of Citizenship, eds. U. Vogel and M. Moran (1991) 59.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="34"
+               type="footnote"
+               place="bottom">
             <label>34</label>
             <note>Compare</note>
             <bibl>U. Vogel, ‘Is Citizenship Gender-Specific?’ in The Frontiers of Citizenship, eds. U. Vogel and M. Moran (1991) 59.</bibl>
@@ -3082,7 +3213,10 @@
    <instance xml:id="instance-33">
       <input type="raw"><![CDATA[35 See, for example, Bradwell v. Illinois 83 U.S. (16 Wall) 130 (1873).]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="35"
+               type="footnote"
+               place="bottom">
             <label>35</label>
             <note>See, for example,</note>
             <bibl>Bradwell v. Illinois 83 U.S. (16 Wall) 130 (1873).</bibl>
@@ -3129,7 +3263,10 @@
    <instance xml:id="instance-34">
       <input type="raw"><![CDATA[36 Compare J. Pahl, Money and Marriage (1989) 5.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="36"
+               type="footnote"
+               place="bottom">
             <label>36</label>
             <note>Compare</note>
             <bibl>J. Pahl, Money and Marriage (1989) 5.</bibl>
@@ -3197,7 +3334,10 @@
    <instance xml:id="instance-35">
       <input type="raw"><![CDATA[37 Although Australia, like the United Kingdom, has a separate property regime, the courts are endowed with broad powers under the Family Law Act 1975 (Cwth.) to distribute property equitably. For detailed treatment, see P. Parkinson, S. Parker and J. Behrens, Australian Family Law in Context: Commentary and Materials (1994). Most civil law countries and most American states have developed community property regimes which recognize the joint ownership of property acquired during marriage, but the legal significance is similarly directed to the time of divorce. For discussion of the position during marriage, see J.T. Oldham, ‘Management of the Community Estate during an Intact Marriage’ (1993) 56 Law and Contemporary Problems 99. For a discussion of the genesis of the two systems, see C. Donahue, ‘What Causes Fundamental Legal Ideas? Marital Property in England and France in the Thirteenth Century’ (1979) 78 Michigan Law Rev. 59.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="37"
+               type="footnote"
+               place="bottom">
             <label>37</label>
             <note>Although Australia, like the United Kingdom, has a separate property regime, the courts are endowed with broad powers under the Family Law Act 1975 (Cwth.) to distribute property equitably.</note>
             <note>For detailed treatment, see</note>
@@ -3424,7 +3564,10 @@
    <instance xml:id="instance-36">
       <input type="raw"><![CDATA[38 The legal construction of masculinity and femininity in family law has been the subject of recent scholarly interest. Notable examples are O’Donovan, op. cit., n. 21 and Collier, op. cit., n. 24.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="38"
+               type="footnote"
+               place="bottom">
             <label>38</label>
             <note>The legal construction of masculinity and femininity in family law has been the subject of recent scholarly interest.</note>
             <note>Notable examples are</note>
@@ -3467,20 +3610,20 @@
       <output type="biblstruct">
          <listBibl xmlns="http://www.tei-c.org/ns/1.0">
             <biblStruct source="#bibl-66">
-               <author>
+               <ref>
                   <persName>
                      <surname>O’Donovan</surname>
                   </persName>
-               </author>
+               </ref>
                <ref type="op-cit">op. cit.</ref>
                <ref type="footnote" n="21">n. 21</ref>
             </biblStruct>
             <biblStruct source="#bibl-67">
-               <author>
+               <ref>
                   <persName>
                      <surname>Collier</surname>
                   </persName>
-               </author>
+               </ref>
                <ref type="op-cit">op. cit.</ref>
                <ref type="footnote" n="24">n. 24</ref>
             </biblStruct>
@@ -3522,7 +3665,10 @@
    <instance xml:id="instance-37">
       <input type="raw"><![CDATA[39 For discussion of sex and legal subjecthood, see N. Naffine ‘Sexing the Subject (of Law)’ in Thornton, op. cit. (1995), n. 4.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="39"
+               type="footnote"
+               place="bottom">
             <label>39</label>
             <note>For discussion of sex and legal subjecthood, see</note>
             <bibl>N. Naffine ‘Sexing the Subject (of Law)’ in Thornton, op. cit. (1995), n. 4.</bibl>
@@ -3566,6 +3712,16 @@
                      </persName>
                   </author>
                </analytic>
+               <monogr source="#bibl-68">
+                  <editor>
+                     <persName>
+                        <surname>Thornton</surname>
+                     </persName>
+                  </editor>
+                  <imprint>
+                     <date when="1995">1995</date>
+                  </imprint>
+               </monogr>
                <ref type="op-cit">op. cit.</ref>
                <ref type="footnote" n="4">n. 4</ref>
             </biblStruct>
@@ -3602,7 +3758,10 @@
    <instance xml:id="instance-38">
       <input type="raw"><![CDATA[40 Contracts Review Act 1980 (N.S.W.).]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="40"
+               type="footnote"
+               place="bottom">
             <label>40</label>
             <bibl>Contracts Review Act 1980 (N.S.W.).</bibl>
          </note>
@@ -3650,7 +3809,10 @@
    <instance xml:id="instance-39">
       <input type="raw"><![CDATA[41 J. Nedelsky, Private Property and the Limits of American Constitutionalism: The Madisonian Framework and its Legacy (1990), especially 223 ff.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="41"
+               type="footnote"
+               place="bottom">
             <label>41</label>
             <bibl>J. Nedelsky, Private Property and the Limits of American Constitutionalism: The Madisonian Framework and its Legacy (1990), especially 223 ff</bibl>
          </note>
@@ -3722,7 +3884,10 @@
    <instance xml:id="instance-40">
       <input type="raw"><![CDATA[42 C.B. Macpherson, Democratic Theory: Essays in Retrieval (1973) 120.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="42"
+               type="footnote"
+               place="bottom">
             <label>42</label>
             <bibl>C.B. Macpherson, Democratic Theory: Essays in Retrieval (1973) 120.</bibl>
          </note>
@@ -3788,7 +3953,10 @@
    <instance xml:id="instance-41">
       <input type="raw"><![CDATA[43 For example, N. Howell, ‘“Sexually Transmitted Debt”: A Feminist Analysis of Laws Regulating Guarantors and Co-Borrowers’ (1995) 4 Aust. Feminist Law J. 93.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="43"
+               type="footnote"
+               place="bottom">
             <label>43</label>
             <note>For example,</note>
             <bibl>N. Howell, ‘“Sexually Transmitted Debt”: A Feminist Analysis of Laws Regulating Guarantors and Co-Borrowers’ (1995) 4 Aust. Feminist Law J. 93.</bibl>
@@ -3866,7 +4034,10 @@
    <instance xml:id="instance-42">
       <input type="raw"><![CDATA[44 P. Baron, ‘The Free Exercise of Her Will: Women and Emotionally Transmitted Debt’ (1995) 13 Law in Context 23.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="44"
+               type="footnote"
+               place="bottom">
             <label>44</label>
             <bibl>P. Baron, ‘The Free Exercise of Her Will: Women and Emotionally Transmitted Debt’ (1995) 13 Law in Context 23.</bibl>
          </note>
@@ -3942,7 +4113,10 @@
    <instance xml:id="instance-43">
       <input type="raw"><![CDATA[45 id., p. 24 B. Fehlberg, ‘The Husband, the Bank, the Wife and Her Signature’ (1994) 57 Modern Law Rev. 467, 468. See, also, Barclays Bank v. O’Brien [1994] 1 A.C. 180, at 185 per Brown-Wilkinson L.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="45"
+               type="footnote"
+               place="bottom">
             <label>45</label>
             <bibl>id., p. 24</bibl>
             <bibl>B. Fehlberg, ‘The Husband, the Bank, the Wife and Her Signature’ (1994) 57 Modern Law Rev. 467, 468.</bibl>
@@ -4026,7 +4200,23 @@
       <output type="resolved-biblstruct">
          <listBibl xmlns="http://www.tei-c.org/ns/1.0">
             <biblStruct source="#bibl-74">
-               <ref type="op-cit">id.</ref>
+               <analytic source="#bibl-73">
+                  <title level="a">The Free Exercise of Her Will: Women and Emotionally Transmitted Debt</title>
+                  <author>
+                     <persName>
+                        <forename>P.</forename>
+                        <surname>Baron</surname>
+                     </persName>
+                  </author>
+               </analytic>
+               <monogr source="#bibl-73">
+                  <title level="j">Law in Context</title>
+                  <imprint>
+                     <date when="1995">1995</date>
+                  </imprint>
+                  <biblScope unit="volume" from="13" to="13">13</biblScope>
+                  <biblScope unit="page" from="23">23</biblScope>
+               </monogr>
                <citedRange unit="page" from="24" to="24">p. 24</citedRange>
             </biblStruct>
             <biblStruct source="#bibl-74b">
@@ -4065,7 +4255,10 @@
    <instance xml:id="instance-44">
       <input type="raw"><![CDATA[46 Baron, op. cit., n. 44, p. 34. M. Richardson, ‘Protecting Women who provide Security for a Husband's, Partner's or Child's Debts. The Value and Limits of an Economic Perspective’ (1996) 16 Legal Studies 368.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="46"
+               type="footnote"
+               place="bottom">
             <label>46</label>
             <bibl>Baron, op. cit., n. 44, p. 34.</bibl>
             <bibl>M. Richardson, ‘Protecting Women who provide Security for a Husband's, Partner's or Child's Debts. The Value and Limits of an Economic Perspective’ (1996) 16 Legal Studies 368.</bibl>
@@ -4107,11 +4300,11 @@
       <output type="biblstruct">
          <listBibl xmlns="http://www.tei-c.org/ns/1.0">
             <biblStruct source="#bibl-76">
-               <author>
+               <ref>
                   <persName>
                      <surname>Baron</surname>
                   </persName>
-               </author>
+               </ref>
                <ref type="op-cit">op. cit.</ref>
                <ref type="footnote" n="44">n. 44</ref>
                <citedRange unit="page" from="34" to="34">p. 34</citedRange>
@@ -4188,7 +4381,10 @@
    <instance xml:id="instance-45">
       <input type="raw"><![CDATA[47 Examples are legion, and by no means confined to the more sensational criminal law cases picked up by the media, such as R. v. Johns, Supreme Court of South Australia, 26 August 1992 (unreported) in which Bollen J. stated that it was acceptable for a husband to resort to ‘rougher than usual handling’ to persuade his wife to have sex with him. For examples relating to STD, see Howell, op. cit., n. 43.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="47"
+               type="footnote"
+               place="bottom">
             <label>47</label>
             <note>Examples are legion, and by no means confined to the more sensational criminal law cases picked up by the media,</note>
             <note>such as</note>
@@ -4245,11 +4441,11 @@
                </monogr>
             </biblStruct>
             <biblStruct source="#bibl-79">
-               <author>
+               <ref>
                   <persName>
                      <surname>Howell</surname>
                   </persName>
-               </author>
+               </ref>
                <ref type="op-cit">op. cit.</ref>
                <ref type="footnote" n="43">n. 43</ref>
             </biblStruct>
@@ -4293,7 +4489,10 @@
    <instance xml:id="instance-46">
       <input type="raw"><![CDATA[48 B. Fehlberg, ‘The Husband, the Bank, the Wife and Her Signature – the Sequel’ (1996) 59 Modern Law Rev. 675.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="48"
+               type="footnote"
+               place="bottom">
             <label>48</label>
             <bibl>B. Fehlberg, ‘The Husband, the Bank, the Wife and Her Signature – the Sequel’ (1996) 59 Modern Law Rev. 675.</bibl>
          </note>
@@ -4369,7 +4568,10 @@
    <instance xml:id="instance-47">
       <input type="raw"><![CDATA[49 National Australia Bank Ltd v. Garcia (1996) 39 N.S.W.L.R. 577 (N.S.W.C.A.).]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="49"
+               type="footnote"
+               place="bottom">
             <label>49</label>
             <bibl>National Australia Bank Ltd v. Garcia (1996) 39 N.S.W.L.R. 577 (N.S.W.C.A.).</bibl>
          </note>
@@ -4426,7 +4628,10 @@
    <instance xml:id="instance-48">
       <input type="raw"><![CDATA[50 (1991) 25 N.S.W.L.R. 32 (C.A.).]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="50"
+               type="footnote"
+               place="bottom">
             <label>50</label>
             <bibl>(1991) 25 N.S.W.L.R. 32 (C.A.).</bibl>
          </note>
@@ -4480,7 +4685,10 @@
    <instance xml:id="instance-49">
       <input type="raw"><![CDATA[52 (1994) A.S.C. 56–268 (N.S.W.C.A.).]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="52"
+               type="footnote"
+               place="bottom">
             <label>52</label>
             <bibl>(1994) A.S.C. 56–268 (N.S.W.C.A.).</bibl>
          </note>
@@ -4500,19 +4708,38 @@
       </output>
       <output type="biblstruct">
          <listBibl xmlns="http://www.tei-c.org/ns/1.0">
-            <biblStruct source="#bibl-83"/>
+            <biblStruct source="#bibl-83">
+               <monogr source="#bibl-83">
+                  <idno type="caseNumber">A.S.C. 56–268</idno>
+                  <imprint>
+                     <date when="1994">1994</date>
+                     <pubPlace>N.S.W.C.A.</pubPlace>
+                  </imprint>
+               </monogr>
+            </biblStruct>
          </listBibl>
       </output>
       <output type="resolved-biblstruct">
          <listBibl xmlns="http://www.tei-c.org/ns/1.0">
-            <biblStruct source="#bibl-83"/>
+            <biblStruct source="#bibl-83">
+               <monogr source="#bibl-83">
+                  <idno type="caseNumber">A.S.C. 56–268</idno>
+                  <imprint>
+                     <date when="1994">1994</date>
+                     <pubPlace>N.S.W.C.A.</pubPlace>
+                  </imprint>
+               </monogr>
+            </biblStruct>
          </listBibl>
       </output>
    </instance>
    <instance xml:id="instance-50">
       <input type="raw"><![CDATA[53 Based on the Trade Practices Act 1974 (Cwth.), s. 52 and the Contracts Review Act 1980 (N.S.W.). 54 (1994) A.S.C. 56–270 (N.S.W.C.A.)]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="53"
+               type="footnote"
+               place="bottom">
             <label>53</label>
             <bibl>Trade Practices Act 1974 (Cwth.), s. 52</bibl>
             <bibl>Contracts Review Act 1980 (N.S.W.). 54 (1994) A.S.C. 56–270 (N.S.W.C.A.)</bibl>
@@ -4598,7 +4825,10 @@
    <instance xml:id="instance-51">
       <input type="raw"><![CDATA[55 A number of recent English cases have also turned on the question of whether the wife received independent legal advice. The House of Lords considered the issue in Barclays Bank v. O’Brien [1994] 1 A.C. 180. See, also, Banco Exterior Internacional v. Mann [1995] 1 All E.R. 936.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="55"
+               type="footnote"
+               place="bottom">
             <label>55</label>
             <note>A number of recent English cases have also turned on the question of whether the wife received independent legal advice. The House of Lords considered the issue in</note>
             <bibl>Barclays Bank v. O’Brien [1994] 1 A.C. 180.</bibl>
@@ -4683,7 +4913,10 @@
    <instance xml:id="instance-52">
       <input type="raw"><![CDATA[56 See I.J. Hardingham and M.A. Neave, Australian Family Property Law (1984) 94.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="56"
+               type="footnote"
+               place="bottom">
             <label>56</label>
             <note>See</note>
             <bibl>I.J. Hardingham and M.A. Neave, Australian Family Property Law (1984) 94.</bibl>
@@ -4770,7 +5003,10 @@
    <instance xml:id="instance-53">
       <input type="raw"><![CDATA[57 Compare K. O’Donovan, Sexual Divisions in Law (1985), especially 112–18.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="57"
+               type="footnote"
+               place="bottom">
             <label>57</label>
             <note>Compare</note>
             <bibl>K. O’Donovan, Sexual Divisions in Law (1985), especially 112–18.</bibl>
@@ -4838,7 +5074,10 @@
    <instance xml:id="instance-54">
       <input type="raw"><![CDATA[58 Although Reich’s work on the conceptualization of non-traditional sources of wealth, such as employment and professional qualifications, as forms of ‘new property’ has been influential, he did not broach the subject of caring work. See C.A. Reich, ‘The New Property’ (1964) 73 Yale Law J. 733. Despite a greater sensitivity to the interests of women, as well as writing almost two decades later, Glendon also fails to address the question of unpaid work as a form of property. See M.A. Glendon, The New Family and the New Property (1981).]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="58"
+               type="footnote"
+               place="bottom">
             <label>58</label>
             <note>Although Reich’s work on the conceptualization of non-traditional sources of wealth, such as employment and professional qualifications, as forms of ‘new property’ has been influential, he did not broach the subject of caring work.</note>
             <note>See</note>
@@ -4969,7 +5208,10 @@
    <instance xml:id="instance-55">
       <input type="raw"><![CDATA[59 (1992) 29 N.S.W.L.R. 188 (C.A.)]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="59"
+               type="footnote"
+               place="bottom">
             <label>59</label>
             <bibl>(1992) 29 N.S.W.L.R. 188 (C.A.)</bibl>
          </note>
@@ -5023,7 +5265,10 @@
    <instance xml:id="instance-56">
       <input type="raw"><![CDATA[60 Trusts of this kind have been judicially created in order to obviate injustice. Ironically, such devices have been commonly utilized over the last twenty years or so in property disputes arising out of de facto relationships, where divisibility has permitted separate interests to crystallize in ways not recognized within marriage. For a discussion of recent trends in Australia, see P. Parkinson, ‘Property Rights and Third Party Creditors – the Scope and Limitations of Equitable Doctrines’ (1997) 11 Australian J. Family Law 100.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="60"
+               type="footnote"
+               place="bottom">
             <label>60</label>
             <note>Trusts of this kind have been judicially created in order to obviate injustice. Ironically, such devices have been commonly utilized over the last twenty years or so in property disputes arising out of de facto relationships, where divisibility has permitted separate interests to crystallize in ways not recognized within marriage.</note>
             <note>For a discussion of recent trends in Australia, see</note>
@@ -5114,7 +5359,10 @@
    <instance xml:id="instance-57">
       <input type="raw"><![CDATA[61 For discussion, see J. Riley, ‘The Property Rights of Home-Makers under General Law: Bryson v. Bryant’ (1994) 16 Sydney Law Rev. 412.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="61"
+               type="footnote"
+               place="bottom">
             <label>61</label>
             <note>For discussion, see</note>
             <bibl>J. Riley, ‘The Property Rights of Home-Makers under General Law: Bryson v. Bryant’ (1994) 16 Sydney Law Rev. 412.</bibl>
@@ -5192,7 +5440,10 @@
    <instance xml:id="instance-58">
       <input type="raw"><![CDATA[62 The Hon. Justice T. E. Lindenmayer and P.A. Doolan, ‘When Bankruptcy and Family Law Collide’ (1994) 8 Aust. J. Family Law 111, 133.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="62"
+               type="footnote"
+               place="bottom">
             <label>62</label>
             <bibl>The Hon. Justice T. E. Lindenmayer and P.A. Doolan, ‘When Bankruptcy and Family Law Collide’ (1994) 8 Aust. J. Family Law 111, 133.</bibl>
          </note>
@@ -5293,7 +5544,10 @@
    <instance xml:id="instance-59">
       <input type="raw"><![CDATA[63 B. Bennett, ‘The Economics of Wifing Services: Law and Economics on the Family’ (1991) 18 J. of Law and Society 206.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="63"
+               type="footnote"
+               place="bottom">
             <label>63</label>
             <bibl>B. Bennett, ‘The Economics of Wifing Services: Law and Economics on the Family’ (1991) 18 J. of Law and Society 206.</bibl>
          </note>
@@ -5369,7 +5623,10 @@
    <instance xml:id="instance-60">
       <input type="raw"><![CDATA[64 O’Donovan, op. cit., n. 57; Thornton, op. cit. (1995), n. 4.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="64"
+               type="footnote"
+               place="bottom">
             <label>64</label>
             <bibl>O’Donovan, op. cit., n. 57;</bibl>
             <bibl>Thornton, op. cit. (1995), n. 4.</bibl>
@@ -5404,20 +5661,20 @@
       <output type="biblstruct">
          <listBibl xmlns="http://www.tei-c.org/ns/1.0">
             <biblStruct source="#bibl-99">
-               <author>
+               <ref>
                   <persName>
                      <surname>O’Donovan</surname>
                   </persName>
-               </author>
+               </ref>
                <ref type="op-cit">op. cit.</ref>
                <ref type="footnote" n="57">n. 57</ref>
             </biblStruct>
             <biblStruct source="#bibl-100">
-               <author>
+               <ref>
                   <persName>
                      <surname>Thornton</surname>
                   </persName>
-               </author>
+               </ref>
                <ref type="op-cit">op. cit. (1995)</ref>
                <ref type="footnote" n="4">n. 4.</ref>
             </biblStruct>
@@ -5462,7 +5719,10 @@
    <instance xml:id="instance-61">
       <input type="raw"><![CDATA[65 N.S.W.C.A., unreported, 23 May 1994.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="65"
+               type="footnote"
+               place="bottom">
             <label>65</label>
             <bibl>N.S.W.C.A., unreported, 23 May 1994.</bibl>
          </note>
@@ -5485,9 +5745,17 @@
       <output type="biblstruct">
          <listBibl xmlns="http://www.tei-c.org/ns/1.0">
             <biblStruct source="#bibl-101">
-               <author>
+               <ref>
                   <orgName>N.S.W.C.A.</orgName>
-               </author>
+               </ref>
+               <monogr source="#bibl-101">
+                  <author>
+                     <orgName>N.S.W.C.A.</orgName>
+                  </author>
+                  <imprint>
+                     <date when="1994-05-23">23 May 1994</date>
+                  </imprint>
+               </monogr>
                <note type="document-type">unreported</note>
             </biblStruct>
          </listBibl>
@@ -5495,9 +5763,17 @@
       <output type="resolved-biblstruct">
          <listBibl xmlns="http://www.tei-c.org/ns/1.0">
             <biblStruct source="#bibl-101">
-               <author>
+               <ref>
                   <orgName>N.S.W.C.A.</orgName>
-               </author>
+               </ref>
+               <monogr source="#bibl-101">
+                  <author>
+                     <orgName>N.S.W.C.A.</orgName>
+                  </author>
+                  <imprint>
+                     <date when="1994-05-23">23 May 1994</date>
+                  </imprint>
+               </monogr>
                <note type="document-type">unreported</note>
             </biblStruct>
          </listBibl>
@@ -5506,7 +5782,10 @@
    <instance xml:id="instance-62">
       <input type="raw"><![CDATA[66 For detailed discussion of the ramifications, see L.J. Weitzman, The Divorce Revolution: The Unexpected Social and Economic Consequences for Women and Children in America (1985).]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="66"
+               type="footnote"
+               place="bottom">
             <label>66</label>
             <note>For detailed discussion of the ramifications, see</note>
             <bibl>L.J. Weitzman, The Divorce Revolution: The Unexpected Social and Economic Consequences for Women and Children in America (1985).</bibl>
@@ -5580,7 +5859,10 @@
    <instance xml:id="instance-63">
       <input type="raw"><![CDATA[67 M.L. Shanley, Feminism, Marriage, and the Law in Victorian England, 1850–1895 (1989) 46.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="67"
+               type="footnote"
+               place="bottom">
             <label>67</label>
             <bibl>M.L. Shanley, Feminism, Marriage, and the Law in Victorian England, 1850–1895 (1989) 46.</bibl>
          </note>
@@ -5646,7 +5928,10 @@
    <instance xml:id="instance-64">
       <input type="raw"><![CDATA[68 The move to contract as the governing principle of family law has been noted by commentators. See, for example, Freeman, op. cit., n. 24; Neave, op. cit., n. 26; Regan, op. cit., n. 30.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="68"
+               type="footnote"
+               place="bottom">
             <label>68</label>
             <note>The move to contract as the governing principle of family law has been noted by commentators.</note>
             <note>See, for example,</note>
@@ -5698,29 +5983,29 @@
       <output type="biblstruct">
          <listBibl xmlns="http://www.tei-c.org/ns/1.0">
             <biblStruct source="#bibl-105">
-               <author>
+               <ref>
                   <persName>
                      <surname>Freeman</surname>
                   </persName>
-               </author>
+               </ref>
                <ref type="op-cit">op. cit.</ref>
                <ref type="footnote" n="24">n. 24</ref>
             </biblStruct>
             <biblStruct source="#bibl-106">
-               <author>
+               <ref>
                   <persName>
                      <surname>Neave</surname>
                   </persName>
-               </author>
+               </ref>
                <ref type="op-cit">op. cit.</ref>
                <ref type="footnote" n="26">n. 26</ref>
             </biblStruct>
             <biblStruct source="#bibl-107">
-               <author>
+               <ref>
                   <persName>
                      <surname>Regan</surname>
                   </persName>
-               </author>
+               </ref>
                <ref type="op-cit">op. cit.</ref>
                <ref type="footnote" n="30">n. 30</ref>
             </biblStruct>
@@ -5762,6 +6047,14 @@
                      </persName>
                   </author>
                </analytic>
+               <monogr source="#bibl-42">
+                  <editor>
+                     <persName>
+                        <surname>Thornton</surname>
+                     </persName>
+                  </editor>
+                  <imprint/>
+               </monogr>
                <ref type="op-cit">op. cit.</ref>
                <ref type="footnote" n="4">n. 4</ref>
             </biblStruct>
@@ -5785,7 +6078,10 @@
    <instance xml:id="instance-65">
       <input type="raw"><![CDATA[69 Bryson v. Bryant in respect of which, it might be noted, the High Court refused leave to appeal. Marcia Neave notes the ‘artificiality’ of the concept of intention in a discussion of the constructive trust in the context of de facto spouses. See M. Neave ‘Three Approaches to Family Law Disputes – Intention/Belief, Unjust Enrichment and Unconscionability’ in Equity, Fiduciaries and Trusts, ed. T.G. Youdan (1989) 262–4.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="69"
+               type="footnote"
+               place="bottom">
             <label>69</label>
             <bibl>Bryson v. Bryant</bibl>
             <note>in respect of which, it might be noted, the High Court refused leave to appeal. Marcia Neave notes the ‘artificiality’ of the concept of intention in a discussion of the constructive trust in the context of de facto spouses.</note>
@@ -5907,7 +6203,10 @@
    <instance xml:id="instance-66">
       <input type="raw"><![CDATA[70 For an interesting case study of this phenomenon, see L. Sarmas, ‘Storytelling and the Law: A Case Study of Louth v. Diprose’ (1994) 19 Melbourne University Law Rev. 701.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="70"
+               type="footnote"
+               place="bottom">
             <label>70</label>
             <note>For an interesting case study of this phenomenon, see</note>
             <bibl>L. Sarmas, ‘Storytelling and the Law: A Case Study of Louth v. Diprose’ (1994) 19 Melbourne University Law Rev. 701.</bibl>
@@ -5985,7 +6284,10 @@
    <instance xml:id="instance-67">
       <input type="raw"><![CDATA[71 C. Colebrook, ‘Feminist Ethics and Historicism’ (1996) 11 Aust. Feminist Studies 295, 300.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="71"
+               type="footnote"
+               place="bottom">
             <label>71</label>
             <bibl>C. Colebrook, ‘Feminist Ethics and Historicism’ (1996) 11 Aust. Feminist Studies 295, 300.</bibl>
          </note>
@@ -6064,7 +6366,10 @@
    <instance xml:id="instance-68">
       <input type="raw"><![CDATA[72 M. Albertson Fineman, The Neutered Mother, the Sexual Family and Other Twentieth Century Tragedies (1995) 7.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="72"
+               type="footnote"
+               place="bottom">
             <label>72</label>
             <bibl>M. Albertson Fineman, The Neutered Mother, the Sexual Family and Other Twentieth Century Tragedies (1995) 7.</bibl>
          </note>
@@ -6136,7 +6441,10 @@
    <instance xml:id="instance-69">
       <input type="raw"><![CDATA[73 Compare K. O’Donovan, ‘Should all Maintenance of Spouses be abolished?’ (1982) 45 Modern Law Rev. 424, 431–3.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="73"
+               type="footnote"
+               place="bottom">
             <label>73</label>
             <note>Compare</note>
             <bibl>K. O’Donovan, ‘Should all Maintenance of Spouses be abolished?’ (1982) 45 Modern Law Rev. 424, 431–3.</bibl>
@@ -6217,7 +6525,10 @@
    <instance xml:id="instance-70">
       <input type="raw"><![CDATA[74 For example, De Facto Relationships Act 1984 (N.S.W.). For detailed analysis of the policy considerations, see M.D.A. Freeman and C.M. Lyon, Cohabitation without Marriage: An Essay in Law and Social Policy (1983); New South Wales Law Reform Commission, De Facto Relationships: Issues Paper (1981).]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="74"
+               type="footnote"
+               place="bottom">
             <label>74</label>
             <note>For example,</note>
             <bibl>De Facto Relationships Act 1984 (N.S.W.).</bibl>
@@ -6357,7 +6668,10 @@
    <instance xml:id="instance-71">
       <input type="raw"><![CDATA[75 Eds. of the Harvard Law Review, Sexual Orientation and the Law (1990); Dean v. District of Columbia 653 U.S. App. D.C. 307 (1995); C. Overington, ‘Why can’t They Marry?’ The Age, 26 April 1997.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="75"
+               type="footnote"
+               place="bottom">
             <label>75</label>
             <bibl>Eds. of the Harvard Law Review, Sexual Orientation and the Law (1990);</bibl>
             <bibl>Dean v. District of Columbia 653 U.S. App. D.C. 307 (1995);</bibl>
@@ -6484,7 +6798,10 @@
    <instance xml:id="instance-72">
       <input type="raw"><![CDATA[76 For example, Lesbian and Gay Rights Service The Bride Wore Pink; Legal Recognition of Our Relationships (1994).]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="76"
+               type="footnote"
+               place="bottom">
             <label>76</label>
             <note>For example,</note>
             <bibl>Lesbian and Gay Rights Service The Bride Wore Pink; Legal Recognition of Our Relationships (1994).</bibl>
@@ -6540,7 +6857,10 @@
    <instance xml:id="instance-73">
       <input type="raw"><![CDATA[77 id., p. 3.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="77"
+               type="footnote"
+               place="bottom">
             <label>77</label>
             <bibl>id., p. 3.</bibl>
          </note>
@@ -6568,7 +6888,15 @@
       <output type="resolved-biblstruct">
          <listBibl xmlns="http://www.tei-c.org/ns/1.0">
             <biblStruct source="#bibl-121">
-               <ref type="op-cit">id.</ref>
+               <monogr source="#bibl-120">
+                  <title level="m">The Bride Wore Pink; Legal Recognition of Our Relationships</title>
+                  <author>
+                     <orgName>Lesbian and Gay Rights Service</orgName>
+                  </author>
+                  <imprint>
+                     <date when="1994">1994</date>
+                  </imprint>
+               </monogr>
                <citedRange unit="page" from="3" to="3">p. 3</citedRange>
             </biblStruct>
          </listBibl>
@@ -6577,7 +6905,10 @@
    <instance xml:id="instance-74">
       <input type="raw"><![CDATA[78 Above, n. 30.]]></input>
       <output type="segmented-instance">
-         <note xmlns="http://www.tei-c.org/ns/1.0">
+         <note xmlns="http://www.tei-c.org/ns/1.0"
+               n="78"
+               type="footnote"
+               place="bottom">
             <label>78</label>
             <bibl>Above, n. 30.</bibl>
          </note>
