@@ -564,7 +564,7 @@
       &lt;/persName&gt;
     &lt;/author&gt;, 
     ‘&lt;title level="a"&gt;Civil Citizenship against Social Citizenship?&lt;/title&gt;’
-    &lt;ref type="op-cit"&gt;in id.&lt;/ref&gt;,
+    &lt;ref type="op-cit" target="#bibl-7"&gt;in id.&lt;/ref&gt;,
     &lt;citedRange unit="page" from="97" to="97"&gt;p. 97&lt;/citedRange&gt;.
   &lt;/bibl&gt;
 &lt;/note&gt;</code></pre>
@@ -589,7 +589,7 @@
          &lt;/author&gt;
       &lt;/analytic&gt;
       &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
-      &lt;ref type="op-cit"&gt;in id.&lt;/ref&gt;
+      &lt;ref type="op-cit" target="#bibl-7"&gt;in id.&lt;/ref&gt;
       &lt;citedRange unit="page" from="97" to="97"&gt;p. 97&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
@@ -614,7 +614,13 @@
             &lt;/persName&gt;
          &lt;/author&gt;
       &lt;/analytic&gt;
-      &lt;error&gt;element citedRange: Element 'tei:citedRange': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;monogr source="#bibl-7"&gt;
+         &lt;title level="m"&gt;The Metaphysics of Morals&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1991"&gt;1991&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="page" from="125" to="126"&gt;125–6&lt;/biblScope&gt;
+      &lt;/monogr&gt;
       &lt;citedRange unit="page" from="97" to="97"&gt;p. 97&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
@@ -671,12 +677,12 @@
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-10"&gt;
-      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
-      &lt;author&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;ref&gt;
          &lt;persName&gt;
             &lt;surname&gt;Vogel&lt;/surname&gt;
          &lt;/persName&gt;
-      &lt;/author&gt;
+      &lt;/ref&gt;
       &lt;ref type="op-cit"&gt;id.&lt;/ref&gt;
       &lt;citedRange unit="page" from="79" to="79"&gt;p. 79&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
@@ -703,7 +709,28 @@
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-10"&gt;
-      &lt;error&gt;element citedRange: Element 'tei:citedRange': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;analytic source="#bibl-8"&gt;
+         &lt;title level="a"&gt;Marriage and the Boundaries of Citizenship&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;U.&lt;/forename&gt;
+               &lt;surname&gt;Vogel&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr source="#bibl-8"&gt;
+         &lt;title level="m"&gt;The Condition of Citizenship&lt;/title&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;B.&lt;/forename&gt;
+               &lt;surname&gt;van Steenbergen&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;imprint&gt;
+            &lt;date when="1994"&gt;1994&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="page" from="75"&gt;75&lt;/biblScope&gt;
+      &lt;/monogr&gt;
       &lt;citedRange unit="page" from="79" to="79"&gt;p. 79&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-11"&gt;
@@ -764,12 +791,12 @@
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-12"&gt;
-      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
-      &lt;author&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;ref&gt;
          &lt;persName&gt;
             &lt;surname&gt;Vogel&lt;/surname&gt;
          &lt;/persName&gt;
-      &lt;/author&gt;
+      &lt;/ref&gt;
       &lt;ref type="op-cit"&gt;op. cit.&lt;/ref&gt;
       &lt;ref type="footnote" n="7"&gt;n. 7&lt;/ref&gt;
       &lt;citedRange unit="page" from="80" to="81"&gt;pp. 80–1&lt;/citedRange&gt;
@@ -1903,7 +1930,15 @@
             &lt;/persName&gt;
          &lt;/author&gt;
       &lt;/analytic&gt;
-      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;monogr source="#bibl-42"&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Thornton&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;error&gt;element imprint: Element 'tei:imprint': This element is not expected. Expected is one of ( tei:author, tei:editor, tei:meeting, tei:respStmt, tei:title ).&lt;/error&gt;
+         &lt;imprint/&gt;
+      &lt;/monogr&gt;
       &lt;ref type="op-cit"&gt;op. cit.&lt;/ref&gt;
       &lt;ref type="footnote" n="4"&gt;n. 4&lt;/ref&gt;
    &lt;/biblStruct&gt;
@@ -2089,12 +2124,12 @@
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-45"&gt;
-      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
-      &lt;author&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;ref&gt;
          &lt;persName&gt;
             &lt;surname&gt;Grossberg&lt;/surname&gt;
          &lt;/persName&gt;
-      &lt;/author&gt;
+      &lt;/ref&gt;
       &lt;ref type="op-cit" target="#bibl-21"&gt;op. cit.&lt;/ref&gt;
       &lt;ref type="footnote" n="18"&gt;n. 18&lt;/ref&gt;
       &lt;citedRange unit="page" from="52" to="52"&gt;p. 52&lt;/citedRange&gt;
@@ -2226,12 +2261,12 @@
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-47"&gt;
-      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
-      &lt;author&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;ref&gt;
          &lt;persName&gt;
             &lt;surname&gt;Freeman&lt;/surname&gt;
          &lt;/persName&gt;
-      &lt;/author&gt;
+      &lt;/ref&gt;
       &lt;ref type="op-cit"&gt;op. cit.&lt;/ref&gt;
       &lt;ref type="footnote" n="24"&gt;n. 24&lt;/ref&gt;
    &lt;/biblStruct&gt;
@@ -2404,11 +2439,11 @@
     (&lt;date when="1995"&gt;1995&lt;/date&gt;)
   &lt;/bibl&gt;;
   &lt;bibl xml:id="bibl-54"&gt;
-    &lt;author&gt;
+    &lt;editor&gt;
       &lt;persName&gt;
         &lt;surname&gt;Thornton&lt;/surname&gt;
       &lt;/persName&gt;
-    &lt;/author&gt;,
+    &lt;/editor&gt;,
     &lt;ref type="op-cit"&gt;op. cit.&lt;/ref&gt;
     (&lt;date when="1996"&gt;1996&lt;/date&gt;),
     &lt;ref type="footnote" n="4"&gt;n. 4&lt;/ref&gt;
@@ -2433,12 +2468,17 @@
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-54"&gt;
-      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
-      &lt;author&gt;
-         &lt;persName&gt;
-            &lt;surname&gt;Thornton&lt;/surname&gt;
-         &lt;/persName&gt;
-      &lt;/author&gt;
+      &lt;monogr source="#bibl-54"&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Thornton&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;error&gt;element imprint: Element 'tei:imprint': This element is not expected. Expected is one of ( tei:author, tei:editor, tei:meeting, tei:respStmt, tei:title ).&lt;/error&gt;
+         &lt;imprint&gt;
+            &lt;date when="1996"&gt;1996&lt;/date&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
       &lt;ref type="op-cit"&gt;op. cit.&lt;/ref&gt;
       &lt;ref type="footnote" n="4"&gt;n. 4&lt;/ref&gt;
    &lt;/biblStruct&gt;
@@ -2517,12 +2557,12 @@
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-55"&gt;
-      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
-      &lt;author&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;ref&gt;
          &lt;persName&gt;
             &lt;surname&gt;Grossberg&lt;/surname&gt;
          &lt;/persName&gt;
-      &lt;/author&gt;
+      &lt;/ref&gt;
       &lt;ref type="op-cit"&gt;op. cit.&lt;/ref&gt;
       &lt;ref type="footnote" n="18"&gt;n. 18&lt;/ref&gt;
       &lt;citedRange unit="page" from="38" to="38"&gt;p. 38&lt;/citedRange&gt;
@@ -2941,22 +2981,22 @@
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-66"&gt;
-      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
-      &lt;author&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;ref&gt;
          &lt;persName&gt;
             &lt;surname&gt;O’Donovan&lt;/surname&gt;
          &lt;/persName&gt;
-      &lt;/author&gt;
+      &lt;/ref&gt;
       &lt;ref type="op-cit"&gt;op. cit.&lt;/ref&gt;
       &lt;ref type="footnote" n="21"&gt;n. 21&lt;/ref&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-67"&gt;
-      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
-      &lt;author&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;ref&gt;
          &lt;persName&gt;
             &lt;surname&gt;Collier&lt;/surname&gt;
          &lt;/persName&gt;
-      &lt;/author&gt;
+      &lt;/ref&gt;
       &lt;ref type="op-cit"&gt;op. cit.&lt;/ref&gt;
       &lt;ref type="footnote" n="24"&gt;n. 24&lt;/ref&gt;
    &lt;/biblStruct&gt;
@@ -3051,7 +3091,17 @@
             &lt;/persName&gt;
          &lt;/author&gt;
       &lt;/analytic&gt;
-      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;monogr source="#bibl-68"&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Thornton&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;error&gt;element imprint: Element 'tei:imprint': This element is not expected. Expected is one of ( tei:author, tei:editor, tei:meeting, tei:respStmt, tei:title ).&lt;/error&gt;
+         &lt;imprint&gt;
+            &lt;date when="1995"&gt;1995&lt;/date&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
       &lt;ref type="op-cit"&gt;op. cit.&lt;/ref&gt;
       &lt;ref type="footnote" n="4"&gt;n. 4&lt;/ref&gt;
    &lt;/biblStruct&gt;
@@ -3450,7 +3500,23 @@
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-74"&gt;
-      &lt;error&gt;element citedRange: Element 'tei:citedRange': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;analytic source="#bibl-73"&gt;
+         &lt;title level="a"&gt;The Free Exercise of Her Will: Women and Emotionally Transmitted Debt&lt;/title&gt;
+         &lt;author&gt;
+            &lt;persName&gt;
+               &lt;forename&gt;P.&lt;/forename&gt;
+               &lt;surname&gt;Baron&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/author&gt;
+      &lt;/analytic&gt;
+      &lt;monogr source="#bibl-73"&gt;
+         &lt;title level="j"&gt;Law in Context&lt;/title&gt;
+         &lt;imprint&gt;
+            &lt;date when="1995"&gt;1995&lt;/date&gt;
+         &lt;/imprint&gt;
+         &lt;biblScope unit="volume" from="13" to="13"&gt;13&lt;/biblScope&gt;
+         &lt;biblScope unit="page" from="23"&gt;23&lt;/biblScope&gt;
+      &lt;/monogr&gt;
       &lt;citedRange unit="page" from="24" to="24"&gt;p. 24&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-74b"&gt;
@@ -3537,12 +3603,12 @@
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-76"&gt;
-      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
-      &lt;author&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;ref&gt;
          &lt;persName&gt;
             &lt;surname&gt;Baron&lt;/surname&gt;
          &lt;/persName&gt;
-      &lt;/author&gt;
+      &lt;/ref&gt;
       &lt;ref type="op-cit"&gt;op. cit.&lt;/ref&gt;
       &lt;ref type="footnote" n="44"&gt;n. 44&lt;/ref&gt;
       &lt;citedRange unit="page" from="34" to="34"&gt;p. 34&lt;/citedRange&gt;
@@ -3679,12 +3745,12 @@
       &lt;/monogr&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-79"&gt;
-      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
-      &lt;author&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;ref&gt;
          &lt;persName&gt;
             &lt;surname&gt;Howell&lt;/surname&gt;
          &lt;/persName&gt;
-      &lt;/author&gt;
+      &lt;/ref&gt;
       &lt;ref type="op-cit"&gt;op. cit.&lt;/ref&gt;
       &lt;ref type="footnote" n="43"&gt;n. 43&lt;/ref&gt;
    &lt;/biblStruct&gt;
@@ -3904,8 +3970,15 @@
             <div id="unresolved-biblstruct-instance-49" data-instance-id="instance-49">
                <pre><code>
 &lt;listBibl&gt;
-   &lt;error&gt;element biblStruct: Element 'tei:biblStruct': Missing child element(s). Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
-   &lt;biblStruct source="#bibl-83"/&gt;
+   &lt;biblStruct source="#bibl-83"&gt;
+      &lt;monogr source="#bibl-83"&gt;
+         &lt;idno type="caseNumber"&gt;A.S.C. 56–268&lt;/idno&gt;
+         &lt;imprint&gt;
+            &lt;date when="1994"&gt;1994&lt;/date&gt;
+            &lt;pubPlace&gt;N.S.W.C.A.&lt;/pubPlace&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
 </code></pre>
             </div>
@@ -4607,22 +4680,22 @@
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-99"&gt;
-      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
-      &lt;author&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;ref&gt;
          &lt;persName&gt;
             &lt;surname&gt;O’Donovan&lt;/surname&gt;
          &lt;/persName&gt;
-      &lt;/author&gt;
+      &lt;/ref&gt;
       &lt;ref type="op-cit"&gt;op. cit.&lt;/ref&gt;
       &lt;ref type="footnote" n="57"&gt;n. 57&lt;/ref&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-100"&gt;
-      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
-      &lt;author&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;ref&gt;
          &lt;persName&gt;
             &lt;surname&gt;Thornton&lt;/surname&gt;
          &lt;/persName&gt;
-      &lt;/author&gt;
+      &lt;/ref&gt;
       &lt;ref type="op-cit"&gt;op. cit. (1995)&lt;/ref&gt;
       &lt;ref type="footnote" n="4"&gt;n. 4.&lt;/ref&gt;
    &lt;/biblStruct&gt;
@@ -4697,10 +4770,18 @@
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-101"&gt;
-      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
-      &lt;author&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;ref&gt;
          &lt;orgName&gt;N.S.W.C.A.&lt;/orgName&gt;
-      &lt;/author&gt;
+      &lt;/ref&gt;
+      &lt;monogr source="#bibl-101"&gt;
+         &lt;author&gt;
+            &lt;orgName&gt;N.S.W.C.A.&lt;/orgName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1994-05-23"&gt;23 May 1994&lt;/date&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
       &lt;note type="document-type"&gt;unreported&lt;/note&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
@@ -4873,32 +4954,32 @@
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-105"&gt;
-      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
-      &lt;author&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;ref&gt;
          &lt;persName&gt;
             &lt;surname&gt;Freeman&lt;/surname&gt;
          &lt;/persName&gt;
-      &lt;/author&gt;
+      &lt;/ref&gt;
       &lt;ref type="op-cit"&gt;op. cit.&lt;/ref&gt;
       &lt;ref type="footnote" n="24"&gt;n. 24&lt;/ref&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-106"&gt;
-      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
-      &lt;author&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;ref&gt;
          &lt;persName&gt;
             &lt;surname&gt;Neave&lt;/surname&gt;
          &lt;/persName&gt;
-      &lt;/author&gt;
+      &lt;/ref&gt;
       &lt;ref type="op-cit"&gt;op. cit.&lt;/ref&gt;
       &lt;ref type="footnote" n="26"&gt;n. 26&lt;/ref&gt;
    &lt;/biblStruct&gt;
    &lt;biblStruct source="#bibl-107"&gt;
-      &lt;error&gt;element author: Element 'tei:author': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
-      &lt;author&gt;
+      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;ref&gt;
          &lt;persName&gt;
             &lt;surname&gt;Regan&lt;/surname&gt;
          &lt;/persName&gt;
-      &lt;/author&gt;
+      &lt;/ref&gt;
       &lt;ref type="op-cit"&gt;op. cit.&lt;/ref&gt;
       &lt;ref type="footnote" n="30"&gt;n. 30&lt;/ref&gt;
    &lt;/biblStruct&gt;
@@ -4942,7 +5023,15 @@
             &lt;/persName&gt;
          &lt;/author&gt;
       &lt;/analytic&gt;
-      &lt;error&gt;element ref: Element 'tei:ref': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;monogr source="#bibl-42"&gt;
+         &lt;editor&gt;
+            &lt;persName&gt;
+               &lt;surname&gt;Thornton&lt;/surname&gt;
+            &lt;/persName&gt;
+         &lt;/editor&gt;
+         &lt;error&gt;element imprint: Element 'tei:imprint': This element is not expected. Expected is one of ( tei:author, tei:editor, tei:meeting, tei:respStmt, tei:title ).&lt;/error&gt;
+         &lt;imprint/&gt;
+      &lt;/monogr&gt;
       &lt;ref type="op-cit"&gt;op. cit.&lt;/ref&gt;
       &lt;ref type="footnote" n="4"&gt;n. 4&lt;/ref&gt;
    &lt;/biblStruct&gt;
@@ -5573,7 +5662,15 @@
                <pre><code>
 &lt;listBibl&gt;
    &lt;biblStruct source="#bibl-121"&gt;
-      &lt;error&gt;element citedRange: Element 'tei:citedRange': This element is not expected. Expected is one of ( tei:analytic, tei:monogr ).&lt;/error&gt;
+      &lt;monogr source="#bibl-120"&gt;
+         &lt;title level="m"&gt;The Bride Wore Pink; Legal Recognition of Our Relationships&lt;/title&gt;
+         &lt;author&gt;
+            &lt;orgName&gt;Lesbian and Gay Rights Service&lt;/orgName&gt;
+         &lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;date when="1994"&gt;1994&lt;/date&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
       &lt;citedRange unit="page" from="3" to="3"&gt;p. 3&lt;/citedRange&gt;
    &lt;/biblStruct&gt;
 &lt;/listBibl&gt;
