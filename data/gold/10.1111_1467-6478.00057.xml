@@ -8,10 +8,10 @@
     <p>Source: Thornton, M. (1997) ‘The Judicial Gendering of Citizenship: A Look at Property Interests During Marriage’, Journal of Law and Society, 24(4), pp. 486–503,
      DOI 10.1111/1467-6478.00057</p>
   ]]></description>
-  <instance xml:id="instance-1">
-    <description content-type="text/html"><![CDATA[ 
-      <h2>Chapter in edited volume</h2>
-    ]]></description>
+    <instance xml:id="instance-1">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Chapter in edited volume</h2>
+      ]]></description>
       <input type="raw"><![CDATA[1 A. Phillips, ‘Citizenship and Feminist Politics’ in Citizenship, ed. G. Andrews (1991) 77.]]></input>
       <output type="bibl">
         <note xmlns="http://www.tei-c.org/ns/1.0" n="1" type="footnote" place="bottom">
