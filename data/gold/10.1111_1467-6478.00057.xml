@@ -253,9 +253,9 @@
     </instance>
     <instance xml:id="instance-9">
       <description content-type="text/html"><![CDATA[ 
-        <h2>Additional commmentary on work</h2>
+        <h2>Crossreference to previously cited work, without indication of footnote of previous occurrence.</h2>
       ]]></description> 
-      <input type="raw"><![CDATA[9 Vogel, id., p. 79. W. Blackstone, Commentaries (Facsimile of 1st. ed. of 1765–69, 1979) 442.]]></input>
+      <input type="raw"><![CDATA[9 Vogel, id., p. 79.]]></input>
       <output type="bibl">
         <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="note-9" n="9" place="bottom">
           <label>9</label>
@@ -280,6 +280,29 @@
             <title level="m">Commentaries</title>
             (<edition>Facsimile of 1st. ed. of 1765–69</edition>,
             <date when="1979">1979</date>)
+            <citedRange unit="page" from="442" to="442">442</citedRange>.
+          </bibl>
+        </note>
+      </output>
+    </instance>
+    <instance xml:id="instance-9a">
+      <description content-type="text/html"><![CDATA[ 
+        <h2>Additional commmentary on work</h2>
+      ]]></description> 
+      <input type="raw"><![CDATA[10 W. Blackstone, Commentaries (Facsimile of 1st. ed. of 1765–69, 1979) 442.]]></input>
+      <output type="bibl">
+        <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="note-10" n="10" place="bottom">
+          <label>11</label>
+          <bibl xml:id="bibl-111">
+            <author>
+              <persName>
+                <forename full="init">W.</forename>
+                <surname>Blackstone</surname>
+              </persName>
+            </author>
+            <title level="m">Commentaries</title>
+            (<edition>Facsimile of 1st. ed. of 1765–69,
+            <date when="1979">1979</date></edition>)
             <citedRange unit="page" from="442" to="442">442</citedRange>.
           </bibl>
         </note>
