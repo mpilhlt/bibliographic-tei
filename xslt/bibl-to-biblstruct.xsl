@@ -48,7 +48,7 @@
     </xsl:if>
 
     <!-- Process analytic section from current or original node-->
-      <xsl:choose>
+    <xsl:choose>
       <xsl:when test="$original-node/tei:title[@level = 'a']">
         <analytic source="#{$original-node/@xml:id}">
             <xsl:copy-of select="$original-node/tei:title[@level = 'a']" />
@@ -61,7 +61,7 @@
               <xsl:copy-of select="$node/tei:author" />
           </analytic>
       </xsl:when>
-      </xsl:choose>
+    </xsl:choose>
     
     <!-- Process monographic section -->
     <xsl:if test="$node/tei:title[@level != 'a'] | $node/tei:editor | $node/tei:idno | $node/tei:date">
@@ -87,6 +87,7 @@
 
     <!-- References -->
     <xsl:copy-of select="$node/tei:ref" />
+
     <!-- citations-->
     <xsl:copy-of select="$original-node/tei:citedRange" />
     <!-- Notes -->
