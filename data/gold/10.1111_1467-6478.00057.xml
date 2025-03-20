@@ -325,7 +325,7 @@
                 </persName>
               </author>,
               <ref type="op-cit" target="#bibl-8">op. cit.</ref>,
-              <ref target="#note-7">n. 7</ref>
+              <ref type="footnote" target="#note-7">n. 7</ref>
             </bibl>,
             <citedRange unit="page" from="80" to="81">pp. 80–1</citedRange>.
           </bibl>
@@ -694,9 +694,10 @@
                 <surname>Collier</surname>
               </persName>
             </author>
-          </bibl> further for a comprehensive study of sexuality in marriage.
-          </note>
-        </output>
+          </bibl>
+          further for a comprehensive study of sexuality in marriage.
+        </note>
+      </output>
     </instance>
     <instance xml:id="instance-23">
       <input type="raw"><![CDATA[25 P.S. Atiyah, An Introduction to the Law of Contract (5th ed., 1995) 3.]]></input>
@@ -761,7 +762,7 @@
                 </persName>
               </editor>,
               <ref type="op-cit" target="#bibl-4a">op. cit.</ref>,
-              <ref target="#note-4">n. 4</ref>
+              <ref type="footnote" target="#note-4">n. 4</ref>
             </bibl>.
           </bibl>.
           For a feminist critique of contract in the American context,
@@ -814,7 +815,7 @@
                 </persName>
               </author>,
               <ref type="op-cit" target="#bibl-21">op. cit.</ref>,
-              <ref target="#note-18">n. 18</ref>
+              <ref type="footnote" target="#note-18">n. 18</ref>
             </bibl>,
             <citedRange unit="page" from="52" to="52">p. 52</citedRange>.
           </bibl>
@@ -826,324 +827,323 @@
         <h2>Legal decision</h2>
       ]]></description>       
       <input type="raw"><![CDATA[29 Balfour v. Balfour [1919] 2 K.B. 571.]]></input>
-        <output type="bibl">
-          <note xmlns="http://www.tei-c.org/ns/1.0" n="29" place="bottom">
-            <label>29</label>
-            <bibl xml:id="bibl-46">
-              <title>Balfour v. Balfour</title>
-              [<date when="1919">1919</date>]
-              <biblScope unit="volume" from="2" to="2">2</biblScope>
-              <title level="j">K.B.</title>
-              <biblScope unit="page" from="571">571</biblScope>.
-            </bibl>
-          </note>
-        </output>
+      <output type="bibl">
+        <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="note-29" n="29" place="bottom">
+          <label>29</label>
+          <bibl xml:id="bibl-46">
+            <title>Balfour v. Balfour</title>
+            [<date when="1919">1919</date>]
+            <biblScope unit="volume" from="2" to="2">2</biblScope>
+            <title level="j">K.B.</title>
+            <biblScope unit="page" from="571">571</biblScope>.
+          </bibl>
+        </note>
+      </output>
     </instance>
     <instance xml:id="instance-28">
       <description content-type="text/html"><![CDATA[ 
         <h2>Op. cit. with comment and reference</h2>
       ]]></description>   
       <input type="raw"><![CDATA[30 Freeman, op. cit., n. 24. While acknowledging the trends towards contractualism and private ordering, Regan cautions against it, noting that greater freedom to contract invites greater scrutiny by the courts. More significantly, however, he would rather reclaim the idea of status by injecting it with new notions of responsibility andrelationality, as well as divesting it of its sexist assumptions. See M.C. Regan, Family Law and the Pursuit of Intimacy (1993).]]></input>
-        <output type="bibl">
-          <note xmlns="http://www.tei-c.org/ns/1.0" n="30" place="bottom">
-            <label>30</label>
-            <bibl xml:id="bibl-47">
-              <author>
-                <persName>
-                  <surname>Freeman</surname>
-                </persName>
-              </author>,
-              <ref type="op-cit">op. cit.</ref>,
-              <ref n="24">n. 24</ref>.
-            </bibl>
-            <note type="comment">
-              While acknowledging the trends towards contractualism and private ordering,
-              Regan cautions against it, noting that greater freedom to contract invites greater scrutiny by
-              the courts. More significantly, however, he would rather reclaim the idea of status by injecting
-              it with new notions of responsibility andrelationality, as well as divesting it of its sexist
-              assumptions.
-            </note>
-            <note type="signal">See</note>
-            <bibl xml:id="bibl-49">
-              <author>
-                <persName>
-                  <forename>M.C.</forename>
-                    <surname>Regan</surname>
-                </persName>
-              </author>,
-              <title level="m">Family Law and the Pursuit of Intimacy</title>
-              (<date when="1993">1993</date>).
-            </bibl>
-          </note>
-        </output>
+      <output type="bibl">
+        <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="note-30" n="30" place="bottom">
+          <label>30</label>
+          <bibl xml:id="bibl-47" ref="#bibl-35">
+            <author>
+              <persName>
+                <surname>Freeman</surname>
+              </persName>
+            </author>,
+            <ref type="op-cit" target="#bibl-35">op. cit.</ref>,
+            <ref type="footnote" target="#note-24">n. 24</ref>
+          </bibl>.
+          While acknowledging the trends towards contractualism and private ordering,
+          Regan cautions against it, noting that greater freedom to contract invites greater scrutiny by
+          the courts. More significantly, however, he would rather reclaim the idea of status by injecting
+          it with new notions of responsibility andrelationality, as well as divesting it of its sexist
+          assumptions.
+          <seg type="signal">See</seg>
+          <bibl xml:id="bibl-49">
+            <author>
+              <persName>
+                <forename full="init">M.C.</forename>
+                <surname>Regan</surname>
+              </persName>
+            </author>,
+            <title level="m">Family Law and the Pursuit of Intimacy</title>
+            (<date when="1993">1993</date>).
+          </bibl>
+        </note>
+      </output>
     </instance>
     <instance xml:id="instance-29">
       <description content-type="text/html"><![CDATA[ 
         <h2>Legislation</h2>
       ]]></description>   
       <input type="raw"><![CDATA[31 For example, Law Reform (Miscellaneous Provisions) Act 1970 (U.K.); Domestic Relations Act 1975 (N.Z.); Marriage Act Amendment Act 1976 (Cwth.).]]></input>
-        <output type="bibl">
-          <note xmlns="http://www.tei-c.org/ns/1.0" n="31" place="bottom">
-              <label>31</label>
-            <note type="signal">For example,</note>
-                <bibl xml:id="bibl-50">
-                  <title level="m">Law Reform (Miscellaneous Provisions) Act</title>
-                    <date when="1970">1970</date>
-                    (<pubPlace>U.K.</pubPlace>)
-                </bibl>;
-                <bibl xml:id="bibl-51">
-                  <title level="m">Domestic Relations Act</title>
-                    <date when="1975">1975</date>
-                    (<pubPlace>N.Z.</pubPlace>)
-                </bibl>;
-                <bibl xml:id="bibl-52">
-                  <title level="m">Marriage Act Amendment Act</title>
-                    <date when="1976">1976</date>
-                    (<pubPlace>Cwth.</pubPlace>)
-                </bibl>.
+      <output type="bibl">
+        <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="note-31" n="31" place="bottom">
+            <label>31</label>
+            <seg type="signal">For example,</seg>
+            <bibl xml:id="bibl-50">
+              <title level="m">Law Reform (Miscellaneous Provisions) Act</title>
+              <date when="1970">1970</date>
+              (<pubPlace>U.K.</pubPlace>)
+            </bibl>;
+            <bibl xml:id="bibl-51">
+              <title level="m">Domestic Relations Act</title>
+              <date when="1975">1975</date>
+              (<pubPlace>N.Z.</pubPlace>)
+            </bibl>;
+            <bibl xml:id="bibl-52">
+              <title level="m">Marriage Act Amendment Act</title>
+              <date when="1976">1976</date>
+              (<pubPlace>Cwth.</pubPlace>)
+            </bibl>.
           </note>
         </output>
     </instance>
     <instance xml:id="instance-30">
       <input type="raw"><![CDATA[32 G.S. Frost, Promises Broken: Courtship, Class, and Gender in Victorian England (1995); Thornton, op. cit. (1996), n. 4.]]></input>
-        <output type="bibl">
-          <note xmlns="http://www.tei-c.org/ns/1.0" n="32" place="bottom">
-              <label>32</label>
-            <bibl xml:id="bibl-53">
+      <output type="bibl">
+        <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="note-32" n="32" place="bottom">
+          <label>32</label>
+          <bibl xml:id="bibl-53">
+            <author>
+              <persName>
+                <forename full="init">G.S.</forename>
+                <surname>Frost</surname>
+              </persName>
+            </author>,
+            <title level="m">Promises Broken: Courtship, Class, and Gender in Victorian England</title>
+            (<date when="1995">1995</date>)
+          </bibl>;
+          <bibl xml:id="bibl-54" ref="#bibl-4a">
+            <editor>
+              <persName>
+                <surname>Thornton</surname>
+              </persName>
+            </editor>,
+            <ref type="op-cit" target="#bibl-4a">op. cit.</ref>
+            (<date when="1996">1996</date>),
+            <ref type="footnote" target="#note-4">n. 4</ref>
+          </bibl>.
+        </note>
+      </output>
+    </instance>
+    <instance xml:id="instance-31">
+      <input type="raw"><![CDATA[33 Grossberg, op. cit., n. 18, p. 38.]]></input>
+      <output type="bibl">
+        <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="note-33" n="33" place="bottom">
+          <label>33</label>
+          <bibl xml:id="bibl-55">
+            <bibl xml:id="bibl-55a" ref="#bibl-21">
               <author>
-                  <persName>
-                    <forename>G.S.</forename>
-                    <surname>Frost</surname>
-                  </persName>
-                </author>,
-                <title level="m">Promises Broken: Courtship, Class, and Gender in Victorian England</title>
-                (<date when="1995">1995</date>)
-            </bibl>;
-            <bibl xml:id="bibl-54">
+                <persName>
+                  <surname>Grossberg</surname>
+                </persName>
+              </author>,
+              <ref type="op-cit" target="#bibl-21">op. cit.</ref>,
+              <ref type="footnote" target="#note-18">n. 18</ref>
+            </bibl>,
+            <citedRange unit="page" from="38" to="38">p. 38</citedRange>.
+          </bibl>
+        </note>
+      </output>
+    </instance>
+    <instance xml:id="instance-32">
+      <input type="raw"><![CDATA[34 Compare U. Vogel, ‘Is Citizenship Gender-Specific?’ in The Frontiers of Citizenship, eds. U. Vogel and M. Moran (1991) 59.]]></input>
+      <output type="bibl">
+        <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="note-34" n="34" place="bottom">
+          <label>34</label>
+          <seg type="signal">Compare</seg>
+          <bibl xml:id="bibl-56">
+            <author>
+              <persName>
+                <forename full="init">U.</forename>
+                <surname>Vogel</surname>
+              </persName>
+            </author>,
+            ‘<title level="a">Is Citizenship Gender-Specific?</title>’ in
+            <bibl xml:id="bibl-56a">
+              <title level="m">The Frontiers of Citizenship</title>, eds.
+              <editor>
+                <persName>
+                  <forename full="init">U.</forename>
+                  <surname>Vogel</surname>
+                </persName>
+              </editor>
+              and
+              <editor>
+                <persName>
+                  <forename full="init">M.</forename>
+                  <surname>Moran</surname>
+                </persName>
+              </editor>
+              (<date when="1991">1991</date>)
+              <biblScope unit="page" from="59">59</biblScope>
+            </bibl>.
+          </bibl>
+        </note>
+      </output>
+    </instance>
+    <instance xml:id="instance-33">
+      <input type="raw"><![CDATA[35 See, for example, Bradwell v. Illinois 83 U.S. (16 Wall) 130 (1873).]]></input>
+      <output type="bibl">
+        <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="note-35" n="35" place="bottom">
+          <label>35</label>
+          <seg type="signal">See, for example,</seg>
+          <bibl xml:id="bibl-57">
+            <title level="m">Bradwell v. Illinois 83 U.S. (16 Wall) 130</title>
+            (<date when="1873">1873</date>).
+          </bibl>
+        </note>
+      </output>
+    </instance>
+    <instance xml:id="instance-34">
+      <input type="raw"><![CDATA[36 Compare J. Pahl, Money and Marriage (1989) 5.]]></input>
+      <output type="bibl">
+        <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="note-36" n="36" place="bottom">
+          <label>36</label>
+          <seg type="signal">Compare</seg>
+          <bibl xml:id="bibl-58">
+            <author>
+              <persName>
+                <forename full="init">J.</forename>
+                <surname>Pahl</surname>
+              </persName>
+            </author>,
+            <title level="m">Money and Marriage</title>
+            (<date when="1989">1989</date>)
+            <citedRange unit="page" from="5" to="5">5</citedRange>.
+          </bibl>
+        </note>
+      </output>
+    </instance>
+    <instance xml:id="instance-35">
+      <input type="raw"><![CDATA[37 Although Australia, like the United Kingdom, has a separate property regime, the courts are endowed with broad powers under the Family Law Act 1975 (Cwth.) to distribute property equitably. For detailed treatment, see P. Parkinson, S. Parker and J. Behrens, Australian Family Law in Context: Commentary and Materials (1994). Most civil law countries and most American states have developed community property regimes which recognize the joint ownership of property acquired during marriage, but the legal significance is similarly directed to the time of divorce. For discussion of the position during marriage, see J.T. Oldham, ‘Management of the Community Estate during an Intact Marriage’ (1993) 56 Law and Contemporary Problems 99. For a discussion of the genesis of the two systems, see C. Donahue, ‘What Causes Fundamental Legal Ideas? Marital Property in England and France in the Thirteenth Century’ (1979) 78 Michigan Law Rev. 59.]]></input>
+      <output type="bibl">
+        <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="note-37" n="37" place="bottom">
+          <label>37</label>
+          Although Australia, like the United Kingdom, has a separate property regime, the courts
+          are endowed with broad powers under the Family Law Act 1975 (Cwth.) to distribute property equitably.
+          <seg type="signal">For detailed treatment, see</seg>
+          <bibl xml:id="bibl-61">
+            <author>
+              <persName>
+                <forename full="init">P.</forename>
+                <forename>Parkinson</forename>
+              </persName>
+            </author>,
+            <author>
+              <persName>
+                <forename full="init">S.</forename>
+                <surname>Parker</surname>
+              </persName>
+            </author>
+            and
+            <author>
+              <persName>
+                <forename full="init">J.</forename>
+                <surname>Behrens</surname>
+              </persName>
+            </author>,
+            <title level="m">Australian Family Law in Context: Commentary and Materials</title>
+            (<date when="1994">1994</date>).
+          </bibl>
+          Most civil law countries and most American states have developed community
+          property regimes which recognize the joint ownership of property acquired during marriage,
+          but the legal significance is similarly directed to the time of divorce.
+          For discussion of the position during marriage,
+          <seg type="signal">see</seg>
+          <bibl xml:id="bibl-63">
+            <author>
+              <persName>
+                <forename full="init">J.T.</forename>
+                <surname>Oldham</surname>
+              </persName>
+            </author>,
+            ‘<title level="a">Management of the Community Estate during an Intact Marriage</title>’
+            (<date when="1993">1993</date>)
+            <biblScope unit="volume" from="56" to="56">56</biblScope>
+            <title level="j">Law and Contemporary Problems</title>
+            <biblScope unit="page" from="99">99</biblScope>.
+          </bibl>
+          For a discussion of the genesis of the two systems,
+          <seg type="signal">see</seg>
+          <bibl xml:id="bibl-64">
+            <author>
+              <persName>
+                <forename full="init">C.</forename>
+                <surname>Donahue</surname>
+              </persName>
+            </author>,
+            ‘<title level="a">What Causes Fundamental Legal Ideas? Marital Property in England and France in the Thirteenth Century’</title>
+            (<date when="1979">1979</date>)
+            <biblScope unit="volume" from="78" to="78">78</biblScope>
+            <title level="j">Michigan Law Rev.</title>
+            <biblScope unit="page" from="59">59</biblScope>
+          </bibl>.
+        </note>
+      </output>
+    </instance>
+    <instance xml:id="instance-36">
+      <input type="raw"><![CDATA[38 The legal construction of masculinity and femininity in family law has been the subject of recent scholarly interest. Notable examples are O’Donovan, op. cit., n. 21 and Collier, op. cit., n. 24.]]></input>
+      <output type="bibl">
+        <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="note-38" n="38" place="bottom">
+          <label>38</label>
+          The legal construction of masculinity and femininity in family law has been the subject of recent scholarly interest.
+          <seg type="signal">Notable examples are</seg>
+          <bibl xml:id="bibl-66" ref="#bibl-27">
+            <author>
+              <persName>
+                <surname>O’Donovan</surname>
+              </persName>
+            </author>,
+            <ref type="op-cit" target="#bibl-27">op. cit.</ref>,
+            <ref type="footnote" target="#note-21">n. 21</ref>
+          </bibl>
+          <seg type="signal">and</seg>
+          <bibl xml:id="bibl-67" ref="#bibl-36">
+            <author>
+              <persName>
+                <surname>Collier</surname>
+              </persName>
+            </author>,
+            <ref type="op-cit" target="#bibl-36">op. cit.</ref>,
+            <ref type="footnote" target="#note-24">n. 24</ref>.
+          </bibl>
+        </note>
+      </output>
+    </instance>
+    <instance xml:id="instance-37">
+      <input type="raw"><![CDATA[39 For discussion of sex and legal subjecthood, see N. Naffine ‘Sexing the Subject (of Law)’ in Thornton, op. cit. (1995), n. 4.]]></input>
+      <output type="bibl">
+        <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="note-39" n="39" place="bottom">
+          <label>39</label>
+          For discussion of sex and legal subjecthood,
+          <seg type="signal">see</seg>
+          <bibl xml:id="bibl-68">
+            <author>
+              <persName>
+                <forename full="init">N.</forename>
+                <surname>Naffine</surname>
+              </persName>
+            </author>
+            ‘<title level="a">Sexing the Subject (of Law)</title>’ in
+            <bibl xml:id="bibl-68a" ref="#bibl-4a">
               <editor>
                 <persName>
                   <surname>Thornton</surname>
                 </persName>
               </editor>,
-              <ref type="op-cit">op. cit.</ref>
-              (<date when="1996">1996</date>),
-              <ref n="4">n. 4</ref>
-            </bibl>.
-          </note>
-        </output>
-    </instance>
-    <instance xml:id="instance-31">
-      <input type="raw"><![CDATA[33 Grossberg, op. cit., n. 18, p. 38.]]></input>
-        <output type="bibl">
-          <note xmlns="http://www.tei-c.org/ns/1.0" n="33" place="bottom">
-              <label>33</label>
-            <bibl xml:id="bibl-55">
-                  <author>
-                      <persName>
-                          <surname>Grossberg</surname>
-                        </persName>
-                    </author>,
-                    <ref type="op-cit">op. cit.</ref>,
-                    <ref n="18">n. 18</ref>,
-                    <citedRange unit="page" from="38" to="38">p. 38</citedRange>.
-                </bibl>
-          </note>
-        </output>
-    </instance>
-    <instance xml:id="instance-32">
-      <input type="raw"><![CDATA[34 Compare U. Vogel, ‘Is Citizenship Gender-Specific?’ in The Frontiers of Citizenship, eds. U. Vogel and M. Moran (1991) 59.]]></input>
-        <output type="bibl">
-          <note xmlns="http://www.tei-c.org/ns/1.0" n="34" place="bottom">
-              <label>34</label>
-            <note type="signal">Compare</note>
-                <bibl xml:id="bibl-56">
-                  <author>
-                      <persName>
-                          <forename>U.</forename>
-                            <surname>Vogel</surname>
-                        </persName>
-                    </author>,
-                    ‘<title level="a">Is Citizenship Gender-Specific?</title>’ in
-                    <title level="m">The Frontiers of Citizenship</title>, eds.
-                    <editor>
-                      <persName>
-                          <forename>U.</forename>
-                            <surname>Vogel</surname>
-                        </persName>
-                    </editor>
-                    and
-                    <editor>
-                      <persName>
-                          <forename>M.</forename>
-                            <surname>Moran</surname>
-                        </persName>
-                    </editor>
-                    (<date when="1991">1991</date>)
-                    <biblScope unit="page" from="59">59</biblScope>.
-                </bibl>
-          </note>
-        </output>
-    </instance>
-    <instance xml:id="instance-33">
-      <input type="raw"><![CDATA[35 See, for example, Bradwell v. Illinois 83 U.S. (16 Wall) 130 (1873).]]></input>
-        <output type="bibl">
-          <note xmlns="http://www.tei-c.org/ns/1.0" n="35" place="bottom">
-              <label>35</label>
-            <note type="signal">See, for example,</note>
-                <bibl xml:id="bibl-57">
-                  <title level="m">Bradwell v. Illinois 83 U.S. (16 Wall) 130</title>
-                    (<date when="1873">1873</date>).
-                </bibl>
-          </note>
-        </output>
-    </instance>
-    <instance xml:id="instance-34">
-      <input type="raw"><![CDATA[36 Compare J. Pahl, Money and Marriage (1989) 5.]]></input>
-        <output type="bibl">
-          <note xmlns="http://www.tei-c.org/ns/1.0" n="36" place="bottom">
-              <label>36</label>
-            <note type="signal">Compare</note>
-                <bibl xml:id="bibl-58">
-                  <author>
-                      <persName>
-                          <forename>J.</forename>
-                            <surname>Pahl</surname>
-                        </persName>
-                    </author>,
-                    <title level="m">Money and Marriage</title>
-                    (<date when="1989">1989</date>)
-                    <citedRange unit="page" from="5" to="5">5</citedRange>.
-                </bibl>
-          </note>
-        </output>
-    </instance>
-    <instance xml:id="instance-35">
-      <input type="raw"><![CDATA[37 Although Australia, like the United Kingdom, has a separate property regime, the courts are endowed with broad powers under the Family Law Act 1975 (Cwth.) to distribute property equitably. For detailed treatment, see P. Parkinson, S. Parker and J. Behrens, Australian Family Law in Context: Commentary and Materials (1994). Most civil law countries and most American states have developed community property regimes which recognize the joint ownership of property acquired during marriage, but the legal significance is similarly directed to the time of divorce. For discussion of the position during marriage, see J.T. Oldham, ‘Management of the Community Estate during an Intact Marriage’ (1993) 56 Law and Contemporary Problems 99. For a discussion of the genesis of the two systems, see C. Donahue, ‘What Causes Fundamental Legal Ideas? Marital Property in England and France in the Thirteenth Century’ (1979) 78 Michigan Law Rev. 59.]]></input>
-        <output type="bibl">
-          <note xmlns="http://www.tei-c.org/ns/1.0" n="37" place="bottom">
-              <label>37</label>
-              <note type="comment">
-                Although Australia, like the United Kingdom, has a separate property regime, the courts
-                are endowed with broad powers under the Family Law Act 1975 (Cwth.) to distribute property equitably.
-              </note>
-              <note type="signal">For detailed treatment, see</note>
-              <bibl xml:id="bibl-61">
-                  <author>
-                      <persName>
-                          <forename>P.</forename>
-                            <forename>Parkinson</forename>
-                        </persName>
-                    </author>,
-                    <author>
-                      <persName>
-                          <forename>S.</forename>
-                            <surname>Parker</surname>
-                        </persName>
-                    </author>
-                    and
-                    <author>
-                      <persName>
-                          <forename>J.</forename>
-                            <surname>Behrens</surname>
-                        </persName>
-                    </author>,
-                    <title level="m">Australian Family Law in Context: Commentary and Materials</title>
-                    (<date when="1994">1994</date>).
-                </bibl>
-                <note type="comment">
-                    Most civil law countries and most American states have developed community
-                    property regimes which recognize the joint ownership of property acquired during marriage,
-                    but the legal significance is similarly directed to the time of divorce.
-              </note>
-                <note type="signal">For discussion of the position during marriage, see</note>
-                <bibl xml:id="bibl-63">
-                  <author>
-                      <persName>
-                          <forename>J.T.</forename>
-                            <surname>Oldham</surname>
-                        </persName>
-                    </author>,
-                    ‘<title level="a">Management of the Community Estate during an Intact Marriage</title>’
-                    (<date when="1993">1993</date>)
-                    <biblScope unit="volume" from="56" to="56">56</biblScope>
-                    <title level="j">Law and Contemporary Problems</title>
-                    <biblScope unit="page" from="99">99</biblScope>.
-                </bibl>
-                <note type="signal">For a discussion of the genesis of the two systems, see</note>
-                <bibl xml:id="bibl-64">
-                  <author>
-                      <persName>
-                          <forename>C.</forename>
-                            <surname>Donahue</surname>
-                        </persName>
-                    </author>,
-                    ‘<title level="a">What Causes Fundamental Legal Ideas? Marital Property in England and France in the
-                        Thirteenth Century’
-                    </title>
-                    (<date when="1979">1979</date>)
-                    <biblScope unit="volume" from="78" to="78">78</biblScope>
-                    <title level="j">Michigan Law Rev.</title>
-                    <biblScope unit="page" from="59">59</biblScope>.
-                </bibl>
-          </note>
-        </output>
-    </instance>
-    <instance xml:id="instance-36">
-      <input type="raw"><![CDATA[38 The legal construction of masculinity and femininity in family law has been the subject of recent scholarly interest. Notable examples are O’Donovan, op. cit., n. 21 and Collier, op. cit., n. 24.]]></input>
-        <output type="bibl">
-          <note xmlns="http://www.tei-c.org/ns/1.0" n="38" place="bottom">
-              <label>38</label>
-            <note type="comment">
-                    The legal construction of masculinity and femininity in family law has been the subject of recent scholarly interest.
-              </note>
-                <note type="signal">Notable examples are</note>
-                <bibl xml:id="bibl-66">
-                  <author>
-                      <persName>
-                          <surname>O’Donovan</surname>
-                        </persName>
-                    </author>,
-                    <ref type="op-cit">op. cit.</ref>,
-                    <ref n="21">n. 21</ref>
-                </bibl>
-                <note type="signal">and</note>
-                <bibl xml:id="bibl-67">
-                  <author>
-                      <persName>
-                          <surname>Collier</surname>
-                        </persName>
-                    </author>,
-                    <ref type="op-cit">op. cit.</ref>,
-                    <ref n="24">n. 24</ref>.
-                </bibl>
-          </note>
-        </output>
-    </instance>
-    <instance xml:id="instance-37">
-      <input type="raw"><![CDATA[39 For discussion of sex and legal subjecthood, see N. Naffine ‘Sexing the Subject (of Law)’ in Thornton, op. cit. (1995), n. 4.]]></input>
-        <output type="bibl">
-          <note xmlns="http://www.tei-c.org/ns/1.0" n="39" place="bottom">
-              <label>39</label>
-            <note type="signal">For discussion of sex and legal subjecthood, see</note>
-                <bibl xml:id="bibl-68">
-                  <author>
-                      <persName>
-                          <forename>N.</forename>
-                            <surname>Naffine</surname>
-                        </persName>
-                    </author>
-                    ‘<title level="a">Sexing the Subject (of Law)</title>’ in
-                    <editor>
-                      <persName>
-                          <surname>Thornton</surname>
-                        </persName>
-                    </editor>,
-                    <ref type="op-cit">op. cit.</ref>
-                    (<date when="1995">1995</date>),
-                    <ref n="4">n. 4</ref>.
-                </bibl>
-          </note>
-        </output>
+              <ref type="op-cit" target="#bibl-4a">op. cit.</ref>
+              (<date when="1995">1995</date>),
+              <ref type="footnote" target="#note-4">n. 4</ref>
+            </bibl>
+          </bibl>.
+        </note>
+      </output>
     </instance>
     <instance xml:id="instance-38">
       <input type="raw"><![CDATA[40 Contracts Review Act 1980 (N.S.W.).]]></input>
