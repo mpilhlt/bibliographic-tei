@@ -5,6 +5,14 @@ This repository contains a [TEI schema](./schema/tei-bib.odd), maintained in the
 from which an [XSD schema](./schema/xsd/document.xsd) can be generated via the 
 https://roma.tei-c.org/ tool.
 
+It is part of the ["Legal Theory Knowledge Graph" project](https://www.lhlt.mpg.de/2514927/03-boulanger-legal-theory-graph) 
+at the Max Planck Institute of Legal History and Legal Theory. 
+
+Related repositories:
+
+ - https://github.com/mpilhlt/pdf-tei-editor
+ - https://github.com/mpilhlt/llamore
+
 ## Motivation
 
 While the standard TEI format allows for the annotation of entries in properly formatted bibliographies, a number of edge cases exist that need to be addressed in order to achieve truly interoperable annotation data.
