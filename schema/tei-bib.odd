@@ -30,7 +30,7 @@
           </desc>
         </application>
       </appInfo>
-    <appInfo><application ident="RomaJS" version="1.1.2" when="2024-11-15T06:17:19.646Z"><desc>File edited with <ref target="https://github.com/TEIC/romajs">RomaJS</ref></desc></application></appInfo></encodingDesc>
+    <appInfo><application ident="RomaJS" version="1.1.2" when="2024-11-15T06:17:19.646Z"><desc>File edited with <ref target="https://github.com/TEIC/romajs">RomaJS</ref></desc></application></appInfo><appInfo><application ident="RomaJS" version="1.1.2" when="2025-06-27T08:02:25.996Z"><desc>File edited with <ref target="https://github.com/TEIC/romajs">RomaJS</ref></desc></application></appInfo></encodingDesc>
   </teiHeader>
   <text>
     <body>
@@ -43,9 +43,9 @@
       <schemaSpec ident="tei-bib" start="TEI teiCorpus" prefix="tbib" targetLang="en" docLang="en">
         <moduleRef n="01" key="tei"/>
         <moduleRef n="02" key="header"/>
-        <moduleRef n="03" key="core" />
-        <moduleRef n="04" key="textstructure" />
-        <moduleRef n="14" key="namesdates" except="affiliation age birth bloc climate country death district education event eventName faith floruit genName gender geo geogFeat geogName langKnowledge langKnown listEvent listNym listObject listOrg listPerson listPlace listRelation location nationality nym object objectIdentifier objectName occupation offset org persPronouns person personGrp persona place placeName population region relation residence settlement sex socecStatus state terrain trait"/>
+        <moduleRef n="03" key="core"/>
+        <moduleRef n="04" key="textstructure"/>
+        <moduleRef n="14" key="namesdates" except="affiliation age birth bloc climate country death district education event eventName faith floruit gender geo geogFeat geogName langKnowledge langKnown listEvent listNym listObject listOrg listPerson listPlace listRelation location nationality nym object objectIdentifier objectName occupation offset org persPronouns person personGrp persona place placeName population region relation residence settlement sex socecStatus state terrain trait"/>
         <moduleRef n="17" key="linking" except="alt altGrp annotation join joinGrp listAnnotation timeline when"/>
         <!-- restrictions of @type of <ref> -->
         <elementSpec ident="ref" mode="change">
